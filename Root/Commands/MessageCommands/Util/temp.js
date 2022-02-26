@@ -1,0 +1,91 @@
+const { MessageEmbed } = require("discord.js");
+const colors = require("../../../Storage/json/colors.json")
+const weather = require("weather-js");
+const emotes = require('../../../Storage/json/emotes.json')
+const db = require('quick.db');
+
+module.exports = {
+    name: "temp",
+    onlyUsers: ["509765051435974692", "691644619758370846"],
+    aliases: ["t", "weather"],
+
+    run: async(client, message, args) => {
+        client.langs = new Discord.Collection()
+        
+              const Handler = require(`../../../Structures/Handlers/Handler`);
+          await Handler.loadLangs(client);
+        
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+
+        let degree;
+        if (args[0]) {
+            if (args[0] === "C" || args[0] === "c" || args[0] === "F" || args[0] === "f") {
+                degree = args[0].toUpperCase();
+            } else {
+                return message.reply({
+                    embeds: [
+                    new MessageEmbed()
+                    .setColor(colors.EPINGLE)
+                    .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                    .setTimestamp()
+                    ]
+                });
+            }
+        } else {
+            return message.reply({
+                embeds: [
+                new MessageEmbed()
+                .setColor(colors.EPINGLE)
+                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                .setTimestamp()
+                ]
+            });
+        }
+
+        let ville = args.splice(1).join(" ")
+        if (!ville) return message.reply({
+            embeds: [
+            new MessageEmbed()
+            .setColor(colors.EPINGLE)
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+            .setTimestamp()
+            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            ]
+        });
+
+        weather.find({ search: ville, degreeType: degree }, function(err, result) {
+            try {;
+                message.reply({
+                    embeds: [
+                        new MessageEmbed()
+                        .setColor(colors.PERSO)
+                        .setTitle(lang.commands.util.temp[3])
+                        .setThumbnail(result[0].current.imageUrl)
+                        .setDescription(`${lang.commands.util.temp[4]} ${result[0].location.name}`)
+                        .addField(`🥶 ┇ **${lang.commands.util.temp[5]}**`, `${result[0].current.temperature}°${result[0].location.degreetype}`, true)
+                        .addField("**Temp:**", `${result[0].current.skytext}`, true)
+                        .addField(`**${lang.commands.util.temp[6]}**`, `${result[0].current.shortday}`, true)
+                        .addField(`**${lang.commands.util.temp[7]}**`, `${result[0].current.feelslike}°${result[0].location.degreetype}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`, true)
+                        .addField(`💦 ┇ **${lang.commands.util.temp[8]}**`, `${result[0].current.humidity}%`, true)
+                        .addField(`💨 ┇ **${lang.commands.util.temp[9]}**`, `${result[0].current.winddisplay}`, true)
+                        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                    ]
+                });
+            } catch (err) {
+                console.log(err);
+
+                return message.reply({
+                    embeds: [
+                    new MessageEmbed()
+                    .setColor(colors.RED)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                    .setTimestamp()
+                    .setDescription(`${emotes.autre.attention} ┇ ${lang.commands.util.temp[10]}`)
+                    ]
+                });
+            }
+        });
+    },
+};
