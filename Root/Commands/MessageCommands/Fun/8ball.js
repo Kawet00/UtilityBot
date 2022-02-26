@@ -7,29 +7,25 @@ module.exports = {
     aliases: ["8b", "ball"],
     onlyUsers: ["509765051435974692", "691644619758370846"],
 
-    run: async (client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
-        
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-
-        const lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+    run: async (client, message, args, container) => {
+        console.log(db.get(`lang_${message.guild.id}`))
+        const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         let question = args.join(" ");
         if (!question)
             return message.reply({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
                     .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.fun.ball[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     .setColor(colors.EPINGLE)
-                    .setFooter(`© ${client.user.username} `, client.user.avatarURL())
+                    .setFooter({text: `© ${client.user.username} `, iconURL: client.user.avatarURL()})
                     .setTimestamp()
                 ]
             })
 
         if (question.length < 10) return message.reply({
             embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.RED)
                 .setDescription(`${emotes.autre.intelligent} ┇ ${lang.commands.fun.ball[9]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter(`© ${client.user.username} `, client.user.avatarURL())
@@ -40,7 +36,7 @@ module.exports = {
         if (question === "test")
             return message.reply({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
                     .setDescription(`${emotes.autre.attention} ┇ ${lang.commands.fun.ball[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     .setColor(colors.EPINGLE)
                     .setFooter(`© ${client.user.username} `, client.user.avatarURL())
@@ -56,7 +52,8 @@ module.exports = {
             lang.commands.fun.ball[8]
         ];
         let reponse = reponses[Math.floor(Math.random() * reponses.length)];
-        let embed = new Discord.MessageEmbed()
+        let embed = 
+            new container.Discord.MessageEmbed()
             .setTitle("8BALL")
             .addFields({
                 name: `${lang.commands.fun.ball[2]}  ${question}`,
@@ -65,7 +62,8 @@ module.exports = {
             .setColor(colors.PERSO)
             .setDescription(`[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setFooter(`© ${client.user.username} `, client.user.avatarURL())
-            .setTimestamp();
+            .setTimestamp()
+        
 
         message.reply({
             embeds: [embed]

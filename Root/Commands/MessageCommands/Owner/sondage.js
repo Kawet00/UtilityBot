@@ -21,19 +21,15 @@ module.exports = {
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 600000,
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async(client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
         let channelM = message.mentions.channels.first();
         if (args.slice(1) !== channelM);
         if (!channelM) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -44,7 +40,7 @@ module.exports = {
         const duration = parseDuration(args[1])
         if (!duration) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.EPINGLE)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -55,7 +51,7 @@ module.exports = {
         let sondage = args.slice(2).join(" ");
         if (!sondage) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -65,7 +61,7 @@ module.exports = {
 
         channelM.send({
             embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
             .setDescription(`${lang.commands.owner.poll[3]} ${message.author} \n\n ${sondage}\n\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setTitle(lang.commands.owner.poll[4])
@@ -80,7 +76,7 @@ module.exports = {
             if (!logsC) return;
             client.channels.cache.get(logsC).send({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
             .setTitle(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[6]}`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -97,7 +93,7 @@ module.exports = {
             let member = message.author;
             member.send({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[9]}`)
                 .setColor(colors.EPINGLE)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -111,7 +107,7 @@ module.exports = {
         }, duration)
         message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.VERT)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()

@@ -8,13 +8,9 @@ module.exports = {
   cooldown: 5000,
   onlyUsers: ["509765051435974692", "691644619758370846"],
 
-  run: async (client, message, args, Discord) => {
-    client.langs = new Discord.Collection()
-    
-          const Handler = require(`../../../Structures/Handlers/Handler`);
-      await Handler.loadLangs(client);
+  run: async (client, message, args, container) => {
       
-      let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
+      let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
       
         const foxdr = [
             "https://media.giphy.com/media/XijnjGLwbq5u8/giphy.gif",
@@ -35,7 +31,7 @@ module.exports = {
       
           message.reply({
               embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.PERSO)
                 .setTitle(lang.commands.fun.animaux[0])
                 .setURL(foxd)

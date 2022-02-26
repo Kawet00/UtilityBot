@@ -1,7 +1,7 @@
 const fs = require("fs");
 const Filer = require("../../Utils/Filer");
 const Discord = require("discord.js");
-const { path, config } = require("../../../index")
+const { path, config } = require("../../..")
 module.exports = async function(client) {
     const container = {
         RootPath: path,

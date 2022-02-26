@@ -10,20 +10,14 @@ module.exports = {
     aliases: ["av"],
     cooldown: 5000,
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
-        
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+    run: async(client, message, args, container) => {
 
         let member = message.mentions.users.first() || message.author
 
         let avatar = member.displayAvatarURL({ dynamic: true, size: 512 })
         axios.get(`https://discord.com/api/users/${member.id}`, {
             headers: {
-                Authorization: `Bot ${ROOT.config.token}`,
+                Authorization: `Bot ${container.Config.token}`,
             },
         })
         .then((res) => {
@@ -34,9 +28,9 @@ module.exports = {
             const url = `https://cdn.discordapp.com/banners/${member.id}/${banner}${extension}?size=4096`
         message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${emotes.autre.cool_pika} ┇ ${lang.commands.fun.avatar[0].replace('{USER}', member.username)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${emotes.autre.cool_pika} ┇ test2\n\n[test](https://nepust.fr/)`)
             .setThumbnail(avatar)
             .setImage(url)
             .setColor(colors.PERSO)
@@ -47,9 +41,9 @@ module.exports = {
     } else if(accent_color) {
         message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${emotes.autre.cool_pika} ┇ ${lang.commands.fun.avatar[1].replace('{USER}', member.username)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${emotes.autre.cool_pika} ┇ test\n\n[test](https://nepust.fr/)`)
             .setImage(avatar)
             .setColor(accent_color)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -59,9 +53,9 @@ module.exports = {
     } else {
         message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${emotes.autre.cool_pika} ┇ ${lang.commands.fun.avatar[2].replace('{USER}', member.username)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${emotes.autre.cool_pika} ┇ test1\n\n[test](https://nepust.fr/)`)
             .setThumbnail(avatar)
             .setColor(colors.PERSO)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})

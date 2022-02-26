@@ -8,19 +8,15 @@ module.exports = {
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 1800000,
 
-    run: async (client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async (client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
         let Lang = args[0];
 
-        if (!Lang) return message.channel.send({
+        if (!Lang) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
             .setDescription(`${lang.commands.owner.setL[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setTimestamp()
@@ -28,9 +24,9 @@ module.exports = {
             ]
         })
 
-        if (Lang !== "fr" && Lang !== "en" && Lang !== "FR" && Lang !== "EN" && Lang !== "Fr" && Lang !== "En" && Lang !== "fR" && Lang !=="eN") return message.channel.send({
+        if (Lang !== "fr" && Lang !== "en" && Lang !== "FR" && Lang !== "EN" && Lang !== "Fr" && Lang !== "En" && Lang !== "fR" && Lang !=="eN") return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
             .setDescription(`${lang.commands.owner.setL[1].replace('{ARGS}', args[0])}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setTimestamp()
@@ -50,9 +46,9 @@ module.exports = {
         await db.delete(`lang_${message.guild.id}`)
         await db.set(`lang_${message.guild.id}`, Lang)
 
-        message.channel.send({
+        message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
             .addField(lang.commands.owner.setL[2], `${Lang}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setTimestamp()

@@ -1,4 +1,3 @@
-const { MessageEmbed } = require("discord.js");
 const colors = require("../../../Storage/json/colors.json")
 const weather = require("weather-js");
 const emotes = require('../../../Storage/json/emotes.json')
@@ -9,13 +8,9 @@ module.exports = {
     onlyUsers: ["509765051435974692", "691644619758370846"],
     aliases: ["t", "weather"],
 
-    run: async(client, message, args) => {
-        client.langs = new Discord.Collection()
+    run: async(client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         let degree;
         if (args[0]) {
@@ -24,7 +19,7 @@ module.exports = {
             } else {
                 return message.reply({
                     embeds: [
-                    new MessageEmbed()
+                    new container.Discord.MessageEmbed()
                     .setColor(colors.EPINGLE)
                     .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -35,7 +30,7 @@ module.exports = {
         } else {
             return message.reply({
                 embeds: [
-                new MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -47,7 +42,7 @@ module.exports = {
         let ville = args.splice(1).join(" ")
         if (!ville) return message.reply({
             embeds: [
-            new MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -59,7 +54,7 @@ module.exports = {
             try {;
                 message.reply({
                     embeds: [
-                        new MessageEmbed()
+                        new container.Discord.MessageEmbed()
                         .setColor(colors.PERSO)
                         .setTitle(lang.commands.util.temp[3])
                         .setThumbnail(result[0].current.imageUrl)
@@ -78,7 +73,7 @@ module.exports = {
 
                 return message.reply({
                     embeds: [
-                    new MessageEmbed()
+                    new container.Discord.MessageEmbed()
                     .setColor(colors.RED)
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                     .setTimestamp()

@@ -17,18 +17,14 @@ module.exports = {
     onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ["MUTE_MEMBERS"],
 
-    run: async (client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async (client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         const member = message.mentions.members.first()
         if (!member) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -38,7 +34,7 @@ module.exports = {
 
         if (message.member.roles.highest.comparePositionTo(member.roles.highest) < 1 && message.author.id !== message.guild.ownerID) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -48,7 +44,7 @@ module.exports = {
 
         if (!member.manageable) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -59,7 +55,7 @@ module.exports = {
         const muteRole = message.guild.roles.cache.find(role => role.name === 'Muted')
         if (!muteRole) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -72,7 +68,7 @@ module.exports = {
             if (!logsC) lang = 'en';
             client.channels.cache.get(logsC).send({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
                 .setTitle(`${config.emotes.pepe.pepe_a} ┇ ${lang.commands.mods.unmute[3]}`)
                 .setColor(colors.EPINGLE)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -85,7 +81,7 @@ module.exports = {
             });
             message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.VERT)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()

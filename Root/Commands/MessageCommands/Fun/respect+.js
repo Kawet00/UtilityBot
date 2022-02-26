@@ -10,13 +10,9 @@ module.exports = {
     cooldown: 10000,
     onlyUsers: ["509765051435974692", "691644619758370846"],
 
-    async run(client, message, args, Discord) {
-        client.langs = new Discord.Collection()
-        
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
+    async run(client, message, args, container) {
 
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         let User = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase().includes() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase().includes() === args.join(' ').toLocaleLowerCase()) || message.member;
         let m = await message.reply(lang.commands.fun.respect[0]);

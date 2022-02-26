@@ -26,13 +26,9 @@ module.exports = {
         aliases: ["u-i"],
         cooldown: 5000,
 
-        run: async(client, message, args, Discord) => {
-            client.langs = new Discord.Collection()
-            
-                  const Handler = require(`../../../Structures/Handlers/Handler`);
-              await Handler.loadLangs(client);
+        run: async(client, message, args, container) => {
                 
-                let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
+                let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
                 const status = {
                     online: `✅${lang.commands.util.Ui[0]}`,
@@ -45,7 +41,7 @@ module.exports = {
                 const userFlags = memberM.user.flags.toArray();
           message.reply({
               embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.PERSO)
                 .setAuthor({ name: memberM.user.username, iconURL: memberM.user.displayAvatarURL({ dynamic: true })})
                 .setThumbnail(memberM.user.displayAvatarURL({ dynamic: true, size: 1024 }))

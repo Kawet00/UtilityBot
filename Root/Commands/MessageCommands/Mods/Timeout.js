@@ -10,18 +10,14 @@ module.exports = {
     onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ['MANAGE_MESSAGES'],
 
-	run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
-        
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+	run: async(client, message, args, container) => {
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
         
         const time = args[0]
         const user = message.mentions.members.first()
         if(!user) return message.reply({
             embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.red_dark)
                 .setDescription(`${emotes.pepe.pepe_srx} ┇ ${lang.commands.mods.timeout[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -43,7 +39,7 @@ module.exports = {
 		if(!milliseconds || milliseconds < 30000 || milliseconds > 2419200000) {
 			return message.reply({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
                     .setColor(colors.green_light)
                     .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.commands.mods.timeout[0]
                                                                                                .replace('{30000}', ms(30000))
@@ -66,7 +62,7 @@ module.exports = {
             });
         message.reply({
             embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.green_light)
                 .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.commands.mods.timeout[1]
                                                                                            .replace('{USER}', user)

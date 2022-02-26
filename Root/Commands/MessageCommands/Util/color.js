@@ -6,20 +6,16 @@ module.exports = {
   cooldown: 5000,
   onlyUsers: ["509765051435974692", "691644619758370846"],
 
-  run: async (client, message, args, Discord) => {
-    client.langs = new Discord.Collection()
+  run: async (client, message, args, container) => {
     
-          const Handler = require(`../../../Structures/Handlers/Handler`);
-      await Handler.loadLangs(client);
-    
-    let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
+    let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
     try {
       const hex = Math.random().toString(16).slice(2, 8).toUpperCase().slice(-6);
 
       message.channel.send({
         embeds: [
-          new Discord.MessageEmbed()
+          new container.Discord.MessageEmbed()
         .setColor(hex)
         .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.color[0].replace('{HEX}', hex)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
         .setTitle("#" + hex)

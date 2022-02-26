@@ -12,23 +12,19 @@ module.exports = {
   description: 'none',
   aliases: ["b-i"],
 
-  run: async (client, message, args, Discord) => {
-    client.langs = new Discord.Collection()
-    
-          const Handler = require(`../../../Structures/Handlers/Handler`);
-      await Handler.loadLangs(client);
+  run: async (client, message, args, container) => {
     let days = Math.floor(client.uptime / 86400000);
     let hours = Math.floor(client.uptime / 3600000) % 24;
     let minutes = Math.floor(client.uptime / 60000) % 60;
     let seconds = Math.floor(client.uptime / 1000) % 60;
     
     var prefix = db.get(`prefix_${message.guild.id}` || container.Config.prefix)
-    let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
+    let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
     const core = os.cpus()[0]
     message.reply({
       embeds: [
-      new Discord.MessageEmbed()
+      new container.Discord.MessageEmbed()
       .setColor(colors.PERSO)
       .setTitle(`BOTINFO`)
       .setThumbnail(client.user.displayAvatarURL({

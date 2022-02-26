@@ -1,4 +1,4 @@
-const config = require("../../../Config")
+const config = require("../../Storage/Vault/Config")
 module.exports = async function (message, command, Discord) {
     if (!command.ownerOnly) return false;
     if (config.developers.some(id => message.member.user.id == id)) return false

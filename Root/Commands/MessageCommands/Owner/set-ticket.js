@@ -9,17 +9,13 @@ module.exports = {
     onlyUsers: ["509765051435974692", "691644619758370846"],
     cooldown: 1800000,
 
-    run: async (client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async (client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
             .setDescription(lang.commands.owner.setT[0].replace('{TheBot}', `[Ticket Utility Bot](https://www.utilitybot.ga/buy/ticket-bot.html)\n\n[${lang.commandsa[0]}](https://nepust.fr/)`))
             .setTimestamp()

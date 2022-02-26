@@ -9,13 +9,9 @@ module.exports = {
     onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ["MANAGE_MESSAGES"],
 
-    run: async (client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async (client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         const user = message.mentions.users.first() || message.guild.members.cache.get(args[1]) || message.author;
 
@@ -26,7 +22,7 @@ module.exports = {
 
         message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPING)
             .setDescription(`${emotes.pepe.pepe_a} ┇ **${user.username}** ${lang.commands.mods.totalW[0].replace('{WARNINGS}', warnings)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})

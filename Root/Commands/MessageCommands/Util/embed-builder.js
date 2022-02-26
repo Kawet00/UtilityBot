@@ -5,15 +5,11 @@ module.exports= {
     aliases: ["e-b"],
     onlyUsers: ["509765051435974692", "691644619758370846"],
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async(client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
-        let msgBE = new Discord.MessageEmbed()
+        let msgBE = new container.Discord.MessageEmbed()
         .setTitle(`${lang.commands.util.embed[0]}`)
         .setDescription(`${lang.commands.util.embed[1]}`)
 
@@ -22,7 +18,7 @@ module.exports= {
         await Promise.all(['✏', '💬', '🕵️‍♂️', '🔻', '🔳', '⌚', '🖼', '🌐', '🔵', '↩', '✅'].map(r => msgwait.react(r)));
         await msgwait.edit({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setTitle(`${lang.commands.util.embed[3]}`)
             .setDescription(`${lang.commands.util.embed[4]}`)
             .addFields(
@@ -75,7 +71,7 @@ module.exports= {
 
         const filterR = (reaction, user) => user.id === message.author.id && !user.bot;
         const filterM = (m) => m.author.id === message.author.id && !m.author.bot;
-        const collectorR = await new Discord.ReactionCollector(msgwait, filterR);
+        const collectorR = await new container.Discord.ReactionCollector(msgwait, filterR);
         collectorR.on('collect', async reaction => {
             switch(reaction._emoji.name) {
                 case '✏':

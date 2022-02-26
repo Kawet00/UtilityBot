@@ -1,10 +1,12 @@
 const db = require("quick.db")
+const Config = require('../../Storage/Vault/Config')
 module.exports = async function (client, message, command, isInteraction, interactionType, Discord) {
     if (!command.cooldown) return false;
     const currentTime = Date.now()
     const user = message.member.user
     const cooldown = command.cooldown
     const oldTime = await db.get(`CooldownSystem.${message.guild.id}.${command.name}.${interactionType ?? "Normal"}.${user.id}`) ?? 0
+    if (Config.developers.some(id => user.id == id)) return false;
     if (Math.floor(currentTime - oldTime) >= cooldown || oldTime == 0) {
         await db.set(`CooldownSystem.${message.guild.id}.${command.name}.${interactionType ?? "Normal"}.${user.id}`, currentTime)
         return false;

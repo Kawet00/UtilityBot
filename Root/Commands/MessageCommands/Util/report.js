@@ -7,19 +7,15 @@ module.exports = {
     onlyUsers: ["509765051435974692", "691644619758370846"],
     cooldown: 100000,
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async(client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         let type = "bug" || "other" || "latency" || "ping" || "autre";
         type = args[0]
         if (!type) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.report[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.EPINGLE)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -30,7 +26,7 @@ module.exports = {
         let co = args.slice(1).join(" ")
         if (!co) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -44,7 +40,7 @@ module.exports = {
         try {
             c.send({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
             .setColor(colors.RED)
             .setDescription(`**${message.member.user.tag}** ${lang.commands.util.report[2]}`)
             .addFields({
@@ -82,7 +78,7 @@ module.exports = {
             }).then(() => {
                 message.reply({
                     embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
                     .setColor(colors.VERT)
                     .setDescription(`${config.emotes.pepe.pepe_s} ┇ ${lang.commands.util.report[8]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -93,7 +89,7 @@ module.exports = {
         } catch (err) {
             message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.RED)
                 .setDescription(`${config.emotes.autre.attention} ┇ ${lang.commands.util.report[9].replace('{SERVER}', "[support](https://discord.gg/BT4SyHUM5z)")}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})

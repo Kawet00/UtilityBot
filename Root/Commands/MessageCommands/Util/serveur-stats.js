@@ -10,13 +10,9 @@ module.exports = {
     aliases: ["s-s", "server-stats"],
     cooldown: 10000,
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
-        
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
+    run: async(client, message, args, container) => {
         var prefix = db.get(`prefix_${message.guild.id}` || container.Config.prefix)
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         const verificationLevels = {
             NONE: lang.commands.util.Ss[0],
@@ -28,7 +24,7 @@ module.exports = {
         const memberS = message.guild.members.cache;
         let totalmembers = message.guild.members.cache.size;
 
-        const EmbedStats = new Discord.MessageEmbed()
+        const EmbedStats = new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
             .setTitle("STATS")
             .setDescription(lang.commands.util.Ss[3])

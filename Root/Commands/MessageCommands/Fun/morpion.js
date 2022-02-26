@@ -8,13 +8,9 @@ module.exports = {
     aliases: ["noughts-and-crosses", "n-a-c"],
     onlyUsers: ["509765051435974692", "691644619758370846"],
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async(client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         const emojis = {
             "1️⃣": "1",
@@ -29,7 +25,7 @@ module.exports = {
         };
 
         message.reply({
-            embeds: [new Discord.MessageEmbed()
+            embeds: [new container.Discord.MessageEmbed()
                 .setDescription(`${emotes.pepe.pepe_a}  ┇ ${lang.commands.fun.morpion[0]} `)
                 .setColor(colors.PERSO)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -64,7 +60,7 @@ module.exports = {
           player2
         }`
             );
-            let morpion = await channel.send({embeds: [new Discord.MessageEmbed()
+            let morpion = await channel.send({embeds: [new container.Discord.MessageEmbed()
                 .setDescription(
                     `🗡️ FIGHT${
             player1
@@ -89,7 +85,7 @@ module.exports = {
                     player2: "O",
                 },
             ];
-            let Morpion = new Discord.MessageEmbed()
+            let Morpion = new container.Discord.MessageEmbed()
                 .setTitle(lang.commands.fun.morpion[3])
                 .setColor(colors.PERSO)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -151,7 +147,7 @@ module.exports = {
                 players[player].reaction;
             msg.edit({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
                     .setDescription(`${lang.commands.fun.morpion[4]}  : ${
             player === 0 ? players[1].user : players[0].user
           }\`\`\`

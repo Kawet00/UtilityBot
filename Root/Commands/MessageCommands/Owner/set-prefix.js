@@ -18,19 +18,15 @@ module.exports = {
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 1800000,
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
-        
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
+    run: async(client, message, args, container) => {
         var prefix = db.get(`prefix_${message.guild.id}`)
         if(prefix = null) prefix = container.Config.prefix
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         if (!args[0]) {
             return message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setColor(colors.EPINGLE)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -41,7 +37,7 @@ module.exports = {
         if (args[1]) {
             return message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.commands.owner.setP[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
@@ -56,7 +52,7 @@ module.exports = {
                 if (!logsC) return;
                 client.channels.cache.get(logsC).send({
                     embeds: [
-                        new Discord.MessageEmbed()
+                        new container.Discord.MessageEmbed()
                 .setTitle(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
                 .setColor(colors.EPINGLE)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -69,7 +65,7 @@ module.exports = {
                 });
             return await message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setDescription(`${emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setP[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setColor(colors.VERT)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -80,7 +76,7 @@ module.exports = {
         if (args[0].length > 5) {
             return await message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP["6"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
@@ -94,7 +90,7 @@ module.exports = {
             if (!logsC) return;
             client.channels.cache.get(logsC).send({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
             .setTitle(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -108,7 +104,7 @@ module.exports = {
 
         await message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setDescription(`${config.emotes.autre.cool_pika} ┇ ${lang.commands.owner.setP["7"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.VERT)
             .setTimestamp()

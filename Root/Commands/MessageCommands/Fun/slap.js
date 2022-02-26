@@ -8,17 +8,13 @@ module.exports = {
     cooldown: 10000,
     onlyUsers: ["509765051435974692", "691644619758370846"],
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async(client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         if (!message.mentions.users.first()) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.fun.slap[0]} `)
             .setColor(colors.EPINGLE)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -28,7 +24,7 @@ module.exports = {
 
         if (message.mentions.users.first().id === client.user.id) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.commands.fun.slap[1]}`)
             .setColor(colors.RED)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -38,7 +34,7 @@ module.exports = {
         
         if (message.mentions.users.first().id == message.author.id) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.RED)
             .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.commands.fun.slap[2]}`)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -51,7 +47,7 @@ module.exports = {
 
         message.reply({
             embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
             .setTitle(lang.commands.fun.slap[3]
             .replace('{USERM}', message.mentions.users.first().username)

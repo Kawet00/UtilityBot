@@ -8,13 +8,9 @@ module.exports = {
     cooldown: 5000,
     onlyUsers: ["509765051435974692", "691644619758370846"],
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async(client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
         
         const fox = [
             "https://cdn.discordapp.com/attachments/692324903432486952/749335532269469696/7794422396_un-renard-illustration.png",
@@ -35,7 +31,7 @@ module.exports = {
 
         message.reply({
             embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
             .setTitle(lang.commands.fun.animaux[0])
             .setURL(fox2)

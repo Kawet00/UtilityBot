@@ -8,17 +8,13 @@ module.exports = {
     aliases: ["s-w", "website", "w-s"],
     cooldown: 20000,
 
-    run: async (client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async (client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
           .setTimestamp()

@@ -20,19 +20,15 @@ module.exports = {
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 600000,
 
-    run: async(client, message, args, Discord) => {
-        client.langs = new Discord.Collection()
+    run: async(client, message, args, container) => {
         
-              const Handler = require(`../../../Structures/Handlers/Handler`);
-          await Handler.loadLangs(client);
-        
-        let lang = client.langs.get(db.get(`lang_${message.guild.id}`));
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         let giveawayChannel = message.mentions.channels.first();
         if (!giveawayChannel) {
             return message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -45,7 +41,7 @@ module.exports = {
         if (!giveawayDuration) {
             return message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -56,7 +52,7 @@ module.exports = {
 
         if (isNaN(ms(giveawayDuration))) return message.reply({
             embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
             .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -68,7 +64,7 @@ module.exports = {
         if (isNaN(giveawayNumberWinners) || (parseInt(giveawayNumberWinners) <= 0)) {
             return message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
                 .setDescription(`${config.emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -81,7 +77,7 @@ module.exports = {
         if (!giveawayPrize) {
             return message.reply({
                 embeds: [
-                new Discord.MessageEmbed()
+                new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
                 .setDescription(`${config.emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -119,7 +115,7 @@ module.exports = {
             if (!logsC) return;
             client.channels.cache.get(logsC).send({
                 embeds: [
-                    new Discord.MessageEmbed()
+                    new container.Discord.MessageEmbed()
             .setTitle(`${config.emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[16]}`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})

@@ -8,20 +8,16 @@ module.exports = {
             onlyUsers: ["509765051435974692", "691644619758370846"],
             cooldown: 5000,
 
-            run: async (client, message, args, Discord) => {
-              client.langs = new Discord.Collection()
-              
-                    const Handler = require(`../../../Structures/Handlers/Handler`);
-                await Handler.loadLangs(client);
+            run: async (client, message, args, container) => {
 
-              let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
+              let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
         const msg = await message.channel.send('Pinging...');
         const latency = msg.createdTimestamp - message.createdTimestamp;
   
         message.reply({
           embeds: [
-            new Discord.MessageEmbed()
+            new container.Discord.MessageEmbed()
             .addFields(
               {
                 name: `\`\`\`Latence:\`\`\``,
