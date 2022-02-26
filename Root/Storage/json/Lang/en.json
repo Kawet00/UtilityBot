@@ -679,16 +679,18 @@
         "Message sent to **{USER}**"
       ],
       "report": [
-        "Please specify the type of problem to report! (`bug`, `latency` or `other`)",
-        "Please specify the problem you want to report!",
-        "reported a problem",
-        "ID",
-        "Server Name",
-        "Server ID",
-        "Problem",
-        "Content of the problem",
-        "Thanks for reporting the problem you found!",
-        "Problem with sending message please try again later or go to the {SERVER} server!"
+        "What is the type of problem?",
+        "Please specify the type of problem to report! (`bug`, `latency` or `other`) then write your report.",
+        "Bug",
+        "Ping",
+        "Other",
+        "If it's a bug",
+        "If it's a problem about the ping",
+        "if it's another problem (bad handwriting, translation mistake, ...)",
+        "Now, write your problem:",
+        "Thanks for this report!",
+        "Your problem is:",
+        "Do you want confirm your report and send it ? (👍: yes, 👎: no)"
       ],
       "Ss": [
         "Nothing",

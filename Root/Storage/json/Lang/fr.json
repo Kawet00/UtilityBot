@@ -668,16 +668,18 @@
         "Message envoyer à **{USER}**"
       ],
       "report": [
-        "Veuillez spécifier le type de problème ! (`bug`, `ping` or `autre`)",
-        "Veuillez préciser votre problème !",
-        "à signaler un problème",
-        "ID",
-        "Nom du serveur",
-        "ID du servuer",
-        "Problème",
-        "Contenu du problème",
-        "Merci d'avoir signaler le problème que vous avez trouver !",
-        "Problème en envoyant le message réessayer ou rejoignez le serveur de {SERVER}!"
+        "Quel est le type de problème ?",
+        "Veuillez spécifier le type de problème ! (`bug`, `ping` or `autre`) puis écrivez votre signalement.",
+        "Bug",
+        "Ping",
+        "Autre",
+        "Si c'est un bug.",
+        "Si c'est un problème de ping",
+        "Si c'est un problème autre (mauvaise écriture, erreur de traduction, ...)",
+        "Maintenant, écrivez votre problème:",
+        "Merci pour votre signalement !",
+        "Votre problem est :",
+        "Vous voulez confirmé votre signalement et l'envoyer ? (👍: oui, 👎: non)"
       ],
       "Ss": [
         "Aucun",

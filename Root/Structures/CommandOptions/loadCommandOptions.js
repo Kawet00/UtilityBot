@@ -8,14 +8,14 @@ module.exports = async function (client, message, command, isInteraction, intera
         Discord: Discord
     }
     if (await require("./Cooldown")(client, message, command, isInteraction, interactionType, Discord)) return;
-    else if (await require("./OwnerOnly")(message, command, Discord)) return;
-    else if (await require("./UserPermissions")(message, command, Discord)) return;
-    else if (await require("./ClientPermissions")(message, command, Discord)) return;
-    else if (await require("./AnyUserPermissions")(message, command, Discord)) return;
-    else if (await require("./AnyClientPermissions")(message, command, Discord)) return;
-    else if (await require("./RequiredAnyRole")(message, command, Discord)) return;
-    else if (await require("./RequiredRoles")(message, command, Discord)) return;
-    else if (await require("./OnlyChannels")(message, command, Discord)) return;
+    else if (await require("./OwnerOnly")(client, message, command, Discord)) return;
+    else if (await require("./UserPermissions")(client, message, command, Discord)) return;
+    else if (await require("./ClientPermissions")(client, message, command, Discord)) return;
+    else if (await require("./AnyUserPermissions")(client, message, command, Discord)) return;
+    else if (await require("./AnyClientPermissions")(client, message, command, Discord)) return;
+    else if (await require("./RequiredAnyRole")(client, message, command, Discord)) return;
+    else if (await require("./RequiredRoles")(client, message, command, Discord)) return;
+    else if (await require("./OnlyChannels")(client, message, command, Discord)) return;
     else if (await require("./OnlyGuilds")(client, message, command, Discord)) return;
     else if (await require("./OnlyUsers")(client, message, command, Discord)) return;
     else {

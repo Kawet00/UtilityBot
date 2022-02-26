@@ -2,7 +2,7 @@ const emotes = require('../../Storage/json/emotes.json')
 const colors = require('../../Storage/json/colors.json')
 const db = require('quick.db')
 
-module.exports = async function (message, command, Discord) {
+module.exports = async function (client, message, command, Discord) {
     const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
     if (!command.requiredAnyRole) return false;
     if (command.requiredAnyRole.some(i => message.member.roles.cache.has(i))) return false;
