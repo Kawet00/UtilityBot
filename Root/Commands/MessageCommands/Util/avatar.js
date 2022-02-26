@@ -2,6 +2,7 @@ const emotes = require('../../../Storage/json/emotes.json')
 const colors = require('../../../Storage/json/colors.json')
 const db = require('quick.db')
 const axios = require('axios')
+const { Util } = require('discord.js')
 
 module.exports = {
     name: "avatar",
@@ -32,7 +33,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${emotes.autre.cool_pika} ┇ test2\n\n[test](https://nepust.fr/)`)
+            .setDescription(`${emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[0]} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
             .setThumbnail(avatar)
             .setImage(url)
             .setColor(colors.PERSO)
@@ -45,7 +46,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${emotes.autre.cool_pika} ┇ test\n\n[test](https://nepust.fr/)`)
+            .setDescription(`${emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[1]} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
             .setImage(avatar)
             .setColor(accent_color)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
@@ -57,7 +58,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${emotes.autre.cool_pika} ┇ test1\n\n[test](https://nepust.fr/)`)
+            .setDescription(`${emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[2]} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
             .setThumbnail(avatar)
             .setColor(colors.PERSO)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})

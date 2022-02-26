@@ -1,6 +1,8 @@
 module.exports = {
     name: "log",
     type: "MESSAGE",
+    ownerOnly: true,
+
     run: async(client, interaction, container) => {
         console.log(interaction.channel.messages.cache.get(interaction.targetId) ?? await interaction.channel.messages.fetch(interaction.targetId))
         interaction.reply({

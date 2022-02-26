@@ -679,7 +679,14 @@
         "Maintenant, écrivez votre problème:",
         "Merci pour votre signalement !",
         "Votre problem est :",
-        "Vous voulez confirmé votre signalement et l'envoyer ? (👍: oui, 👎: non)"
+        "Vous voulez confirmé votre signalement et l'envoyer ? (👍: oui, 👎: non)",
+        "a signaler un problème !",
+        "ID de l'utilisateur",
+        "Nom du serveur",
+        "ID du serveur",
+        "Type de problème",
+        "Le problème",
+        "Vous devez plus détaillez votre problème."
       ],
       "Ss": [
         "Aucun",

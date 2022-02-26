@@ -690,7 +690,14 @@
         "Now, write your problem:",
         "Thanks for this report!",
         "Your problem is:",
-        "Do you want confirm your report and send it ? (👍: yes, 👎: no)"
+        "Do you want confirm your report and send it ? (👍: yes, 👎: no)",
+        "reported a problem!",
+        "User ID",
+        "Name of the server",
+        "ID of the server",
+        "Type of problem",
+        "The problem",
+        "You need to give more details about your problem."
       ],
       "Ss": [
         "Nothing",

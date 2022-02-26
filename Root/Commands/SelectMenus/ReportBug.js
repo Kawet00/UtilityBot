@@ -2,13 +2,22 @@ const db = require('quick.db')
 const Discord = require('discord.js')
 const colors = require('../../Storage/json/colors.json')
 const emoji = require('../../Storage/json/emotes.json')
+const config = require('../../Storage/Vault/Config')
 
 module.exports = {
     name: "bug",
     run: async(client, interaction) => {
         let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
-        const fmsg = interaction.reply(lang.commands.util.report[8])
+        interaction.reply({
+            embeds: [
+                new Discord.MessageEmbed()
+                .setDescription(`${emoji.pepe.pepe_srx} ┇ ${lang.commands.util.report[8]}`)
+                .setColor(colors.PERSO)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+            ]
+        })
 
         const filter = (m) => {
             return m.author.id === interaction.user.id
@@ -19,32 +28,85 @@ module.exports = {
             time: 1000 * 60
         })
 
-        collector.on('collect', message => {
-            console.log(message.content)
-        })
-
         collector.on('end', collected => {
-            if (collected.size === 10) {
-                interaction.channel.send('met du text stp')
+            if (collected.length < 25) {
+                interaction.channel.send({
+                    embeds: [
+                        new Discord.MessageEmbed()
+                        .setColor(colors.EPINGLE)
+                        .setDescription(`${emoji.pepe.pepe_a} ┇ ${lang.commands.util.report[18]}`)
+                        .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                        .setTimestamp()
+                    ]
+                })
                 return;
             }
 
             let text = ''
 
             collected.forEach((message) => {
-                text += `${message.content}\n`
+                text += `${message.content}`
             });
 
             interaction.channel.send({
                 embeds: [
                     new Discord.MessageEmbed()
                     .setColor(colors.VERT)
-                    .setDescription(`${emoji.autre.intelligent} ${lang.commands.util.report[9]}`)
+                    .setDescription(`${emoji.blob.blob_thx} ┇ ${lang.commands.util.report[9]}`)
                     .addField(lang.commands.util.report[10], "`" + text + "`")
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
                 ]
             }).then(() => {
+                client.guilds.cache.get(config.supporGuild).channels.cache.get(config.reportChannel).send({
+                    embeds: [
+                        new Discord.MessageEmbed()
+                .setColor(colors.RED)
+                .setDescription(`**${interaction.member.user.tag}** ${lang.commands.util.report[12]}`)
+                .addFields({
+                    name: lang.commands.util.report[13],
+                    value: interaction.user.id,
+                    inline: false,
+                }, {
+                    name: "\u200B",
+                    value: "\u200B",
+                    inline: false,
+                }, {
+                    name: lang.commands.util.report[14],
+                    value: interaction.guild.name,
+                    inline: true,
+                }, {
+                    name: lang.commands.util.report[15],
+                    value: interaction.guild.id,
+                    inline: true,
+                }, {
+                    name: "\u200B",
+                    value: "\u200B",
+                    inline: false,
+                }, {
+                    name: lang.commands.util.report[16],
+                    value: 'Bug',
+                    inline: false,
+                }, {
+                    name: lang.commands.util.report[17],
+                    value: "`" + text + "`",
+                    inline: false
+                })
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                .setTimestamp()
+                    ]
+                }).then(() => {
+                    interaction.channel.send({
+                        embeds: [
+                            new Discord.MessageEmbed()
+                            .setColor(colors.VERT)
+                            .setDescription(`${emoji.autre.intelligent} ┇ ${lang.commands.util.report[19]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                        ]
+                    })
+                })
+            })/*.then(() => {
                 interaction.channel.send({
                     embeds: [
                         new Discord.MessageEmbed()
@@ -80,10 +142,7 @@ module.exports = {
                         interaction.channel.send('test2')
                     }
                 })
-            })
+            })*/
         })
-
-        
-
     }
 }
