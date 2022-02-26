@@ -1,0 +1,768 @@
+{
+    "fullName": "French",
+    "shortName": "fr",
+    "cmdOptions": {
+      "AnyClientPerm": [
+        "J'ai besoin de l'une de ces permissions pour cette commande.",
+        "Non requis"
+      ],
+      "AnyUserPerm": [
+        "Vous avez besoin de l'une de ces permissions pour cette commande.",
+        "Non requis"
+      ],
+      "ClientPerm": [
+        "J'ai besoin de ces permissions pour exécuté cette commande.",
+        "Permission(s) requise"
+      ],
+      "Cooldown": [
+        "Vous êtes acctuellement en cooldown pour cette commande inutile de retaper la commande, le cooldown se termine le {TIME}.",
+        "Temp du cooldown"
+      ],
+      "OnlyChannels": [
+        "Cette commande peut être utilisé que dans certain salon.",
+        "Ces salons"
+      ],
+      "OnlyGuild": [
+        "Cette commande peut être utilisé que dans certain serveurs.",
+        "Ces serveurs"
+      ],
+      "OnlyUsers": [
+        "Cette commande peut être utilisé que par certaine personnes.",
+        "Ces personnes"
+      ],
+      "OwnerOnly": [
+        "Cette commande est réservé au développeur de Utility Bot."
+      ],
+      "RequiredAnyRole": [
+        "Vous avez besoin d'avoir de l'un de ces roles pour cette commande.",
+        "Ces roles"
+      ],
+      "RequiredRoles": [
+        "Vous n'avez pas le role requis.",
+        "Role requis"
+      ],
+      "UserPerms": [
+        "Vous n'avez pas les permissions requise pour éxécuté cette commande.",
+        "Permission(s) requise"
+      ]
+    },
+    "commandsa": [
+      "Partenaire"
+    ],
+    "commands": {
+      "fun": {
+        "ball": [
+          "Veuillez spécifiez votre question.",
+          "Vous devez poser une vrai question !",
+          "Vous avez dit :",
+          "Réponse :",
+          "Oui, mais...",
+          "Hmm, franchement pas sûr !",
+          "NON !",
+          "mmm...Ouai.",
+          "OUIIIIII !!!!",
+          "Votre question doit avoir minimum 10 caractères."
+        ],
+        "avatar": [
+          "Avatar et bannière de **{USER}**.",
+          "**{USER}** n'a pas de bannière donc je vous met la couleur de sa bannière dans la couleur du message.",
+          "**{USER}** n'a pas de bannière ni de couleur de bannière."
+        ],
+        "animaux": [
+          "L'image ne s'affiche pas ? Cliquer içi !",
+          "OUAF",
+          "QUI QUI",
+          "MIAOU"
+        ],
+        "meme": [
+          "**Veuillez patientez...**"
+        ],
+        "morpion": [
+          "Qui veut jouer ? `Besoin de 2 joueurs`",
+          "Morpion",
+          "VOUS DEVEZ ATTENDRE QUE TOUT LES EMOJIS SOIT MIS SINON SA NE MARCHE PAS !!!",
+          "Jeu : Morpion",
+          "Joueur",
+          "Joueur **{PLAYER}** a gagner.\nDans 5 secondes ce channel sera supprimer.",
+          "Egualité",
+          "Aucun gagnant pour cette partie.\nDans 5 secondes ce channel sera supprimer."
+        ],
+        "pf": [
+          "Pile",
+          "Face"
+        ],
+        "respect": [
+          "**Veuillez patientez...**"
+        ],
+        "slap": [
+          "Vous devez mentionner le membre a gifler !",
+          "Mais pourquoi vous voulez me gifler ?",
+          "Vous ne pouvez pas vous gifler ! Ou bien vous êtes vraiment bête !",
+          "OwO, {USERM} à été gifler par {USER}! (la honte {EMOJI})."
+        ],
+        "wanted": [
+          "**Veuillez patientez...**"
+        ]
+      },
+      "helpa": [
+        "Oui",
+        "Non",
+        "Commande en Slash ?",
+        "List des commandes",
+        "Ce qui est entre `<>` est obligatoire a mettre et ce qui sont entre `[]` ne sont pas obligatoire a mettre. Dans 3 minutes se message ne sera plus utilisable. \nPour avoir plus d'information sur une commande, faites {PREFIX}help-[commande]",
+        "Description",
+        "Usage",
+        "Alias",
+        "Aucun alias",
+        "Catégorie",
+        "Permissions",
+        "`Aucune Permissions`",
+        "`Modérateur`",
+        "`Bannir des membres`",
+        "`Géré les messages`",
+        "`Kick ddes membres`",
+        "`Rendre Muet des membres`",
+        "`Administrateur`",
+        "`Propriétaire du serveur`"
+      ],
+      "help": {
+        "moderation": [
+          "Commandes de Modération",
+          "Vous devez faire : `{PREFIX}ban <un membre> [la raison]`",
+          "Vous devez faire : `{PREFIX}kick <un membre> [la raison]`",
+          "Vous devez faire : `{PREFIX}mute <un membre> [la raison]`",
+          "Vous devez faire : `{PREFIX}unmute <un membre> [la raison]`",
+          "Vous devez faire : `{PREFIX}clear <un nombre de message a supprimer>`",
+          "Vous devez faire : `{PREFIX}warn <un membre> <la raison>`",
+          "Vous devez faire : `{PREFIX}delete-warns <un membre> <un nombre>`",
+          "Vous devez faire : `{PREFIX}total-warns <un membre>`",
+          "Vous devez faire : `{PREFIX}set-prefix <un nouveau prefix>`",
+          "Vous devez faire : `{PREFIX}set-welcome <un salon>`",
+          "Vous devez faire : `{PREFIX}set-bye <un salon>`",
+          "Vous devez faire : `{PREFIX}set-logs <un salon>`",
+          "Vous devez faire : `{PREFIX}set-lang <fr/en>`",
+          "Vous devez faire : `{PREFIX}timeout <un membre> <un temp> [la raison]`"
+        ],
+        "fun": [
+            "Commandes de Fun",
+            "MORPION",
+            "PILE OU FACE",
+          "Vous devez faire : `{PREFIX}8ball <une question>`",
+          "Vous devez faire : `{PREFIX}fun-dog`",
+          "Vous devez faire : `{PREFIX}dog`",
+          "Vous devez faire : `{PREFIX}fun-cat`",
+          "Vous devez faire : `{PREFIX}cat`",
+          "Vous devez faire : `{PREFIX}fun-fox`",
+          "Vous devez faire : `{PREFIX}fox`",
+          "Vous devez faire : `{PREFIX}fun-bird`",
+          "Vous devez faire : `{PREFIX}bird`",
+          "Vous devez faire : `{PREFIX}morpion`",
+          "Vous devez faire : `{PREFIX}pile-ou-face`",
+          "Vous devez faire : `{PREFIX}message <un membre> <le message>`",
+          "Vous devez faire : `{PREFIX}anonymous-message <un membre> <le message>`",
+          "Vous devez faire : `{PREFIX}wanted [un membre]`",
+          "Vous devez faire : `{PREFIX}respect+ [un membre]`",
+          "Vous devez faire : `{PREFIX}slap <un membre>`"
+        ],
+        "info": [
+            "Commandes d'Information",
+            "SERVEUR-STATS",
+          "Vous devez faire : `{PREFIX}ping`",
+          "Vous devez faire : `{PREFIX}uptime`",
+          "Vous devez faire : `{PREFIX}user-info [un membre]`",
+          "Vous devez faire : `{PREFIX}bot-info`",
+          "Vous devez faire : `{PREFIX}serveur-stats`",
+          "Vous devez faire : `{PREFIX}invite`"
+        ],
+        "util": [
+            "Commandes Utiles",
+            "SONDAGE",
+            "TEMP",
+          "SITE WEB",
+          "Vous devez faire : `{PREFIX}sondage <un salon> <un temp> <le sondage>`",
+          "Vous devez faire : `{PREFIX}start-g <un salon> <un temp> <le nombre de gagnant(s)> <le cadeau>`",
+          "Vous devez faire : `{PREFIX}reroll-g <id du giveaway>`",
+          "Vous devez faire : `{PREFIX}color`",
+          "Vous devez faire : `{PREFIX}vote`",
+          "Vous devez faire : `{PREFIX}avatar [un membre]`",
+          "Vous devez faire : `{PREFIX}report <bug/ping/autre> <votre problème>`",
+          "Vous devez faire : `{PREFIX}weather <C/F> <une ville>`",
+          "Vous devez faire : `{PREFIX}calcul <un nombre> <+|-|*|/> <un nombre>`",
+          "Vous devez faire : `{PREFIX}site-web`",
+          "Vous devez faire : `{PREFIX}support`"
+        ],
+        "helpB": [
+          "Vous aurez des information sur la commande `{PREFIX}8ball`:",
+          "Posez une question et Utility Bot vous répondra.",
+          "`{PREFIX}8ball <une question>`"
+        ],
+        "helpA": [
+          "Vous aurez des information sur la commande `{PREFIX}avatar`:",
+          "Avoir votre avatar ou l'avatar d'un membre du serveur.",
+          "`{PREFIX}avatar [un membre]`"
+        ],
+        "helpBa": [
+          "Vous aurez des information sur la commande `{PREFIX}ban`:",
+          "`{PREFIX}ban <un membre> [la raison]`"
+        ],
+        "helpBi": [
+          "Vous aurez des information sur la commande `{PREFIX}bird`:",
+          "Avoir des images random d'oiseau."
+        ],
+        "helpBo": [
+          "Vous aurez des information sur la commande `{PREFIX}bot-info`:",
+          "Avoir un peu plus d'information sur Utility Bot"
+        ],
+        "helpCal": [
+          "Vous aurez des information sur la commande `{PREFIX}calcul`:",
+          "Faire des calcules.",
+          "`{PREFIX}calcul <un nombre> <+|-|*|/> <un nombre>`"
+        ],
+        "helpCat": [
+          "Vous aurez des information sur la commande `{PREFIX}cat`:",
+          "Avoir des images random de chat."
+        ],
+        "helpCl": [
+          "Vous aurez des information sur la commande `{PREFIX}clear`:",
+          "Supprimer des messages.",
+          "`{PREFIX}clear <un nombre de message a supprimer>`"
+        ],
+        "helpSlap": [
+          "Vous aurez des information sur la commande `{PREFIX}slap`",
+          "Vous pouvez gilfer un membre du serveur.",
+          "{PREFIX}slap <un membre>"
+        ],
+        "helpCo": [
+          "Vous aurez des information sur la commande `{PREFIX}color`:",
+          "Avoir une couleur au hasard."
+        ],
+        "helpDW": [
+          "Vous aurez des information sur la commande `{PREFIX}delete-warns`:",
+          "Enlever tout les warns d'un membre.",
+          "`{PREFIX}delete-warns <un membre>`"
+        ],
+        "helpM": [
+          "Vous aurez des information sur la commande `{PREFIX}meme`:",
+          "Vous pouvez voir des memes"
+        ],
+        "helpDog": [
+          "Vous aurez des information sur la commande `{PREFIX}dog`:",
+          "Avoir une image de chien."
+        ],
+        "helpFox": [
+          "Vous aurez des information sur la commande `{PREFIX}fox`:",
+          "Avoir une image de renard."
+        ],
+        "helpFBI": [
+          "Vous aurez des information sur la commande `{PREFIX}fun-bird`:",
+          "Avoir un gif d'un drôle d'oiseau."
+        ],
+        "helpFCat": [
+          "Vous aurez des information sur la commande `{PREFIX}fun-cat`:",
+          "Avoir un gif d'un drôle de chat."
+        ],
+        "helpFDog": [
+          "Vous aurez des information sur la commande `{PREFIX}fun-dog`:",
+          "Avoir un gif d'un drôle de chien."
+        ],
+        "helpFFox": [
+          "Vous aurez des information sur la commande `{PREFIX}fun-fox`:",
+          "Avoir un gif d'un drôle de renard."
+        ],
+        "helpI": [
+          "Vous aurez des information sur la commande `{PREFIX}invite`:",
+          "Avoir le lien d'invitation pour Utility Bot."
+        ],
+        "helpK": [
+          "Vous aurez des information sur la commande `{PREFIX}kick`:",
+          "Kick des membres.",
+          "`{PREFIX}kick <un membre> [la raison]`"
+        ],
+        "helpMsgA": [
+          "Vous aurez des information sur la commande `{PREFIX}anonymous-message`:",
+          "Envoyer un message anonyme a un membre.",
+          "`{PREFIX}anonymous-message <un membre> <un message>`"
+        ],
+        "helpMsg": [
+          "Vous aurez des information sur la commande `{PREFIX}message`:",
+          "Envoyer un message a un membre.",
+          "`{PREFIX}message <un membre> <un message>`"
+        ],
+        "helpMo": [
+          "Vous aurez des information sur la commande `{PREFIX}morpion`:",
+          "Fair eun morpion avec un membre du serveur (Les 2 joueurs doivent mettre l'émoji qui a avec le message)."
+        ],
+        "helpMu": [
+          "Vous aurez des information sur la commande `{PREFIX}mute`:",
+          "Mute des membres.",
+          "`{PREFIX}mute <un membre> [la raison]`"
+        ],
+        "helpPF": [
+          "Vous aurez des information sur la commande `{PREFIX}pile-ou-face`:",
+          "Faire un pile ou face."
+        ],
+        "helpP": [
+          "Vous aurez des information sur la commande `{PREFIX}ping`:",
+          "Savoir le ping de Utility Bot."
+        ],
+        "helpR": [
+          "Vous aurez des information sur la commande `{PREFIX}report`:",
+          "Signaler un problème de Utility Bot a la direction.",
+          "`{PREFIX}report <bug/ping/autre> <le problème>`"
+        ],
+        "helpRg": [
+          "Vous aurez des information sur la commande `{PREFIX}reroll-g`:",
+          "Trouver un autre gagnant pour votre giveaway.",
+          "`{PREFIX}reroll-g <id du giveaway>`"
+        ],
+        "helpRe": [
+          "Vous aurez des information sur la commande `{PREFIX}respect+`:",
+          "Respect+ un membre ou vous même.",
+          "`{PREFIX}respect+ [un membre]`"
+        ],
+        "helpSS": [
+          "Vous aurez des information sur la commande `{PREFIX}serveur-stats`:",
+          "Avoir des information en plus sur le serveur."
+        ],
+        "helpSLa": [
+          "Vous aurez des information sur la commande `{PREFIX}set-lang`:",
+          "Définissez la langue de Utility Bot (`fr` (Français) ou `en` (Anglais))"
+        ],
+        "helpSl": [
+          "Vous aurez des information sur la commande `{PREFIX}set-logs`:",
+          "Définir un salon de logs.",
+          "`{PREFIX}set-logs <un salon>`"
+        ],
+        "helpSp": [
+          "Vous aurez des information sur la commande `{PREFIX}set-prefix`:",
+          "Changer le prefix de Utility Bot sur le serveur.",
+          "`{PREFIX}set-prefix <votre nouveau prefix>`"
+        ],
+        "helpSw": [
+          "Vous aurez des informations sur la commande `{PREFIX}set-welcome`:",
+          "Définir le salon où il y aura le message de bienvenue.",
+          "`{PREFIX}set-welcome <un salon>`"
+        ],
+        "helpSwe": [
+          "Vous aurez des informations sur la commande `{PREFIX}site-web`:",
+          "Avoir le lien du site web de Utility Bot."
+        ],
+        "helpSs": [
+          "Vous aurez des informations sur la commande `{PREFIX}sondage`:",
+          "Faire un sondage avec un timer.",
+          "`{PREFIX}sondage <un salon> <un temp> le sondage>`"
+        ],
+        "helpSg": [
+          "Vous aurez des informations sur la commande `{PREFIX}start-g`:",
+          "Faire un giveaway.",
+          "`{PREFIX}start-g <un salon> <uun time> <un nombre de gagnant(s)> <le cadeau>`"
+        ],
+        "helpSu": [
+          "Vous aurez des informations sur la commande `{PREFIX}support`:",
+          "Rejoindre le serveur de support."
+          ] ,
+        "helpT": [
+          "Vous aurez des informations sur la commande `{PREFIX}temp`:",
+          "Avoir le temp d'une ville.",
+          "`{PREFIX}temp <C|F> <une ville>`"
+        ],
+        "helpTi": [
+          "Vous aurez des informations sur la commande`{PREFIX}timeout`:",
+          "Exclure un membre pour un temps donnée.",
+          "`{PREFIX}timeout <un membre> <temp> (raison)`"
+        ],
+        "helpTw": [
+          "Vous aurez des informations sur la commande `{PREFIX}total-warns`:",
+          "Voir tout les warns d'un membre.",
+          "`{PREFIX}total-warns <un membre>`"
+        ],
+        "helpUm": [
+          "Vous aurez des information sur la commande `{PREFIX}unmute`:",
+          "Unmute un membre.",
+          "`{PREFIX}unmute <un membre>`"
+        ],
+        "helpUp": [
+          "Vous aurez des information sur la commande `{PREFIX}uptime`:",
+          "Savoir depuis combien de temp Utility Bot est en ligne."
+        ],
+        "helpUI": [
+          "Vous aurez des information sur la commande `{PREFIX}user-info`:",
+          "Avoir des information sur vous ou un membre du serveur..",
+          "`{PREFIX}user-info [un membre]`"
+        ],
+        "helpV": [
+          "Vous aurez des information sur la commande `{PREFIX}vote`:",
+          "Avoir le lien Top.GG pour voter pour Utility Bot."
+        ],
+        "helpWa": [
+          "Vous aurez des information sur la commande `{PREFIX}wanted`:",
+          "Faire une pancarte de fugitif.",
+          "`{PREFIX}wanted [un membre]`"
+        ],
+        "helpW": [
+          "Vous aurez des information sur la commande `{PREFIX}warn`:",
+          "Warn un membre.",
+          "`{PREFIX}warn <un membre> [la raison]`"
+        ]
+      },
+      "modsa": [
+        "Modérateur",
+        "Raison",
+        "Aucune raison fournie.",
+        "Cette personne n'est pas sur le serveur !",
+        "Vous devez mentionner un membre !",
+        "Salon",
+        "Serveur"
+    ],
+      "mods": {
+        "ban": [
+          "Vous ne pouvez bannir des bots.",
+          "Vous ne pouvez pas bannir un staff.",
+          "Un membre à été bannie !",
+          "Membre bannie",
+          "bannie avec succés !",
+          "Je n'est pas les **Persmissions** pour bannir des membres ! [BAN_MEMBERS]"
+        ],
+        "clear": [
+          "Vous devez mettre le nombre de message a supprimer !",
+          "Êtes-vous sérieux ? Vous ne pouvez pas le faire seul ?!",
+          "Je ne peut pas supprimer plus de 100 messages !",
+          "messages supprimer !",
+          "Un membre ma dit de supprimer des messages !",
+          "Nombre de message supprimer ",
+          "Petit problème😅... Je ne peut pas supprimer ces messages (probablement car les messages date de plus de 14 jours et quand des messages date de plus de 14 jours je ne peut pas les supprimée)"
+        ],
+        "kick": [
+          "Vous ne pouvez pas kick des bots.",
+          "Vous ne pouvez pas kick un staff.",
+          "à été kick avec succés !",
+          "un membre a été kick !",
+          "Membre kick",
+          "Je n'arrive pas a kick ce membre..."
+        ],
+        "mute": [
+          "Vous devez mentionner le membre a kick !",
+          "Vous ne pouvez pas mute le propriétaire ! Ca va pas ou quoi ?!",
+          "Vous ne pouvez pas mute des membre plus gradé que vous !",
+          "Je ne peut pas mute ce membre !",
+          "Un membre a été mute !",
+          "Membre mute",
+          "est mute !"
+        ],
+        "totalW": [
+          "a *{WARNINGS}* warn(s)"
+        ],
+        "unmute": [
+          "Vous ne pouvez pas unmute un membre plus gradé que vous !",
+          "Je ne peut pas unmute ce membre !",
+          "Ce membre n'est pas mute donc vous ne pouvez pas le unmute.",
+          "Un membre a été unmute !",
+          "Membre unmute",
+          "est unmute !"
+        ],
+        "warn": [
+          "Veuillez mentionner ou mettre l'ID du membre.",
+          "Vous ne pouvez pas warn des bots.",
+          "Vous ne pouvez pas vous warn.",
+          "Vous ne pouvez pas warn le propriétaire ! Ca va pas ou quoi ?!",
+          "Vous avez été warn.",
+          "a été warn.",
+          "Un membre a été warn !",
+          "Membre Warn",
+          "Nombre de warn(s)"
+        ],
+        "timeout": [
+          "Vous pouvez exclure un membre a partir de {30000} et maximum {2419200000}.",
+          "{USER} a été exclue durant {TIME} !",
+          "Veuillez mentionner un membre à exclure."
+        ]
+      },
+      "ownera": [
+        "Membre",
+        "Modérateur",
+        "Salon"
+      ],
+      "owner": {
+        "deleteW": [
+          "Vous ne pouvez pas vous enlevez des warns.",
+          "n'a pas de warn.",
+          "Un membre a enlever tout les warns d'un autre membre!",
+          "Vous avez supprimer ${NUMBER} warns de {USER} !"
+        ],
+        "setT": [
+          "Pour avoir les tickets ils faut acheter {TheBot} sur le site.\n\nPrix : $17.99, Economisez 50% en ce moment ! $17.99 à $8.99."
+        ],
+        "rerollG": [
+          "Veuillez mettre l'ID du giveaway.",
+          "Acun giveaway trouver a cette ID =>",
+          "Giveaway relancer !",
+          "Ce giveaway n'est pas terminer donc je ne peut pas trouve de nouveau gagnant(s)."
+        ],
+        "setB": [
+          "Le salon d'aurevoir a été supprimer !",
+          "Veuillez mentionner le salon.",
+          "Salon d'aurevoir enregistré !",
+          "Un membre a définie le salon d'aurevoir !",
+          "Le salon d'aurevoir a été supprimer !"
+        ],
+        "setL": [
+          "Veuillez spécifier la nouvelle lang. [fr/en]",
+          "`{ARGS}` n'est pas une lang disponible sur Utility Bot.",
+          "Changement de la langue de Utility Bot"
+        ],
+        "setLo": [
+          "Veuillez mentionner un salon text.",
+          "Salon enregistré",
+          "Le salon a été définie."
+        ],
+        "setP": [
+          "Veuillez spécifier le nouveau prefix de Utility Bot.",
+          "Vous ne pouvez pas mettre d'espace dans votre prefix.",
+          "Un membre a changer le prefix du serveur !",
+          "Nouveau prefix",
+          "Prefix mis de base !",
+          "Un prefix ne peut pas faire plus de 5 caractères.",
+          "Le prefix du serveur a- été mis à jour !"
+        ],
+        "setW": [
+          "Un membre a supprimer le salon de bienvenue !",
+          "Salon de bienvenue supprimer !",
+          "Veuillez mentionner le salon.",
+          "Un membre a définie le salon de bienvenue!",
+          "Salon de Bienvenue enregistré !"
+        ],
+        "poll": [
+          "Vous devez mentionner un salon !",
+          "Vous devez spécifier le temp du sondage.",
+          "Vous devez mettre le text de votre sondage !",
+          "Sondage proposer par",
+          "SONDAGE",
+          "Temp du sondage : {DURATION}",
+          "Un membre a créer un sondage !",
+          "Contenue du sondage",
+          "Temp du sondage",
+          "Votre sondage est terminer !",
+          "Votre sondage a été publier !"
+        ],
+        "startG": [
+          "Veuillez mentionner le salon du giveaway.",
+          "Veuillez spécifier le temp du giveaway.",
+          "Le temp doit terminer par : d => (jour(s)), h => (heure(s)), m => (minutes), s => (secondes).",
+          "Veuillez specifier le nombre de gagnant(s).",
+          "Veuillez spécifier le(s) cadeau(x).",
+          "NOUVEAU GIVEAWAY",
+          "GIVEAWAY TERMINER",
+          "Temp",
+          "Réajisez avec {EMOJI} pour participer !",
+          "Vous venez de gagnez ",
+          "2 membres ont participé, dommage, je jure que je suis dégoûté. En plus c'était un bon cadeau",
+           "Proposé par",
+          "Gagnant(e(s))",
+          "Termine à",
+          "heure(s)",
+          "jour(s)",
+          "un membre à commencer un giveaway !",
+          "Cadeau",
+          "Nombre de gagant(s)",
+          "Temp du giveaway",
+          "Cadeau :",
+          "secondes"
+        ]
+    },
+    "util": {
+      "Serveur": "Serveur",
+      "BI": [
+        "ID de Utility Bot",
+        "Information sur Utility Bot",
+        "Créer à",
+        "Dévelopeur",
+        "Version de Utility Bot",
+        "Prefix de Utility Bot",
+        "Information sur le system",
+        "Usage des RAM",
+        "Uptime",
+        "jour(s)",
+         "heures(s)",
+        "secondes",
+        "Latence",
+        "Version de Node.js utilisé",
+        "Version de Discord.js utilisé",
+        "Type de CPU",
+        "Vitesse",
+        "Mémoire",
+        "Utilisé"
+      ],
+      "calcul": [
+        "Veuillez mettre le premier chiffre/nombre (ex : `1` * 5)",
+        "Veuillez mettre un signe d'opération (ex : 1 `*` 5)",
+        "Veuillez mettre le deuxième chiffre/nombre (ex : 1 * `5`)",
+        "Le premier chiffre/nombre est invalide (ex : `1` * 5)",
+        "Le deuxième chiffre/nombre est invalide (ex : 1 * `5`)",
+        "Veuillez mettre un signe d'opération valide (`+` `-` `*` `/`)"
+      ],
+      "embed": [
+        "Titre par défaut",
+        "Description par défaut",
+        "Veuillez patientez, ajout des émojis...",
+        "Quest-ce qu'il y à a changé ?",
+        "Choisissez la réaction aproprié.",
+        "Changer le Titre",
+        "Changer la Description",
+        "Changer l'Autheur",
+        "Changer le Footer",
+        "Changer le Thumbnail",
+        "Ajoutez un Timestamp",
+         "Changer l'Image",
+        "Changer l'URL",
+        "Change la couleur",
+        "Ajoutez un Field",
+        "Confirmez l'Embed",
+        "Quel est votre Titre ?",
+        "Titre changer avec succés !",
+        "Quel est votre Description ?",
+        "Description changer avec succés !",
+        "Qui est l'Auteur ?",
+        "Auteur changer avec succés !",
+        "Quel est votre Footer ?",
+        "Footer changer avec succés !",
+        "Quel est votre Thumbnail ?",
+        "Thumbnail incorrecte.",
+        "Thumbnail changer avec succés !",
+        "Timestamp ajouter avec succés !",
+        "Quel est votre Image ?",
+        "Image incorrecte.",
+        "Image changer avec succés !",
+        "Quel est L'URL a mettre ?",
+        "Ceci n'est pas une URL.",
+        "URL changer avec succés !",
+        "Quel couleur je dois mettre ?",
+        "Ceci n'est pas une (digital) couleur.",
+        "Couleur changer avec succés !",
+        "Quel est le Titre de votre Field ?",
+        "Quel est la Description de votre Field ?",
+        "Field changer avec succés !",
+        "Veuillez mettre l'id du salon ou sera l'Embed",
+        "Salon invalid.",
+        "Embed envoyer avec succés !",
+        "Quel est l'url de l'avatar de l'Auteur ?"
+      ],
+      "color": [
+        "Voici un code HEX : #{HEX}"
+      ],
+      "invite": [
+        "Vous voulez {UtilityBot} ? Aucun problème !",
+        "INVITE Utility Bot"
+      ],
+      "messageA": [
+        "Un membre anonyme vous a envoyez un message :",
+        "Problème, veuillez [contact] pour signalez ce problème !"
+      ],
+      "message": [
+        "Vous devez mentionner un membre !",
+        "Vous devez mettre le message a envoyer !",
+        "{USER} vous a envoyer un message :",
+        "Le message a bien été envoyer !",
+        "Message envoyer à **{USER}**"
+      ],
+      "report": [
+        "Veuillez spécifier le type de problème ! (`bug`, `ping` or `autre`)",
+        "Veuillez préciser votre problème !",
+        "à signaler un problème",
+        "ID",
+        "Nom du serveur",
+        "ID du servuer",
+        "Problème",
+        "Contenu du problème",
+        "Merci d'avoir signaler le problème que vous avez trouver !",
+        "Problème en envoyant le message réessayer ou rejoignez le serveur de {SERVER}!"
+      ],
+      "Ss": [
+        "Aucun",
+        "Faible",
+        "Moyen",
+        "Voici les statiques",
+        "Propriètaire",
+        "Région",
+        "Level de vérification",
+        "Nombre de rôle(s)",
+        "Nombre de channel(s)",
+        "Temp d'AFK",
+        "Total de membre(s)",
+         "Nombre de membres connecter",
+        "Nombre de boost",
+        "Level de boost",
+        "Nombre d'émoji sur le serveur",
+        "Prefix",
+        "Aucun boost"
+      ],
+      "Sw": [
+        "Site Web",
+        "Vous voulez le {WebSite} ?"
+      ],
+      "support": [
+        "Vous voulez rejoindre le serveur de {SupportServer} ?"
+      ],
+      "temp": [
+        "Veuillez mettre un type de température valid (Celsius -> `C` | Fahrenheit -> `F`).",
+        "Veuillez mettre un type de température valid (Celsius -> `C` | Fahrenheit -> `F`",
+        "Veuillez mettre la ville où vous voulez avoir la météo.",
+        "Météo",
+        "Météo à",
+        "Température",
+        "Jour",
+        "Ressentie",
+        "Humidité",
+        "Vent",
+        "Vous êtes sûr que cette ville existe ??"
+      ],
+      "uptime": [
+        "jour(s)",
+        "heur(s)",
+        "minutes",
+        "secondes"
+      ],
+      "Ui": [
+        "En Ligne",
+        "Inactif",
+        "Ne Pas Déranger",
+        "Hors Ligne",
+        "Invisible",
+        "En Stream",
+        "Information sur",
+        "Aucun",
+        "Oui",
+        "Non",
+        "Joue à",
+         "Rien",
+        "A rejoint le serveur le",
+        "Rôles",
+        "Aucun rôles",
+        "Badges",
+        "Aucun"
+      ],
+      "Vote": [
+        "You want to {VoteForMe}? You flatter me!"
+      ]
+    }
+  },
+    "events": {
+      "server": "server",
+      "guildC": [
+        "Thanks for inviting me to your server!",
+        "Here is a little more information about me!",
+        "Support server",
+        "Web Site",
+        "Support",
+        "If you want to help the Elpistolero13🔫#0001",
+        "to have the list of commands"
+      ],
+      "guildMA": [
+        "Bienvenue",
+        "sur"
+      ],
+      "guildMR": [
+        "a quitté",
+        "Aurevoir"
+      ]
+    }
+  }

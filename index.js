@@ -1,6 +1,6 @@
 (async () => {
     const Discord = require("discord.js");
-    const config = require("./Config");
+    const config = require("./Root/Storage/Vault/Config");
     const path = __dirname;
     const client = new Discord.Client({
         intents: [
