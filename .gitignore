@@ -3,4 +3,6 @@ node_modules/
 data
 json.sqlite
 
-package.json
+package-lock.json
+
+Root/Commands/MessageCommands/Test

@@ -23,6 +23,7 @@
     exports.config = config;
     client.commands = {};
     client.events = new Discord.Collection();
+    client.langs = new Discord.Collection();
     client.commands.messageCommands = new Discord.Collection();
     client.commands.messageCommands.aliases = new Discord.Collection();
     client.commands.contextMenus = new Discord.Collection();
@@ -33,6 +34,7 @@
     const Handler = require(`${path}/Root/Structures/Handlers/Handler`);
     await Handler.loadMessageCommands(client, path);
     await Handler.loadEvents(client);
+    await Handler.loadLangs(client);
     await client.login(config.token);
     await Handler.loadSlashCommands(client, path);
     await Handler.loadContextMenus(client, path);
