@@ -123,7 +123,13 @@
       "Kick members",
       "Mute members",
       "Administrator",
-      "`Server owner`"
+      "`Server owner`",
+      "Which part do you want?",
+      "Utility part",
+      "Moderator part",
+      "Information part",
+      "Fun part",
+      "Choose the part of the help you want to see..."
     ],
     "help": {
       "moderation": [
@@ -300,7 +306,8 @@
       ],
       "helpMo": [
         "You will have information on the `{PREFIX}morpion` command:",
-        "Do a noughts and crosses with a member of the server (You and the memebre who want to do a noughts and crosses must put the emojis to make the noughts and crosses)."
+        "Do a noughts and crosses with a member of the server (You and the memebre who want to do a noughts and crosses must put the emojis to make the noughts and crosses).",
+        "Noughts and Crosses"
       ],
       "helpMu": [
         "You will have information on the `{PREFIX}mute` command:",
@@ -309,7 +316,8 @@
       ],
       "helpPF": [
         "You will have information on the `{PREFIX}heads-or-tails` command:",
-        "Tossing a coin"
+        "Tossing a coin",
+        "Heads of Tails"
       ],
       "helpP": [
         "You will have information on the `{PREFIX}ping` command:",
@@ -317,8 +325,7 @@
       ],
       "helpR": [
         "You will have information on the `{PREFIX}report` command:",
-        "Report a problem to the moderators of Utility Bot",
-        "`{PREFIX}report <bug/ping/other> <the problem>`"
+        "Report a problem to the moderators of Utility Bot"
       ],
       "helpRg": [
         "You will have information on the `{PREFIX}reroll-g` command:",

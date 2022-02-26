@@ -1,7 +1,7 @@
 const db = require('quick.db')
 module.exports = {
-    name: 'treport',
-    aliase: ["s-la"],
+    name: 'report',
+    aliase: ["bug"],
     onlyUsers: ["509765051435974692", "691644619758370846"],
     cooldown: 100000,
     
@@ -10,7 +10,7 @@ module.exports = {
 
         const row = new container.Discord.MessageActionRow().addComponents(
             new container.Discord.MessageSelectMenu()
-					.setCustomId('Set lang')
+					.setCustomId('Report')
 					.setPlaceholder(lang.commands.util.report[0])
 					.addOptions([
                         {

@@ -22,7 +22,7 @@ module.exports = {
                 value: lang.commands.help.helpR[1]
             }, {
                 name: lang.commands.helpa[6],
-                value: lang.commands.help.helpR[2].replace('{PREFIX}', prefix),
+                value: `${prefix}report`,
                 inline: true
             }, {
                 name: lang.commands.helpa[7],

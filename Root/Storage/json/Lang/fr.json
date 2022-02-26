@@ -123,7 +123,13 @@
         "`Kick ddes membres`",
         "`Rendre Muet des membres`",
         "`Administrateur`",
-        "`Propriétaire du serveur`"
+        "`Propriétaire du serveur`",
+        "Quel est la partie que vous voulez ?",
+        "Partie Util",
+        "Partie Modérateurs",
+        "Partie Information",
+        "Partie Fun",
+        "Choisissez la partie du help que vous voulez voir..."
       ],
       "help": {
         "moderation": [
@@ -290,7 +296,8 @@
         ],
         "helpMo": [
           "Vous aurez des information sur la commande `{PREFIX}morpion`:",
-          "Fair eun morpion avec un membre du serveur (Les 2 joueurs doivent mettre l'émoji qui a avec le message)."
+          "Fair eun morpion avec un membre du serveur (Les 2 joueurs doivent mettre l'émoji qui a avec le message).",
+          "Morpion"
         ],
         "helpMu": [
           "Vous aurez des information sur la commande `{PREFIX}mute`:",
@@ -299,7 +306,8 @@
         ],
         "helpPF": [
           "Vous aurez des information sur la commande `{PREFIX}pile-ou-face`:",
-          "Faire un pile ou face."
+          "Faire un pile ou face.",
+          "Pile ou Face"
         ],
         "helpP": [
           "Vous aurez des information sur la commande `{PREFIX}ping`:",
@@ -307,8 +315,7 @@
         ],
         "helpR": [
           "Vous aurez des information sur la commande `{PREFIX}report`:",
-          "Signaler un problème de Utility Bot a la direction.",
-          "`{PREFIX}report <bug/ping/autre> <le problème>`"
+          "Signaler un problème de Utility Bot a la direction."
         ],
         "helpRg": [
           "Vous aurez des information sur la commande `{PREFIX}reroll-g`:",
