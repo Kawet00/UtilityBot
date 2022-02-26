@@ -40,4 +40,4 @@
     await Handler.loadContextMenus(client, path);
     await Handler.loadButtonCommands(client, path);
     await Handler.loadSelectMenus(client, path);
-    })()
+    })();
