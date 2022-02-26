@@ -1,4 +1,9 @@
+const emotes = require('../../Storage/json/emotes.json')
+const colors = require('../../Storage/json/colors.json')
+const db = require('quick.db')
+
 module.exports = async function (client, message, command, Discord) {
+    const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
     if (!command.onlyGuilds) return false;
     if (command.onlyGuilds.some(id => id == message.guild.id)) return false;
     else {
@@ -13,9 +18,10 @@ module.exports = async function (client, message, command, Discord) {
                     name: message.member.user.tag,
                     iconURL: message.member.user.displayAvatarURL({ dynamic: true })
                 })
-                .setColor("RANDOM")
+                .setColor(colors.EPINGLE)
                 .setTimestamp()
-                .setDescription(`This command can only be ran in these guilds.\n•${onlyGuilds.join("\n•")}`)],
+                .setDescription(`${emotes.blob.blob_n} ┇ ${lang.cmdOptions.OnlyGuild[0]}`)
+                .addField(lang.cmdOptions.OnlyGuild[1], `•${onlyGuilds.join("\n•")}`)],
                 allowedMentions: {
                     repliedUser: false
                 }

@@ -14,14 +14,14 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
-            .setTitle(lang.commands.help.helpSLa[0].replace('{PREFIX}', prefix))
+            .setTitle(`lang.commands.help.helpSLa[0].replace('{PREFIX}', prefix)`)
             .setDescription(lang.commands.helpa[4])
             .addFields({
                 name: lang.commands.helpa[5],
                 value: lang.commands.help.helpSLa[1]
             }, {
                 name: lang.commands.helpa[6],
-                value: `\`${prefix}set-lang <en/fr>\``,
+                value: `\`${prefix}set-lang\``,
                 inline: true
             }, {
                 name: lang.commands.helpa[7],

@@ -1,5 +1,10 @@
 const config = require("../../Storage/Vault/Config")
+const emotes = require('../../Storage/json/emotes.json')
+const colors = require('../../Storage/json/colors.json')
+const db = require('quick.db')
+
 module.exports = async function (message, command, Discord) {
+    const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
     if (!command.ownerOnly) return false;
     if (config.developers.some(id => message.member.user.id == id)) return false
     else {
@@ -10,9 +15,9 @@ module.exports = async function (message, command, Discord) {
                     name: message.member.user.tag,
                     iconURL: message.member.user.displayAvatarURL({ dynamic: true })
                 })
-                .setColor("RANDOM")
+                .setColor(colors.EPINGLE)
                 .setTimestamp()
-                .setDescription(`This command is reserved for the developers of the bot.`)],
+                .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.cmdOptions.OwnerOnly[0]}`)],
                 allowedMentions: {
                     repliedUser: false
                 }

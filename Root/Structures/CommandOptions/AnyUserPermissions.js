@@ -1,4 +1,9 @@
+const emotes = require('../../Storage/json/emotes.json')
+const colors = require('../../Storage/json/colors.json')
+const db = require('quick.db')
+
 module.exports = async function (message, command, Discord) {
+    const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
     if (!command.anyUserPermission) return false;
     if (command.anyUserPermission.some(i => message.member.permissions.has(i))) return false;
     else {
@@ -9,9 +14,10 @@ module.exports = async function (message, command, Discord) {
                     name: message.member.user.tag,
                     iconURL: message.member.user.displayAvatarURL({ dynamic: true })
                 })
-                .setColor("RANDOM")
+                .setColor(colors.EPINGLE)
                 .setTimestamp()
-                .setDescription(`You require any one of these permissions to be able to run this command..\n•${command.anyUserPermission.join("\n•")}`)],
+                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.cmdOptions.AnyUserPerm[0]}`)
+                .addField(lang.cmdOptions.AnyUserPerm[1], `•${command.anyUserPermission.join("\n•")}`)],
                 allowedMentions: {
                     repliedUser: false
                 }

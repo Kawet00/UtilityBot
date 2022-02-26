@@ -12,6 +12,8 @@ module.exports = {
 
     run: async(client, message, args, container) => {
 
+        let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
+
         let member = message.mentions.users.first() || message.author
 
         let avatar = member.displayAvatarURL({ dynamic: true, size: 512 })

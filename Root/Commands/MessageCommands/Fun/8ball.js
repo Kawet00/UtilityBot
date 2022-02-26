@@ -8,7 +8,7 @@ module.exports = {
     onlyUsers: ["509765051435974692", "691644619758370846"],
 
     run: async (client, message, args, container) => {
-        console.log(db.get(`lang_${message.guild.id}`))
+        
         const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         let question = args.join(" ");

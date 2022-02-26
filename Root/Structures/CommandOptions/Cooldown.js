@@ -1,12 +1,16 @@
 const db = require("quick.db")
-const Config = require('../../Storage/Vault/Config')
+const config = require('../../Storage/Vault/Config')
+const emotes = require('../../Storage/json/emotes.json')
+const colors = require('../../Storage/json/colors.json')
+
 module.exports = async function (client, message, command, isInteraction, interactionType, Discord) {
+    const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
     if (!command.cooldown) return false;
     const currentTime = Date.now()
     const user = message.member.user
     const cooldown = command.cooldown
     const oldTime = await db.get(`CooldownSystem.${message.guild.id}.${command.name}.${interactionType ?? "Normal"}.${user.id}`) ?? 0
-    if (Config.developers.some(id => user.id == id)) return false;
+    if (config.developers.some(id => user.id == id)) return false;
     if (Math.floor(currentTime - oldTime) >= cooldown || oldTime == 0) {
         await db.set(`CooldownSystem.${message.guild.id}.${command.name}.${interactionType ?? "Normal"}.${user.id}`, currentTime)
         return false;
@@ -20,8 +24,9 @@ module.exports = async function (client, message, command, isInteraction, intera
                         iconURL: message.member.user.displayAvatarURL({ dynamic: true })
                     })
                     .setTimestamp()
-                    .setColor("RANDOM")
-                    .setDescription(`You are currently at cooldown until <t:${Math.floor(Math.floor(oldTime + cooldown) / 1000)}>`)],
+                    .setColor(colors.EPINGLE)
+                    .setDescription(`${emotes.blob.blob_n} ┇ ${lang.cmdOptions.Cooldown[0]}`)
+                    .addField(lang.cmdOptions.Cooldown[1], `<t:${Math.floor(Math.floor(oldTime + cooldown) / 1000)}>`)],
                     allowedMentions: {
                         repliedUser: false
                     }

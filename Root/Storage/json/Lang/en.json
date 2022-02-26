@@ -15,7 +15,7 @@
       "Permissions required"
     ],
     "Cooldown": [
-      "You are currently at cooldown until to retype the command, you need to wait {TIME}.",
+      "You are currently at cooldown until to retype the command.",
       "Time of the cooldown"
     ],
     "OnlyChannels": [
@@ -517,9 +517,12 @@
         "Goodbye channel remove!"
       ],
       "setL": [
-        "Please specify the language you want. [fr/en]",
-        "`{ARGS}` is not a language you can put on Utility Bot.",
-        "New language of Utility Bot"
+        "Choose...",
+        "Choose the next language of Utility Bot, either French or English.",
+        "English",
+        "French",
+        "Set the language of Utility Bot in English",
+        "Set the Language of Utility Bot in French"
       ],
       "setLo": [
         "Please choose a text channel.",

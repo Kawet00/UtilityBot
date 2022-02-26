@@ -1,4 +1,9 @@
+const emotes = require('../../Storage/json/emotes.json')
+const colors = require('../../Storage/json/colors.json')
+const db = require('quick.db')
+
 module.exports = async function (message, command, Discord) {
+    const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
     if (!command.requiredRoles) return false;
     let missing = []
     command.requiredRoles.forEach(role => {
@@ -13,9 +18,10 @@ module.exports = async function (message, command, Discord) {
                     name: message.member.user.tag,
                     iconURL: message.member.user.displayAvatarURL({ dynamic: true })
                 })
-                .setColor("RANDOM")
+                .setColor(colors.EPINGLE)
                 .setTimestamp()
-                .setDescription(`You are required to have these roles to be able to run this command.\n•${missing.join("\n•")}`)],
+                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.cmdOptions.RequiredRoles[0]}`)
+                .addField(lang.cmdOptions.RequiredRoles[1], `•${missing.join("\n•")}`)],
                 allowedMentions: {
                     repliedUser: false
                 }

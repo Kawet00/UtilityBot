@@ -15,7 +15,7 @@
         "Permission(s) requise"
       ],
       "Cooldown": [
-        "Vous êtes acctuellement en cooldown pour cette commande inutile de retaper la commande, le cooldown se termine le {TIME}.",
+        "Vous êtes acctuellement en cooldown pour cette commande inutile de retaper la commande.",
         "Temp du cooldown"
       ],
       "OnlyChannels": [
@@ -506,9 +506,12 @@
           "Le salon d'aurevoir a été supprimer !"
         ],
         "setL": [
-          "Veuillez spécifier la nouvelle lang. [fr/en]",
-          "`{ARGS}` n'est pas une lang disponible sur Utility Bot.",
-          "Changement de la langue de Utility Bot"
+          "Choisissez...",
+          "Choisissez la prochaine langue de Utility Bot, soit Français soit Anglais.",
+          "Anglais",
+          "Français",
+          "Mettre la langue de Utility Bot en Anglais.",
+          "Mettre la langue de Utility Bot en Français."
         ],
         "setLo": [
           "Veuillez mentionner un salon text.",
