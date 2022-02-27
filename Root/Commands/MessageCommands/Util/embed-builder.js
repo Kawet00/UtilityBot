@@ -142,6 +142,7 @@ module.exports= {
                     const msgQTh = await message.channel.send(lang.commands.util.embed[24]);
                     const thumbnail =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
                     if(!thumbnail.includes('http') || !thumbnail.includes('https')) return message.channel.send(lang.commands.util.embed[25])
+                    if(!thumbnail.endWith('.png' && '.gif' && '.jpg' && 'jpeg')) return message.channel.send('test')
                     msgQTh.delete();
                     msgBE.setThumbnail(thumbnail);
                     msgFE.edit({

@@ -21,7 +21,7 @@ module.exports = {
                     embeds: [
                     new container.Discord.MessageEmbed()
                     .setColor(colors.EPINGLE)
-                    .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                    .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                     .setTimestamp()
                     ]
@@ -32,7 +32,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
-                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
                 ]
@@ -46,7 +46,7 @@ module.exports = {
             .setColor(colors.EPINGLE)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
-            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
         });
 
@@ -77,7 +77,7 @@ module.exports = {
                     .setColor(colors.RED)
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                     .setTimestamp()
-                    .setDescription(`${emotes.autre.attention} ┇ ${lang.commands.util.temp[10]}`)
+                    .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.util.temp[10]}`)
                     ]
                 });
             }

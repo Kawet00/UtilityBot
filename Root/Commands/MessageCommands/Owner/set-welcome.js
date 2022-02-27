@@ -30,7 +30,7 @@ module.exports = {
                 client.channels.cache.get(logsC).send({
                     embeds: [
                         new container.Discord.MessageEmbed()
-                    .setTitle(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setW[0]}`)
+                    .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setW[0]}`)
                     .setColor(colors.EPINGLE)
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                     .setTimestamp()
@@ -44,7 +44,7 @@ module.exports = {
                     
                     embeds: [
                         new container.Discord.MessageEmbed()
-                        .setDescription(`${emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setW[1]}`)
+                        .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setW[1]}`)
                         .setColor(colors.VERT)
                         .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                         .setTimestamp()
@@ -56,7 +56,7 @@ module.exports = {
             return message.reply({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                    .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setW[2]}`)
+                    .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setW[2]}`)
                     .setColor(colors.EPINGLE)
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                     .setTimestamp()
@@ -69,7 +69,7 @@ module.exports = {
         message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setW[4]}`)
+                .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setW[4]}`)
                 .setColor(colors.green_light)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
@@ -81,7 +81,7 @@ module.exports = {
             client.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                .setTitle(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setW[3]}`)
+                .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setW[3]}`)
                 .setColor(colors.VERT)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()

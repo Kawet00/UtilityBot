@@ -27,7 +27,7 @@ module.exports = {
         if (!channelFetched || channelFetched.type !== "text") return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setLo[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setLo[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
             .setColor(colors.EPINGLE)
@@ -38,7 +38,7 @@ module.exports = {
         channelFetched.send({
             embeds: [
                 new container.Discord.MessageEmbed()
-            .setTitle(`${emotes.autre.cool_pika} ┇ ${lang.commands.owner.setLo[1]}`)
+            .setTitle(`${container.Emotes.cool_pika} ┇ ${lang.commands.owner.setLo[1]}`)
             .setColor(colors.VERT)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -53,7 +53,7 @@ module.exports = {
             new container.Discord.MessageEmbed()
             .setColor(colors.VERT)
             .setDescription(`${
-                emotes.autre.cool_pika} ┇ ${lang.commands.owner.setLo[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                container.Emotes.cool_pika} ┇ ${lang.commands.owner.setLo[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
             ]

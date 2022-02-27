@@ -17,7 +17,7 @@ module.exports = {
         embeds: [
           new container.Discord.MessageEmbed()
         .setColor(hex)
-        .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.color[0].replace('{HEX}', hex)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+        .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.color[0].replace('{HEX}', hex)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
         .setTitle("#" + hex)
          .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
         .setTimestamp()

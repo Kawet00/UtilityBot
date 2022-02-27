@@ -35,7 +35,7 @@ module.exports = {
                 .setColor(colors.PERSO)
                 .setTitle(lang.commands.fun.animaux[0])
                 .setURL(dog2)
-                .setDescription(`${emotes.autre.dog} ${lang.commands.fun.animaux[1]}  ${emotes.autre.dog}`)
+                .setDescription(`${container.Emotes.dog} ${lang.commands.fun.animaux[1]}  ${container.Emotes.dog}`)
                 .setImage(dog2)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()

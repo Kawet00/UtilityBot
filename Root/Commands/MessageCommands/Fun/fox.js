@@ -35,7 +35,7 @@ module.exports = {
             .setColor(colors.PERSO)
             .setTitle(lang.commands.fun.animaux[0])
             .setURL(fox2)
-            .setDescription(`${emotes.autre.fox} AAA ${emotes.autre.fox}`)
+            .setDescription(`${container.Emotes.fox} AAA ${container.Emotes.fox}`)
             .setImage(fox2)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()

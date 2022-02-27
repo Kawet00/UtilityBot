@@ -26,7 +26,7 @@ module.exports = {
 
         message.reply({
             embeds: [new container.Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_a}  ┇ ${lang.commands.fun.morpion[0]} `)
+                .setDescription(`${container.Emotes.pepe.pepe_a}  ┇ ${lang.commands.fun.morpion[0]} `)
                 .setColor(colors.PERSO)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()

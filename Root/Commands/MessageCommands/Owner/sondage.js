@@ -30,7 +30,7 @@ module.exports = {
         if (!channelM) return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -41,7 +41,7 @@ module.exports = {
         if (!duration) return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.EPINGLE)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -52,7 +52,7 @@ module.exports = {
         if (!sondage) return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -77,7 +77,7 @@ module.exports = {
             client.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-            .setTitle(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[6]}`)
+            .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[6]}`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -94,7 +94,7 @@ module.exports = {
             member.send({
                 embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[9]}`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[9]}`)
                 .setColor(colors.EPINGLE)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
@@ -111,7 +111,7 @@ module.exports = {
             .setColor(colors.VERT)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
-            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[10]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[10]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
         })
     

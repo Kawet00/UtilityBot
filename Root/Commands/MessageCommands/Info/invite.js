@@ -16,7 +16,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
               .setColor(colors.PERSO)
-              .setDescription(`${emotes.pepe.pepe_s} ┇ ${lang.commands.util.invite[0].replace('{UtilityBot}', '[invite Utility Bot](https://www.utilitybot.ga/)')}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+              .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.util.invite[0].replace('{UtilityBot}', '[invite Utility Bot](https://www.utilitybot.ga/)')}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
               .setThumbnail(client.user.avatarURL({ dynamic: true, size: 512 }))
               .setTitle(lang.commands.util.invite[1])
               .setURL('https://www.utilitybot.ga/')

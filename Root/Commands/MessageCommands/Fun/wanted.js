@@ -31,7 +31,7 @@ message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.cream)
-                .setDescription(emotes.pepe.pepe_ar)
+                .setDescription(container.Emotes.pepe.pepe_ar)
                 .setImage("attachment://wanted.png")
             ], files: [attachment]
         }).then(() => {

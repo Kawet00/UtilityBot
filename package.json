@@ -27,6 +27,7 @@
     "cli-box": "^6.0.10",
     "discord-logs": "^2.0.1",
     "discord.js": "^13.6.0",
+    "djs-tickets": "^5.2.1",
     "fs": "^0.0.1-security",
     "glob": "^7.2.0",
     "humanize-duration": "^3.27.1",

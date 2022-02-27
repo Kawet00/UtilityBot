@@ -27,7 +27,7 @@ module.exports = {
             return message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setColor(colors.EPINGLE)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
@@ -38,7 +38,7 @@ module.exports = {
             return message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.commands.owner.setP[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.owner.setP[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
                 .setColor(colors.RED)
@@ -53,7 +53,7 @@ module.exports = {
                 client.channels.cache.get(logsC).send({
                     embeds: [
                         new container.Discord.MessageEmbed()
-                .setTitle(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
+                .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
                 .setColor(colors.EPINGLE)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
@@ -66,7 +66,7 @@ module.exports = {
             return await message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setP[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setP[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setColor(colors.VERT)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
@@ -77,7 +77,7 @@ module.exports = {
             return await message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP["6"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP["6"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
                 .setColor(colors.EPINGLE)
@@ -91,7 +91,7 @@ module.exports = {
             client.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-            .setTitle(`${emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
+            .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -105,7 +105,7 @@ module.exports = {
         await message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${config.emotes.autre.cool_pika} ┇ ${lang.commands.owner.setP["7"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${config.container.Emotes.cool_pika} ┇ ${lang.commands.owner.setP["7"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.VERT)
             .setTimestamp()
             .setFooter(`©${client.user.username}`, client.user.displayAvatarURL())

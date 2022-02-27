@@ -23,7 +23,7 @@ module.exports = {
             })
         });
 
-        message.reply(emotes.pepe.pepe_s)
+        message.reply(container.Emotes.pepe.pepe_s)
         message.channel.send({
             files: [{
             attachment: buffer,

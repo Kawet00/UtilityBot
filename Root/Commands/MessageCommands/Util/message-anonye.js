@@ -18,7 +18,7 @@ module.exports = {
     if (!msgUser) return message.reply({
       embeds: [
       new container.Discord.MessageEmbed()
-      .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+      .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
       .setColor(colors.EPINGLE)
        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
       .setTimestamp()
@@ -27,7 +27,7 @@ module.exports = {
   if (!messageBeingSent) return message.reply({
     embeds: [
       new container.Discord.MessageEmbed()
-      .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+      .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
       .setColor(colors.EPINGLE)
        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
       .setTimestamp()  
@@ -44,7 +44,7 @@ module.exports = {
         `© ${client.user.username}`,
         message.client.user.displayAvatarURL({ dynamic: true })
       )
-      .setTitle(`${emotes.blob.blob_w} ┇ ${lang.commands.util.messageA[0]}`)
+      .setTitle(`${container.Emotes.blob.blob_w} ┇ ${lang.commands.util.messageA[0]}`)
       .setDescription(`${messageBeingSent}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
       ]
     })
@@ -53,7 +53,7 @@ module.exports = {
         embeds: [
         new container.Discord.MessageEmbed()
           .setColor(colors.RED)
-          .setDescription(`${emotes.autre.attention} ┇ ${lang.commands.util.messageA[1].replace('[contact]', '[contact the support](https://discord.gg/BT4SyHUM5z)')}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+          .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.util.messageA[1].replace('[contact]', '[contact the support](https://discord.gg/BT4SyHUM5z)')}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
           .setTimestamp()
         ]

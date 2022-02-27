@@ -35,7 +35,7 @@ module.exports = {
             .setColor(colors.PERSO)
             .setTitle(lang.commands.fun.animaux[0])
             .setURL(bird2)
-            .setDescription(`${emotes.autre.bird} ${lang.commands.fun.animaux[2]} ${emotes.autre.bird}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.bird} ${lang.commands.fun.animaux[2]} ${container.Emotes.bird}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setImage(bird2)
             .setFooter(`© ${client.user.username} `, client.user.avatarURL())
             .setTimestamp()
