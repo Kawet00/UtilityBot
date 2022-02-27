@@ -1,8 +1,5 @@
 node_modules/
 
-data
-json.sqlite
-
 package-lock.json
 
 Root/Commands/MessageCommands/Test
