@@ -701,7 +701,9 @@
         "Veuillez mettre l'id du salon ou sera l'Embed",
         "Salon invalid.",
         "Embed envoyer avec succés !",
-        "Quel est l'url de l'avatar de l'Auteur ?"
+        "Quel est l'url de l'avatar de l'Auteur ?",
+        "Vous devez avoir un thumbail qui soit dans un de ces 4 formats : `.png`, `.jpg`, `.jpeg`, `.gif`",
+        "Vous avez pris plus de 1 minute pour répondre. Veuillez remettre la réaction pour actualiser."
       ],
       "color": [
         "Voici un code HEX : #{HEX}"

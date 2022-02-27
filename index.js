@@ -22,10 +22,6 @@ const client = new Discord.Client({
 });
 
 
-const logs = require('discord-logs');
-logs(client);
-
-
 exports.client = client;
 exports.path = path;
 exports.config = config;

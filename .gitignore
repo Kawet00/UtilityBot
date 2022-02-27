@@ -3,5 +3,6 @@ node_modules/
 package-lock.json
 
 Root/Commands/MessageCommands/Test
+Root/Commands/SelectMenus/Test
 
 bin

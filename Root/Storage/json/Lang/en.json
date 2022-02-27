@@ -714,7 +714,9 @@
         "Please put the id of the room where I have to send the embed",
         "Invalid channel.",
         "Embed successfully send!",
-        "What is the avatar url of the Author?"
+        "What is the avatar url of the Author?",
+        "You must have a thumbnail that is in one of these 4 formats: `.png`, `.jpg`, `.jpeg`, `.gif`",
+        "You took more than 1 minute to respond. Please put back the reaction to refresh."
       ],
       "color": [
         "Random HEX code : #{HEX}"

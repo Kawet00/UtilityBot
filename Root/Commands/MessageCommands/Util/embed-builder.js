@@ -69,20 +69,46 @@ module.exports= {
             ]
         })
 
-        const filterR = (reaction, user) => user.id === message.author.id && !user.bot;
+        const filterR = (user) => user.id === message.author.id && !user.bot;
         const filterM = (m) => m.author.id === message.author.id && !m.author.bot;
         const collectorR = await new container.Discord.ReactionCollector(msgwait, filterR);
         collectorR.on('collect', async reaction => {
             switch(reaction._emoji.name) {
                 case '✏':
-                    const msgQT = await message.channel.send(lang.commands.util.embed[16]);
-                    const title =  (await message.channel.awaitMessages({filterM, max: 1, time: 60000})).first().content;
+                    const msgQT = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[16]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const title =  (await message.channel.awaitMessages({filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(title == null) {
+                        msgQT.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
                     msgQT.delete();
                     msgBE.setTitle(title);
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[17]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[17]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -90,14 +116,40 @@ module.exports= {
                     });
                     break;
                     case '💬':
-                    const msgQD = await message.channel.send(lang.commands.util.embed[18]);
-                    const description =  (await message.channel.awaitMessages({filterM, max: 1, time: 60000})).first().content;
+                    const msgQD = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[18]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const description =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(description == null) {
+                        msgQD.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
                     msgQD.delete();
                     msgBE.setDescription(description);
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[19]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[19]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                             m.delete()
                             }, 5000)
@@ -105,18 +157,70 @@ module.exports= {
                     });
                     break;
                     case '🕵️‍♂️':
-                    const msgQA = await message.channel.send(lang.commands.util.embed[20]);
-                    const auteur =  (await message.channel.awaitMessages({filterM, max: 1, time: 60000})).first().content;
+                    const msgQA = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[20]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const auteur =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(auteur == null) {
+                        msgQT.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
                     msgQA.delete();
-                    const msgQAU = await message.channel.send(lang.commands.util.embed[43])
-                    const auteurURL = (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
-                    if(!auteurURL.includes('http') || !auteurURL.includes('https')) return message.channel.send(lang.commands.util.embed["26"])
+                    const msgQAU = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[43]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const auteurURL = (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(auteurURL == null) {
+                        msgQAU.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
+                    if(!auteurURL.includes('http') || !auteurURL.includes('https')) return message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed["26"]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    })
                     msgQAU.delete();
                     msgBE.setAuthor({ name: auteur, iconURL: auteurURL });
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[21]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[21]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -124,14 +228,40 @@ module.exports= {
                     });
                     break;
                     case '🔻':
-                    const msgQF = await message.channel.send(lang.commands.util.embed[22]);
-                    const footer =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
+                    const msgQF = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[22]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const footer =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(footer == null) {
+                        msgQF.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
                     msgQF.delete();
                     msgBE.setFooter(footer);
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[23]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[23]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -139,16 +269,56 @@ module.exports= {
                     });
                     break;
                     case '🔳':
-                    const msgQTh = await message.channel.send(lang.commands.util.embed[24]);
-                    const thumbnail =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
-                    if(!thumbnail.includes('http') || !thumbnail.includes('https')) return message.channel.send(lang.commands.util.embed[25])
-                    if(!thumbnail.endWith('.png' && '.gif' && '.jpg' && 'jpeg')) return message.channel.send('test')
+                    const msgQTh = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[24]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const thumbnail =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(thumbnail == null) {
+                        msgQTh.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
+                    if(!thumbnail.includes('http') || !thumbnail.includes('https')) return message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[25]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    })
+                    if(!thumbnail.includes('.png') || !thumbnail.includes('.gif') || !thumbnail.includes('.jpg') || !thumbnail.includes('jpeg')) return message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[44]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    })
                     msgQTh.delete();
                     msgBE.setThumbnail(thumbnail);
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[26]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[26]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -160,7 +330,14 @@ module.exports= {
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[27]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[27]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -168,15 +345,48 @@ module.exports= {
                     });
                     break;
                     case '🖼':
-                    const msgQI = await message.channel.send(lang.commands.util.embed[28]);
-                    const image =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
-                    if(!image.includes('http') || !image.includes('https')) return message.channel.send(lang.commands.util.embed[29])
+                    const msgQI = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[28]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const image =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(image == null) {
+                        msgQI.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
+                    if(!image.includes('http') || !image.includes('https')) return message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[29]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    })
                     msgQI.delete();
                     msgBE.setImage(image);
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[30]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[30]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -184,15 +394,48 @@ module.exports= {
                     });
                     break;
                     case '🌐':
-                    const msgQU = await message.channel.send(lang.commands.util.embed[31]);
-                    const url =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
-                    if(!url.includes('http') || !url.includes('https')) return message.channel.send(lang.commands.util.embed[32])
+                    const msgQU = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[31]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const url =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(url == null) {
+                        msgQU.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
+                    if(!url.includes('http') || !url.includes('https')) return message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[32]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
                     msgQU.delete();
                     msgBE.setURL(url);
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[33]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[33]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -200,15 +443,48 @@ module.exports= {
                     });
                     break;
                     case '🔵':
-                    const msgQC = await message.channel.send(lang.commands.util.embed[34]);
-                    const couleur =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
-                    if(!couleur.includes('#')) return message.channel.send(lang.commands.util.embed[35])
+                    const msgQC = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[34]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const couleur =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(couleur == null) {
+                        msgQC.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
+                    if(!couleur.includes('#')) return message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[35]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    })
                     msgQC.delete();
                     msgBE.setColor(couleur);
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[36]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[36]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -216,17 +492,62 @@ module.exports= {
                     });
                     break;
                     case '↩':
-                    const msgQTF = await message.channel.send(lang.commands.util.embed[37]);
-                    const tfield =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
+                    const msgQTF = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[37]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    })
+                    const tfield =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(tfield == null) {
+                        msgQTF.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
                     msgQTF.delete();
-                    const msgQDF = await message.channel.send(lang.commands.util.embed[38]);
-                    const dfield =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
+                    const msgQDF = await message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[38]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                            .setTimestamp()
+                    ]
+                    });
+                    const dfield =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                    if(dfield == null) {
+                        msgQDF.delete()
+                        message.channel.send({
+                        embeds: [
+                            new container.Discord.MessageEmbed()
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                            .setTimestamp()
+                            .setColor(container.Colors.EPINGLE)
+                        ]
+                    })
+                }
                     msgQDF.delete();
                     msgBE.addField(tfield, dfield);
                     msgFE.edit({
                         embeds: [msgBE]
                     }).then(() => {
-                        message.channel.send(lang.commands.util.embed[39]).then(m => {
+                        message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[39]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        }).then(m => {
                             setTimeout(() => {
                                 m.delete()
                             }, 5000)
@@ -234,14 +555,47 @@ module.exports= {
                     });
                     break;
                     case '✅':
-                        const msgQE = await message.channel.send(lang.commands.util.embed[40]);
-                        const channel =  (await message.channel.awaitMessages({ filterM, max: 1, time: 60000})).first().content;
+                        const msgQE = await message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[40]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        });
+                        const channel =  (await message.channel.awaitMessages({ filter: filterM, max: 1, time: 60000})).first()?.content;
+                        if(channel == null) {
+                            msgQE.delete()
+                            message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                                .setTimestamp()
+                                .setColor(container.Colors.EPINGLE)
+                            ]
+                        })
+                    }
                         msgQE.delete();
-                        if(!message.guild.channels.cache.get(channel)) return message.channel.send(lang.commands.util.embed[41])
+                        if(!message.guild.channels.cache.get(channel)) return message.channel.send({
+                            embeds: [
+                                new container.Discord.MessageEmbed()
+                                .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[41]}`)
+                                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                .setTimestamp()
+                        ]
+                        })
                         else message.guild.channels.cache.get(channel).send({
                             embeds: [msgBE]
                         }).then(() => {
-                            message.channel.send(lang.commands.util.embed[42]).then(m => {
+                            message.channel.send({
+                                embeds: [
+                                    new container.Discord.MessageEmbed()
+                                    .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[42]}`)
+                                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+                                    .setTimestamp()
+                            ]
+                            }).then(m => {
                                 setTimeout(() => {
                                 m.delete()
                             }, 5000)
