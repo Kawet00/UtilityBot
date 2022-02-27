@@ -1,7 +1,7 @@
 const emotes = require(`../../../Storage/json/emotes.json`)
 const db = require('quick.db')
 const colors = require(`../../../Storage/json/colors.json`)
-const Discord = require('discord.js')
+const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
         name: `help-fun`,
@@ -11,6 +11,7 @@ module.exports = {
 
         run: async (client, message, args, container) => {
                 let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
+                var prefix = db.get(`prefix_${message.guild.id}`) || config.prefix;
 
                 const embed =
                         new container.Discord.MessageEmbed()
@@ -22,88 +23,98 @@ module.exports = {
                         })
                         .setTimestamp()
 
-                        const row = new container.Discord.MessageActionRow().addComponents(
+                const row = new container.Discord.MessageActionRow().addComponents(
                         new container.Discord.MessageSelectMenu()
                         .setCustomId('Help')
                         .setPlaceholder(lang.commands.helpa[19])
                         .addOptions([{
-                                        label: 'Meme',
-                                        description: lang.commands.helpa[20],
-                                        value: 'HelpMeme',
-                                },
-                                {
-                                        label: '8ball',
-                                        description: lang.commands.helpa[21],
+                                        label: '8BALL',
+                                        description: lang.commands.help.helpB[0].replace('{PREFIX}', prefix),
                                         value: 'Help8ball'
                                 },
                                 {
-                                        label: 'Bird',
-                                        description: lang.commands.helpa[22],
+                                        label: 'BIRD',
+                                        description: lang.commands.help.helpBi[0].replace('{PREFIX}', prefix),
                                         value: 'HelpBird'
                                 },
                                 {
-                                        label: 'Cat',
-                                        description: lang.commands.helpa[23],
+                                        label: 'CAT',
+                                        description: lang.commands.help.helpCat[0].replace('{PREFIX}', prefix),
                                         value: 'HelpCat'
                                 },
                                 {
-                                        label: 'Color',
-                                        description: lang.commands.helpa[23],
+                                        label: 'COLOR',
+                                        description: lang.commands.help.helpCo[0].replace('{PREFIX}', prefix),
                                         value: 'HelpColor'
                                 },
                                 {
-                                        label: 'dog',
-                                        description: lang.commands.helpa[23],
+                                        label: 'DOG',
+                                        description: lang.commands.help.helpDog[0].replace('{PREFIX}', prefix),
                                         value: 'HelpDog'
                                 },
                                 {
-                                        label: 'fox',
-                                        description: lang.commands.helpa[23],
+                                        label: 'FOX',
+                                        description: lang.commands.help.helpFox[0].replace('{PREFIX}', prefix),
                                         value: 'HelpFox'
                                 },
                                 {
-                                        label: 'Fun Bird',
-                                        description: lang.commands.helpa[23],
+                                        label: 'FUN BIRD',
+                                        description: lang.commands.help.helpFBI[0].replace('{PREFIX}', prefix),
                                         value: 'HelpFunBird'
                                 },
                                 {
-                                        label: 'Fun Cat',
-                                        description: lang.commands.helpa[23],
+                                        label: 'FUN CAT',
+                                        description: lang.commands.help.helpFCat[0].replace('{PREFIX}', prefix),
                                         value: 'HelpFunCat'
                                 },
                                 {
-                                        label: 'Fun Dog',
-                                        description: lang.commands.helpa[23],
+                                        label: 'FUN DOG',
+                                        description: lang.commands.help.helpFDog[0].replace('{PREFIX}', prefix),
                                         value: 'HelpFunDog'
                                 },
                                 {
-                                        label: 'Fun Fox',
-                                        description: lang.commands.helpa[23],
+                                        label: 'FUN FOX',
+                                        description: lang.commands.help.helpFFox[0].replace('{PREFIX}', prefix),
                                         value: 'HelpFunFox'
                                 },
                                 {
-                                        label: lang.commands.help.helpMo[3],
-                                        description: lang.commands.helpa[23],
+                                        label: 'MEME',
+                                        description: lang.commands.help.helpM[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpMeme',
+                                },
+                                {
+                                        label: lang.commands.help.helpMo[2],
+                                        description: lang.commands.help.helpMo[0].replace('{PREFIX}', prefix),
                                         value: 'HelpMo'
                                 },
                                 {
-                                        label: lang.commands.help.helpPF[3],
-                                        description: lang.commands.helpa[23],
+                                        label: lang.commands.help.helpPF[2],
+                                        description: lang.commands.help.helpPF[0].replace('{PREFIX}', prefix),
                                         value: 'HelpPF'
                                 },
                                 {
-                                        label: 'Respect+',
-                                        description: lang.commands.helpa[23],
+                                        label: 'MESSAGE ANONYME',
+                                        description: lang.commands.help.helpMsgA[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpMsgAnonyme'
+                                },
+                                {
+                                        label: 'MESSAGE',
+                                        description: lang.commands.help.helpMsg[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpMsg'
+                                },
+                                {
+                                        label: 'RESPECT+',
+                                        description: lang.commands.help.helpRe[0].replace('{PREFIX}', prefix),
                                         value: 'HelpRespect'
                                 },
                                 {
-                                        label: 'Slap',
-                                        description: lang.commands.helpa[23],
+                                        label: 'SLAP',
+                                        description: lang.commands.help.helpSlap[0].replace('{PREFIX}', prefix),
                                         value: 'HelpSlap'
                                 },
                                 {
-                                        label: 'Wanted',
-                                        description: lang.commands.helpa[23],
+                                        label: 'WANTED',
+                                        description: lang.commands.help.helpWa[0].replace('{PREFIX}', prefix),
                                         value: 'HelpWanted'
                                 }
                         ]),

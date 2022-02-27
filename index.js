@@ -2,6 +2,8 @@
 const Discord = require("discord.js");
 const config = require("./Root/Storage/Vault/Config");
 const path = __dirname;
+const emotes = require('./Root/Storage/json/emotes.json')
+const colors = require('./Root/Storage/json/colors.json')
 const client = new Discord.Client({
     intents: [
         Discord.Intents.FLAGS.GUILDS,
@@ -18,9 +20,17 @@ const client = new Discord.Client({
     ],
     partials: ["CHANNEL"]
 });
+
+
+const logs = require('discord-logs');
+logs(client);
+
+
 exports.client = client;
 exports.path = path;
 exports.config = config;
+exports.emotes = emotes;
+exports.colors = colors;
 client.commands = {};
 client.events = new Discord.Collection();
 client.langs = new Discord.Collection();

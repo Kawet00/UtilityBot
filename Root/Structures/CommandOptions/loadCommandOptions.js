@@ -1,11 +1,13 @@
 const Discord = require("discord.js")
-const { path, config } = require("../../../index")
+const { path, config, emotes, colors } = require("../../../index")
 module.exports = async function (client, message, command, isInteraction, interactionType) {
     if (!command) return;
     const container = {
         RootPath: path,
         Config: config,
-        Discord: Discord
+        Discord: Discord,
+        Emotes: emotes,
+        Colors: colors
     }
     if (await require("./Cooldown")(client, message, command, isInteraction, interactionType, Discord)) return;
     else if (await require("./OwnerOnly")(client, message, command, Discord)) return;

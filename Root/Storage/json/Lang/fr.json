@@ -172,7 +172,7 @@
         ],
         "info": [
             "Commandes d'Information",
-            "SERVEUR-STATS",
+            "SERVEUR STATS",
           "Vous devez faire : `{PREFIX}ping`",
           "Vous devez faire : `{PREFIX}uptime`",
           "Vous devez faire : `{PREFIX}user-info [un membre]`",
@@ -198,215 +198,262 @@
           "Vous devez faire : `{PREFIX}support`"
         ],
         "helpB": [
+          "Vous aurez des information sur la commande {PREFIX}8ball:",
           "Vous aurez des information sur la commande `{PREFIX}8ball`:",
           "Posez une question et Utility Bot vous répondra.",
           "`{PREFIX}8ball <une question>`"
         ],
         "helpA": [
+          "Vous aurez des information sur la commande {PREFIX}avatar:",
           "Vous aurez des information sur la commande `{PREFIX}avatar`:",
           "Avoir votre avatar ou l'avatar d'un membre du serveur.",
           "`{PREFIX}avatar [un membre]`"
         ],
         "helpBa": [
+          "Vous aurez des information sur la commande {PREFIX}ban:",
           "Vous aurez des information sur la commande `{PREFIX}ban`:",
           "`{PREFIX}ban <un membre> [la raison]`"
         ],
         "helpBi": [
+          "Vous aurez des information sur la commande {PREFIX}bird:",
           "Vous aurez des information sur la commande `{PREFIX}bird`:",
           "Avoir des images random d'oiseau."
         ],
         "helpBo": [
+          "Vous aurez des information sur la commande {PREFIX}bot-info:",
           "Vous aurez des information sur la commande `{PREFIX}bot-info`:",
           "Avoir un peu plus d'information sur Utility Bot"
         ],
         "helpCal": [
+          "Vous aurez des information sur la commande {PREFIX}calcul:",
           "Vous aurez des information sur la commande `{PREFIX}calcul`:",
           "Faire des calcules.",
           "`{PREFIX}calcul <un nombre> <+|-|*|/> <un nombre>`"
         ],
         "helpCat": [
+          "Vous aurez des information sur la commande {PREFIX}cat:",
           "Vous aurez des information sur la commande `{PREFIX}cat`:",
           "Avoir des images random de chat."
         ],
         "helpCl": [
+          "Vous aurez des information sur la commande {PREFIX}clear:",
           "Vous aurez des information sur la commande `{PREFIX}clear`:",
           "Supprimer des messages.",
           "`{PREFIX}clear <un nombre de message a supprimer>`"
         ],
         "helpSlap": [
+          "Vous aurez des information sur la commande {PREFIX}slap",
           "Vous aurez des information sur la commande `{PREFIX}slap`",
           "Vous pouvez gilfer un membre du serveur.",
           "{PREFIX}slap <un membre>"
         ],
         "helpCo": [
+          "Vous aurez des information sur la commande {PREFIX}color:",
           "Vous aurez des information sur la commande `{PREFIX}color`:",
           "Avoir une couleur au hasard."
         ],
         "helpDW": [
+          "Vous aurez des information sur la commande {PREFIX}delete-warns:",
           "Vous aurez des information sur la commande `{PREFIX}delete-warns`:",
           "Enlever tout les warns d'un membre.",
           "`{PREFIX}delete-warns <un membre>`"
         ],
         "helpM": [
+          "Vous aurez des information sur la commande {PREFIX}meme:",
           "Vous aurez des information sur la commande `{PREFIX}meme`:",
           "Vous pouvez voir des memes"
         ],
         "helpDog": [
+          "Vous aurez des information sur la commande {PREFIX}dog:",
           "Vous aurez des information sur la commande `{PREFIX}dog`:",
           "Avoir une image de chien."
         ],
         "helpFox": [
+          "Vous aurez des information sur la commande {PREFIX}fox:",
           "Vous aurez des information sur la commande `{PREFIX}fox`:",
           "Avoir une image de renard."
         ],
         "helpFBI": [
+          "Vous aurez des information sur la commande {PREFIX}fun-bird:",
           "Vous aurez des information sur la commande `{PREFIX}fun-bird`:",
           "Avoir un gif d'un drôle d'oiseau."
         ],
         "helpFCat": [
+          "Vous aurez des information sur la commande `{PREFIX}fun-cat:",
           "Vous aurez des information sur la commande `{PREFIX}fun-cat`:",
           "Avoir un gif d'un drôle de chat."
         ],
         "helpFDog": [
+          "Vous aurez des information sur la commande {PREFIX}fun-dog:",
           "Vous aurez des information sur la commande `{PREFIX}fun-dog`:",
           "Avoir un gif d'un drôle de chien."
         ],
         "helpFFox": [
+          "Vous aurez des information sur la commande {PREFIX}fun-fox:",
           "Vous aurez des information sur la commande `{PREFIX}fun-fox`:",
           "Avoir un gif d'un drôle de renard."
         ],
         "helpI": [
+          "Vous aurez des information sur la commande {PREFIX}invite:",
           "Vous aurez des information sur la commande `{PREFIX}invite`:",
           "Avoir le lien d'invitation pour Utility Bot."
         ],
         "helpK": [
+          "Vous aurez des information sur la commande {PREFIX}kick:",
           "Vous aurez des information sur la commande `{PREFIX}kick`:",
           "Kick des membres.",
           "`{PREFIX}kick <un membre> [la raison]`"
         ],
         "helpMsgA": [
+          "Vous aurez des information sur la commande {PREFIX}anonymous-message:",
           "Vous aurez des information sur la commande `{PREFIX}anonymous-message`:",
           "Envoyer un message anonyme a un membre.",
           "`{PREFIX}anonymous-message <un membre> <un message>`"
         ],
         "helpMsg": [
+          "Vous aurez des information sur la commande {PREFIX}message:",
           "Vous aurez des information sur la commande `{PREFIX}message`:",
           "Envoyer un message a un membre.",
           "`{PREFIX}message <un membre> <un message>`"
         ],
         "helpMo": [
+          "Vous aurez des information sur la commande {PREFIX}morpion:",
           "Vous aurez des information sur la commande `{PREFIX}morpion`:",
           "Fair eun morpion avec un membre du serveur (Les 2 joueurs doivent mettre l'émoji qui a avec le message).",
           "Morpion"
         ],
         "helpMu": [
+          "Vous aurez des information sur la commande {PREFIX}mute:",
           "Vous aurez des information sur la commande `{PREFIX}mute`:",
           "Mute des membres.",
           "`{PREFIX}mute <un membre> [la raison]`"
         ],
         "helpPF": [
+          "Vous aurez des information sur la commande {PREFIX}pile-ou-face:",
           "Vous aurez des information sur la commande `{PREFIX}pile-ou-face`:",
           "Faire un pile ou face.",
           "Pile ou Face"
         ],
         "helpP": [
+          "Vous aurez des information sur la commande {PREFIX}ping:",
           "Vous aurez des information sur la commande `{PREFIX}ping`:",
           "Savoir le ping de Utility Bot."
         ],
         "helpR": [
+          "Vous aurez des information sur la commande {PREFIX}report:",
           "Vous aurez des information sur la commande `{PREFIX}report`:",
           "Signaler un problème de Utility Bot a la direction."
         ],
         "helpRg": [
+          "Vous aurez des information sur la commande {PREFIX}reroll-g:",
           "Vous aurez des information sur la commande `{PREFIX}reroll-g`:",
           "Trouver un autre gagnant pour votre giveaway.",
           "`{PREFIX}reroll-g <id du giveaway>`"
         ],
         "helpRe": [
+          "Vous aurez des information sur la commande {PREFIX}respect+:",
           "Vous aurez des information sur la commande `{PREFIX}respect+`:",
           "Respect+ un membre ou vous même.",
           "`{PREFIX}respect+ [un membre]`"
         ],
         "helpSS": [
+          "Vous aurez des information sur la commande {PREFIX}serveur-stats:",
           "Vous aurez des information sur la commande `{PREFIX}serveur-stats`:",
           "Avoir des information en plus sur le serveur."
         ],
         "helpSLa": [
+          "Vous aurez des information sur la commande {PREFIX}set-lang:",
           "Vous aurez des information sur la commande `{PREFIX}set-lang`:",
           "Définissez la langue de Utility Bot (`fr` (Français) ou `en` (Anglais))"
         ],
         "helpSl": [
+          "Vous aurez des information sur la commande {PREFIX}set-logs:",
           "Vous aurez des information sur la commande `{PREFIX}set-logs`:",
           "Définir un salon de logs.",
           "`{PREFIX}set-logs <un salon>`"
         ],
         "helpSp": [
+          "Vous aurez des information sur la commande {PREFIX}set-prefix:",
           "Vous aurez des information sur la commande `{PREFIX}set-prefix`:",
           "Changer le prefix de Utility Bot sur le serveur.",
           "`{PREFIX}set-prefix <votre nouveau prefix>`"
         ],
         "helpSw": [
+          "Vous aurez des informations sur la commande {PREFIX}set-welcome:",
           "Vous aurez des informations sur la commande `{PREFIX}set-welcome`:",
           "Définir le salon où il y aura le message de bienvenue.",
           "`{PREFIX}set-welcome <un salon>`"
         ],
         "helpSwe": [
+          "Vous aurez des informations sur la commande {PREFIX}site-web:",
           "Vous aurez des informations sur la commande `{PREFIX}site-web`:",
           "Avoir le lien du site web de Utility Bot."
         ],
         "helpSs": [
+          "Vous aurez des informations sur la commande {PREFIX}sondage:",
           "Vous aurez des informations sur la commande `{PREFIX}sondage`:",
           "Faire un sondage avec un timer.",
           "`{PREFIX}sondage <un salon> <un temp> le sondage>`"
         ],
         "helpSg": [
+          "Vous aurez des informations sur la commande {PREFIX}start-g:",
           "Vous aurez des informations sur la commande `{PREFIX}start-g`:",
           "Faire un giveaway.",
           "`{PREFIX}start-g <un salon> <uun time> <un nombre de gagnant(s)> <le cadeau>`"
         ],
         "helpSu": [
+          "Vous aurez des informations sur la commande {PREFIX}support:",
           "Vous aurez des informations sur la commande `{PREFIX}support`:",
           "Rejoindre le serveur de support."
           ] ,
         "helpT": [
+          "Vous aurez des informations sur la commande {PREFIX}temp:",
           "Vous aurez des informations sur la commande `{PREFIX}temp`:",
           "Avoir le temp d'une ville.",
           "`{PREFIX}temp <C|F> <une ville>`"
         ],
         "helpTi": [
-          "Vous aurez des informations sur la commande`{PREFIX}timeout`:",
+          "Vous aurez des informations sur la commande {PREFIX}timeout:",
+          "Vous aurez des informations sur la commande `{PREFIX}timeout`:",
           "Exclure un membre pour un temps donnée.",
           "`{PREFIX}timeout <un membre> <temp> (raison)`"
         ],
         "helpTw": [
+          "Vous aurez des informations sur la commande {PREFIX}total-warns:",
           "Vous aurez des informations sur la commande `{PREFIX}total-warns`:",
           "Voir tout les warns d'un membre.",
           "`{PREFIX}total-warns <un membre>`"
         ],
         "helpUm": [
+          "Vous aurez des information sur la commande {PREFIX}unmute:",
           "Vous aurez des information sur la commande `{PREFIX}unmute`:",
           "Unmute un membre.",
           "`{PREFIX}unmute <un membre>`"
         ],
         "helpUp": [
+          "Vous aurez des information sur la commande {PREFIX}uptime:",
           "Vous aurez des information sur la commande `{PREFIX}uptime`:",
           "Savoir depuis combien de temp Utility Bot est en ligne."
         ],
         "helpUI": [
+          "Vous aurez des information sur la commande {PREFIX}user-info:",
           "Vous aurez des information sur la commande `{PREFIX}user-info`:",
           "Avoir des information sur vous ou un membre du serveur..",
           "`{PREFIX}user-info [un membre]`"
         ],
         "helpV": [
+          "Vous aurez des information sur la commande {PREFIX}vote:",
           "Vous aurez des information sur la commande `{PREFIX}vote`:",
           "Avoir le lien Top.GG pour voter pour Utility Bot."
         ],
         "helpWa": [
+          "Vous aurez des information sur la commande {PREFIX}wanted:",
           "Vous aurez des information sur la commande `{PREFIX}wanted`:",
           "Faire une pancarte de fugitif.",
           "`{PREFIX}wanted [un membre]`"
         ],
         "helpW": [
+          "Vous aurez des information sur la commande {PREFIX}warn:",
           "Vous aurez des information sur la commande `{PREFIX}warn`:",
           "Warn un membre.",
           "`{PREFIX}warn <un membre> [la raison]`"

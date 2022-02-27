@@ -6,3 +6,5 @@ json.sqlite
 package-lock.json
 
 Root/Commands/MessageCommands/Test
+
+bin
