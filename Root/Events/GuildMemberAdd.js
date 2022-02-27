@@ -7,9 +7,6 @@ module.exports = {
     name: "guildMemberAdd",
 
     run: async (member, client) => {
-        client.langs = new Discord.Collection()
-        const Handler = require(`../Classes/Handlers/Handler`);
-    await Handler.loadLangs(client);
     
     let chx = db.get(`welchannel_${member.guild.id}`);
 

@@ -16,7 +16,7 @@ module.exports = {
         const user = message.mentions.users.first() || message.guild.members.cache.get(args[1]) || message.author;
 
 
-        let warnings = await db.get(`warnings_${message.guild.id}_${user.id}`);
+        let warnings = await db.get(`warns_${message.guild.id}_${user.id}`);
 
         if (warnings === null) warnings = 0;
 

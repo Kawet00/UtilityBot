@@ -105,7 +105,7 @@ module.exports = {
         await message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${config.container.Emotes.cool_pika} ┇ ${lang.commands.owner.setP["7"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${config.container.Emotes.autre.cool_pika} ┇ ${lang.commands.owner.setP["7"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.VERT)
             .setTimestamp()
             .setFooter(`©${client.user.username}`, client.user.displayAvatarURL())

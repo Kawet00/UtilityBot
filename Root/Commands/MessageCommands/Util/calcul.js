@@ -50,7 +50,7 @@ module.exports = {
                 value: `${calculator(args[0], args[1], args[2])}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`
             })
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
-            .setDescription(`${config.container.Emotes.cool_pika}`)
+            .setDescription(`${config.container.Emotes.autre.cool_pika}`)
             .setTimestamp()
         ]
     });

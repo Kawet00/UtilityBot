@@ -56,7 +56,7 @@ module.exports = {
                 message.channel.send({
                     embeds: [
                     new container.Discord.MessageEmbed()
-                    .setDescription(`${container.Emotes.cool_pika} ┇ \`${args[0]}\` ${lang.commands.mods.clear[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                    .setDescription(`${container.Emotes.autre.cool_pika} ┇ \`${args[0]}\` ${lang.commands.mods.clear[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     .setColor(colors.VERT)
                      .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                     .setTimestamp()

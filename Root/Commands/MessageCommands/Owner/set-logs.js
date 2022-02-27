@@ -38,7 +38,7 @@ module.exports = {
         channelFetched.send({
             embeds: [
                 new container.Discord.MessageEmbed()
-            .setTitle(`${container.Emotes.cool_pika} ┇ ${lang.commands.owner.setLo[1]}`)
+            .setTitle(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.owner.setLo[1]}`)
             .setColor(colors.VERT)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
@@ -53,7 +53,7 @@ module.exports = {
             new container.Discord.MessageEmbed()
             .setColor(colors.VERT)
             .setDescription(`${
-                container.Emotes.cool_pika} ┇ ${lang.commands.owner.setLo[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                container.Emotes.autre.cool_pika} ┇ ${lang.commands.owner.setLo[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
             ]

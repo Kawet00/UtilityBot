@@ -7,10 +7,6 @@ module.exports = {
     name: "guildCreate",
     
     run: async(guild, client) => {
-        client.langs = new Discord.Collection()
-        
-              const Handler = require(`../Classes/Handlers/Handler`);
-          await Handler.loadLangs(client);
 
         db.set(`lang_${guild.id}`, "en")
     let lang = client.langs.get(db.get(`lang_${guild.id}`))

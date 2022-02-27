@@ -1,5 +1,3 @@
-const colors = require('../../../Storage/json/colors.json');
-const emotes = require('../../../Storage/json/emotes.json')
 const db = require('quick.db');
 function dateFormat(date) {
     return new Date(date).toLocaleString('fr-FR', {
@@ -27,7 +25,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.warn[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-            .setColor(colors.EPINGLE)
+            .setColor(container.Colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
             ]
@@ -37,7 +35,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.warn[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-            .setColor(colors.RED)
+            .setColor(container.Colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
             ]
@@ -49,7 +47,7 @@ module.exports = {
             .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.warn[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
-            .setColor(colors.RED)
+            .setColor(container.Colors.RED)
             ]
         }).then(msg => {
             msg.delete({
@@ -57,11 +55,11 @@ module.exports = {
             })
         });
 
-        if (message.guild.owner.id === user.id) return message.reply({
+        if (message.guild.ownerID === user.id) return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.warn[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-            .setColor(colors.RED)
+            .setColor(container.Colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
             ]
@@ -69,11 +67,12 @@ module.exports = {
 
         let reason = args.slice(2).join(" ") || lang.commands.modsa[2];
 
-        let warnings = db.get(`warnings_${message.guild.id}_${user.id}`);
+        let warnings = db.get(`warns_${message.guild.id}_${user.id}`);
 
         if (warnings === null) {
-            db.set(`warnings_${message.guild.id}_${user.id}`, 1);
-            user.send(
+            db.add(`warns_${message.guild.id}_${user.id}`, 1);
+            user.send({
+                embeds: [
                 new container.Discord.MessageEmbed()
                 .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.warn[4]}`)
                 .addFields({
@@ -87,12 +86,13 @@ module.exports = {
                 })
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
-                .setColor(colors.EPINGLE)
-            )
+                .setColor(container.Colors.EPINGLE)
+            ]
+        })
             await message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
-                .setColor(colors.VERT)
+                .setColor(container.Colors.VERT)
                 .setDescription(`${container.Emotes.pepe.pepe_w} ┇ **${user.username}** ${lang.commands.mods.warn[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
@@ -101,8 +101,9 @@ module.exports = {
         }
 
         if (warnings !== null) {
-            db.add(`warnings_${message.guild.id}_${user.id}`, 1)
-            user.send(
+            db.add(`warns_${message.guild.id}_${user.id}`, 1)
+            user.send({
+                embeds: [
                 new container.Discord.MessageEmbed()
                 .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.warn[4]}`)
                 .addFields({
@@ -116,13 +117,14 @@ module.exports = {
                 })
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
-                .setColor(colors.EPINGLE)
-            )
+                .setColor(container.Colors.EPINGLE)
+            ]
+        })
             await message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setDescription(`${container.Emotes.pepe.pepe_w} ┇ **${user.username}** ${lang.commands.mods.warn[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-                .setColor(colors.VERT)
+                .setColor(container.Colors.VERT)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
                 ]
@@ -135,7 +137,7 @@ module.exports = {
             embeds: [
                 new container.Discord.MessageEmbed()
             .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.warn[6]}`)
-            .setColor(colors.EPINGLE)
+            .setColor(container.Colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
             .addField(lang.commands.mods.warn[7], user.tag, true)

@@ -85,7 +85,7 @@ module.exports = {
                 .setColor(colors.VERT)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
-                .setDescription(`${config.container.Emotes.cool_pika} ┇ ${member} ${lang.commands.mods.unmute[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${config.container.Emotes.autre.cool_pika} ┇ ${member} ${lang.commands.mods.unmute[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 ]
             })
         })
