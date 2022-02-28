@@ -2,8 +2,8 @@ const db = require('quick.db')
 module.exports = {
     name: "messageCreate",
     run: async(message, client, container) => {
-        if(message.channel.type == 'GUILD_TEXT') {
-        const Prefix = db.get(`prefix_${message.guild.id}`) || container.Config.prefix
+        if(message.channel.type == 'GUILD_TEXT' || !message.author.bot) {
+        const Prefix = db.get(`prefix_${message.guild.id}`) ||container.Config.prefix
         const loadCommandOptions = require("../Structures/CommandOptions/loadCommandOptions")
         Prefix.forEach(prefix => {
             if (!message.content.toLowerCase().startsWith(prefix)) return;
@@ -16,6 +16,7 @@ module.exports = {
             else if (!message.guild) return;
             else loadCommandOptions(client, message, command, false)
         })
+    
     }
     }
 }

@@ -4,10 +4,9 @@ module.exports = {
     name: "test",
     description: "test",
     aliases: ["t"],
-    ownerOnly: true,
+    voiceChannel: true,
 
     run: async(client, message, args, container) => {
-        const channelid = message.mention.channel.first()
-        ts.setup()
+        message.channel.send('test')
 }
 }

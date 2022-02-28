@@ -20,6 +20,7 @@ module.exports = async function (client, message, command, isInteraction, intera
     else if (await require("./OnlyChannels")(client, message, command, Discord)) return;
     else if (await require("./OnlyGuilds")(client, message, command, Discord)) return;
     else if (await require("./OnlyUsers")(client, message, command, Discord)) return;
+    else if (await require("./VoiceChannel")(client, message, command, Discord)) return;
     else {
         if (isInteraction) command.run(client, message, container)
         else {
