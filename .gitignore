@@ -6,3 +6,5 @@ Root/Commands/MessageCommands/Test
 Root/Commands/SelectMenus/Test
 
 bin
+Root/Commands/.DS_Store
+.DS_Store
