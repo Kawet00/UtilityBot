@@ -4,7 +4,7 @@ const colors = require('../../../Storage/json/colors.json')
 const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
-    name: "Help",
+    name: "HelpFilter",
     
     run: async(client, interaction) => {
         var prefix = db.get(`prefix_${interaction.guild.id}`)
@@ -15,16 +15,16 @@ module.exports = {
   embeds: [
       new Discord.MessageEmbed()
       .setColor(colors.PERSO)
-      .setTitle(lang.commands.help.help[1].replace('{PREFIX}', prefix))
+      .setTitle(lang.commands.help.helpFilter[1].replace('{PREFIX}', prefix))
       .setDescription(lang.commands.helpa[4])
       .addFields({
           name: lang.commands.helpa[5],
-          value: lang.commands.help.help[2]
+          value: lang.commands.help.helpFilter[2]
       }, {
           name: lang.commands.helpa[6],
-          value: lang.commands.help.help[3],
+          value: `\`${prefix}\``,
           inline: true
-      }, {
+      }, { 
           name: lang.commands.helpa[7],
           value: `\`${prefix}\``,
           inline: true
@@ -33,7 +33,7 @@ module.exports = {
           value: lang.commands.helpa[1]
       }, {
           name: lang.commands.helpa[9],
-          value: `\`${lang.commands.music[1]}\``
+          value: `\`${lang.commands.help.music[1]}\``
       }, {
           name: "Cooldown",
           value: "5s"

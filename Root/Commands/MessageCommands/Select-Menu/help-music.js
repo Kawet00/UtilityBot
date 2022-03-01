@@ -29,8 +29,12 @@ module.exports = {
                         .setPlaceholder(lang.commands.helpa[19])
                         .addOptions([
                                 {
-                                        label: 'CLEAR',
-                                        description: lang.commands.help.helpCl[0].replace('{PREFIX}', prefix),
+                                        label: 'BACK',
+                                        description: lang.commands.help.helpBk[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpBack'
+                                }, { 
+                                        label: 'CLEAR LIST',
+                                        description: lang.commands.help.helpCll[0].replace('{PREFIX}', prefix),
                                         value: 'HelpClear'
                                 },
                                 {
@@ -85,7 +89,7 @@ module.exports = {
                                 },
                                 {
                                         label: 'STOP',
-                                        description: lang.commands.help.helpSp[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpStop[0].replace('{PREFIX}', prefix),
                                         value: 'HelpStop'
                                 },
                                 {

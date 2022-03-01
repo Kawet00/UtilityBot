@@ -32,7 +32,7 @@ module.exports = {
                     value: lang.commands.helpa[1]
                 }, {
                     name: lang.commands.helpa[9],
-                    value: `\`${lang.commands.music[1]}\``
+                    value: `\`${lang.commands.help.music[1]}\``
                 }, {
                     name: "Cooldown",
                     value: "5s"

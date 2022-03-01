@@ -15,28 +15,36 @@ module.exports = {
   embeds: [
       new Discord.MessageEmbed()
       .setColor(colors.PERSO)
-      .setTitle(lang.commands.help.help[1].replace('{PREFIX}', prefix))
+      .setTitle(lang.commands.help.helpCll[1].replace('{PREFIX}', prefix))
       .setDescription(lang.commands.helpa[4])
       .addFields({
           name: lang.commands.helpa[5],
-          value: lang.commands.help.help[2]
+          value: lang.commands.help.helpCll[2]
       }, {
           name: lang.commands.helpa[6],
-          value: lang.commands.help.help[3],
+          value: `${prefix}clear-list`,
           inline: true
       }, {
-          name: lang.commands.helpa[7],
-          value: `\`${prefix}\``,
-          inline: true
-      }, {
+        name: lang.commands.helpa[7],
+        value: lang.commands.helpa[8],
+        inline: true
+    }, {
+        name: '\u200B',
+        value: 'ㅤ'
+    }, {
           name: lang.commands.helpa[2],
-          value: lang.commands.helpa[1]
+          value: lang.commands.helpa[1],
+          inline: true
       }, {
+        name: 'Disponible seulement dans un salon vocal ?',
+        value: 'OUAI',
+        inline: true
+    }, {
           name: lang.commands.helpa[9],
-          value: `\`${lang.commands.music[1]}\``
+          value: `\`${lang.commands.help.music[1]}\``
       }, {
           name: "Cooldown",
-          value: "5s"
+          value: "0s"
       }, {
           name: lang.commands.helpa[10],
           value: lang.commands.helpa[11] + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`

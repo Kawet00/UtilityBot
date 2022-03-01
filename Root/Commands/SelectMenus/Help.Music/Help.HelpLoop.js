@@ -4,7 +4,7 @@ const colors = require('../../../Storage/json/colors.json')
 const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
-    name: "Help",
+    name: "HelpLoop",
     
     run: async(client, interaction) => {
         var prefix = db.get(`prefix_${interaction.guild.id}`)
@@ -33,7 +33,7 @@ module.exports = {
           value: lang.commands.helpa[1]
       }, {
           name: lang.commands.helpa[9],
-          value: `\`${lang.commands.music[1]}\``
+          value: `\`${lang.commands.help.music[1]}\``
       }, {
           name: "Cooldown",
           value: "5s"

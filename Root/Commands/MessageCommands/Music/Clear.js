@@ -1,8 +1,8 @@
 module.exports = {
-  name: 'clear',
+  name: 'clear-list',
   voiceChannel: true,
 
-  run: async(client, message, args) => {
+  run: async(client, message) => {
       const queue = client.player.getQueue(message.guild.id);
 
       if (!queue || !queue.playing) return message.channel.send(`${message.author}, No music currently playing. ❌`);
