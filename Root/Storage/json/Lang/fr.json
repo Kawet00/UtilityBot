@@ -199,13 +199,21 @@
         ],
         "music": [
           "Commandes de Musique",
+          "Musique",
           "Vous devez faire : `{PREFIX}back`",
           "Vous devez faire : `{PREFIX}clear`",
-          "Vous devez faire : `{PREFIX}filter <bassboost/8d>`",
-          "Vous devez faire : `{PREFIX}`",
-          "Vous devez faire : `{PREFIX}`",
-          "Vous devez faire : `{PREFIX}`",
-          "Vous devez faire : `{PREFIX}`"
+          "Vous devez faire : `{PREFIX}filter <un filtre>`",
+          "Vous devez faire : `{PREFIX}loop`",
+          "Vous devez faire : `{PREFIX}nowplaying`",
+          "Vous devez faire : `{PREFIX}pause`",
+          "Vous devez faire : `{PREFIX}play <le lien ou le titre d'une musique>`",
+          "Vous devez faire : `{PREFIX}queue`",
+          "Vous devez faire : `{PREFIX}resume`",
+          "Vous devez faire : `{PREFIX}save`",
+          "Vous devez faire : `{PREFIX}search <le titre d'une musique>`",
+          "Vous devez faire : `{PREFIX}skip`",
+          "Vous devez faire : `{PREFIX}stop`",
+          "Vous devez faire : `{PREFIX}volume <un nombre entre 1 et 250>`"
         ],
         "helpB": [
           "Vous aurez des information sur la commande {PREFIX}8ball:",

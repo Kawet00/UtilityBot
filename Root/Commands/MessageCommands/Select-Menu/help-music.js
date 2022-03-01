@@ -27,90 +27,71 @@ module.exports = {
                         new container.Discord.MessageSelectMenu()
                         .setCustomId('Help')
                         .setPlaceholder(lang.commands.helpa[19])
-                        .addOptions([{
+                        .addOptions([
+                                {
+                                        label: 'CLEAR',
+                                        description: lang.commands.help.helpCl[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpClear'
+                                },
+                                {
+                                        label: 'FILTER',
+                                        description: lang.commands.help.helpFl[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpFilter'
+                                },
+                                {
+                                        label: 'LOOP',
+                                        description: lang.commands.help.helpLp[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpLoop'
+                                },
+                                {
+                                        label: 'NOW PLAYING',
+                                        description: lang.commands.help.helpNp[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpNowPlaying'
+                                },
+                                {
+                                        label: 'PAUSE',
+                                        description: lang.commands.help.helpPause[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpPause'
+                                },
+                                {
                                         label: 'PLAY',
-                                        description: lang.commands.help.helpTi[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpPl[0].replace('{PREFIX}', prefix),
                                         value: 'HelpPlay'
                                 },
                                 {
-                                        label: 'BAN',
-                                        description: lang.commands.help.helpBa[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpBan'
+                                        label: 'QUEUE',
+                                        description: lang.commands.help.helpQueue[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpQueue'
                                 },
                                 {
-                                        label: 'CLEAR',
-                                        description: lang.commands.help.helpCat[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpClear'
-                                },/*
-                                {
-                                        label: 'DELETE WARNS',
-                                        description: lang.commands.help.helpDW[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpDeleteWarns'
-                                },*/
-                                {
-                                        label: 'KICK',
-                                        description: lang.commands.help.helpK[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpKick'
+                                        label: 'RESUME',
+                                        description: lang.commands.help.helpRes[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpResume'
                                 },
                                 {
-                                        label: 'MUTE',
-                                        description: lang.commands.help.helpMu[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpMute'
+                                        label: 'SAVE',
+                                        description: lang.commands.help.helpSave[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpSave'
                                 },
                                 {
-                                        label: 'UNMUTE',
-                                        description: lang.commands.help.helpUm[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpUnMute'
+                                        label: 'SEARCH',
+                                        description: lang.commands.help.helpSch[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpSearch'
                                 },
                                 {
-                                        label: 'REROLL GIVEAWAYS',
-                                        description: lang.commands.help.helpRg[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpRerollG'
+                                        label: 'SKIP',
+                                        description: lang.commands.help.helpSk[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpSkip',
                                 },
                                 {
-                                        label: 'SET BYE',
-                                        description: lang.commands.help.helpSetB[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpSetBye'
-                                },
-                                {
-                                        label: 'SET LANG',
-                                        description: lang.commands.help.helpSLa[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpSetLang'
-                                },
-                                {
-                                        label: 'SET LOGS',
-                                        description: lang.commands.help.helpSl[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpSetLogs'
-                                },
-                                {
-                                        label: 'SET PREFIX',
+                                        label: 'STOP',
                                         description: lang.commands.help.helpSp[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpSetPrefix',
+                                        value: 'HelpStop'
                                 },
                                 {
-                                        label: 'SET WELCOME',
-                                        description: lang.commands.help.helpSw[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpSetWelcome'
-                                },
-                                {
-                                        label: lang.commands.help.util[1],
-                                        description: lang.commands.help.helpSs[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpPoll'
-                                },
-                                {
-                                        label: 'START GIVEAWAYS',
-                                        description: lang.commands.help.helpSg[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpStartG'
-                                },
-                                {
-                                        label: 'TOTAL WARNS',
-                                        description: lang.commands.help.helpTw[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpSlap'
-                                },
-                                {
-                                        label: 'WARN',
-                                        description: lang.commands.help.helpW[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpWarn'
+                                        label: 'VOLUME',
+                                        description: lang.commands.help.helpVol[0].replace('{PREFIX}', prefix),
+                                        value: 'HelpVolume'
                                 }
                         ]),
                 )

@@ -36,11 +36,6 @@ module.exports = {
                                         label: 'BAN',
                                         description: lang.commands.help.helpBa[0].replace('{PREFIX}', prefix),
                                         value: 'HelpBan'
-                                },
-                                {
-                                        label: 'CLEAR',
-                                        description: lang.commands.help.helpCat[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpClear'
                                 },/*
                                 {
                                         label: 'DELETE WARNS',

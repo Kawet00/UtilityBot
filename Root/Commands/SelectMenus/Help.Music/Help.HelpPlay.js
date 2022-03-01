@@ -14,25 +14,25 @@ module.exports = {
             embeds: [
                 new Discord.MessageEmbed()
                 .setColor(colors.PERSO)
-                .setTitle(lang.commands.help.helpA[1].replace('{PREFIX}', prefix))
+                .setTitle(lang.commands.help.helpPl[1].replace('{PREFIX}', prefix))
                 .setDescription(lang.commands.helpa[4])
                 .addFields({
                     name: lang.commands.helpa[5],
-                    value: lang.commands.help.helpA[2]
+                    value: lang.commands.help.helpPl[2]
                 }, {
                     name: lang.commands.helpa[6],
-                    value: lang.commands.help.helpA[3],
+                    value: lang.commands.help.helpPl[3],
                     inline: true
                 }, {
                     name: lang.commands.helpa[7],
-                    value: `\`${prefix}av\``,
+                    value: `\`${prefix}p\``,
                     inline: true
                 }, {
                     name: lang.commands.helpa[2],
                     value: lang.commands.helpa[1]
                 }, {
                     name: lang.commands.helpa[9],
-                    value: "`Util`"
+                    value: `\`${lang.commands.music[1]}\``
                 }, {
                     name: "Cooldown",
                     value: "5s"

@@ -200,7 +200,20 @@
       ],
       "music": [
         "Music commands",
-        ""
+        "Music",
+        "You need to do: `{PREFIX}back`",
+        "You need to do: `{PREFIX}clear`",
+        "You need to do: `{PREFIX}filter <a filter>`",
+        "You need to do: `{PREFIX}loop`",
+        "You need to do: `{PREFIX}nowplaying`",
+        "You need to do: `{PREFIX}pause`",
+        "You need to do: `{PREFIX}play <the link or the title of a song>`",
+        "You need to do: `{PREFIX}queue`",
+        "You need to do: `{PREFIX}resume`",
+        "You need to do: `{PREFIX}save`",
+        "You need to do: `{PREFIX}search <the title of a song>`",
+        "You need to do: `{PREFIX}stop`",
+        "You need to do: `{PREFIX}volume <a numbre between 1 and 250>`"
       ],
       "helpB": [
         "You will have information on the {PREFIX}8ball command:",
