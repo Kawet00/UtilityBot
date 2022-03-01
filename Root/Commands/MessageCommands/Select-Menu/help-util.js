@@ -30,7 +30,7 @@ module.exports = {
                         .addOptions([{
                                         label: 'AVATAR',
                                         description: lang.commands.help.helpB[0].replace('{PREFIX}', prefix),
-                                        value: 'HelpAvtar'
+                                        value: 'HelpAvatar'
                                 },
                                 {
                                         label: 'CALCUL',

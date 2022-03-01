@@ -26,6 +26,7 @@ const trackDuration = timestamp.progress == 'Forever' ? 'Endless (Live)' : track
 
         embed.setDescription(`Audio **%${queue.volume}**\nDuration **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${track. requestedBy}`);
 
+        embed.addField('\u200B', '\u200B')
         embed.addField(`Track, (${timestamp.progress}%)`, progress)
         embed.setTimestamp();
         embed.setFooter({ text: 'Edited by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true })});

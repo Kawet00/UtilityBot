@@ -1,13 +1,16 @@
 const Discord = require("discord.js")
 const { path, config, emotes, colors } = require("../../../index")
+const db = require('quick.db')
 module.exports = async function (client, message, command, isInteraction, interactionType) {
     if (!command) return;
+    const dbprefix = db.get(`prefix_${message.guild.id}`) || config.prefix;
     const container = {
         RootPath: path,
         Config: config,
         Discord: Discord,
         Emotes: emotes,
-        Colors: colors
+        Colors: colors,
+        Prefix: dbprefix
     }
     if (await require("./Cooldown")(client, message, command, isInteraction, interactionType, Discord)) return;
     else if (await require("./OwnerOnly")(client, message, command, Discord)) return;

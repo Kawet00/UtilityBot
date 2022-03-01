@@ -198,6 +198,10 @@
         "You need to do: `{PREFIX}website`",
         "You need to do: `{PREFIX}support`"
       ],
+      "music": [
+        "Music commands",
+        ""
+      ],
       "helpB": [
         "You will have information on the {PREFIX}8ball command:",
         "You will have information on the `{PREFIX}8ball` command:",
@@ -351,6 +355,11 @@
         "You will have information on the `{PREFIX}ping` command:",
         "Know Utility Bot's ping"
       ],
+      "helpPl": [
+        "You will have information on the {PREFIX}ping command:",
+        "You will have information on the `{PREFIX}ping` command:",
+        "Know Utility Bot's ping"
+      ],
       "helpR": [
         "You will have information on the {PREFIX}report command:",
         "You will have information on the `{PREFIX}report` command:",
@@ -395,6 +404,12 @@
         "You will have information on the `{PREFIX}set-welcome` command:",
         "Specify the channel where the welcome message will be.",
         "`{PREFIX}set-welcome <a channel>`"
+      ],
+      "helpSetB": [
+        "You will have information on the {PREFIX}set-bye command:",
+        "You will have information on the `{PREFIX}set-bye command:`",
+        "Set the channel where will have the bye message.",
+        "`{PREFIX}set-bye <a channel>`"
       ],
       "helpSwe": [
         "You will have information on the {PREFIX}site-web command:",

@@ -191,11 +191,21 @@
           "Vous devez faire : `{PREFIX}color`",
           "Vous devez faire : `{PREFIX}vote`",
           "Vous devez faire : `{PREFIX}avatar [un membre]`",
-          "Vous devez faire : `{PREFIX}report <bug/ping/autre> <votre problème>`",
+          "Vous devez faire : `{PREFIX}report`",
           "Vous devez faire : `{PREFIX}weather <C/F> <une ville>`",
           "Vous devez faire : `{PREFIX}calcul <un nombre> <+|-|*|/> <un nombre>`",
           "Vous devez faire : `{PREFIX}site-web`",
           "Vous devez faire : `{PREFIX}support`"
+        ],
+        "music": [
+          "Commandes de Musique",
+          "Vous devez faire : `{PREFIX}back`",
+          "Vous devez faire : `{PREFIX}clear`",
+          "Vous devez faire : `{PREFIX}filter <bassboost/8d>`",
+          "Vous devez faire : `{PREFIX}`",
+          "Vous devez faire : `{PREFIX}`",
+          "Vous devez faire : `{PREFIX}`",
+          "Vous devez faire : `{PREFIX}`"
         ],
         "helpB": [
           "Vous aurez des information sur la commande {PREFIX}8ball:",
@@ -339,6 +349,12 @@
           "Vous aurez des information sur la commande `{PREFIX}ping`:",
           "Savoir le ping de Utility Bot."
         ],
+        "helpPl": [
+          "Vous aurez des information sur la commande {PREFIX}play:",
+          "Vous aurez des information sur la commande `{PREFIX}play`:",
+          "Lancer une une musique dans un salon vocal.",
+          "`{PREFIX}play <le lien d'une musique ou un tire>`"
+        ],
         "helpR": [
           "Vous aurez des information sur la commande {PREFIX}report:",
           "Vous aurez des information sur la commande `{PREFIX}report`:",
@@ -383,6 +399,12 @@
           "Vous aurez des informations sur la commande `{PREFIX}set-welcome`:",
           "Définir le salon où il y aura le message de bienvenue.",
           "`{PREFIX}set-welcome <un salon>`"
+        ],
+        "helpSetB": [
+          "Vous aurez des informations sur la commande {PREFIX}set-bye :",
+          "Vous aurez des informations sur la commande `{PREFIX}set-bye :`",
+          "Définir le salon où il y aura le message d'aurevoir.",
+          "`{PREFIX}set-bye <un salon>`"
         ],
         "helpSwe": [
           "Vous aurez des informations sur la commande {PREFIX}site-web:",

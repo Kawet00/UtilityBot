@@ -4,7 +4,7 @@ const colors = require('../../../Storage/json/colors.json')
 const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
-    name: "HelpAvatar",
+    name: "HelpPlay",
     run: async(client, interaction) => {
         var prefix = db.get(`prefix_${interaction.guild.id}`)
         if(prefix == null) prefix = config.prefix;

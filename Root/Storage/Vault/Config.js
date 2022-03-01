@@ -7,11 +7,6 @@ module.exports = {
     reportChannel: "799932188442886176",
 
     opt: {
-        DJ: {
-            enabled: false,
-            roleName: 'DJ',
-            commands: ['back', 'clear', 'filter', 'loop', 'pause', 'resume', 'skip', 'stop', 'volume']
-        },
         maxVol: 250,
         loopMessage: false,
         discordPlayer: {
