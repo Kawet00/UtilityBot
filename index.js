@@ -57,11 +57,11 @@ player.on('error', (queue, error) => {
 });
 
 player.on('connectionError', (queue, error) => {
-    console.log(`I'm having trouble connecting => ${error.message}`);
+    console.log(error);
 });
 
 player.on('trackStart', (queue, track) => {
-    if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
+    if (!config.opt.loopMessage && queue.repeatMode !== 0) return;
     queue.metadata.send(`🎵 Music started playing: **${track.title}** -> Channel: **${queue.connection.channel.name}** 🎧`);
 });
 
