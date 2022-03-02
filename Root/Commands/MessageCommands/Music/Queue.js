@@ -8,9 +8,25 @@ module.exports = {
       const queue = client.player.getQueue(message.guild.id);
 
  
-        if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. ❌`);
+        if (!queue || !queue.playing) return message.reply({
+          embeds: [
+            new container.Discord.MessageEmbed()
+            .setColor(container.Colors)
+            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+            .setTimestamp()
+            .setDescription(`There is no music currently playing!. ❌`)
+          ]
+        });
 
-        if (!queue.tracks[0]) return message.channel.send(`${message.author}, No music in queue after current. ❌`);
+        if (!queue.tracks[0]) return message.reply({
+          embeds: [
+            new container.Discord.MessageEmbed()
+            .setColor(container.Colors)
+            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+            .setTimestamp()
+            .setDescription(`No music in queue after current. ❌`)
+          ]
+        });
 
         const embed = new container.Discord.MessageEmbed();
         const methods = ['🔁', '🔂'];
@@ -29,6 +45,8 @@ module.exports = {
         embed.setTimestamp();
         embed.setFooter({ text: 'Edited by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true })});
 
-        message.channel.send({ embeds: [embed] });
+        message.reply({
+          embeds: [embed]
+        });
     }
   }

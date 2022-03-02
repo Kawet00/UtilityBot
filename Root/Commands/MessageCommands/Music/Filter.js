@@ -32,8 +32,7 @@ module.exports = {
           .setDescription(`I couldn't find a filter with this name. ❌\nAll filters are \`bassboost, bassboost_low, bassboost_high, 8D, vaporwave, nightcore, phaser, tremolo, vibrato, reverse, treble, normalizer, normalizer2, surrounding, pulsator, subboost, karaoke, flanger, gate, haas, mcompand, mono, mstlr, mstrr, compressor, expander, softlimiter, chorus, chorus2d, chorus3d, fadein, dim, earrape\``)
         ]
       });
-
-      const filtersUpdated = {};
+      const filtersUpdated = queue.getFiltersEnabled()
 
       filtersUpdated[filter] = queue.getFiltersEnabled().includes(filter) ? false : true;
 

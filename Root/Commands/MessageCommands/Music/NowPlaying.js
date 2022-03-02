@@ -31,16 +31,9 @@ module.exports = {
 
         const timestamp = queue.getPlayerTimestamp();
 const trackDuration = timestamp.progress == 'Forever' ? 'Endless (Live)' : track.duration;
-const filters = [];
-queue.getFiltersEnabled().map(x => filters.push(x));
-queue.getFiltersDisabled().map(x => filters.push(x));
+const filter = ["bassboost", "8d"]
 
-
-const filter = filters.find((x) => x.toLowerCase() === args[0].toLowerCase());
-
-const filtersUpdated = {};
-
-      filtersUpdated[filter] = queue.getFiltersEnabled().includes(filter) ? false : true;
+if(queue.getFiltersEnabled() !== filter) {}
 
         embed.setDescription(`Volume **${queue.volume}%**\nDuration **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\nFilter **${queue.getFiltersEnabled()}**`);
 
@@ -56,6 +49,7 @@ const filtersUpdated = {};
         .setStyle('SUCCESS')
         )
 
-        message.channel.send({ embeds: [embed], components: [row] });
+        message.reply({ embeds: [embed], components: [row] });
+        console.log(queue.getFiltersEnabled())
     },
 };

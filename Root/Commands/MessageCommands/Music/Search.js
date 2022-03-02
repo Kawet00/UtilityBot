@@ -5,14 +5,30 @@ module.exports = {
   voiceChannel: true,
 
   run: async(client, message, args, container) => {
-    if (!args[0]) return message.channel.send(`${message.author}, Please enter a valid song name. ❌`);
+    if (!args[0]) return message.reply({
+        embeds: [
+            new container.Discord.MessageEmbed()
+            .setColor(container.Colors.RED)
+            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+            .setTimestamp()
+            .setDescription(`Please enter a valid song name. ❌`)
+        ]
+    });
 
         const res = await client.player.search(args.join(' '), {
             requestedBy: message.member,
             searchEngine: QueryType.AUTO
         });
 
-        if (!res || !res.tracks.length) return message.channel.send(`${message.author}, No search results found. ❌`);
+        if (!res || !res.tracks.length) return message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setColor(container.Colors.RED)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+                .setDescription(`No search results found. ❌`)
+            ]
+        });
 
         const queue = await client.player.createQueue(message.guild, {
             metadata: message.channel
@@ -30,7 +46,7 @@ module.exports = {
         embed.setTimestamp();
         embed.setFooter({ text: 'Edited by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true })});
 
-        message.channel.send({ embeds: [embed] });
+        message.reply({ embeds: [embed] });
 
         const collector = message.channel.createMessageCollector({
             time: 15000,
@@ -51,7 +67,15 @@ module.exports = {
                 if (!queue.connection) await queue.connect(message.member.voice.channel);
             } catch {
                 await client.player.deleteQueue(message.guild.id);
-                return message.channel.send(`${message.author}, I can't join audio channel. ❌`);
+                return message.reply({
+                    embeds: [
+                        new container.Discord.MessageEmbed()
+                        .setColor(container.Colors)
+                        .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                        .setTimestamp()
+                        .setDescription(`I can't join audio channel. ❌`)
+                    ]
+                });
             }
 
             await message.channel.send(`Loading your music call. 🎧`);
@@ -62,7 +86,15 @@ module.exports = {
         });
 
         collector.on('end', (msg, reason) => {
-            if (reason === 'time') return message.channel.send(`${message.author}, Song search time expired ❌`);
+            if (reason === 'time') return message.reply({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setColor(container.Colors)
+                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                    .setTimestamp()
+                    .setDescription(`Song search time expired ❌`)
+                ]
+            });
         });
       }
     }

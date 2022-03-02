@@ -7,14 +7,30 @@ module.exports = {
     voiceChannel: true,
 
     run: async(client, message, args, container) => {
-        if (!args[0]) return message.channel.send(`${message.author}, Write the name of the music you want to search. ❌`);
+        if (!args[0]) return message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setColor(container.Colors.RED)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+                .setDescription(`Write the name of the music you want to search. ❌`)
+            ]
+        });
 
         const res = await client.player.search(args.join(' '), {
             requestedBy: message.member,
             searchEngine: QueryType.AUTO
         });
 
-        if (!res || !res.tracks.length) return message.channel.send(`${message.author}, No results found! ❌`);
+        if (!res || !res.tracks.length) return message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setColor(container.Colors.RED)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+                .setDescription(`No results found! ❌`)
+            ]
+        });
 
         const queue = await client.player.createQueue(message.guild, {
             metadata: message.channel
@@ -24,10 +40,26 @@ module.exports = {
             if (!queue.connection) await queue.connect(message.member.voice.channel);
         } catch {
             await client.player.deleteQueue(message.guild.id);
-            return message.channel.send(`${message.author}, I can't join audio channel. ❌`);
+            return message.reply({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setColor(container.Colors.EPINGLE)
+                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                    .setTimestamp()
+                    .setDescription(`I can't join audio channel.`)
+                ]
+            });
         }
 
-        await message.channel.send(`Your ${res.playlist ? 'Your Playlist' : 'Your Track'} Loading... 🎧`);
+        await message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setColor(container.Colors.VERT)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+                .setDescription(`Your ${res.playlist ? 'Your Playlist' : 'Your Track'} Loading... 🎧`)
+            ]
+        });
 
         res.playlist ? queue.addTracks(res.tracks) : queue.addTrack(res.tracks[0]);
 
