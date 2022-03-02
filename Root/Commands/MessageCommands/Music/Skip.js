@@ -5,10 +5,26 @@ module.exports = {
   run: async(client, message, args, container) => {
     const queue = client.player.getQueue(message.guild.id);
  
-if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. ❌`);
+if (!queue || !queue.playing) return message.reply({
+  embeds: [
+    new container.Discord.MessageEmbed()
+    .setColor(container.Colors.RED)
+    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+    .setTimestamp()
+    .setDescription(`${message.author}, There is no music currently playing!. ❌`)
+  ]
+});
 
 const success = queue.skip();
 
-return message.channel.send(success ? `**${queue.current.title}**, Skipped song ✅` : `${message.author}, Something went wrong ❌`);
+return message.reply({
+  embeds: [
+    new container.Discord.MessageEmbed()
+    .setColor(success ? container.Colors.VERT : container.Colors.RED)
+    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+    .setTimestamp()
+    .setDescription(success ? `**${queue.current.title}**, Skipped song ✅` : `${message.author}, Something went wrong ❌`)
+  ]
+});
   }
 }

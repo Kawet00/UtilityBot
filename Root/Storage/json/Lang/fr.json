@@ -725,6 +725,11 @@
         "secondes"
       ]
     },
+    "music": {
+      "AllF": [
+        "Voici tout les filtres disponible."
+      ]
+    },
     "util": {
       "Serveur": "Serveur",
       "BI": [

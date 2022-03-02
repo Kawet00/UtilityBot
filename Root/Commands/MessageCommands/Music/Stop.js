@@ -7,10 +7,26 @@ module.exports = {
   run: async(client, message, args, container) => {
       const queue = client.player.getQueue(message.guild.id);
 
-      if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. ❌`);
+      if (!queue || !queue.playing) return message.reply({
+        embeds: [
+          new container.Discord.MessageEmbed()
+          .setColor(container.Colors.RED)
+          .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+          .setTimestamp()
+          .setDescription(`${message.author}, There is no music currently playing!. ❌`)
+        ]
+      });
 
       queue.destroy();
 
-      message.channel.send(`The music playing on this server has been turned off, see you next time ✅`);
+      message.reply({
+        embeds: [
+          new container.Discord.MessageEmbed()
+          .setColor(container.Colors.VERT)
+          .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+          .setTimestamp()
+          .setDescription(`The music playing on this server has been turned off, see you next time ✅`)
+        ]
+      });
   },
 };
