@@ -2,7 +2,8 @@ module.exports = {
   name: 'pause',
   voiceChannel: true,
 
-  run: async(client, message, args, container) => {const queue = client.player.getQueue(message.guild.id);
+  run: async(client, message, args, container) => {
+    const queue = client.player.getQueue(message.guild.id);
 
        if (!queue || !queue.playing) return message.channel.send(`${message.author}, There is no music currently playing!. ❌`);
 

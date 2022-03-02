@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["p"],
     voiceChannel: true,
 
-    run: async(client, message, args) => {
+    run: async(client, message, args, container) => {
         if (!args[0]) return message.channel.send(`${message.author}, Write the name of the music you want to search. ❌`);
 
         const res = await client.player.search(args.join(' '), {

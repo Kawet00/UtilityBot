@@ -28,7 +28,7 @@ module.exports = {
                 new container.Discord.MessageEmbed()
                 .setColor(colors.RED)
                 .setDescription(`${container.Emotes.intelligent} ┇ ${lang.commands.fun.ball[9]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-                .setFooter(`© ${client.user.username} `, client.user.avatarURL())
+                .setFooter({ text: `© ${client.user.username} `, iconURL: client.user.avatarURL() })
                 .setTimestamp()
             ]
         })
@@ -39,7 +39,7 @@ module.exports = {
                     new container.Discord.MessageEmbed()
                     .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.fun.ball[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     .setColor(colors.EPINGLE)
-                    .setFooter(`© ${client.user.username} `, client.user.avatarURL())
+                    .setFooter({ text: `© ${client.user.username} `, iconURL: client.user.avatarURL() })
                     .setTimestamp()
                 ]
             })
@@ -61,7 +61,7 @@ module.exports = {
             })
             .setColor(colors.PERSO)
             .setDescription(`[${lang.commandsa[0]}](https://nepust.fr/)`)
-            .setFooter(`© ${client.user.username} `, client.user.avatarURL())
+            .setFooter({ text: `© ${client.user.username} `, iconURL: client.user.avatarURL() })
             .setTimestamp()
         
 
