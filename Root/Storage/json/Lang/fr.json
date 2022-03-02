@@ -229,7 +229,8 @@
       "helpFl": [
         "Vous aurez des informations sur la commande {PREFIX}filter",
         "Vous aurez des informations sur la commande `{PREFIX}filter`",
-        "Ajouter des filtre a la musique que vous écoutez."
+        "Ajouter des filtre a la musique que vous écoutez.",
+        "`{PREFIX}filter <un filtre>`, si vous voulez avoir tout les nom des filtres faite `{PREFIX}all-filters`"
       ],
       "helpLp": [
         "Vous aurez des informations sur la commande {PREFIX}loop",
@@ -264,7 +265,8 @@
       "helpSch": [
         "Vous aurez des informations sur la commande {PREFIX}search",
         "Vous aurez des informations sur la commande `{PREFIX}search`",
-        "Chercher la musique éxact en faisant une recherche."
+        "Chercher la musique éxact en faisant une recherche.",
+        "`{PREFIX}search <le titre d'une chanson>`"
       ],
       "helpSk": [
         "Vous aurez des informations sur la commande {PREFIX}skip",
@@ -279,7 +281,8 @@
       "helpVol": [
         "Vous aurez des informations sur la commande {PREFIX}volume",
         "Vous aurez des informations sur la commande `{PREFIX}volume`",
-        "Vous pourrez régler le volume du son entre 1% et 250%."
+        "Vous pourrez régler le volume du son entre 1% et 250%.",
+        "`{PREFIX}volume <un nombre entre 1 et 250>`"
       ],
       "helpB": [
         "Vous aurez des informations sur la commande {PREFIX}8ball",

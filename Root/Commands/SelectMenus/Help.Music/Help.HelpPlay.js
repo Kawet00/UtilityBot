@@ -21,21 +21,29 @@ module.exports = {
                     value: lang.commands.help.helpPl[2]
                 }, {
                     name: lang.commands.helpa[6],
-                    value: lang.commands.help.helpPl[3],
+                    value: lang.commands.help.helpPl[3].replace('{PREFIX}', prefix),
                     inline: true
                 }, {
                     name: lang.commands.helpa[7],
                     value: `\`${prefix}p\``,
                     inline: true
                 }, {
-                    name: lang.commands.helpa[2],
-                    value: lang.commands.helpa[1]
+                    name: '\u200B',
+                    value: 'ㅤ'
+                }, {
+                      name: lang.commands.helpa[2],
+                      value: lang.commands.helpa[1],
+                      inline: true
+                    }, {
+                          name: lang.commands.helpa[25],
+                          value: lang.commands.helpa[0],
+                          inline: true
                 }, {
                     name: lang.commands.helpa[9],
                     value: `\`${lang.commands.help.music[1]}\``
                 }, {
                     name: "Cooldown",
-                    value: "5s"
+                    value: "0s"
                 }, {
                     name: lang.commands.helpa[10],
                     value: lang.commands.helpa[11] + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`
