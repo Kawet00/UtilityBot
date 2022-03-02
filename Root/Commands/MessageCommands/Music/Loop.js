@@ -35,7 +35,7 @@ module.exports = {
                     
                     new container.Discord.MessageEmbed()
                     .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? 'Inactive' : 'Active'}**, The whole sequence will repeat non-stop 🔁` : `Something went wrong. ❌`)
-                    .setColor(success ? container.Colors.GREEN : container.Colors.RED)
+                    .setColor(success ? container.Colors.VERT : container.Colors.RED)
                     .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
                   ]
@@ -58,7 +58,12 @@ module.exports = {
                   embeds: [
                     
                     new container.Discord.MessageEmbed()
-                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? 'Inactive' : 'Active'}**, Current music will be repeated non-stop (all music in the list **${container.Prefix}loop queue**  You can repeat it with the option.) 🔂` : `Something went wrong ❌`)]});
+                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? 'Inactive' : 'Active'}**, Current music will be repeated non-stop (all music in the list **${container.Prefix}loop queue**  You can repeat it with the option.) 🔂` : `Something went wrong ❌`)
+                    .setColor(success ? container.Colors.VERT : container.Colors.RED)
+                    .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                    .setTimestamp()
+                  ]
+                });
     };
   }
 };
