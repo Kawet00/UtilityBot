@@ -15,28 +15,39 @@ module.exports = {
   embeds: [
       new Discord.MessageEmbed()
       .setColor(colors.PERSO)
-      .setTitle(lang.commands.help.helpFilter[1].replace('{PREFIX}', prefix))
+      .setTitle(lang.commands.help.helpFl[1].replace('{PREFIX}', prefix))
       .setDescription(lang.commands.helpa[4])
       .addFields({
           name: lang.commands.helpa[5],
-          value: lang.commands.help.helpFilter[2]
+          value: lang.commands.help.helpFl[2]
       }, {
           name: lang.commands.helpa[6],
-          value: `\`${prefix}\``,
+          value: lang.commands.help.helpFl[3].replace('{PREFIX}', prefix),
           inline: true
       }, { 
-          name: lang.commands.helpa[7],
-          value: `\`${prefix}\``,
-          inline: true
-      }, {
+        name: lang.commands.helpa[7],
+        value: lang.commands.helpa[8],
+        inline: true
+    }, {
           name: lang.commands.helpa[2],
           value: lang.commands.helpa[1]
       }, {
+        name: '\u200B',
+        value: 'ㅤ'
+    }, {
+          name: lang.commands.helpa[2],
+          value: lang.commands.helpa[1],
+          inline: true
+        }, {
+              name: lang.commands.helpa[25],
+              value: lang.commands.helpa[0],
+              inline: true
+    }, {
           name: lang.commands.helpa[9],
           value: `\`${lang.commands.help.music[1]}\``
       }, {
           name: "Cooldown",
-          value: "5s"
+          value: "0s"
       }, {
           name: lang.commands.helpa[10],
           value: lang.commands.helpa[11] + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`

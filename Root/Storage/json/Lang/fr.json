@@ -129,7 +129,8 @@
       "Partie Modérateurs",
       "Partie Information",
       "Partie Fun",
-      "Choisissez la partie du help que vous voulez voir..."
+      "Choisissez la partie du help que vous voulez voir...",
+      "Vous pouvez utiliser cette commande seulement en étant dans un salon vocal ?"
     ],
     "help": {
       "moderation": [

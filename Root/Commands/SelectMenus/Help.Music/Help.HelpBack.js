@@ -29,6 +29,17 @@ module.exports = {
           value: lang.commands.helpa[8],
           inline: true
       }, {
+        name: '\u200B',
+        value: 'ㅤ'
+    }, {
+          name: lang.commands.helpa[2],
+          value: lang.commands.helpa[1],
+          inline: true
+        }, {
+              name: lang.commands.helpa[25],
+              value: lang.commands.helpa[0],
+              inline: true
+    }, {
           name: lang.commands.helpa[2],
           value: lang.commands.helpa[1]
       }, {

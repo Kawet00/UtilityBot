@@ -35,10 +35,10 @@ module.exports = {
           name: lang.commands.helpa[2],
           value: lang.commands.helpa[1],
           inline: true
-      }, {
-        name: 'Disponible seulement dans un salon vocal ?',
-        value: 'OUAI',
-        inline: true
+        }, {
+              name: lang.commands.helpa[25],
+              value: lang.commands.helpa[0],
+              inline: true
     }, {
           name: lang.commands.helpa[9],
           value: `\`${lang.commands.help.music[1]}\``

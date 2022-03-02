@@ -129,7 +129,8 @@
       "Moderator part",
       "Information part",
       "Fun part",
-      "Choose the part of the help you want to see..."
+      "Choose the part of the help you want to see...",
+      "Can you use this command only while in a voice channel?"
     ],
     "help": {
       "moderation": [
@@ -228,7 +229,8 @@
       "helpFl": [
         "You will have informations on the {PREFIX}filter command",
         "You will have informations on the `{PREFIX}filter` command:",
-        "Add filters to the music you listen to."
+        "Add filters to the music you listen to.",
+        "`{PREFIX}filter <a filter>`, if you want to have all of the filters do `{PREFIX}all-filters`"
       ],
       "helpLp": [
         "You will have informations on the {PREFIX}loop command",
