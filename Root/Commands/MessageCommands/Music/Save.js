@@ -1,3 +1,5 @@
+const db = require('quick.db');
+
 module.exports = {
   name: "save",
   description: "save",

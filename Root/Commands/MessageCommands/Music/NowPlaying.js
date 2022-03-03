@@ -1,57 +1,71 @@
+const db = require('quick.db');
+
 module.exports = {
-    name: 'nowplaying',
-    aliases: ['np'],
-    voiceChannel: true,
+  name: 'nowplaying',
+  aliases: ['np'],
+  voiceChannel: true,
 
-    run: async(client, message, args, container) => {
-        
-      let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
-      Object.assign(this, container)
-        const queue = client.player.getQueue(message.guild.id);
+  run: async (client, message, args, container) => {
 
- if (!queue || !queue.playing) return message.reply({
-   embeds: [
-     new container.Discord.MessageEmbed()
-     .setColor(container.Colors.RED)
-     .setDescription(`There is no music currently playing!.`)
-     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
-     .setTimestamp()
-]
-});
+    let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
+    Object.assign(this, container)
+    const queue = client.player.getQueue(message.guild.id);
 
-        const track = queue.current;
+    if (!queue || !queue.playing) return message.reply({
+      embeds: [
+        new container.Discord.MessageEmbed()
+        .setColor(container.Colors.RED)
+        .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+        .setFooter({
+          text: `© ${client.user.username}`,
+          iconURL: client.user.displayAvatarURL()
+        })
+        .setTimestamp()
+      ]
+    });
 
-        const embed = new container.Discord.MessageEmbed();
+    const track = queue.current;
 
-        const progress = queue.createProgressBar();
+    const embed = new container.Discord.MessageEmbed();
 
-        embed.setColor('RED');
-        embed.setThumbnail(track.thumbnail);
-        embed.setTitle(track.title)
+    const progress = queue.createProgressBar();
 
-        const methods = ['disabled', 'track', 'queue'];
+    embed.setColor(container.Colors.PERSO);
+    embed.setThumbnail(track.thumbnail);
+    embed.setTitle(track.title)
 
-        const timestamp = queue.getPlayerTimestamp();
-const trackDuration = timestamp.progress == 'Forever' ? 'Endless (Live)' : track.duration;
-const filter = ["bassboost", "8d"]
+    const methods = [lang.commands.music.NowP[0], 'track', lang.commands.music.NowP[1]];
 
-if(queue.getFiltersEnabled() !== filter) {}
+    const timestamp = queue.getPlayerTimestamp();
+    const trackDuration = timestamp.progress == lang.commands.music.NowP[4] ? lang.commands.music.NowP[5] : track.duration;
+    const filter = ["bassboost", "8d"]
 
-        embed.setDescription(`Volume **${queue.volume}%**\nDuration **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\nFilter **${queue.getFiltersEnabled()}**`);
+    if (queue.getFiltersEnabled() !== filter) {}
+    if (queue.getFiltersEnabled().length < 1) {
+      embed.setDescription(`Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\nFilter **Rien**`);
+    } else if (queue.getFiltersEnabled().length > 0) {
+      embed.setDescription(`Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\nFilter **${queue.getFiltersEnabled()}**`);
+    }
 
-        embed.addField('\u200B', '\u200B')
-        embed.addField(`Track, (${timestamp.progress}%)`, progress)
-        embed.setTimestamp();
-        embed.setFooter({ text: 'Edited by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true })});
 
-        const row = new container.Discord.MessageActionRow().addComponents(
-          new container.Discord.MessageButton()
-        .setLabel('Save Song')
-        .setCustomId('saveBtn')
-        .setStyle('SUCCESS')
-        )
+    embed.addField('\u200B', '\u200B')
+    embed.addField(`Track, (${timestamp.progress}%)`, progress)
+    embed.setTimestamp();
+    embed.setFooter({
+      text: ``,
+      iconURL: client.user.displayAvatarURL()
+    });
 
-        message.reply({ embeds: [embed], components: [row] });
-        console.log(queue.getFiltersEnabled())
-    },
+    const row = new container.Discord.MessageActionRow().addComponents(
+      new container.Discord.MessageButton()
+      .setLabel(lang.commands.music.NowP[3])
+      .setCustomId('saveBtn')
+      .setStyle('SUCCESS')
+    )
+
+    message.reply({
+      embeds: [embed],
+      components: [row]
+    });
+  },
 };

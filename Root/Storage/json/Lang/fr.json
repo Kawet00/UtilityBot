@@ -726,8 +726,45 @@
       ]
     },
     "music": {
+      "AnyM": [
+        "Aucun musique est actuellement en cours !"
+      ],
       "AllF": [
         "Voici tout les filtres disponible."
+      ],
+      "Back": [
+        "Il n'y a pas eu de musique avec celle-ci.",
+        "Musique précédente remise..."
+      ],
+      "Clear": [
+        "Il y a déjà aucune musique dans la file d'attente.",
+        "La file d'attente a été supprimer."
+      ],
+      "Filter": [
+        "Veuillez entrer le nom d'un filtre.\n\nVous pouvez faire `{PREFIX}all-filters` pour voir tout les noms de filtre valide.",
+        "Je n'est pas trouver de filtre avec çe nom.\n\nVous pouvez faire `{PREFIX}all-filters` pour voir tout les noms de filtre valide.",
+        "Filtre appliqué",
+        "**Rappel**, si la musique est longue, le filtre sera appliquer plus ou moins rapidement."
+      ],
+      "Loop": [
+        "Vous devez en premier désactiver le loop mode de la musique, `{PREFIX}loop`.",
+        "Inactif",
+        "Actif",
+        "La musique sera répété non-stop.",
+        "Quelque chose ne va pas.",
+        "En loop mode, vous devez d'abord désactiver la file d'attente existante, `{PREFIX}loop queue`",
+        "La musique acctuellement en cours sera répété non-stop (Vous pouvez répété toute la file d'attente aussi avec l'option `{PREFIX}loop queue`)."
+      ],
+      "NowP": [
+        "désactiver",
+        "file d'attente",
+        "Durée",
+        "Enregistré la musique",
+        "Toujours",
+        "Sans fin (Live)"
+      ],
+      "Pause": [
+        ""
       ]
     },
     "util": {

@@ -736,6 +736,48 @@
         "seconds"
       ]
     },
+    "music": {
+      "AnyM": [
+        "No music currently playing!"
+      ],
+      "AllF": [
+        "Here are all the filters available."
+      ],
+      "Back": [
+        "There was no music playing before.",
+        "Previous music started playing..."
+      ],
+      "Clear": [
+        "There is already no music in queue.",
+        "The queue has just been cleared."
+      ],
+      "Filter": [
+        "Please enter a calid filter name.\n\nYou can do `{PREFIX}all-filters` to see all of filters available.",
+        "I counldn't find a filter with this name.\n\nYou can do `{PREFIX}all-filter` to see all of filters available.",
+        "Filter applied",
+        "**Remember**, if the music is long, the filter application time may be longer accordingly."
+      ],
+      "Loop": [
+        "You should disable loop mode of existing music first, `{PREFIX}loop`.",
+        "Inactive",
+        "Active",
+        "The whole sequence will repeat non-stop.",
+        "Something went wrong.",
+        "In Loop mode you must disable existing queue first, `{PREFIX}loop queue`.",
+        "Current music will be repeated non-stop (You can repeat the queue too with the option `{PREFIX}loop queue`.)."
+      ],
+      "NowP": [
+        "disabled",
+        "queue",
+        "Duration",
+        "Save Song",
+        "Forever",
+        "Endless (Live)"
+      ],
+      "Pause": [
+        ""
+      ]
+    },
     "util": {
       "Serveur": "Server",
       "BI": [

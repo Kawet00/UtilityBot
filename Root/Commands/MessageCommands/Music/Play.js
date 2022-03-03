@@ -1,4 +1,5 @@
 const { QueryType } = require('discord-player')
+const db = require('quick.db');
 
 module.exports = {
     name: "play",
@@ -9,7 +10,7 @@ module.exports = {
     run: async(client, message, args, container) => {
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
-        
+
         if (!args[0]) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
@@ -64,6 +65,10 @@ module.exports = {
             ]
         });
 
+        const dbVol = db.get(`vol_${message.guild.id}`)
+        if(dbVol) {
+            queue.setVolume(dbVol)
+        }
         res.playlist ? queue.addTracks(res.tracks) : queue.addTrack(res.tracks[0]);
 
         if (!queue.playing) await queue.play();

@@ -1,3 +1,5 @@
+const db = require('quick.db');
+
 module.exports = {
   name: 'pause',
   voiceChannel: true,
@@ -11,7 +13,7 @@ module.exports = {
        if (!queue || !queue.playing) return message.reply({
          embeds: [
            new container.Discord.MessageEmbed()
-           .setDescription(`There is no music currently playing!.`)
+           .setDescription(`  ${lang.commands.music.AnyM[0]}`)
            .setColor(container.Colors.RED)
            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
            .setTimestamp()

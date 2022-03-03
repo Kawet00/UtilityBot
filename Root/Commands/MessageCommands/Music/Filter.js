@@ -1,3 +1,5 @@
+const db = require('quick.db');
+
 module.exports = {
   name: 'filter',
   voiceChannel: true,
@@ -14,11 +16,19 @@ module.exports = {
      .setColor(container.Colors.RED)
      .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
      .setThumbnail()
-     .setDescription(`There is no music currently playing!. ❌`)
+     .setDescription(`  ${lang.commands.music.AnyM[0]}`)
    ]
   });
 
-      if (!args[0]) return message.channel.send(`Please enter a valid filter name. ❌\nAll filters are \`bassboost, bassboost_low, bassboost_high, 8D, vaporwave, nightcore, phaser, tremolo, vibrato, reverse, treble, normalizer, normalizer2, surrounding, pulsator, subboost, karaoke, flanger, gate, haas, mcompand, mono, mstlr, mstrr, compressor, expander, softlimiter, chorus, chorus2d, chorus3d, fadein, dim, earrape\``);
+      if (!args[0]) return message.reply({
+        embeds: [
+          new container.Discord.MessageEmbed()
+          .setDescription(`  ${lang.commands.music.Filter[0].replace('{PREFIX}', container.PREFIX)}`)
+          .setColor(container.Colors.RED)
+          .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+          .setTimestamp()
+        ]
+      });
 
       const filters = [];
       queue.getFiltersEnabled().map(x => filters.push(x));
@@ -32,7 +42,7 @@ module.exports = {
           .setColor(container.Colors.RED)
           .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setThumbnail()
-          .setDescription(`I couldn't find a filter with this name. ❌\nAll filters are \`bassboost, bassboost_low, bassboost_high, 8D, vaporwave, nightcore, phaser, tremolo, vibrato, reverse, treble, normalizer, normalizer2, surrounding, pulsator, subboost, karaoke, flanger, gate, haas, mcompand, mono, mstlr, mstrr, compressor, expander, softlimiter, chorus, chorus2d, chorus3d, fadein, dim, earrape\``)
+          .setDescription(`  ${lang.commands.music.Filter[1].replace('{PREFIX}', container.PREFIX)}`)
         ]
       });
       const filtersUpdated = queue.getFiltersEnabled()
@@ -48,9 +58,8 @@ module.exports = {
           .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setThumbnail()
           .addField('\u200B', 'ㅤ')
-          .addField('Filter applied', filter)
-          .addField('Filter Status', queue.getFiltersEnabled().includes(filter) ? 'Active' : 'Inactive')
-          .setDescription('**Remember**, if the music is long, the filter application time may be longer accordingly.')
+          .addField(lang.commands.music.Filter[2], filter)
+          .setDescription(`  ${lang.commands.music.Filter[3]}`)
         ]
       })
   },

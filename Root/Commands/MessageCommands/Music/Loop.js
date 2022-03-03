@@ -1,4 +1,5 @@
 const { QueueRepeatMode } = require('discord-player')
+const db = require('quick.db');
 
 module.exports = {
   name: "loop",
@@ -15,16 +16,20 @@ module.exports = {
  
     if (!queue || !queue.playing) return message.reply({
       embeds: [
-        
         new container.Discord.MessageEmbed()
-        .setDescription(`There is no music currently playing!. ❌`)]});
+        .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+        .setColor(container.Colors.RED)
+        .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+        .setTimestamp()
+      ]
+    });
     
-            if (args.join('').toLowerCase() === 'queue') {
+            if (args[0] === 'queue') {
                 if (queue.repeatMode === 1) return message.reply({
                   embeds: [
                     
                     new container.Discord.MessageEmbed()
-                    .setDescription(`You should disable loop mode of existing music first **(${container.Prefix}loop)** ❌`)
+                    .setDescription(`  ${lang.commands.music.Loop[0].replace('{PREFIX}', container.PREFIX)}`)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
                     .setColor(container.Colors.RED)
@@ -37,7 +42,7 @@ module.exports = {
                   embeds: [
                     
                     new container.Discord.MessageEmbed()
-                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? 'Inactive' : 'Active'}**, The whole sequence will repeat non-stop 🔁` : `Something went wrong. ❌`)
+                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${lang.commands.music.Loop[2]}` : `${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[3]}` : `  ${lang.commands.music.Loop[4]}`)
                     .setColor(success ? container.Colors.VERT : container.Colors.RED)
                     .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
@@ -48,7 +53,7 @@ module.exports = {
                   embeds: [
                     
                     new container.Discord.MessageEmbed()
-                    .setDescription(`In Loop mode you must disable existing queue first **(${container.Prefix}loop queue)**`)
+                    .setDescription(`  ${lang.commands.music.Loop[5].replace('{PREFIX}', container.PREFIX)}`)
                     .setColor(container.Colors.RED)
                     .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
@@ -61,7 +66,7 @@ module.exports = {
                   embeds: [
                     
                     new container.Discord.MessageEmbed()
-                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? 'Inactive' : 'Active'}**, Current music will be repeated non-stop (all music in the list **${container.Prefix}loop queue**  You can repeat it with the option.) 🔂` : `Something went wrong ❌`)
+                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${lang.commands.music.Loop[1]}` : `${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[6].replace('{PREFIX}', container.PREFIX)}` : `  ${lang.commands.music.Loop[4]}`)
                     .setColor(success ? container.Colors.VERT : container.Colors.RED)
                     .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()

@@ -1,3 +1,5 @@
+const db = require('quick.db');
+
 module.exports = {
   name: 'clear-list',
   voiceChannel: true,
@@ -14,7 +16,7 @@ module.exports = {
           .setColor(container.Colors.RED)
           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL() })
           .setThumbnail()
-        .setDescription(`No music currently playing. ❌`)
+        .setDescription(`  ${lang.commands.music.AnyM[0]}`)
         ]
       });
 
@@ -24,7 +26,7 @@ module.exports = {
           .setColor(container.Colors.EPINGLE)
           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL() })
           .setThumbnail()
-        .setDescription(`There is already no music in queue after the current one ❌`)
+        .setDescription(`  ${lang.commands.music.Clear[0]}`)
         ]
       });
 
@@ -36,7 +38,7 @@ module.exports = {
           .setColor(container.Colors.VERT)
           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL() })
           .setThumbnail()
-        .setDescription(`The queue has just been cleared. 🗑️`)
+        .setDescription(`  ${lang.commands.music.Clear[1]}`)
         ]
       });
   },

@@ -1,3 +1,5 @@
+const db = require('quick.db');
+
 module.exports = {
   name: "back",
   description: "back",
@@ -13,7 +15,7 @@ module.exports = {
           embeds: [
             new container.Discord.MessageEmbed()
             .setColor(container.Colors.RED)
-          .setDescription(`No music currently playing!`)
+          .setDescription(`  ${lang.commands.music.AnyM[0]}`)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
           .setThumbnail()
           ]
@@ -23,7 +25,7 @@ module.exports = {
           embeds: [
             new container.Discord.MessageEmbed()
             .setColor(container.Colors.RED)
-          .setDescription(`There was no music playing before.`)
+          .setDescription(`  ${lang.commands.music.Back[0]}`)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
           .setThumbnail()
           ]
@@ -35,7 +37,7 @@ module.exports = {
           embeds: [
             new container.Discord.MessageEmbed()
             .setColor(container.Colors.VERT)
-          .setDescription(`Previous music started playing... ✅`)
+          .setDescription(`  ${lang.commands.music.Back[1]}`)
         .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
         .setThumbnail()
       ]

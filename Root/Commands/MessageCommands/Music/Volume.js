@@ -1,3 +1,5 @@
+const db = require('quick.db');
+
 module.exports = {
   name: "volume",
   aliases: ["vol"],
@@ -52,7 +54,9 @@ module.exports = {
           ]
         });
 
-        const success = queue.setVolume(vol);
+        const success = queue.setVolume(vol).then(() => {
+          db.set(`vol_${message.guild.id}`, vol)
+        })
 
         return message.reply({
           embeds: [
