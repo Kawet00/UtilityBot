@@ -3,6 +3,9 @@ module.exports = {
   voiceChannel: true,
 
   run: async(client, message, args, container) => {
+        
+    let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
+    
       const queue = client.player.getQueue(message.guild.id);
 
       if (!queue || !queue.playing) return message.reply({

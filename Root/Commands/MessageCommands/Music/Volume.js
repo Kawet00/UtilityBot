@@ -4,6 +4,9 @@ module.exports = {
   voiceChannel: true,
 
   run: async(client, message, args, container) => {
+        
+    let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
+    
     const maxVol = container.Config.opt.maxVol;
     const queue = client.player.getQueue(message.guild.id);
 
