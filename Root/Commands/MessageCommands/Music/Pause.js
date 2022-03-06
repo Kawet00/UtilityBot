@@ -25,7 +25,7 @@ module.exports = {
         return message.reply({
           embeds: [
           new container.Discord.MessageEmbed()
-          .setDescription(success ? `The currently playing music named **${queue.current.title}** has stopped ✅` : `Something went wrong. ❌`)
+          .setDescription(success ? lang.commands.music.Pause[0].replace('{TITLE}', queue.current.title) : `Something went wrong. ❌`)
           .setColor(sucess ? container.Colors.VERT : CredentialsContainer.Colors.RED)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setTimestamp()
