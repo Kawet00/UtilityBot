@@ -729,6 +729,9 @@
       "AnyM": [
         "Aucun musique est actuellement en cours !"
       ],
+      "SomethW": [
+        "Quelque chose ne va pas."
+      ],
       "AllF": [
         "Voici tout les filtres disponible."
       ],
@@ -751,7 +754,6 @@
         "Inactif",
         "Actif",
         "La musique sera répété non-stop.",
-        "Quelque chose ne va pas.",
         "En loop mode, vous devez d'abord désactiver la file d'attente existante, `{PREFIX}loop queue`",
         "La musique acctuellement en cours sera répété non-stop (Vous pouvez répété toute la file d'attente aussi avec l'option `{PREFIX}loop queue`)."
       ],

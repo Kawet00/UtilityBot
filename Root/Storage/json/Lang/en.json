@@ -740,6 +740,9 @@
       "AnyM": [
         "No music currently playing!"
       ],
+      "SomethW": [
+        "Something went wrong."
+      ],
       "AllF": [
         "Here are all the filters available."
       ],
@@ -762,7 +765,6 @@
         "Inactive",
         "Active",
         "The whole sequence will repeat non-stop.",
-        "Something went wrong.",
         "In Loop mode you must disable existing queue first, `{PREFIX}loop queue`.",
         "Current music will be repeated non-stop (You can repeat the queue too with the option `{PREFIX}loop queue`.)."
       ],
@@ -775,7 +777,7 @@
         "Endless (Live)"
       ],
       "Pause": [
-        ""
+        "The currently playing music named **${TITLE}** has stopped"
       ]
     },
     "util": {
