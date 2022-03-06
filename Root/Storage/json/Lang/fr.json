@@ -764,7 +764,7 @@
         "Sans fin (Live)"
       ],
       "Pause": [
-        ""
+        "The currently playing music named **${queue.current.title}** has stopped"
       ]
     },
     "util": {
