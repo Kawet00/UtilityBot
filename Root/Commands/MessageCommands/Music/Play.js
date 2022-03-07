@@ -17,7 +17,7 @@ module.exports = {
                 .setColor(container.Colors.RED)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`Write the name of the music you want to search. ❌`)
+                .setDescription(`  ${lang.commands.music.Play[0]}`)
             ]
         });
 
@@ -32,7 +32,7 @@ module.exports = {
                 .setColor(container.Colors.RED)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`No results found! ❌`)
+                .setDescription(`  ${lang.commands.music.Play[1]}`)
             ]
         });
 
@@ -50,7 +50,7 @@ module.exports = {
                     .setColor(container.Colors.EPINGLE)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
-                    .setDescription(`I can't join audio channel.`)
+                    .setDescription(`  ${lang.commands.music.Play[2]}`)
                 ]
             });
         }
@@ -61,7 +61,7 @@ module.exports = {
                 .setColor(container.Colors.VERT)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`Your ${res.playlist ? 'Your Playlist' : 'Your Track'} Loading... 🎧`)
+                .setDescription(`  ${lang.commands.music.Play[3]} ${res.playlist ? lang.commands.music.Play[4]: lang.commands.music.Play[5]} ${lang.commands.music.Play[6]} `)
             ]
         });
 

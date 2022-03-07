@@ -19,7 +19,7 @@ module.exports = {
             .setColor(container.Colors)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`There is no music currently playing!. ❌`)
+            .setDescription(`  ${lang.commands.music.AnyM[0]}`)
           ]
         });
 
@@ -29,26 +29,26 @@ module.exports = {
             .setColor(container.Colors)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`No music in queue after current. ❌`)
+            .setDescription(`  ${lang.commands.music.Queue[0]}`)
           ]
         });
 
         const embed = new container.Discord.MessageEmbed();
         const methods = ['🔁', '🔂'];
 
-        embed.setColor('RED');
+        embed.setColor(container.Colors.PERSO);
         embed.setThumbnail(message.guild.iconURL({ size: 2048, dynamic: true }));
-        embed.setTitle(`Server Music List - ${message.guild.name} ${methods[queue.repeatMode]}`);
+        embed.setTitle(`  ${lang.commands.music.Queue[1]} - ${message.guild.name} ${methods[queue.repeatMode]}`);
 
-        const tracks = queue.tracks.map((track, i) => `**${i + 1}** - ${track.title} | ${track.author} (Started by <@${track. requestedBy.id}>)`);
+        const tracks = queue.tracks.map((track, i) => `**${i + 1}** - ${track.title} | ${track.author} (${lang.commands.music.Queue[2]} <@${track. requestedBy.id}>)`);
 
         const songs = queue.tracks.length;
-        const nextSongs = songs > 5 ? `And **${songs - 5}** Other Song...` : `There are **${songs}** Songs in the List.`;
+        const nextSongs = songs > 5 ? `${lang.commands.music.Queue[3]} **${songs - 5}** ${lang.commands.music.Queue[4]}` : `${lang.commands.music.Queue[5].replace('{SONGS}', songs)}`;
 
-        embed.setDescription(`Currently Playing: \`${queue.current.title}\`\n\n${tracks.slice(0, 5).join('\n')}\n\n${nextSongs }`);
+        embed.setDescription(`${lang.commands.music.Queue[6]} \`${queue.current.title}\`\n\n${tracks.slice(0, 5).join('\n')}\n\n${nextSongs }`);
 
         embed.setTimestamp();
-        embed.setFooter({ text: 'Edited by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true })});
+        embed.setFooter({ text: client.user.username, iconURL: client.user.displayAvatarURL() });
 
         message.reply({
           embeds: [embed]

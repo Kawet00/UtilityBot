@@ -767,6 +767,18 @@
       ],
       "Pause": [
         "The currently playing music named **${queue.current.title}** has stopped"
+      ],
+      "Play": [
+        "Ecrivez le nom de la musique que vous voulez chercher.",
+        "Aucun résultat trouver !",
+        "Je ne peut pas rejoindre le salon audio.",
+        "Votre",
+        "Votre playlist",
+        "Votre track",
+        "Chargement..."
+      ],
+      "Queue": [
+        ""
       ]
     },
     "util": {

@@ -42,7 +42,7 @@ module.exports = {
                   embeds: [
                     
                     new container.Discord.MessageEmbed()
-                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${lang.commands.music.Loop[2]}` : `${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[3]}` : `  ${lang.commands.music.SomethW[0]}`)
+                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${lang.commands.music.Loop[1]}` : `${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[3]}` : `  ${lang.commands.music.SomethW[0]}`)
                     .setColor(success ? container.Colors.VERT : container.Colors.RED)
                     .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
@@ -53,7 +53,7 @@ module.exports = {
                   embeds: [
                     
                     new container.Discord.MessageEmbed()
-                    .setDescription(`  ${lang.commands.music.Loop[5].replace('{PREFIX}', container.PREFIX)}`)
+                    .setDescription(`  ${lang.commands.music.Loop[4].replace('{PREFIX}', container.PREFIX)}`)
                     .setColor(container.Colors.RED)
                     .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
@@ -66,7 +66,7 @@ module.exports = {
                   embeds: [
                     
                     new container.Discord.MessageEmbed()
-                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${lang.commands.music.Loop[1]}` : `${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[6].replace('{PREFIX}', container.PREFIX)}` : `  ${lang.commands.music.Loop[4]}`)
+                    .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${lang.commands.music.Loop[1]}` : `${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[5].replace('{PREFIX}', container.PREFIX)}` : `  ${lang.commands.music.SomethW[0]}`)
                     .setColor(success ? container.Colors.VERT : container.Colors.RED)
                     .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()

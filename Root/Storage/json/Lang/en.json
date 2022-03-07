@@ -778,6 +778,24 @@
       ],
       "Pause": [
         "The currently playing music named **${TITLE}** has stopped"
+      ],
+      "Play": [
+        "Write the name of the music you want to search.",
+        "No result found!",
+        "I can't join audio channel.",
+        "Your",
+        "Your playlist",
+        "Your track",
+        "Loading..."
+      ],
+      "Queue": [
+        "No music in queue after current.",
+        "Server Music List",
+        "Started by",
+        "And",
+        "Other Song...",
+        "There are **${SONGS}** Songs in the List.",
+        "Currently Playing:"
       ]
     },
     "util": {
