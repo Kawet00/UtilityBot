@@ -16,7 +16,7 @@ if (!queue || !queue.playing) return message.reply({
     .setColor(container.Colors.RED)
     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
     .setTimestamp()
-    .setDescription(`${message.author}, There is no music currently playing!. ❌`)
+    .setDescription(`  ${lang.commands.music.AnyM[0]}`)
   ]
 });
 
@@ -28,7 +28,7 @@ return message.reply({
     .setColor(success ? container.Colors.VERT : container.Colors.RED)
     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
     .setTimestamp()
-    .setDescription(success ? `**${queue.current.title}**, Skipped song ✅` : `${message.author}, Something went wrong ❌`)
+    .setDescription(success ? `**${queue.current.title}**, ${lang.commands.music.Skip[0]}` : `${lang.commands.music.SomethW[0]}`)
   ]
 });
   }

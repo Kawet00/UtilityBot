@@ -16,14 +16,14 @@ module.exports = {
      .setColor(container.Colors.RED)
      .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
      .setThumbnail()
-     .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+     .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
    ]
   });
 
       if (!args[0]) return message.reply({
         embeds: [
           new container.Discord.MessageEmbed()
-          .setDescription(`  ${lang.commands.music.Filter[0].replace('{PREFIX}', container.PREFIX)}`)
+          .setDescription(`${container.Emotes.pepe.pepe_srx} ┇ ${lang.commands.music.Filter[0].replace('{PREFIX}', container.PREFIX)}`)
           .setColor(container.Colors.RED)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setTimestamp()
@@ -42,7 +42,7 @@ module.exports = {
           .setColor(container.Colors.RED)
           .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setThumbnail()
-          .setDescription(`  ${lang.commands.music.Filter[1].replace('{PREFIX}', container.PREFIX)}`)
+          .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Filter[1].replace('{PREFIX}', container.PREFIX)}`)
         ]
       });
       const filtersUpdated = queue.getFiltersEnabled()
@@ -59,7 +59,7 @@ module.exports = {
           .setThumbnail()
           .addField('\u200B', 'ㅤ')
           .addField(lang.commands.music.Filter[2], filter)
-          .setDescription(`  ${lang.commands.music.Filter[3]}`)
+          .setDescription(`${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Filter[3]}`)
         ]
       })
   },

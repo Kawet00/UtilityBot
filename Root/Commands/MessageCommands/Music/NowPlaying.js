@@ -15,7 +15,7 @@ module.exports = {
       embeds: [
         new container.Discord.MessageEmbed()
         .setColor(container.Colors.RED)
-        .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+        .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
         .setFooter({
           text: `© ${client.user.username}`,
           iconURL: client.user.displayAvatarURL()
@@ -42,9 +42,9 @@ module.exports = {
 
     if (queue.getFiltersEnabled() !== filter) {}
     if (queue.getFiltersEnabled().length < 1) {
-      embed.setDescription(`Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\nFilter **Rien**`);
+      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${lang.commands.music.NowP[6]}**`);
     } else if (queue.getFiltersEnabled().length > 0) {
-      embed.setDescription(`Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\nFilter **${queue.getFiltersEnabled()}**`);
+      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${queue.getFiltersEnabled()}**`);
     }
 
 

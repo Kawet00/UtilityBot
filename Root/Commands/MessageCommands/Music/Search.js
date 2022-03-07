@@ -15,7 +15,7 @@ module.exports = {
             .setColor(container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`Please enter a valid song name. ❌`)
+            .setDescription(`  ${lang.commands.music.Search[0]}`)
         ]
     });
 
@@ -30,7 +30,7 @@ module.exports = {
                 .setColor(container.Colors.RED)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`No search results found. ❌`)
+                .setDescription(`  ${lang.commands.music.Search[1]}`)
             ]
         });
 
@@ -40,15 +40,15 @@ module.exports = {
 
         const embed = new container.Discord.MessageEmbed();
 
-        embed.setColor('RED');
-        embed.setTitle(`Searched Music: ${args.join(' ')}`);
+        embed.setColor(container.Colors.PERSO);
+        embed.setTitle(`  ${lang.commands.music.Search[2]} ${args.join(' ')}`);
 
         const maxTracks = res.tracks.slice(0, 10);
 
-        embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\nChoose a song from **1** to **${maxTracks.length}** write send or write **cancel** and cancel selection.⬇️`);
+        embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\n  ${lang.commands.music.Search[3].replace('{MAXT}', maxTracks.length)}`);
 
         embed.setTimestamp();
-        embed.setFooter({ text: 'Edited by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true })});
+        embed.setFooter({ text: client.user.username, iconURL: client.user.displayAvatarURL()});
 
         message.reply({ embeds: [embed] });
 
@@ -59,11 +59,11 @@ module.exports = {
         });
 
        collector.on('collect', async (query) => {
-            if (query.content.toLowerCase() === 'cancel') return message.channel.send(`Call cancelled. ✅`) && collector.stop();
+            if (query.content.toLowerCase() === 'cancel') return message.channel.send(`  ${lang.commands.music.Search[4]}`) && collector.stop();
 
             const value = parseInt(query.content);
 
-            if (!value || value <= 0 || value > maxTracks.length) return message.channel.send(`Error: select a song **1** to **${maxTracks.length}** and write send or type **cancel** and cancel selection. ❌`);
+            if (!value || value <= 0 || value > maxTracks.length) return message.channel.send(`  ${lang.commands.music.Search[5].replace('{MAXT}', maxTracks.length)}`);
 
             collector.stop();
 
@@ -77,12 +77,12 @@ module.exports = {
                         .setColor(container.Colors)
                         .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                         .setTimestamp()
-                        .setDescription(`I can't join audio channel. ❌`)
+                        .setDescription(`  ${lang.commands.music.Search[6]}`)
                     ]
                 });
             }
 
-            await message.channel.send(`Loading your music call. 🎧`);
+            await message.channel.send(`  ${lang.commands.music.Search[7]}`);
 
             queue.addTrack(res.tracks[Number(query.content)-1]);
             if (!queue.playing) await queue.play();
@@ -96,7 +96,7 @@ module.exports = {
                     .setColor(container.Colors)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
-                    .setDescription(`Song search time expired ❌`)
+                    .setDescription(`  ${lang.commands.music.Search[8].replace('{PREFIX}', container.Prefix)}`)
                 ]
             });
         });

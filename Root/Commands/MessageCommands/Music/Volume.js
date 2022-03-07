@@ -18,7 +18,7 @@ module.exports = {
            .setColor(container.Colors.RED)
            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
            .setTimestamp()
-           .setDescription(`There is no music currently playing!. ❌`)
+           .setDescription(`  ${lang.commands.music.AnyM[0]}`)
          ]
         });
 
@@ -30,7 +30,7 @@ module.exports = {
             .setColor(container.Colors.PERSO)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`Current volume: **${queue.volume}** 🔊\n**To change the volume, with \`1\` to \`${maxVol}\` Type a number between.**`)
+            .setDescription(`  ${lang.commands.music.Volume[0]} **${queue.volume}** 🔊\n${lang.commands.music.Volume[1].replace('{MAXV}', maxVol)}`)
           ]
         });
 
@@ -40,7 +40,7 @@ module.exports = {
             .setColor(container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`The volume you want to change is already the current volume ❌`)
+            .setDescription(`  ${lang.commands.music.Volume[2]}`)
           ]
         });
 
@@ -50,7 +50,7 @@ module.exports = {
             .setColor(container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`**Type a number from \`1\` to \`${maxVol}\` to change the volume .** ❌`)
+            .setDescription(`  ${lang.commands.music.Volume[3]}`)
           ]
         });
 
@@ -64,7 +64,7 @@ module.exports = {
             .setColor(success ? container.Colors.VERT : container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(success ? `Volume changed: **%${vol}**/**${maxVol}** 🔊` : `Something went wrong. ❌`)
+            .setDescription(success ? `${lang.commands.music.Volume[4]} **%${vol}**/**${maxVol}** 🔊` : `${lang.commands.music.SomethW[0]}`)
           ]
         });
   }

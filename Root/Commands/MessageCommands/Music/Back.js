@@ -15,7 +15,7 @@ module.exports = {
           embeds: [
             new container.Discord.MessageEmbed()
             .setColor(container.Colors.RED)
-          .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+          .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
           .setThumbnail()
           ]
@@ -25,7 +25,7 @@ module.exports = {
           embeds: [
             new container.Discord.MessageEmbed()
             .setColor(container.Colors.RED)
-          .setDescription(`  ${lang.commands.music.Back[0]}`)
+          .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Back[0]}`)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
           .setThumbnail()
           ]
@@ -37,7 +37,7 @@ module.exports = {
           embeds: [
             new container.Discord.MessageEmbed()
             .setColor(container.Colors.VERT)
-          .setDescription(`  ${lang.commands.music.Back[1]}`)
+          .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.music.Back[1]}`)
         .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
         .setThumbnail()
       ]

@@ -18,7 +18,7 @@ module.exports = {
           .setColor(container.Colors.RED)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setTimestamp()
-          .setDescription(`${message.author}, There is no music currently playing!. ❌`)
+          .setDescription(`  ${lang.commands.music.AnyM[0]}`)
         ]
       });
 

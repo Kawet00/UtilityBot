@@ -17,7 +17,7 @@ const queue = client.player.getQueue(message.guild.id);
       .setColor(container.Colors.RED)
       .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
       .setTimestamp()
-      .setDescription(`There is no music currently playing!. ❌`)
+      .setDescription(`  ${lang.commands.music.AnyM[0]}`)
     ]
   });
 
@@ -27,7 +27,7 @@ const queue = client.player.getQueue(message.guild.id);
             .setColor(container.Colors.PERSO)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`Registered track: **${queue.current.title}** | ${queue.current.author}, Saved server: **${message.guild.name}** ✅`)
+            .setDescription(`  ${lang.commands.music.Save[0]} **${queue.current.title}** | ${queue.current.author}, ${lang.commands.music.Save[1]} **${message.guild.name}**`)
           ]
         }) .then(() => {
             message.reply({
@@ -36,7 +36,7 @@ const queue = client.player.getQueue(message.guild.id);
                 .setColor(container.Colors.VERT)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`I sent the name of the music via private message. ✅`)
+                .setDescription(`  ${lang.commands.music.Save[2]}`)
               ]
             });
         }).catch(error => {
@@ -46,7 +46,7 @@ const queue = client.player.getQueue(message.guild.id);
                 .setColor(container.Colors.RED)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`Unable to send you private message. ❌`)
+                .setDescription(`  ${lang.commands.music.Save[3]}`)
               ]
             });
         });

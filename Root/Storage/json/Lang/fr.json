@@ -763,10 +763,12 @@
         "Durée",
         "Enregistré la musique",
         "Toujours",
-        "Sans fin (Live)"
+        "Sans fin (Live)",
+        "Rien",
+        "Filtre(s) :"
       ],
       "Pause": [
-        "The currently playing music named **${queue.current.title}** has stopped"
+        "The currently playing music named **${TITLE}** has stopped"
       ],
       "Play": [
         "Ecrivez le nom de la musique que vous voulez chercher.",
@@ -778,7 +780,46 @@
         "Chargement..."
       ],
       "Queue": [
-        ""
+        "Aucune musique dans la file d'attente.",
+        "Liste des Musiques du Serveur",
+        "Commencer par",
+        "Et",
+        "Autre musique(s)...",
+        "Il y a **${SONGS}** Musiques dans la liste.",
+        "Actuellement en cours :"
+      ],
+      "Resume": [
+        "La musique continue a être joué."
+      ],
+      "Save": [
+        "Track enregistré :",
+        "Serveur enregistré :",
+        "J'ai envoyer le nom de la musique via messages privée.",
+        "Impossible de vous envoyer de messages privée."
+      ],
+      "Search": [
+        "Veuillez entré un nom de musique valide.",
+        "Aucun résultat de récherche trouver.",
+        "Musique chercher :",
+        "Veuillez choisir un nombre entre **1** et **{MAXT}** écrivez puis envoyer ou bien écrivez puis envoyer **cancel** pour annulé.",
+        "Recherche annulé.",
+        "Erreur: choisissez un nombre entre **1** et **{MAXT}** écrivez puis envoyer ou bien écrivez puis envoyer **cancel** pour annulé.",
+        "Je ne peut pas rejoindre le salon.",
+        "Chargement de votre musique rechercher.",
+        "Temps de recherche expiré. Reécrivez `{PREFIX}search <votre musique>` pour refaire."
+      ],
+      "Skip": [
+        "à été ignoré."
+      ],
+      "Stop": [
+        "La musique sur cce serveur a été éteinte. On se voit la prochaine fois !"
+      ],
+      "Volume": [
+        "Volume actuel :",
+        "**Pour changer le volume, écrivez un nombre entre `1` et `{MAXV}`.**",
+        "Le volume que vous voulez mettre est le volume actuel.",
+        "Mettez un nombre entre `1` et `{MAXV}` pour changer le volume.",
+        "Volume changer :"
       ]
     },
     "util": {

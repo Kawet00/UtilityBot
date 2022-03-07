@@ -427,7 +427,7 @@
         "`{PREFIX}mute <a member> [the reason]`"
       ],
       "helpPF": [
-        "You will have informations on the {PREFIX}heads-or-tails`$ command:",
+        "You will have informations on the {PREFIX}heads-or-tails` command:",
         "You will have informations on the `{PREFIX}heads-or-tails` command:",
         "Tossing a coin",
         "Heads of Tails"
@@ -774,10 +774,12 @@
         "Duration",
         "Save Song",
         "Forever",
-        "Endless (Live)"
+        "Endless (Live)",
+        "Nothing",
+        "Filter(s):"
       ],
       "Pause": [
-        "The currently playing music named **${TITLE}** has stopped"
+        "The currently playing music named **{TITLE}** has stopped"
       ],
       "Play": [
         "Write the name of the music you want to search.",
@@ -793,9 +795,42 @@
         "Server Music List",
         "Started by",
         "And",
-        "Other Song...",
-        "There are **${SONGS}** Songs in the List.",
+        "Other Song(s)...",
+        "There are **{SONGS}** Songs in the List.",
         "Currently Playing:"
+      ],
+      "Resume": [
+        "The song continues to play."
+      ],
+      "Save": [
+        "Registered track:",
+        "Saved server:",
+        "I sent the name of the music via private message.",
+        "Unable to send you private message."
+      ],
+      "Search": [
+        "Please enter a valid song name.",
+        "No search results found.",
+        "Searched Music:",
+        "Choose a song between **1** and **{MAXT}** write send or write **cancel** and cancel selection.",
+        "Call cancelled.",
+        "Error: select a song between **1** and **{MAXT}** and write send or type **cancel** and cancel selection.",
+        "I can't join audio channel.",
+        "Loading your music call.",
+        "Song search time expired. Retype `{PREFIX}search <your music>` to retry."
+      ],
+      "Skip": [
+        "was skipped."
+      ],
+      "Stop": [
+        "The music playing on this server has been turned off, see you next time!"
+      ],
+      "Volume": [
+        "Current volume:",
+        "**To change the volume, with `1` to `{MAXV}`, type a number between.**",
+        "The volume you want to change is already the current volume",
+        "Type a number between `1` and `{MAXV}` to change the volume .",
+        "Volume changed:"
       ]
     },
     "util": {
