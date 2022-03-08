@@ -53,7 +53,7 @@ module.exports = {
         embeds: [
         new container.Discord.MessageEmbed()
           .setColor(colors.RED)
-          .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.util.messageA[1].replace('[contact]', '[contact the support](https://discord.gg/BT4SyHUM5z)')}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+          .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.util.messageA[1].replace('[contact]', '[contact the support](https://discord.gg/R39FrwyZ7w)')}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
           .setTimestamp()
         ]

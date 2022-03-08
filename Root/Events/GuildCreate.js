@@ -24,7 +24,7 @@ module.exports = {
                 inline: true
             }, {
                 name: "Here is the support server",
-                value: `[🕵️‍♀️Support Server](https://discord.gg/BT4SyHUM5z)`,
+                value: `[🕵️‍♀️Support Server](https://discord.gg/R39FrwyZ7w)`,
                 inline: true
             }, {
                 name: "Here my Website",
@@ -40,7 +40,7 @@ module.exports = {
                 inline: true
             }, {
                 name: "Prefix + Help command",
-                value: "\`2tp help\`"
+                value: "\`u!help\`"
             })
             .setFooter({
                 text: `© ${client.user.username}`,
