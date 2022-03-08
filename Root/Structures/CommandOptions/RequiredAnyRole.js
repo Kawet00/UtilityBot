@@ -11,19 +11,23 @@ module.exports = async function (client, message, command, Discord) {
         command.requiredAnyRole.forEach(i => requiredRoles.push(`<@&${i}>`))
         if (command.returnRequiredAnyRole == false || command.returnNoErrors) return true;
         else message.reply({
-            embeds: [new Discord.MessageEmbed()
+            embeds: [
+                new Discord.MessageEmbed()
                 .setAuthor({
                     name: message.member.user.tag,
-                    iconURL: message.member.user.displayAvatarURL({ dynamic: true })
+                    iconURL: message.member.user.displayAvatarURL({
+                        dynamic: true
+                    })
                 })
                 .setColor(colors.EPINGLE)
                 .setTimestamp()
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.cmdOptions.RequiredAnyRole[0]}`)
-                .addField(lang.cmdOptions.RequiredAnyRole[1], `•${requiredRoles.join("\n•")}`)],
-                allowedMentions: {
-                    repliedUser: false
-                }
-            })
-            return true;
-        }
+                .addField(lang.cmdOptions.RequiredAnyRole[1], `•${requiredRoles.join("\n•")}`)
+            ],
+            allowedMentions: {
+                repliedUser: false
+            }
+        })
+        return true;
     }
+}

@@ -1,5 +1,10 @@
 const Discord = require("discord.js")
-const { path, config, emotes, colors } = require("../../../index")
+const {
+    path,
+    config,
+    emotes,
+    colors
+} = require("../../../index")
 const db = require('quick.db')
 module.exports = async function (client, message, command, isInteraction, interactionType) {
     if (!command) return;

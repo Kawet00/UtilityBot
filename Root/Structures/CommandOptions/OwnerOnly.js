@@ -10,18 +10,22 @@ module.exports = async function (client, message, command, Discord) {
     else {
         if (command.returnOwnerOnly == false || command.returnNoErrors) return true;
         else message.reply({
-            embeds: [new Discord.MessageEmbed()
+            embeds: [
+                new Discord.MessageEmbed()
                 .setAuthor({
                     name: message.member.user.tag,
-                    iconURL: message.member.user.displayAvatarURL({ dynamic: true })
+                    iconURL: message.member.user.displayAvatarURL({
+                        dynamic: true
+                    })
                 })
                 .setColor(colors.EPINGLE)
                 .setTimestamp()
-                .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.cmdOptions.OwnerOnly[0]}`)],
-                allowedMentions: {
-                    repliedUser: false
-                }
-            })
-            return true
-        }
+                .setDescription(`${emotes.pepe.pepe_n} ┇ ${lang.cmdOptions.OwnerOnly[0]}`)
+            ],
+            allowedMentions: {
+                repliedUser: false
+            }
+        })
+        return true
     }
+}

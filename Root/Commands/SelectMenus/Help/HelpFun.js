@@ -5,91 +5,91 @@ const colors = require('../../../Storage/json/colors.json')
 const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
-    name: "Fun",
-    run: async(client, interaction) => {
-        var prefix = db.get(`prefix_${interaction.guild.id}`)
-        if(prefix == null) prefix = config.prefix;
-        let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
+        name: "Fun",
+        run: async (client, interaction) => {
+                var prefix = db.get(`prefix_${interaction.guild.id}`)
+                if (prefix == null) prefix = config.prefix;
+                let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
-        interaction.user.send({
-            embeds: [
-                new Discord.MessageEmbed()
-                .setColor(colors.PERSO)
-                .setTitle(`🎲 ┇ ${lang.commands.help.fun[0]}`)
-                .setDescription(lang.commands.helpa[4].replace('{PREFIX}', prefix))
-                .setFooter({
-                        text: `© ${client.user.username}`,
-                        iconURL: client.user.avatarURL()
+                interaction.user.send({
+                        embeds: [
+                                new Discord.MessageEmbed()
+                                .setColor(colors.PERSO)
+                                .setTitle(`🎲 ┇ ${lang.commands.help.fun[0]}`)
+                                .setDescription(lang.commands.helpa[4].replace('{PREFIX}', prefix))
+                                .setFooter({
+                                        text: `© ${client.user.username}`,
+                                        iconURL: client.user.avatarURL()
+                                })
+                                .setTimestamp()
+                                .addFields({
+                                        name: `${emotes.blob.blob_p} ┇ 8BALL`,
+                                        value: lang.commands.help.fun[3].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.autre.dog} ┇ FUN DOG`,
+                                        value: lang.commands.help.fun[4].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.autre.dog} ┇ DOG`,
+                                        value: lang.commands.help.fun[5].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.autre.cat} ┇ FUN CAT`,
+                                        value: lang.commands.help.fun[6].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.autre.cat} ┇ CAT`,
+                                        value: lang.commands.help.fun[7].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.autre.fox} ┇ FUN FOX`,
+                                        value: lang.commands.help.fun[8].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.autre.fox} ┇ FOX`,
+                                        value: lang.commands.help.fun[9].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.autre.bird} ┇ FUN BIRD`,
+                                        value: lang.commands.help.fun[10].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.autre.bird} ┇ BIRD`,
+                                        value: lang.commands.help.fun[11].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.blob.blob_t} ┇ ${lang.commands.help.fun[1]}`,
+                                        value: lang.commands.help.fun[12].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.blob.blob_t} ┇ ${lang.commands.help.fun[2]}`,
+                                        value: lang.commands.help.fun[13].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
+                                        name: `${emotes.blob.blob_p} ┇ MESSAGE`,
+                                        value: lang.commands.help.fun[14].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.blob.blob_t} ┇ MESSAGE ANONYME`,
+                                        value: lang.commands.help.fun[15].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.pepe.pepe_ar} ┇ WANTED`,
+                                        value: lang.commands.help.fun[16].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.autre.intelligent} ┇ RESPECT+`,
+                                        value: lang.commands.help.fun[17].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.pepe.pepe_wa} ┇ SLAP`,
+                                        value: lang.commands.help.fun[18].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        inline: true
+                                })
+                        ]
+                }).then(() => {
+                        interaction.reply('Help sent with succes !')
                 })
-                .setTimestamp()
-                .addFields({
-                        name: `${emotes.blob.blob_p} ┇ 8BALL`,
-                        value: lang.commands.help.fun[3].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.autre.dog} ┇ FUN DOG`,
-                        value: lang.commands.help.fun[4].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.autre.dog} ┇ DOG`,
-                        value: lang.commands.help.fun[5].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.autre.cat} ┇ FUN CAT`,
-                        value: lang.commands.help.fun[6].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.autre.cat} ┇ CAT`,
-                        value: lang.commands.help.fun[7].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.autre.fox} ┇ FUN FOX`,
-                        value: lang.commands.help.fun[8].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.autre.fox} ┇ FOX`,
-                        value: lang.commands.help.fun[9].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.autre.bird} ┇ FUN BIRD`,
-                        value: lang.commands.help.fun[10].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.autre.bird} ┇ BIRD`,
-                        value: lang.commands.help.fun[11].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.blob.blob_t} ┇ ${lang.commands.help.fun[1]}`,
-                        value: lang.commands.help.fun[12].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.blob.blob_t} ┇ ${lang.commands.help.fun[2]}`,
-                        value: lang.commands.help.fun[13].replace("{PREFIX}", prefix),
-                        inline: true,
-                }, {
-                        name: `${emotes.blob.blob_p} ┇ MESSAGE`,
-                        value: lang.commands.help.fun[14].replace("{PREFIX}", prefix),
-                        inline: true
-                }, {
-                        name: `${emotes.blob.blob_t} ┇ MESSAGE ANONYME`,
-                        value: lang.commands.help.fun[15].replace("{PREFIX}", prefix),
-                        inline: true
-                }, {
-                        name: `${emotes.pepe.pepe_ar} ┇ WANTED`,
-                        value: lang.commands.help.fun[16].replace("{PREFIX}", prefix),
-                        inline: true
-                }, {
-                        name: `${emotes.autre.intelligent} ┇ RESPECT+`,
-                        value: lang.commands.help.fun[17].replace("{PREFIX}", prefix),
-                        inline: true
-                }, {
-                        name: `${emotes.pepe.pepe_wa} ┇ SLAP`,
-                        value: lang.commands.help.fun[18].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
-                        inline: true
-                })
-            ]
-        }).then(() => {
-            interaction.reply('Help sent with succes !')
-        })
-    }
+        }
 }

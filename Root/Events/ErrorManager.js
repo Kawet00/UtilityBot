@@ -1,7 +1,7 @@
 module.exports = {
     name: "errorManager",
     customEvent: true,
-    run: async(client) => {
+    run: async (client) => {
         process.on('unhandledRejection', error => {
             console.log(error)
         })

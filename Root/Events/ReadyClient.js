@@ -3,26 +3,26 @@ const Box = require("cli-box")
 module.exports = {
     name: "ready",
     once: true,
-    run: async(client) => {
+    run: async (client) => {
         client.user.setActivity('Cookies get baked.', {
             type: `WATCHING`,
         })
         const ClientBox = new Box({
-            w: Math.floor(client.user.tag.length + 27 ),
+            w: Math.floor(client.user.tag.length + 27),
             h: 7,
             stringify: false,
             marks: {
-              nw: '╭',
-              n: '─',
-              ne: '╮',
-              e: '│',
-              se: '╯',
-              s: '─',
-              sw: '╰',
-              w: '│'
+                nw: '╭',
+                n: '─',
+                ne: '╮',
+                e: '│',
+                se: '╯',
+                s: '─',
+                sw: '╰',
+                w: '│'
             },
             hAlign: 'left',
-          }, `C L I E N T   I N F O R M A T I O N
+        }, `C L I E N T   I N F O R M A T I O N
 
 Client Details    ::    ${client.user.tag}
 Guilds Count      ::    ${client.guilds.cache.size}

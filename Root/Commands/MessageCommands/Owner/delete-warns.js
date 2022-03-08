@@ -28,7 +28,7 @@ module.exports = {
         if(!number) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(' ┇ Veuillez mettre le nombre de warns a enlever ou bien mettait `all` pour supprimer tout ces warns.')
+                .setDescription(` ┇ ${lang.commands.owner.deleteW[0]}`)
                 .setColor(container.Colors.EPINGLE)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
@@ -38,7 +38,7 @@ module.exports = {
         if(!Number.isNaN(+number)) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(' ┇ Veuillez mettre soit `all` pour supprimer tout les warns soit un nombre de warn(s) a supprimer')
+                .setDescription(` ┇ ${lang.commands.owner.deleteW[1]}`)
                 .setColor(container.Colors.EPINGLE)
                 .setTimestamp()
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
@@ -48,7 +48,7 @@ module.exports = {
         if(!user) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${container.Emote.pepe.pepe_a} ┇ Vous devez mentionner le membre a qui enlever les warns.`)
+                .setDescription(`${container.Emote.pepe.pepe_a} ┇ ${lang.commands.owner.deleteW[2]}`)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setColor(container.Colors.EPINGLE)
                 .setTimestamp()
@@ -58,7 +58,7 @@ module.exports = {
         if(user.id == message.author.id) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(' ┇ Vous ne pouvez pas enlever vos propres warns.')
+                .setDescription(` ┇ ${lang.commands.owner.deleteW[3]}`)
                 .setColor(container.Colors.red)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
@@ -68,7 +68,7 @@ module.exports = {
         if(user.bot) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(' ┇ Vous ne pouvez pas warns des bots.')
+                .setDescription(` ┇ ${lang.commands.owner.deleteW[4]}`)
                 .setColor(container.Colors.red)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
@@ -78,7 +78,7 @@ module.exports = {
         if(message.member.roles.highest.comparePositionTo(user.roles.highest) < 1 && message.author.id !== message.guild.ownerID) return message.reply({
             embeds: [ 
             new container.Discord.MessageEmbed()
-            .setDescription(' ┇ Vous ne pouvez pas enlever les warns des membres avec un rôle plus haut que le votre.')
+            .setDescription(` ┇ ${lang.commands.owner.deleteW[5]}`)
             .setColor(container.Colors.red)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
@@ -86,11 +86,11 @@ module.exports = {
         })
 
         if(number === 'all') {
-            db.delete(`warns_${message.guild.id}_${member.id}`)
+            db.delete(`warns_${message.guild.id}_${user.id}`)
             message.reply({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                    .setDescription(` ┇ Je vient de supprimer tout les warns de ${member}`)
+                    .setDescription(` ┇ ${lang.commands.owner.deleteW[6].replace('{MEMBER}', user)}`)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setColor(container.Colors.VERT)
                     .setTimestamp()
@@ -101,12 +101,12 @@ module.exports = {
             client.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-            .setTitle(`${container.Emotes.pepe.pepe_a} ┇ Je vient de supprimer tout les warns d'un membre.`)
+            .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.deleteW[7]}`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
-            .addField('Membre', user, true)
-            .addField('Modérateur résponsable', message.author, true)
+            .addField(lang.commands.owner.deleteW[8], user, true)
+            .addField(lang.commands.owner.deleteW[9], message.author, true)
             .addField(`\u200B`, '\u200B')
             .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 ]
@@ -119,7 +119,8 @@ module.exports = {
             message.reply({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                    .setDescription(` ┇ Je vient de supprimer ${number} warn(s) à ${user}`)
+                    .setDescription(` ┇ ${lang.commands.owner.deleteW[10].replace('{NUMBER}', number)
+                                                                         .replace('{MEMBER}', user)}`)
                     .setColor(container.Colors.EPINGLE)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
@@ -129,14 +130,14 @@ module.exports = {
             client.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-            .setTitle(`${container.Emotes.pepe.pepe_a} ┇ Je vient de supprimer un certains nombre de warn(s) d'un membre.`)
+            .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.deleteW[11]}`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
-            .addField('Membre', user, true)
-            .addField('Modérateur résponsable', message.author, true)
-            .addField('Nombre de warn(s) enlever', number, true)
-            .addField('Total de warn du membre', Wdb)
+            .addField(lang.commands.owner.deleteW[8], user, true)
+            .addField(lang.commands.owner.deleteW[9], message.author, true)
+            .addField(lang.commands.owner.deleteW[12], number, true)
+            .addField(lang.commands.owner.deleteW[13], Wdb)
             .addField(`\u200B`, '\u200B')
             .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 ]
@@ -146,8 +147,8 @@ module.exports = {
                 message.reply({
                     embeds: [
                         new container.Discord.MessageEmbed()
-                        .setDescription(` ┇ Un problème est survenue, veuillez faire un signalement au support en faisent \`${container.Prefix}report\` et en sélécctionnent \`bug\`.`)
-                        .setColor(container.Colors.red)
+                        .setDescription(` ┇ ${lang.commands.owner.deleteW[14].replace('{PREFIX}', container.Prefix)}`)
+                        .setColor(container.Colors.RED)
                         .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                         .setTimestamp()
                     ]

@@ -67,6 +67,10 @@
     "UserPerms": [
       "Vous n'avez pas les permissions requise pour éxécuté cette commande.",
       "Permission(s) requise"
+    ],
+    "VoiceChannel": [
+      "Vous n'êtes pas connecter a un salon audio.",
+      "Vous n'êtes pas dans le même salon audio que moi."
     ]
   },
   "commandsa": [
@@ -660,10 +664,21 @@
     ],
     "owner": {
       "deleteW": [
-        "Vous ne pouvez pas vous enlevez des warns.",
-        "n'a pas de warn.",
-        "Un membre a enlever tout les warns d'un autre membre!",
-        "Vous avez supprimer ${NUMBER} warns de {USER} !"
+        "Veuillez mettre le nombre de warns a enlever ou bien veuillez mettre `all` pour supprimer tout ces warns.",
+        "Veuillez mettre soit `all` pour supprimer tout les warns soit un nombre de warn(s) a supprimer.",
+        "Vous devez mentionner le membre a qui enlever les warns.",
+        "Vous ne pouvez pas enlever vos propres warns !",
+        "Vous ne pouvez pas warns des bots donc vous ne pouvez pas enlever des warns a un bot.",
+        "Vous ne pouvez pas enlever les warns des membres avec un rôle plus haut que le votre.",
+        "Je viens de supprimer tout les warns de {MEMBER}",
+        "Je viens de supprimer tout les warns d'un membre.",
+        "Membre",
+        "Modérateur résponsable",
+        "Je viens de supprimer {NUMBER} warn(s) à {MEMBER}",
+        "Je viens de supprimer un certains nombre de warn(s) d'un membre.",
+        "Nombre de warn(s) enlever",
+        "Total de warn du membre",
+        "Un problème est survenue, veuillez faire un signalement au support en faisent `{PREFIX}report` et en sélécctionnent `bug`"
       ],
       "setT": [
         "Pour avoir les tickets ils faut acheter {TheBot} sur le site.\n\nPrix : $17.99, Economisez 50% en ce moment ! $17.99 à $8.99."

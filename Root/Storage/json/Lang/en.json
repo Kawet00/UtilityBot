@@ -67,6 +67,10 @@
     "UserPerms": [
       "You have not the permissions required.",
       "Permission required"
+    ],
+    "VoiceChannel": [
+      "You are not connected to an audio channel.",
+      "You are not on the same audio channel as me."
     ]
   },
   "commandsa": [
@@ -671,10 +675,21 @@
     ],
     "owner": {
       "deleteW": [
-        "You cannot remove yourself from the warns.",
-        "has no warns",
-        "A member has deleted a member's warns!",
-        "You have deleted {NUMBER} warn(s) all of {USER}"
+        "Please put the number of warns to remove or else please put `all` to remove all these warns.",
+        "Please put either `all` to remove all warns or a number of warn(s) to remove",
+        "You must mention the member to remove the warns from.",
+        "You cannot remove your own warns!",
+        "You can't warn bots so you can't remove warns from a bot.",
+        "You cannot remove warns from members with a role higher than yours.",
+        "I just removed all warnings from {MEMBER}",
+        "I just removed all warns from a member.",
+        "Member",
+        "Responsible moderator",
+        "I just deleted {NUMBER} warn(s) at {MEMBER}",
+        "I just removed a number of warn(s) from a member.",
+        "Number of warn(s) removed",
+        "Member's Total Warn",
+        "A problem has occurred, please report it to support by doing `{PREFIX}report` and selecting `bug`"
       ],
       "setT": [
         "To have The Ticket System you need to buy {TheBot} on the shop in the Web Site.\n\nPrice : $17.99, Save 50% in the moment! $17.99 to $8.99."

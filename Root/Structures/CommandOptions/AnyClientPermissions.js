@@ -9,7 +9,8 @@ module.exports = async function (client, message, command, Discord) {
     else {
         if (command.returnAnyClientPermissions == false || command.returnNoErrors) return true;
         else message.reply({
-            embeds: [new Discord.MessageEmbed()
+            embeds: [
+                new Discord.MessageEmbed()
                 .setAuthor({
                     name: message.member.user.tag,
                     iconURL: message.member.user.displayAvatarURL({ dynamic: true })

@@ -1,9 +1,5 @@
-const fs = require('fs');
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
-const { token } = require('./Root/Storage/Vault/Config');
 
 const { GiveawaysManager } = require("discord-giveaways");
 ;

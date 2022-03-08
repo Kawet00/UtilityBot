@@ -15,11 +15,13 @@ module.exports = {
             exec(`${lola}`, (error, stdout) => {
                 let response = (error || stdout)
                 if (error) {
+                    console.log(`Tien un erreur`, error)
                     message.channel.send({
                         content:`\`\`\`js\n${error.message}\n\`\`\``,
                         components: [row]
                     })
                 } else {
+                    console.log(`Voici un Exec réaliser :`, response)
                     message.channel.send({
                         content:`\`\`\`js\n${response}\n\`\`\``,
                         components: [row]

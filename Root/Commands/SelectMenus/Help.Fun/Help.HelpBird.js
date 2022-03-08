@@ -5,9 +5,9 @@ const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
     name: "HelpBird",
-    run: async(client, interaction) => {
+    run: async (client, interaction) => {
         var prefix = db.get(`prefix_${interaction.guild.id}`)
-        if(prefix == null) prefix = config.prefix;
+        if (prefix == null) prefix = config.prefix;
         let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
         interaction.user.send({
@@ -27,7 +27,7 @@ module.exports = {
                     name: lang.commands.helpa[7],
                     value: `\`${prefix}bi\``,
                     inline: true
-                },  {
+                }, {
                     name: lang.commands.helpa[2],
                     value: lang.commands.helpa[1]
                 }, {
@@ -40,7 +40,10 @@ module.exports = {
                     name: lang.commands.helpa[10],
                     value: lang.commands.helpa[11] + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`
                 })
-                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                .setFooter({
+                    text: `© ${client.user.username}`,
+                    iconURL: client.user.avatarURL()
+                })
                 .setTimestamp()
             ]
         }).then(() => {
