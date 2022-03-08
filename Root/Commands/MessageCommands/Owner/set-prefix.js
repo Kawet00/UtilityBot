@@ -19,8 +19,6 @@ module.exports = {
     cooldown: 1800000,
 
     run: async(client, message, args, container) => {
-        var prefix = db.get(`prefix_${message.guild.id}`)
-        if(prefix = null) prefix = container.Config.prefix
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         if (!args[0]) {
@@ -45,7 +43,7 @@ module.exports = {
                 ]
             })
         }
-        if (args.join("") === container.Config.prefix || args.join("") === 'delete') {
+        if (args.join("") === container.Prefix || args.join("") === 'delete') {
             db.delete(`prefix_${message.guild.id}`);
 
                 let logsC = db.get(`logs_${message.guild.id}`)
@@ -57,7 +55,7 @@ module.exports = {
                 .setColor(colors.EPINGLE)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
                 .setTimestamp()
-                .addField(lang.commands.owner.setP[3], `\`${prefix}\``, true)
+                .addField(lang.commands.owner.setP[3], `\`${container.Prefix}\``, true)
                 .addField(lang.commands.ownera[1], message.author, true)
                 .addField(`\u200B`, '\u200B')
                 .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
@@ -95,7 +93,7 @@ module.exports = {
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
             .setTimestamp()
-            .addField(lang.commands.owner.setP[3], `\`${prefix}\``, true)
+            .addField(lang.commands.owner.setP[3], `\`${container.Prefix}\``, true)
             .addField(lang.commands.ownera[1], message.author, true)
             .addField(`\u200B`, '\u200B')
             .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)

@@ -11,7 +11,6 @@ module.exports = {
     cooldown: 10000,
 
     run: async(client, message, args, container) => {
-        var prefix = db.get(`prefix_${message.guild.id}` || container.Config.prefix)
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
         const verificationLevels = {
@@ -79,7 +78,7 @@ module.exports = {
                 inline: true
             }, {
                 name: lang.commands.util.Ss[15],
-                value: `${prefix}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                value: `${container.Prefix}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
                 inline: true
             })
             .setThumbnail(message.guild.iconURL({

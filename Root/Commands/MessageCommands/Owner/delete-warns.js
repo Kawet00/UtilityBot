@@ -18,7 +18,6 @@ module.exports = {
     cooldown: 1800000,
 
     run: async (client, message, args, container) => {
-        const prefix = db.get(`prefix_${message.guild.id}`)
 
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
         let logsC = db.get(`logs_${message.guild.id}`)
@@ -29,7 +28,7 @@ module.exports = {
         if(!number) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription('Veuillez mettre le nombre de warns a enlever ou bien mettait `all` pour supprimer tout ces warns.')
+                .setDescription(' ┇ Veuillez mettre le nombre de warns a enlever ou bien mettait `all` pour supprimer tout ces warns.')
                 .setColor(container.Colors.EPINGLE)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
@@ -39,7 +38,7 @@ module.exports = {
         if(!Number.isNaN(+number)) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription('Veuillez mettre soit `all` pour supprimer tout les warns soit un nombre de warn(s) a supprimer')
+                .setDescription(' ┇ Veuillez mettre soit `all` pour supprimer tout les warns soit un nombre de warn(s) a supprimer')
                 .setColor(container.Colors.EPINGLE)
                 .setTimestamp()
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
@@ -49,7 +48,7 @@ module.exports = {
         if(!user) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${container.Emote.pepe.pepe_a}  Vous devez mentionner le membre a qui enlever les warns.`)
+                .setDescription(`${container.Emote.pepe.pepe_a} ┇ Vous devez mentionner le membre a qui enlever les warns.`)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setColor(container.Colors.EPINGLE)
                 .setTimestamp()
@@ -59,7 +58,7 @@ module.exports = {
         if(user.id == message.author.id) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription('Vous ne pouvez pas enlever vos propres warns.')
+                .setDescription(' ┇ Vous ne pouvez pas enlever vos propres warns.')
                 .setColor(container.Colors.red)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
@@ -69,7 +68,7 @@ module.exports = {
         if(user.bot) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription('Vous ne pouvez pas warns des bots.')
+                .setDescription(' ┇ Vous ne pouvez pas warns des bots.')
                 .setColor(container.Colors.red)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
@@ -79,7 +78,7 @@ module.exports = {
         if(message.member.roles.highest.comparePositionTo(user.roles.highest) < 1 && message.author.id !== message.guild.ownerID) return message.reply({
             embeds: [ 
             new container.Discord.MessageEmbed()
-            .setDescription('Vous ne pouvez pas enlever les warns des membres avec un rôle plus haut que le votre.')
+            .setDescription(' ┇ Vous ne pouvez pas enlever les warns des membres avec un rôle plus haut que le votre.')
             .setColor(container.Colors.red)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
@@ -91,7 +90,7 @@ module.exports = {
             message.reply({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                    .setDescription(`Je vient de supprimer tout les warns de ${member}`)
+                    .setDescription(` ┇ Je vient de supprimer tout les warns de ${member}`)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setColor(container.Colors.VERT)
                     .setTimestamp()
@@ -120,7 +119,7 @@ module.exports = {
             message.reply({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                    .setDescription(`Je vient de supprimer ${number} warn(s) à ${user}`)
+                    .setDescription(` ┇ Je vient de supprimer ${number} warn(s) à ${user}`)
                     .setColor(container.Colors.EPINGLE)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
@@ -147,7 +146,7 @@ module.exports = {
                 message.reply({
                     embeds: [
                         new container.Discord.MessageEmbed()
-                        .setDescription(`Un problème est survenue, veuillez faire un signalement au support en faisent \`${prefix}report\` et en sélécctionnent \`bug\`.`)
+                        .setDescription(` ┇ Un problème est survenue, veuillez faire un signalement au support en faisent \`${container.Prefix}report\` et en sélécctionnent \`bug\`.`)
                         .setColor(container.Colors.red)
                         .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                         .setTimestamp()

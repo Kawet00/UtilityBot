@@ -30,7 +30,7 @@ module.exports = {
           .setColor(container.Colors.VERT)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setTimestamp()
-          .setDescription(`${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.stop[0]}`)
+          .setDescription(`${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.Stop[0]}`)
         ]
       });
   },

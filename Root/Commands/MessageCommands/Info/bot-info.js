@@ -18,7 +18,6 @@ module.exports = {
     let minutes = Math.floor(client.uptime / 60000) % 60;
     let seconds = Math.floor(client.uptime / 1000) % 60;
     
-    var prefix = db.get(`prefix_${message.guild.id}` || container.Config.prefix)
     let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
     const core = os.cpus()[0]
@@ -42,7 +41,7 @@ module.exports = {
         **• ${lang.commands.util.BI[3]}:** ${moment(client.user.createdAt).format('MM/DD/YYYY')}
         **• ${lang.commands.util.BI[4]}:** __${version["author"]}__
         **• ${lang.commands.util.BI[5]}:** ${version["version"]}
-        **• ${lang.commands.util.BI[6]}:** \`${prefix}\``,
+        **• ${lang.commands.util.BI[6]}:** \`${container.Prefix}\``,
         inline: true
       }, {
         name: `__**🕵️‍♂️ ┇ ${lang.commands.util.BI[7]}**__`,

@@ -11,7 +11,6 @@ module.exports = {
 
         run: async (client, message, args, container) => {
                 let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
-                var prefix = db.get(`prefix_${message.guild.id}`) || config.prefix;
 
                 const embed =
                         new container.Discord.MessageEmbed()

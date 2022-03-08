@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const { Player } = require('discord-player');
 const config = require("./Root/Storage/Vault/Config");
 const path = __dirname;
+const db = require('quick.db');
 const emotes = require('./Root/Storage/json/emotes.json')
 const colors = require('./Root/Storage/json/colors.json')
 const client = new Discord.Client({
@@ -21,7 +22,6 @@ const client = new Discord.Client({
     ],
     partials: ["CHANNEL"]
 });
-
 
 exports.client = client;
 exports.path = path;
@@ -49,35 +49,100 @@ await Handler.loadContextMenus(client, path);
 await Handler.loadButtonCommands(client, path);
 await Handler.loadSelectMenus(client, path);
 
-
 const player = client.player
 
 player.on('error', (queue, error) => {
-    console.log(`There was a problem with the song queue => ${error.message}`);
+    const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    queue.metadata.send({
+        embeds: [
+            new Discord.MessageEmbed()
+            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.mscOptions.error[0].replace('{PREFIX}', config.prefix)}`)
+    .setColor(colors.RED)
+    .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+    .setTimestamp()
+]
+});
+    console.log(error);
 });
 
 player.on('connectionError', (queue, error) => {
+    const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    queue.metadata.send({
+        embeds: [
+            new Discord.MessageEmbed()
+            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.mscOptions.connectionError[0].replace('{PREFIX}', config.prefix)}`)
+    .setColor(colors.RED)
+    .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+    .setTimestamp()
+]
+});
     console.log(error);
 });
 
 player.on('trackStart', (queue, track) => {
+    const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
     if (!config.opt.loopMessage && queue.repeatMode !== 0) return;
-    queue.metadata.send(`🎵 Music started playing: **${track.title}** -> Channel: **${queue.connection.channel.name}** 🎧`);
+    queue.metadata.send({
+        embeds: [
+            new Discord.MessageEmbed()
+            .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.trackStart[0].replace('{TITLE}', track.title)
+                                                            .replace('{CHANNEL}', queue.connection.channel.name)}`)
+    .setColor(colors.VERT)
+    .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+    .setTimestamp()
+]
+});
 });
 
 player.on('trackAdd', (queue, track) => {
-    queue.metadata.send(`**${track.title}** added to playlist. ✅`);
+    const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    queue.metadata.send({
+        embeds: [
+            new Discord.MessageEmbed()
+            .setDescription(`${emotes.pepe.pepe_ok} ┇ ${lang.mscOptions.trackAdd[0].replace('{TITLE}', track.title)}`)
+    .setColor(colors.VERT)
+    .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+    .setTimestamp()
+]
+});
 });
 
 player.on('botDisconnect', (queue) => {
-    queue.metadata.send('Someone from the audio channel Im connected to kicked me out, the whole playlist has been cleared! ❌');
+    const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    queue.metadata.send({
+        embeds: [
+            new Discord.MessageEmbed()
+            .setDescription(`${emotes.blob.blob_w} ┇ ${lang.mscOptions.botDisconnect[0]}`)
+    .setColor(colors.EPINGLE)
+    .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+    .setTimestamp()
+]
+});
 });
 
 player.on('channelEmpty', (queue) => {
-    queue.metadata.send('I left the audio channel because there is no one on my audio channel. ❌');
+    const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    queue.metadata.send({
+        embeds: [
+            new Discord.MessageEmbed()
+            .setDescription(`${emotes.pepe.pepe_srx} ┇ ${lang.mscOptions.channelEmpty[0]}`)
+    .setColor(colors.EPINGLE)
+    .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+    .setTimestamp()
+]
+});
 });
 
 player.on('queueEnd', (queue) => {
-    queue.metadata.send('All play queue finished, I think you can listen to some more music. ✅');
+    const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    queue.metadata.send({
+        embeds: [
+            new Discord.MessageEmbed()
+        .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.queueEnd[0]}`)
+        .setColor(colors.VERT)
+        .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
+        .setTimestamp()
+    ]
+});
 });
 })()

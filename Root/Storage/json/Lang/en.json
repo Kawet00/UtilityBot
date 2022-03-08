@@ -1,6 +1,29 @@
 {
   "fullName": "English",
   "shortName": "en",
+  "mscOptions": {
+    "error": [
+      "I have an error, please do `{PREFIX}report` and choose **bug** and write the problem."
+    ],
+    "connectionError": [
+      "I have an error, please do `{PREFIX}report` and choose **bug** and write the problem."
+    ],
+    "trackStart": [
+      "Music started playing: **{TITLE}** -> Channel: **{CHANNEL}**"
+    ],
+    "trackAdd": [
+      "**{TITLE}** added to playlist."
+    ],
+    "botDisconnect": [
+      "Someone from the audio channel kicked me out, the whole playlist has been cleared!"
+    ],
+    "channelEmpty": [
+      "I left the audio channel because there is no one on my audio channel."
+    ],
+    "queueEnd": [
+      "All play queue finished, I think you can listen to some more music."
+    ]
+  },
   "cmdOptions": {
     "AnyClientPerm": [
       "I required any one of these permissions for this command.",

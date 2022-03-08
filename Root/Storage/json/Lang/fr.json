@@ -1,6 +1,29 @@
 {
   "fullName": "French",
   "shortName": "fr",
+  "mscOptions": {
+    "error": [
+      "J'ai une erreur, veuillez faire `{PREFIX}report`, choisissez **bug** puis écrivez le problème."
+    ],
+    "connectionError": [
+      "J'ai une erreur, veuillez faire `{PREFIX}report`, choisissez **bug** puis écrivez le problème."
+    ],
+    "trackStart": [
+      "Musique lancée : **{TITLE}** -> Salon: **{CHANNEL}**"
+    ],
+    "trackAdd": [
+      "**{TITLE}** ajouté a la playlist."
+    ],
+    "botDisconnect": [
+      "Une personne du salon m'a kick du salon, tout la playlist a été supprimée!"
+    ],
+    "channelEmpty": [
+      "J'ai quitté le salon car il n'y a plus personne dans le salon."
+    ],
+    "queueEnd": [
+      "Toute la playlist a été terminer, je pense que vous pouvez écouter encore plus de musique."
+    ]
+  },
   "cmdOptions": {
     "AnyClientPerm": [
       "J'ai besoin de l'une de ces permissions pour cette commande.",
