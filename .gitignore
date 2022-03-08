@@ -2,5 +2,12 @@ node_modules/
 
 package-lock.json
 
+.frontmatter/
+
+bin/
+
+data/
+json.sqlite
+
 Root/Commands/.DS_Store
 .DS_Store

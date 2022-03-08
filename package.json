@@ -29,7 +29,6 @@
     "discord-logs": "^2.0.1",
     "discord-player": "^5.2.2",
     "discord.js": "^13.6.0",
-    "djs-tickets": "^5.2.1",
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.4.1",
     "fs": "^0.0.1-security",
