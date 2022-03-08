@@ -9,5 +9,8 @@ bin/
 data/
 json.sqlite
 
+ROOT/Commands/MessageCommands/Test
+ROOT/Commands/SelectMenus/Test
+
 Root/Commands/.DS_Store
 .DS_Store
