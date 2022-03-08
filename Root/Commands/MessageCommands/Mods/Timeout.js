@@ -2,7 +2,7 @@ const db = require('quick.db')
 const ms = require('ms')
 const fetch = require('node-fetch')
 const colors = require('../../../Storage/json/colors.json')
-const emotes = require('../../../Storage/json/emotes.json')
+
 
 module.exports = {
 	name: "timeout",

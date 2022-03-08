@@ -1,7 +1,7 @@
 const AmeClient = require('amethyste-api');
 const config = require('../../../Storage/Vault/Config')
 const AmeAPI = new AmeClient(config.AME_API);
-const emotes = require('../../../Storage/json/emotes.json')
+
 const db = require('quick.db');
 const colors = require('../../../Storage/json/colors.json')
 

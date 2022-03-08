@@ -1,5 +1,5 @@
 const db = require('quick.db')
-const emotes = require('../../../Storage/json/emotes.json')
+
 const colors = require('../../../Storage/json/colors.json')
 
 module.exports = {

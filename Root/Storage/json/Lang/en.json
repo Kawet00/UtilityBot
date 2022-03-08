@@ -957,6 +957,9 @@
         "Want to {UtilityBot}? No problem!",
         "INVITE Utility Bot"
       ],
+      "github": [
+        "Here is [my github profile](https://github.com/Elpistolero131), but if you want [the code of Utility Bot is on github](https://github.com/Elpistolero131/UtilityBot) because Utility Bot is ** Open Source**, you can take a short tour and then maybe put your proposed changes and make a `Fork` and then maybe your part of code will be on Utility Bot!"
+      ],
       "messageA": [
         "A anonymous member has sent you a message:",
         "Problem, please [contact] to report this problem!"

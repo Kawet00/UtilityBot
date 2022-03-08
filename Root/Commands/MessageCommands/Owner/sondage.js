@@ -1,5 +1,5 @@
 const colors = require('../../../Storage/json/colors.json')
-const emotes = require('../../../Storage/json/emotes.json')
+
 const parseDuration = require('parse-duration')
 const humanizeDuration = require('humanize-duration')
 const db = require('quick.db');

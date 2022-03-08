@@ -1,6 +1,6 @@
 const colors = require("../../../Storage/json/colors.json")
 const weather = require("weather-js");
-const emotes = require('../../../Storage/json/emotes.json')
+
 const db = require('quick.db');
 
 module.exports = {

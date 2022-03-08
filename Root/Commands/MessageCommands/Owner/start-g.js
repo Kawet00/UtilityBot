@@ -1,4 +1,4 @@
-const emotes = require('../../../Storage/json/emotes.json')
+
 const ms = require('ms');
 const colors = require('../../../Storage/json/colors.json')
 const db = require('quick.db');

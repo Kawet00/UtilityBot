@@ -22,7 +22,7 @@ module.exports = {
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
-        let channelFetched = message.guild.channels.cache.find(c => c.id, channel.id);
+        let channelFetched = message.guild.channels.cache.get(args[0]);
         if (!channelFetched || channelFetched.type !== "text") return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
@@ -32,6 +32,8 @@ module.exports = {
             .setColor(colors.EPINGLE)
             ]
         });
+
+        channelFetched = message.guild.channels.cache.find(c => c.id, channel.id);
 
         db.set(`logs_${message.guild.id}`, channelFetched.id)
         channelFetched.send({

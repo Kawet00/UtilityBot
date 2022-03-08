@@ -1,4 +1,4 @@
-const emotes = require('../../../Storage/json/emotes.json')
+
 const db = require('quick.db')
 
 module.exports = {

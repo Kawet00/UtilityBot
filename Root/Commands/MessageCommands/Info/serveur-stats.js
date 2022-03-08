@@ -1,6 +1,6 @@
 const colors = require("../../../Storage/json/colors.json");
 const moment = require("moment");
-const emotes = require('../../../Storage/json/emotes.json');
+;
 const db = require('quick.db');
 
 module.exports = {
