@@ -7,7 +7,7 @@
 
  :octocat: ╎ Made by **[Elpistolero13](https://github.com/Elpistolero131)**<br>
  💻 ╎ [WebSite](https://www.utilitybot.ga)<br>
- 📌 ╎ Open Source<br>
+ 📌 ╎ it's a Open Source discord bot<br>
  <img src="https://freesvg.org/img/frenchflagframed.png" height="17em"/>/<img src="https://freesvg.org/img/Flag_of_the_United_States.png" height="17em"/> ╎ French and English bot
   
 -------
@@ -25,14 +25,14 @@
   
   <h4> ⚙️ &nbsp;Root/Storage/Vault/Config.js </h4>
   
-  -**Prefix**, here in the `[""]` you need to put your prefix.
-  -**Token**, here in the `[""]`you need to put the token of your bot.
-  -**AME_API**, here you need to put in the `[""]` your key of amethyste api. To see your key you need to go [here](https://api.amethyste.moe/) in the website of the api, wenn you need to **sign up** and click on **generate the token** on the buttom.
-  -**Developpers**, here you need to put the ids of the developpers, for exemple: `["0123456789", "9876543210"]`.
-  -**SupportGuild**, here you need to put the id of your support guild, for the command `report`.
-  -**ReportCahnnel**, here you need to put the id of the channel where are going the message of the `report` and it must be a channel of the `SupportGuild`.
-  -**MaxVol**, here you need to put the volume max of the music.
-  -**LoopMessage**, here it's if you want to send a message for the loop.
+  -**Prefix**, here in the `[""]` you need to put your prefix.<br>
+  -**Token**, here in the `[""]`you need to put the token of your bot.<br>
+  -**AME_API**, here you need to put in the `[""]` your key of amethyste api. To see your key you need to go [here](https://api.amethyste.moe/) in the website of the api, wenn you need to **sign up** and click on **generate the token** on the buttom.<br>
+  -**Developpers**, here you need to put the ids of the developpers, for exemple: `["0123456789", "9876543210"]`.<br>
+  -**SupportGuild**, here you need to put the id of your support guild, for the command `report`.<br>
+  -**ReportCahnnel**, here you need to put the id of the channel where are going the message of the `report` and it must be a channel of the `SupportGuild`.<br>
+  -**MaxVol**, here you need to put the volume max of the music.<br>
+  -**LoopMessage**, here it's if you want to send a message for the loop.<br>
   -**DiscordPlayer**, please don't touch this is imortant for the music.
   
   <h4> &nbsp;Root/Storage/json/colors.json </h4>
