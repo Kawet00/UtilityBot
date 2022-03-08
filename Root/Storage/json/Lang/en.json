@@ -741,7 +741,7 @@
         "No music currently playing!"
       ],
       "SomethW": [
-        "Something went wrong."
+        "Something went wrong. Please do `{PREFIX}report` then select **bug** and write the issue"
       ],
       "AllF": [
         "Here are all the filters available."
@@ -800,7 +800,7 @@
         "Currently Playing:"
       ],
       "Resume": [
-        "The song continues to play."
+        "start playing again."
       ],
       "Save": [
         "Registered track:",

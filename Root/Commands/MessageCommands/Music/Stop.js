@@ -18,7 +18,7 @@ module.exports = {
           .setColor(container.Colors.RED)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setTimestamp()
-          .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+          .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
         ]
       });
 
@@ -30,7 +30,7 @@ module.exports = {
           .setColor(container.Colors.VERT)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setTimestamp()
-          .setDescription(`The music playing on this server has been turned off, see you next time ✅`)
+          .setDescription(`${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.stop[0]}`)
         ]
       });
   },

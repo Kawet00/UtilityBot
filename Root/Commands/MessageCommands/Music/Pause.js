@@ -13,7 +13,7 @@ module.exports = {
        if (!queue || !queue.playing) return message.reply({
          embeds: [
            new container.Discord.MessageEmbed()
-           .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+           .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
            .setColor(container.Colors.RED)
            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
            .setTimestamp()
@@ -25,8 +25,8 @@ module.exports = {
         return message.reply({
           embeds: [
           new container.Discord.MessageEmbed()
-          .setDescription(success ? lang.commands.music.Pause[0].replace('{TITLE}', queue.current.title) : lang.commands.music.SomethW[0])
-          .setColor(sucess ? container.Colors.VERT : CredentialsContainer.Colors.RED)
+          .setDescription(success ? `${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Pause[0].replace('{TITLE}', queue.current.title)}` : `${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.SomethW[0].replace('{PREFIX}', container.Prefix)}`)
+          .setColor(success ? container.Colors.VERT : container.Colors.RED)
           .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
           .setTimestamp()
           ]

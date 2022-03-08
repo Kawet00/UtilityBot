@@ -730,7 +730,7 @@
         "Aucun musique est actuellement en cours !"
       ],
       "SomethW": [
-        "Quelque chose ne va pas."
+        "Quelque chose ne va pas. Veuillez faire `{PREFIX}report` puis séléctionner **bug** et écrivez le soucis."
       ],
       "AllF": [
         "Voici tout les filtres disponible."
@@ -768,7 +768,7 @@
         "Filtre(s) :"
       ],
       "Pause": [
-        "The currently playing music named **${TITLE}** has stopped"
+        "The currently playing music named **{TITLE}** has stopped"
       ],
       "Play": [
         "Ecrivez le nom de la musique que vous voulez chercher.",
@@ -785,11 +785,11 @@
         "Commencer par",
         "Et",
         "Autre musique(s)...",
-        "Il y a **${SONGS}** Musiques dans la liste.",
+        "Il y a **{SONGS}** Musiques dans la liste.",
         "Actuellement en cours :"
       ],
       "Resume": [
-        "La musique continue a être joué."
+        "recommence à être joué."
       ],
       "Save": [
         "Track enregistré :",
@@ -812,7 +812,7 @@
         "à été ignoré."
       ],
       "Stop": [
-        "La musique sur cce serveur a été éteinte. On se voit la prochaine fois !"
+        "La musique sur ce serveur a été éteinte. On se voit la prochaine fois !"
       ],
       "Volume": [
         "Volume actuel :",

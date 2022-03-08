@@ -19,7 +19,7 @@ module.exports = {
             .setColor(container.Colors)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+            .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.AnyM[0]}`)
           ]
         });
 
@@ -29,7 +29,7 @@ module.exports = {
             .setColor(container.Colors)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`  ${lang.commands.music.Queue[0]}`)
+            .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.music.Queue[0]}`)
           ]
         });
 
@@ -38,7 +38,7 @@ module.exports = {
 
         embed.setColor(container.Colors.PERSO);
         embed.setThumbnail(message.guild.iconURL({ size: 2048, dynamic: true }));
-        embed.setTitle(`  ${lang.commands.music.Queue[1]} - ${message.guild.name} ${methods[queue.repeatMode]}`);
+        embed.setTitle(`${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Queue[1]}`);
 
         const tracks = queue.tracks.map((track, i) => `**${i + 1}** - ${track.title} | ${track.author} (${lang.commands.music.Queue[2]} <@${track. requestedBy.id}>)`);
 

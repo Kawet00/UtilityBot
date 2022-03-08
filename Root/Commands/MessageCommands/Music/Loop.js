@@ -50,7 +50,7 @@ module.exports = {
         embeds: [
 
           new container.Discord.MessageEmbed()
-          .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.music.Loop[1]}` : `${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[3]}` : `${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.SomethW[0]}`)
+          .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.music.Loop[1]}` : `${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[3]}` : `${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.SomethW[0].replace('{PREFIX}', container.Prefix)}`)
           .setColor(success ? container.Colors.VERT : container.Colors.RED)
           .setFooter({
             text: `© ${client.user.username}`,
@@ -80,7 +80,7 @@ module.exports = {
         embeds: [
 
           new container.Discord.MessageEmbed()
-          .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.music.Loop[1]}` : `${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[5].replace('{PREFIX}', container.PREFIX)}` : `${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.SomethW[0]}`)
+          .setDescription(success ? `Loop Mode: **${queue.repeatMode === 0 ? `${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.music.Loop[1]}` : `${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Loop[2]}`}**, ${lang.commands.music.Loop[5].replace('{PREFIX}', container.PREFIX)}` : `${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.SomethW[0].replace('{PREFIX}', container.Prefix)}`)
           .setColor(success ? container.Colors.VERT : container.Colors.RED)
           .setFooter({
             text: `© ${client.user.username}`,

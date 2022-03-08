@@ -17,7 +17,7 @@ const queue = client.player.getQueue(message.guild.id);
       .setColor(container.Colors.RED)
       .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
       .setTimestamp()
-      .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+      .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
     ]
   });
 
@@ -27,7 +27,7 @@ const queue = client.player.getQueue(message.guild.id);
             .setColor(container.Colors.PERSO)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`  ${lang.commands.music.Save[0]} **${queue.current.title}** | ${queue.current.author}, ${lang.commands.music.Save[1]} **${message.guild.name}**`)
+            .setDescription(`${container.Emotes.blob.blob_b} ┇ ${lang.commands.music.Save[0]} **${queue.current.title}** | ${queue.current.author}, ${lang.commands.music.Save[1]} **${message.guild.name}**`)
           ]
         }) .then(() => {
             message.reply({
@@ -36,7 +36,7 @@ const queue = client.player.getQueue(message.guild.id);
                 .setColor(container.Colors.VERT)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`  ${lang.commands.music.Save[2]}`)
+                .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.music.Save[2]}`)
               ]
             });
         }).catch(error => {
@@ -46,7 +46,7 @@ const queue = client.player.getQueue(message.guild.id);
                 .setColor(container.Colors.RED)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`  ${lang.commands.music.Save[3]}`)
+                .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Save[3]}`)
               ]
             });
         });

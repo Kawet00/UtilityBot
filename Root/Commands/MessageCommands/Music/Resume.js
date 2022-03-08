@@ -16,15 +16,16 @@ module.exports = {
             .setColor(container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+            .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
           ]
         });
+        const success = queue.setPaused(false);
 
         return message.reply({
           embeds: [
             new container.Discord.MessageEmbed()
             .setColor(container.Colors.VERT)
-            .setDescription(`**${queue.current.title}**,   ${lang.commands.music.Resume[0]}`)
+            .setDescription(success ? `${container.Emotes.autre.wumpus_dj} ┇ **${queue.current.title}**, ${lang.commands.music.Resume[0]}` : `${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.SomethW[0].replace('{PREFIX}', container.Prefix)}`)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
           ]

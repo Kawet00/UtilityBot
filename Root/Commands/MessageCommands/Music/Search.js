@@ -13,9 +13,9 @@ module.exports = {
         embeds: [
             new container.Discord.MessageEmbed()
             .setColor(container.Colors.RED)
-            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`  ${lang.commands.music.Search[0]}`)
+            .setDescription(`${container.Emotes.pepe.pepe_srx} ┇ ${lang.commands.music.Search[0]}`)
         ]
     });
 
@@ -28,9 +28,9 @@ module.exports = {
             embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(container.Colors.RED)
-                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`  ${lang.commands.music.Search[1]}`)
+                .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Search[1]}`)
             ]
         });
 
@@ -41,7 +41,7 @@ module.exports = {
         const embed = new container.Discord.MessageEmbed();
 
         embed.setColor(container.Colors.PERSO);
-        embed.setTitle(`  ${lang.commands.music.Search[2]} ${args.join(' ')}`);
+        embed.setTitle(`${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Search[2]} ${args.join(' ')}`);
 
         const maxTracks = res.tracks.slice(0, 10);
 
@@ -59,11 +59,27 @@ module.exports = {
         });
 
        collector.on('collect', async (query) => {
-            if (query.content.toLowerCase() === 'cancel') return message.channel.send(`  ${lang.commands.music.Search[4]}`) && collector.stop();
+            if (query.content.toLowerCase() === 'cancel') return message.channel.send({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                .setDescription(`${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.Search[4]}`)
+                .setColor(container.Colors.VERT)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+            ]
+        }) && collector.stop();
 
             const value = parseInt(query.content);
 
-            if (!value || value <= 0 || value > maxTracks.length) return message.channel.send(`  ${lang.commands.music.Search[5].replace('{MAXT}', maxTracks.length)}`);
+            if (!value || value <= 0 || value > maxTracks.length) return message.channel.send({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.music.Search[5].replace('{MAXT}', maxTracks.length)}`)
+                .setColor(container.Colors.EPINGLE)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+            ]
+        });
 
             collector.stop();
 
@@ -75,14 +91,22 @@ module.exports = {
                     embeds: [
                         new container.Discord.MessageEmbed()
                         .setColor(container.Colors)
-                        .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                        .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                         .setTimestamp()
-                        .setDescription(`  ${lang.commands.music.Search[6]}`)
+                        .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.music.Search[6]}`)
                     ]
                 });
             }
 
-            await message.channel.send(`  ${lang.commands.music.Search[7]}`);
+            await message.channel.send({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription(`${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.Search[7]}`)
+                    .setColor(container.Colors.PERSO)
+                    .setTimestamp()
+                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                ]
+            });
 
             queue.addTrack(res.tracks[Number(query.content)-1]);
             if (!queue.playing) await queue.play();
@@ -94,9 +118,9 @@ module.exports = {
                 embeds: [
                     new container.Discord.MessageEmbed()
                     .setColor(container.Colors)
-                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
-                    .setDescription(`  ${lang.commands.music.Search[8].replace('{PREFIX}', container.Prefix)}`)
+                    .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.music.Search[8].replace('{PREFIX}', container.Prefix)}`)
                 ]
             });
         });

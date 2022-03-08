@@ -18,7 +18,7 @@ module.exports = {
            .setColor(container.Colors.RED)
            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
            .setTimestamp()
-           .setDescription(`  ${lang.commands.music.AnyM[0]}`)
+           .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
          ]
         });
 
@@ -30,7 +30,7 @@ module.exports = {
             .setColor(container.Colors.PERSO)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`  ${lang.commands.music.Volume[0]} **${queue.volume}** 🔊\n${lang.commands.music.Volume[1].replace('{MAXV}', maxVol)}`)
+            .setDescription(`${container.Emotes.pepe.pepe_srx} ┇ ${lang.commands.music.Volume[0]} **${queue.volume}** 🔊\n${lang.commands.music.Volume[1].replace('{MAXV}', maxVol)}`)
           ]
         });
 
@@ -40,7 +40,7 @@ module.exports = {
             .setColor(container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`  ${lang.commands.music.Volume[2]}`)
+            .setDescription(`${container.Emotes.pepe.pepe_srx} ┇ ${lang.commands.music.Volume[2]}`)
           ]
         });
 
@@ -50,13 +50,11 @@ module.exports = {
             .setColor(container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`  ${lang.commands.music.Volume[3]}`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.music.Volume[3]}`)
           ]
         });
 
-        const success = queue.setVolume(vol).then(() => {
-          db.set(`vol_${message.guild.id}`, vol)
-        })
+        const success = queue.setVolume(vol)
 
         return message.reply({
           embeds: [
@@ -64,7 +62,7 @@ module.exports = {
             .setColor(success ? container.Colors.VERT : container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(success ? `${lang.commands.music.Volume[4]} **%${vol}**/**${maxVol}** 🔊` : `${lang.commands.music.SomethW[0]}`)
+            .setDescription(success ? `${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.Volume[4]} **%${vol}**/**${maxVol}** 🔊` : `${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.SomethW[0].replace('{PREFIX}', container.Prefix)}`)
           ]
         });
   }

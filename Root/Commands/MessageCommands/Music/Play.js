@@ -17,7 +17,7 @@ module.exports = {
                 .setColor(container.Colors.RED)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`  ${lang.commands.music.Play[0]}`)
+                .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Play[0]}`)
             ]
         });
 
@@ -32,7 +32,7 @@ module.exports = {
                 .setColor(container.Colors.RED)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`  ${lang.commands.music.Play[1]}`)
+                .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Play[1]}`)
             ]
         });
 
@@ -50,7 +50,7 @@ module.exports = {
                     .setColor(container.Colors.EPINGLE)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
-                    .setDescription(`  ${lang.commands.music.Play[2]}`)
+                    .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Play[2]}`)
                 ]
             });
         }
@@ -61,7 +61,7 @@ module.exports = {
                 .setColor(container.Colors.VERT)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`  ${lang.commands.music.Play[3]} ${res.playlist ? lang.commands.music.Play[4]: lang.commands.music.Play[5]} ${lang.commands.music.Play[6]} `)
+                .setDescription(`${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.Play[3]} ${res.playlist ? lang.commands.music.Play[4]: lang.commands.music.Play[5]} ${lang.commands.music.Play[6]} `)
             ]
         });
 
