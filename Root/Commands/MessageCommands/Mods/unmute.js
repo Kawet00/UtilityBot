@@ -14,7 +14,6 @@ function dateFormat(date) {
 module.exports = {
     name: 'unmute',
     aliases: ["um"],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ["MUTE_MEMBERS"],
 
     run: async (client, message, args, container) => {

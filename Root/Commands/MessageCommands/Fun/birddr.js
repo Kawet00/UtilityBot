@@ -7,7 +7,6 @@ module.exports = {
     name: 'fun-bird',
     aliases: ['f-bi'],
     cooldown: 5000,
-    onlyUsers: ["509765051435974692", "691644619758370846"],
 
     run: async(client, message, args, container) => {
         

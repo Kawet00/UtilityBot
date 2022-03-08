@@ -5,7 +5,6 @@ module.exports = {
     name: 'help-anonymous-message',
     aliases: ["h-a-msg", "h-msg-a","help-message-anonyme"],
 
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     run: async (client, message, args, container) => {
 
         var prefix = db.get(`prefix_${message.guild.id}` || container.Config.prefix)

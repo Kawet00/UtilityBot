@@ -2,7 +2,6 @@ const db = require('quick.db')
 module.exports = {
     name: 'set-lang',
     aliase: ["s-la"],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 1800000,
     

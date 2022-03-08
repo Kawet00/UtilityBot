@@ -6,7 +6,6 @@ module.exports = {
     name: 'morpion',
     description: 'none',
     aliases: ["noughts-and-crosses", "n-a-c"],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
 
     run: async(client, message, args, container) => {
         

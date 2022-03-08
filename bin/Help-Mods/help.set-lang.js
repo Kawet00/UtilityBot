@@ -4,7 +4,6 @@ const colors = require('../../../Storage/json/colors.json')
 module.exports = {
     name: 'help-set-lang',
     aliases: ["h-s-la"],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     run: async(client, message, args, container) => {
 
         var prefix = db.get(`prefix_${message.guild.id}` || container.Config.prefix)

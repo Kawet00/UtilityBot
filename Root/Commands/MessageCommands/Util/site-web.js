@@ -4,7 +4,6 @@ const db = require('quick.db');
 module.exports = {
     name: 'site-web',
     description: 'flm',
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     aliases: ["s-w", "website", "w-s"],
     cooldown: 20000,
 

@@ -13,7 +13,6 @@ function dateFormat(date) {
 
 module.exports = {
     name: 'set-logs',
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     description: 'flm',
     aliases: ["s-l"],
     userPermissions: ["ADMINISTRATOR"],

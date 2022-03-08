@@ -6,7 +6,6 @@ module.exports = {
     name: "total-warns",
     description: "Check a users warnings",
     aliases: ["t-w"],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ["MANAGE_MESSAGES"],
 
     run: async (client, message, args, container) => {

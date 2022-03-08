@@ -11,7 +11,6 @@ function dateFormat(date) {
 
 module.exports = {
     name: 'delete-warns',
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     description: 'flm',
     aliases: ["d-w"],
     userPermissions: ["ADMINISTRATOR"],

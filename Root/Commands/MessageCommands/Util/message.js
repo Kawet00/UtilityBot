@@ -4,7 +4,6 @@ const db = require('quick.db');
 
 module.exports = {
     name: "message",
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     aliases: ["msg"],
     cooldown: 10000,
 

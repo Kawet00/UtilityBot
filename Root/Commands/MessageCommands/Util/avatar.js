@@ -7,7 +7,6 @@ const { Util } = require('discord.js')
 module.exports = {
     name: "avatar",
     description: "Brodcast someone's avatar",
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     aliases: ["av"],
     cooldown: 5000,
 

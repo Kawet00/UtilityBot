@@ -6,7 +6,6 @@ module.exports = {
     name: 'help-temp',
     aliases: ["h-t", "h-we", "help-weather"],
 
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     run: async(client, message, args, container) => {
 
         var prefix = db.get(`prefix_${message.guild.id}` || container.Config.prefix)

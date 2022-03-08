@@ -16,7 +16,6 @@ module.exports = {
     name: "clear",
     description: "clears message",
     aliases: ['cl', 'purge'],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ["MANAGE_MESSAGES"],
     clientPermissions: ["MANAGE_MESSAGES"],
 

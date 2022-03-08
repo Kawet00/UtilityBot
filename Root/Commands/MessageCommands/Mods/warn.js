@@ -11,7 +11,6 @@ function dateFormat(date) {
 
 module.exports = {
     name: "warn",
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     description: "Warn a member",
     userPermissions: ["MANAGE_MESSAGES"],
 

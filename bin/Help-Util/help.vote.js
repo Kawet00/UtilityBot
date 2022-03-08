@@ -3,7 +3,6 @@ const colors = require('../../../Storage/json/colors.json')
 
 module.exports = {
     name: 'help-vote',
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     aliases: ["h-v"],
 
     run: async (client, message, args, container) => {

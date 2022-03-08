@@ -7,7 +7,6 @@ const emotes = require('../../../Storage/json/emotes.json')
 module.exports = {
 	name: "timeout",
 	description: "Set a timeout for a member",
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ['MANAGE_MESSAGES'],
 
 	run: async(client, message, args, container) => {

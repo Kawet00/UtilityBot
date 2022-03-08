@@ -12,7 +12,6 @@ function dateFormat(date) {
 
 module.exports = {
     name: "set-welcome",
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     aliases: ["s-we"],
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 1800000,

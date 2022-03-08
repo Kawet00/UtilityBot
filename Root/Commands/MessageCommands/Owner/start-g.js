@@ -15,7 +15,6 @@ function dateFormat(date) {
 
 module.exports = {
     name: 'start-g',
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     aliases: ["s-g"],
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 600000,

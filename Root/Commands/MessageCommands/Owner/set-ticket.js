@@ -6,7 +6,6 @@ module.exports = {
     name: 'set-ticket',
     aliase: ["s-t"],
     userPermissions: ["ADMINISTRATOR"],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     cooldown: 1800000,
 
     run: async (client, message, args, container) => {

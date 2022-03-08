@@ -4,7 +4,6 @@ const colors = require('../../Root/Storage/json/colors.json')
 module.exports = {
     name: 'help-meme',
     aliases: ["h-me"],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
 
     run: async (client, message, args, container) => {
 

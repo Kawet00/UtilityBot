@@ -9,7 +9,6 @@ module.exports = {
     name: "wanted",
     aliases: [],
     cooldown: 10000,
-    onlyUsers: ["509765051435974692", "691644619758370846"],
 
     async run(client, message, args, container) {
         

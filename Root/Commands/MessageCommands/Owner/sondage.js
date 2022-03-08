@@ -16,7 +16,6 @@ function dateFormat(date) {
 module.exports = {
     name: 'sondage',
     description: 'none',
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     aliases: ["poll", "s", "p"],
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 600000,

@@ -14,7 +14,6 @@ function dateFormat(date) {
 module.exports = {
     name: 'set-prefix',
     aliases: ["s-p"],
-    onlyUsers: ["509765051435974692", "691644619758370846"],
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 1800000,
 
