@@ -1,7 +1,5 @@
-const emotes = require(`../../../Storage/json/emotes.json`)
 const db = require('quick.db')
 const colors = require(`../../../Storage/json/colors.json`)
-const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
         name: `help-fun`,
@@ -28,92 +26,92 @@ module.exports = {
                         .setPlaceholder(lang.commands.helpa[19])
                         .addOptions([{
                                         label: '8BALL',
-                                        description: lang.commands.help.helpB[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpB[0].replace('{PREFIX}', container.Prefix),
                                         value: 'Help8ball'
                                 },
                                 {
                                         label: 'BIRD',
-                                        description: lang.commands.help.helpBi[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpBi[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpBird'
                                 },
                                 {
                                         label: 'CAT',
-                                        description: lang.commands.help.helpCat[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpCat[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpCat'
                                 },
                                 {
                                         label: 'COLOR',
-                                        description: lang.commands.help.helpCo[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpCo[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpColor'
                                 },
                                 {
                                         label: 'DOG',
-                                        description: lang.commands.help.helpDog[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpDog[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpDog'
                                 },
                                 {
                                         label: 'FOX',
-                                        description: lang.commands.help.helpFox[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpFox[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpFox'
                                 },
                                 {
                                         label: 'FUN BIRD',
-                                        description: lang.commands.help.helpFBI[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpFBI[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpFunBird'
                                 },
                                 {
                                         label: 'FUN CAT',
-                                        description: lang.commands.help.helpFCat[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpFCat[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpFunCat'
                                 },
                                 {
                                         label: 'FUN DOG',
-                                        description: lang.commands.help.helpFDog[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpFDog[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpFunDog'
                                 },
                                 {
                                         label: 'FUN FOX',
-                                        description: lang.commands.help.helpFFox[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpFFox[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpFunFox'
                                 },
                                 {
                                         label: 'MEME',
-                                        description: lang.commands.help.helpM[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpM[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpMeme',
                                 },
                                 {
                                         label: lang.commands.help.helpMo[2],
-                                        description: lang.commands.help.helpMo[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpMo[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpMo'
                                 },
                                 {
                                         label: lang.commands.help.helpPF[2],
-                                        description: lang.commands.help.helpPF[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpPF[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpPF'
                                 },
                                 {
                                         label: 'MESSAGE ANONYME',
-                                        description: lang.commands.help.helpMsgA[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpMsgA[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpMsgAnonyme'
                                 },
                                 {
                                         label: 'MESSAGE',
-                                        description: lang.commands.help.helpMsg[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpMsg[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpMsg'
                                 },
                                 {
                                         label: 'RESPECT+',
-                                        description: lang.commands.help.helpRe[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpRe[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpRespect'
                                 },
                                 {
                                         label: 'SLAP',
-                                        description: lang.commands.help.helpSlap[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpSlap[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpSlap'
                                 },
                                 {
                                         label: 'WANTED',
-                                        description: lang.commands.help.helpWa[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpWa[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpWanted'
                                 }
                         ]),

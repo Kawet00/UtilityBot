@@ -1,7 +1,5 @@
-const emotes = require(`../../../Storage/json/emotes.json`)
 const db = require('quick.db')
 const colors = require(`../../../Storage/json/colors.json`)
-const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
         name: `help-util`,
@@ -11,7 +9,6 @@ module.exports = {
 
         run: async (client, message, args, container) => {
                 let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
-                var prefix = db.get(`prefix_${message.guild.id}`) || config.prefix;
 
                 const embed =
                         new container.Discord.MessageEmbed()
@@ -29,37 +26,37 @@ module.exports = {
                         .setPlaceholder(lang.commands.helpa[19])
                         .addOptions([{
                                         label: 'AVATAR',
-                                        description: lang.commands.help.helpB[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpB[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpAvatar'
                                 },
                                 {
                                         label: 'CALCUL',
-                                        description: lang.commands.help.helpBi[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpBi[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpCalcul'
                                 },
                                 {
                                         label: 'REPORT',
-                                        description: lang.commands.help.helpR[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpR[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelprEPORT'
                                 },
                                 {
                                         label: lang.commands.help.util[3],
-                                        description: lang.commands.help.helpSwe[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpSwe[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpWebSite'
                                 },
                                 {
                                         label: 'SUPPORT',
-                                        description: lang.commands.help.helpSu[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpSu[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpSupport'
                                 },
                                 {
                                         label: 'Temp',
-                                        description: lang.commands.help.helpT[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpT[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpTemp'
                                 },
                                 {
                                         label: 'VOTE',
-                                        description: lang.commands.help.helpV[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpV[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpVote'
                                 }
                         ]),

@@ -1,7 +1,5 @@
-const emotes = require(`../../../Storage/json/emotes.json`)
 const db = require('quick.db')
 const colors = require(`../../../Storage/json/colors.json`)
-const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
         name: `help-info`,
@@ -11,7 +9,6 @@ module.exports = {
 
         run: async (client, message, args, container) => {
                 let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
-                var prefix = db.get(`prefix_${message.guild.id}`) || config.prefix;
 
                 const embed =
                         new container.Discord.MessageEmbed()
@@ -29,32 +26,32 @@ module.exports = {
                         .setPlaceholder(lang.commands.helpa[19])
                         .addOptions([{
                                         label: 'BOTINFO',
-                                        description: lang.commands.help.helpBo[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpBo[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpBotInfo'
                                 },
                                 {
                                         label: 'INVITE',
-                                        description: lang.commands.help.helpI[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpI[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpInvite'
                                 },
                                 {
                                         label: 'PING',
-                                        description: lang.commands.help.helpCat[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpCat[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpPing'
                                 },
                                 {
                                         label: lang.commands.help.info[1],
-                                        description: lang.commands.help.helpSS[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpSS[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpServerStats'
                                 },
                                 {
                                         label: 'UPTIME',
-                                        description: lang.commands.help.helpUp[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpUp[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpUptime'
                                 },
                                 {
                                         label: 'USERINFO',
-                                        description: lang.commands.help.helpUI[0].replace('{PREFIX}', prefix),
+                                        description: lang.commands.help.helpUI[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpUserInfo'
                                 }
                         ]),
