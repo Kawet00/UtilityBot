@@ -248,6 +248,11 @@
         "Vous aurez des informations sur la commande `{PREFIX}back`",
         "Remettre la chanson précédente."
       ],
+      "helpGit": [
+        "Vous aurez des informations sur la commande {PREFIX}github",
+        "Vous aurez des informations sur la commande `{PREFIX}github`",
+        "Avoir les liens github concernant Utility Bot."
+      ],
       "helpCll": [
         "Vous aurez des informations sur la commande {PREFIX}clear-list",
         "Vous aurez des informations sur la commande `{PREFIX}clear-list`",

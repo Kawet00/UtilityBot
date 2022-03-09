@@ -1,11 +1,10 @@
 const colors = require('../../../Storage/json/colors.json')
-
 const db = require('quick.db')
 
 module.exports = {
     name: 'github',
     description: 'none',
-    cooldown: 20000,
+    cooldown: 10000,
 
     run: async (client, message, args, container) => {
         
