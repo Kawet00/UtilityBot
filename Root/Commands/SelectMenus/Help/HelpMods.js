@@ -5,7 +5,7 @@ const colors = require('../../../Storage/json/colors.json')
 const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
-        name: "Fun",
+        name: "Mods",
         run: async (client, interaction) => {
                 var prefix = db.get(`prefix_${interaction.guild.id}`)
                 if (prefix == null) prefix = config.prefix;
@@ -62,11 +62,11 @@ module.exports = {
                                                 value: lang.commands.help.moderation[6].replace("{PREFIX}", prefix),
                                                 inline: true
                                         },
-                                        /* {
+                                         {
                                                                 name: `${emotes.autre.cool_pika} ┇ DELETE-WARNS`,
                                                                 value: lang.commands.help.moderation[7].replace("{PREFIX}", prefix),
                                                                 inline: true
-                                                        }, */
+                                                        }, 
                                         {
                                                 name: `${emotes.blob.blob_t} ┇ TOTAL WARNS`,
                                                 value: lang.commands.help.moderation[8].replace("{PREFIX}", prefix),
@@ -94,7 +94,7 @@ module.exports = {
                                         })
                         ]
                 }).then(() => {
-                        interaction.reply('Help sent with succes !')
+                        interaction.reply(lang.commands.help.sucess[0])
                 })
         }
 }

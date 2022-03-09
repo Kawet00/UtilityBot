@@ -226,6 +226,9 @@
         "You need to do: `{PREFIX}website`",
         "You need to do: `{PREFIX}support`"
       ],
+      "sucss": [
+        "Help sent with succes !"
+      ],
       "music": [
         "Music commands",
         "Music",

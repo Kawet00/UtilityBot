@@ -225,6 +225,9 @@
         "Vous devez faire : `{PREFIX}site-web`",
         "Vous devez faire : `{PREFIX}support`"
       ],
+      "sucess": [
+        "Help envoyer avec succés !"
+      ],
       "music": [
         "Commandes de Musique",
         "Musique",

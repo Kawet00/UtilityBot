@@ -89,7 +89,7 @@ module.exports = {
                                 })
                         ]
                 }).then(() => {
-                        interaction.reply('Help sent with succes !')
+                        interaction.reply(lang.commands.help.sucess[0])
                 })
         }
 }
