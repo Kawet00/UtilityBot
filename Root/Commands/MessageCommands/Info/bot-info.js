@@ -35,29 +35,29 @@ module.exports = {
         value: `${client.user.id}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
         inline: true
       }, {
-        name: `__**🕵️‍♂️ ┇ ${lang.commands.util.BI[2]}:**__`,
+        name: `__**🕵️‍♂️ ┇ ${lang.commands.util.BI[1]}:**__`,
         value: `**• Status :** ${client.user.presence.status}
-        **• ${lang.commands.util["Serveur"]} :** ${client.guilds.cache.size}
-        **• ${lang.commands.util.BI[3]}:** ${moment(client.user.createdAt).format('MM/DD/YYYY')}
-        **• ${lang.commands.util.BI[4]}:** __${version["author"]}__
-        **• ${lang.commands.util.BI[5]}:** ${version["version"]}
-        **• ${lang.commands.util.BI[6]}:** \`${container.Prefix}\``,
+        **• ${lang.commands.util["Serveur"]}:** ${client.guilds.cache.size}
+        **• ${lang.commands.util.BI[2]}:** ${moment(client.user.createdAt).format('MM/DD/YYYY')}
+        **• ${lang.commands.util.BI[3]}:** __${version["author"]}__
+        **• ${lang.commands.util.BI[4]}:** ${version["version"]}
+        **• ${lang.commands.util.BI[5]}:** ${container.Prefix}`,
         inline: true
       }, {
-        name: `__**🕵️‍♂️ ┇ ${lang.commands.util.BI[7]}**__`,
-        value: `**• ${lang.commands.util.BI[8]}:** ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
-    **• ${lang.commands.util.BI[9]}:** ${days} ${lang.commands.util.BI[10]}, ${hours} ${lang.commands.util.BI[11]}, ${minutes} minute(s), ${seconds} ${lang.commands.util.BI[12]}
-    **• ${lang.commands.util.BI[13]}:** ${client.ws.ping}ms
+        name: `__**🕵️‍♂️ ┇ ${lang.commands.util.BI[6]}**__:`,
+        value: `**• ${lang.commands.util.BI[7]}:** ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
+    **• ${lang.commands.util.BI[8]}:** ${days} ${lang.commands.util.BI[9]}, ${hours} ${lang.commands.util.BI[10]}, ${minutes} minute(s), ${seconds} ${lang.commands.util.BI[11]}
+    **• ${lang.commands.util.BI[12]}:** ${client.ws.ping}ms
         **• Platforme :** ${process.platform}
-        **• ${lang.commands.util.BI[14]}:** ${process.version}
-        **• ${lang.commands.util.BI[15]}:** ${Discord.version}
-        **${lang.commands.util.BI[16]}:**
+        **• ${lang.commands.util.BI[13]}:** ${process.version}
+        **• ${lang.commands.util.BI[14]}:** ${container.Discord.version}
+        **${lang.commands.util.BI[15]}:**
   \u3000 **• Cores**: ${os.cpus().length},
   \u3000 **• Model**: ${core.model},
-  \u3000 **• ${lang.commands.util.BI[17]}**: ${core.speed} MHZ,
-        **${lang.commands.util.BI[18]}:**
+  \u3000 **• ${lang.commands.util.BI[16]}**: ${core.speed} MHZ,
+        **${lang.commands.util.BI[17]}:**
   \u3000 • Total: ${formatBytes(process.memoryUsage().heapTotal)},
-  \u3000 • ${lang.commands.util.BI[19]}: ${formatBytes(process.memoryUsage().heapUsed)}`,
+  \u3000 • ${lang.commands.util.BI[18]}: ${formatBytes(process.memoryUsage().heapUsed)}`,
         inline: true
       })
        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})

@@ -8,7 +8,7 @@ const {
 const db = require('quick.db')
 module.exports = async function (client, message, command, isInteraction, interactionType) {
     if (!command) return;
-    const dbprefix = db.get(`prefix_${message.guild.id}`) || config.prefix;
+    const dbprefix = db.get(`prefix_${message.guild.id}`) || "<your prefix>"; //Where we have "<your prefix>" you need tu put your default prefix
     const container = {
         RootPath: path,
         Config: config,
@@ -32,15 +32,13 @@ module.exports = async function (client, message, command, isInteraction, intera
     else {
         if (isInteraction) command.run(client, message, container)
         else {
-            container.Config.prefix.forEach(prefix => {
-                if (!message.content.toLowerCase().startsWith(prefix)) return;
-                const cmdName = message.content.trim().toLowerCase().slice(prefix.length).trim().split(" ")[0]
+                if (!message.content.toLowerCase().startsWith(dbprefix)) return;
+                const cmdName = message.content.trim().toLowerCase().slice(dbprefix.length).trim().split(" ")[0]
                 const command = client.commands.messageCommands.get(cmdName) ?? client.commands.messageCommands.get(client.commands.aliases.get(cmdName))
                 if (!command) return;
-                let args = message.content.slice(prefix.length).trim()
+                let args = message.content.slice(dbprefix.length).trim()
                 if (args.toLowerCase().startsWith(cmdName)) args = args.slice(cmdName.length).trim().split(" ")
                 command.run(client, message, args, container)
-            })
         }
     }
 }

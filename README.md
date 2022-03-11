@@ -22,10 +22,11 @@
 ----
 
 <h3> 📑 &nbsp;Documentation </h3>
+
+  -**Prefix**, to setup your default prefix you need to go in the [MessageCreate.js](https://github.com/Elpistolero131/UtilityBot/blob/main/Root/Events/MessageCreate.js) and change `<your prefix>` (line 5) and in [loadCommandOptions.js](https://github.com/Elpistolero131/UtilityBot/blob/main/Root/Structures/CommandOptions/loadCommandOptions.js) too (line 11).
   
   <h4> ⚙️ &nbsp;Root/Storage/Vault/Config.js </h4>
   
-  -**Prefix**, here in the `[""]` you need to put your prefix.<br>
   -**Token**, here in the `[""]`you need to put the token of your bot.<br>
   -**AME_API**, here you need to put in the `[""]` your key of amethyste api. To see your key you need to go [here](https://api.amethyste.moe/) in the website of the api, wenn you need to **sign up** and click on **generate the token** on the buttom.<br>
   -**Developpers**, here you need to put the ids of the developpers, for exemple: `["0123456789", "9876543210"]`.<br>

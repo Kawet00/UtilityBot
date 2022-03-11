@@ -1,5 +1,4 @@
 module.exports = {
-    prefix: ["u!"], /*Here you need to put your prefix*/
     developers: ["ID"], /*Here you need to put your id*/
     token: "TOKEN", /*Here you need to put the token of your bot*/
     AME_API: "KEY", /*Here you need to put your amethyste api key*/
