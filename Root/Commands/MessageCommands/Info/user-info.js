@@ -54,7 +54,7 @@ module.exports = {
         .addField(`**•👋 ${lang.commands.util.Ui[12]}:**`, `${moment(message.member.joinedAt).format(`DD/MM/YYYY`)}`, true)
         .addField(`**•🧔 ${lang.commands.util.Ui[13]}:**`, `${memberM.roles.cache.filter(r => r.name !== "@everyone").map(roles => `${roles}`).join(", ") || `🚫 ${lang.commands.util.Ui[14]}`}`, true)
         .addField(`**• ${lang.commands.util.Ui[15]}:**`, userFlags.length ? userFlags.map(flag => flags[flag]).join(`, `) : `🚫 ${lang.commands.util.Ui[16]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`, true)
-       .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+       .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
       .setTimestamp()
               ]
           });

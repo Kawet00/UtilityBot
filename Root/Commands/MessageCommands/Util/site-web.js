@@ -15,7 +15,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
-           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()
             .setTitle(lang.commands.util.Sw[0])
             .setDescription(`${lang.commands.util.Sw[1].replace('{WebSite}', "[Web Site](https://www.utilitybot.ga/)")}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)

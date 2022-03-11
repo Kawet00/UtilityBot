@@ -30,7 +30,7 @@ module.exports = {
       .setTitle(`${lang.events.guildMR[1]} !`)
       .setFooter({
         text: `© ${client.user.username}`,
-        iconURL: client.user.avatarURL()
+        iconURL: client.user.displayAvatarURL()
       })
 
     client.channels.cache.get(chx).send({

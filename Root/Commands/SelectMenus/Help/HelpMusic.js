@@ -19,7 +19,7 @@ module.exports = {
         .setDescription(lang.commands.helpa[4].replace('{PREFIX}', prefix))
         .setFooter({
           text: `© ${client.user.username}`,
-          iconURL: client.user.avatarURL()
+          iconURL: client.user.displayAvatarURL()
         })
         .setTimestamp()
         .addFields({

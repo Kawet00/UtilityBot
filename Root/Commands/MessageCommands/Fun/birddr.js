@@ -37,7 +37,7 @@ module.exports = {
             .setURL(birdd)
             .setDescription(`${container.Emotes.bird} ${lang.commands.fun.animaux[2]} ${container.Emotes.bird}`)
             .setImage(birdd)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
         ]});
     }

@@ -36,7 +36,7 @@ module.exports = {
             .setURL(fox2)
             .setDescription(`${container.Emotes.fox} AAA ${container.Emotes.fox}`)
             .setImage(fox2)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         });

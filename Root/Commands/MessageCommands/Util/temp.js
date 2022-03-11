@@ -21,7 +21,7 @@ module.exports = {
                     new container.Discord.MessageEmbed()
                     .setColor(colors.EPINGLE)
                     .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
                     ]
                 });
@@ -32,7 +32,7 @@ module.exports = {
                 new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
                 .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
             });
@@ -43,7 +43,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
-            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
@@ -64,7 +64,7 @@ module.exports = {
                         .addField(`**${lang.commands.util.temp[7]}**`, `${result[0].current.feelslike}°${result[0].location.degreetype}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`, true)
                         .addField(`💦 ┇ **${lang.commands.util.temp[8]}**`, `${result[0].current.humidity}%`, true)
                         .addField(`💨 ┇ **${lang.commands.util.temp[9]}**`, `${result[0].current.winddisplay}`, true)
-                        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     ]
                 });
             } catch (err) {
@@ -74,7 +74,7 @@ module.exports = {
                     embeds: [
                     new container.Discord.MessageEmbed()
                     .setColor(colors.RED)
-                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
                     .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.util.temp[10]}`)
                     ]

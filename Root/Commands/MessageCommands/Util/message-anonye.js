@@ -20,7 +20,7 @@ module.exports = {
       new container.Discord.MessageEmbed()
       .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
       .setColor(colors.EPINGLE)
-       .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+       .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
       .setTimestamp()
            ]     
           });
@@ -29,7 +29,7 @@ module.exports = {
       new container.Discord.MessageEmbed()
       .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
       .setColor(colors.EPINGLE)
-       .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+       .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
       .setTimestamp()  
     ]
     })
@@ -54,7 +54,7 @@ module.exports = {
         new container.Discord.MessageEmbed()
           .setColor(colors.RED)
           .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.util.messageA[1].replace('[contact]', '[contact the support](https://discord.gg/R39FrwyZ7w)')}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()
         ]
       });

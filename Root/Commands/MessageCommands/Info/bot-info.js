@@ -60,7 +60,7 @@ module.exports = {
   \u3000 • ${lang.commands.util.BI[18]}: ${formatBytes(process.memoryUsage().heapUsed)}`,
         inline: true
       })
-       .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+       .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
       .setTimestamp()
     ]
   })

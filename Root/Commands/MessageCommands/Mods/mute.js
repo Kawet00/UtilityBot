@@ -29,7 +29,7 @@ module.exports = {
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.mute[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.EPINGLE)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
     })
@@ -39,7 +39,7 @@ module.exports = {
             new container.Discord.MessageEmbed()
             .setColor(colors.RED)
             .setDescription('EN ATTENTE')
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
         ]
     })
     console.log('s')
@@ -49,7 +49,7 @@ if (member.id === message.guild.ownerID) return message.reply({
     new container.Discord.MessageEmbed()
     .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.mods.mute[1]}`)
     .setColor(colors.RED)
-     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
     .setTimestamp()
     ]
 })
@@ -58,7 +58,7 @@ if (member.id === message.member.id) return message.reply({
     new container.Discord.MessageEmbed()
     .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.mods.mute[1]}`)
     .setColor(colors.RED)
-     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
     .setTimestamp()
     ]
 })
@@ -68,7 +68,7 @@ if (member.id === message.member.id) return message.reply({
             new container.Discord.MessageEmbed()
             .setColor(colors.RED)
             .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.mods.mute[2]}`)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         })
@@ -78,7 +78,7 @@ if (member.id === message.member.id) return message.reply({
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.mods.mute[3]}`)
             .setColor(colors.RED)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         })
@@ -107,7 +107,7 @@ if (member.id === message.member.id) return message.reply({
                     new container.Discord.MessageEmbed()
                 .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.mute[4]}`)
                 .setColor(colors.EPINGLE)
-                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 .addField(lang.commands.mods.mute[5], member.author.tag, true)
                 .addField(lang.commands.modsa[0], message.author, true)
@@ -121,7 +121,7 @@ if (member.id === message.member.id) return message.reply({
                 new container.Discord.MessageEmbed()
                 .setDescription(`${container.Emotes.mute} ┇ ${member} ${lang.commands.mods.mute[6]}`)
                 .setColor(colors.VERT)
-                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
             })

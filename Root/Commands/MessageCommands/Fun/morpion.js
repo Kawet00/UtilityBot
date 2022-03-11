@@ -27,7 +27,7 @@ module.exports = {
             embeds: [new container.Discord.MessageEmbed()
                 .setDescription(`${container.Emotes.pepe.pepe_a}  ┇ ${lang.commands.fun.morpion[0]} `)
                 .setColor(colors.PERSO)
-                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
             }).then(async(msg) => {
@@ -69,7 +69,7 @@ module.exports = {
       `
                 )
                 .setColor(colors.PERSO)
-                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})]});
+                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})]});
 
             let players = [{
                     user: `${
@@ -87,7 +87,7 @@ module.exports = {
             let Morpion = new container.Discord.MessageEmbed()
                 .setTitle(lang.commands.fun.morpion[3])
                 .setColor(colors.PERSO)
-                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setDescription(`${lang.commands.fun.morpion[4]}: ${players[0].user}
 \`\`\`
 1  |  2  |  3

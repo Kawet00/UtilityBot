@@ -29,7 +29,7 @@ module.exports = {
             .setDescription('New language of Utility Bot')
             .addField('The New language of Utility Bot is', `English\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setTimestamp()
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             ]
         });
         }

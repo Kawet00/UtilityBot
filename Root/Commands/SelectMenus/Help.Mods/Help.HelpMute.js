@@ -40,7 +40,7 @@ module.exports = {
                 name: lang.commands.helpa[12],
                 value: lang.commands.helpa[18]+`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`
             })
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         }).then(() => {

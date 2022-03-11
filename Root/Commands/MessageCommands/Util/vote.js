@@ -16,7 +16,7 @@ module.exports = {
             new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
             .setDescription(`Not Disponible\n\n[${lang.commandsa[0]}](https://nepust.fr/)`/*`${lang.commands.util.Ui["6"].replace('{VoteForMe}', "[vote for me](https://top.gg/bot/787400372938735616/vote)")}🥰🥳😊`*/)
-           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()
             .setTitle('VOTE')
             .setURL('https://top.gg/bot/787400372938735616/vote')

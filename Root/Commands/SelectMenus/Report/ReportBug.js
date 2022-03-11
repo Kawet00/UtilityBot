@@ -92,7 +92,7 @@ module.exports = {
                     value: "`" + text + "`",
                     inline: false
                 })
-                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                     ]
                 }).then(() => {

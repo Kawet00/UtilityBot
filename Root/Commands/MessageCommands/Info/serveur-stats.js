@@ -83,7 +83,7 @@ module.exports = {
             .setThumbnail(message.guild.iconURL({
                 dynamic: true
             }))
-            .setFooter(`${moment(message.guild.createdAt).format('DD/MM/YYYY')} • © ${client.user.username}`, client.user.avatarURL())
+            .setFooter(`${moment(message.guild.createdAt).format('DD/MM/YYYY')} • © ${client.user.username}`, client.user.displayAvatarURL())
             .setTimestamp();
 
         message.channel.send(EmbedStats);

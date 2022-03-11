@@ -27,7 +27,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setLo[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             .setColor(colors.EPINGLE)
             ]
@@ -41,7 +41,7 @@ module.exports = {
                 new container.Discord.MessageEmbed()
             .setTitle(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.owner.setLo[1]}`)
             .setColor(colors.VERT)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             .addField(lang.commands.owner.setL[1], channelFetched, true)
             .addField(lang.commands.ownera[1], message.author, true)
@@ -55,7 +55,7 @@ module.exports = {
             .setColor(colors.VERT)
             .setDescription(`${
                 container.Emotes.autre.cool_pika} ┇ ${lang.commands.owner.setLo[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         })

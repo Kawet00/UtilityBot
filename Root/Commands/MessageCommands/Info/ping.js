@@ -29,7 +29,7 @@ module.exports = {
                 inline: true
               }
   )
-   .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+   .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
   .setColor(colors.PERSO)
         ]
 })

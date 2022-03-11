@@ -15,7 +15,7 @@ module.exports = {
       embeds: [
         new container.Discord.MessageEmbed()
         .setColor(container.Colors.RED)
-        .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}`)
+        .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
         .setFooter({
           text: `© ${client.user.username}`,
           iconURL: client.user.displayAvatarURL()
@@ -42,19 +42,16 @@ module.exports = {
 
     if (queue.getFiltersEnabled() !== filter) {}
     if (queue.getFiltersEnabled().length < 1) {
-      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${lang.commands.music.NowP[6]}**`);
+      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${lang.commands.music.NowP[6]}**\n\n[${lang.commandsa[0]}](https://nepust.fr/)`);
     } else if (queue.getFiltersEnabled().length > 0) {
-      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${queue.getFiltersEnabled()}**`);
+      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${queue.getFiltersEnabled()}**\n\n[${lang.commandsa[0]}](https://nepust.fr/)`);
     }
 
 
     embed.addField('\u200B', '\u200B')
     embed.addField(`Track, (${timestamp.progress}%)`, progress)
     embed.setTimestamp();
-    embed.setFooter({
-      text: ``,
-      iconURL: client.user.displayAvatarURL()
-    });
+    embed.setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
 
     const row = new container.Discord.MessageActionRow().addComponents(
       new container.Discord.MessageButton()

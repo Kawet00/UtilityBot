@@ -44,7 +44,7 @@ module.exports = {
             })
             .setFooter({
                 text: `© ${client.user.username}`,
-                iconURL: client.user.avatarURL()
+                iconURL: client.user.displayAvatarURL()
             })
             .setTimestamp()
         guild.systemChannel.send({

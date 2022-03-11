@@ -31,7 +31,7 @@ module.exports = {
             .setTitle(`${lang.events.guildMA[0]} !`)
             .setFooter({
                 text: `© ${client.user.username}`,
-                iconURL: client.user.avatarURL()
+                iconURL: client.user.displayAvatarURL()
             })
 
         client.channels.cache.get(chx).send({

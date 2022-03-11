@@ -21,7 +21,7 @@ module.exports = {
                 new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
             .setDescription(`${container.Emotes.autre.cool_pika} ┇ Uptime : ${days} ${lang.commands.util.temp[0]}, ${hours} ${lang.commands.util.temp[1]}, ${minutes} ${lang.commands.util.temp[2]}, ${seconds} ${lang.commands.util.temp[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         });

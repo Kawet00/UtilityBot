@@ -36,7 +36,7 @@ module.exports = {
             .setThumbnail(avatar)
             .setImage(url)
             .setColor(colors.PERSO)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         });
@@ -48,7 +48,7 @@ module.exports = {
             .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[1]} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
             .setImage(avatar)
             .setColor(accent_color)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         });
@@ -60,7 +60,7 @@ module.exports = {
             .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[2]} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
             .setThumbnail(avatar)
             .setColor(colors.PERSO)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         });

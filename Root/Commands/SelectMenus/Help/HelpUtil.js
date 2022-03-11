@@ -17,7 +17,7 @@ module.exports = {
                                 .setColor(colors.PERSO)
                                 .setFooter({
                                         text: `© ${client.user.username}`,
-                                        iconURL: client.user.avatarURL()
+                                        iconURL: client.user.displayAvatarURL()
                                 })
                                 .setTimestamp()
                                 .setTitle(`📚 ┇ ${lang.commands.help.util[0]}`)

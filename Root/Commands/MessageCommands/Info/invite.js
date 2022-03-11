@@ -19,7 +19,7 @@ module.exports = {
               .setThumbnail(client.user.avatarURL({ dynamic: true, size: 512 }))
               .setTitle(lang.commands.util.invite[1])
               .setURL('https://www.utilitybot.ga/')
-              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()
             ]
         })

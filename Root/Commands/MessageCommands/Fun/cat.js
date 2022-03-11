@@ -37,7 +37,7 @@ module.exports = {
             .setURL(catt)
             .setDescription(`${container.Emotes.cat} ${lang.commands.fun.animaux[3]} ${container.Emotes.cat}`)
             .setImage(catt)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         });

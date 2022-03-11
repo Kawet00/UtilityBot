@@ -16,7 +16,7 @@ module.exports = {
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.fun.slap[0]} `)
             .setColor(colors.EPINGLE)
-            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         })
@@ -26,7 +26,7 @@ module.exports = {
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.fun.slap[1]}`)
             .setColor(colors.RED)
-            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         })
@@ -36,7 +36,7 @@ module.exports = {
             new container.Discord.MessageEmbed()
             .setColor(colors.RED)
             .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.fun.slap[2]}`)
-            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         })
@@ -54,7 +54,7 @@ module.exports = {
             .replace('{EMOJI}', container.Emotes.pepe.pepe_wa)
             )
             .setImage(body.url)
-            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.avatarURL()})
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         })
