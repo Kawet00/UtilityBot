@@ -1,24 +1,24 @@
 {
-  "name": "discordbot-template",
-  "version": "5.0.3",
-  "description": "Advanced Template",
+  "name": "utility-bot",
+  "version": "2.1",
+  "description": "Source code of Utility Bot.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RileCraft/DiscordBot-Template.git"
+    "url": "git+https://github.com/Elpistolero131/UtilityBot.git"
   },
   "keywords": [
     "Yes"
   ],
-  "author": "RileCraft",
-  "license": "MIT",
+  "author": "Elpistolero131",
+  "license": "APACHE",
   "bugs": {
-    "url": "https://github.com/RileCraft/DiscordBot-Template/issues"
+    "url": "https://github.com/Elpistolero131/UtilityBot/issues"
   },
-  "homepage": "https://github.com/RileCraft/DiscordBot-Template#readme",
+  "homepage": "https://github.com/Elpistolero131/UtilityBot#readme",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
     "amethyste-api": "^1.1.5",
