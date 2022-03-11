@@ -31,7 +31,7 @@ NodeJS Version    ::    ${process.version}
 `).stringify()
 
         const CommandsBox = new Box({
-            w: Math.floor(`Initiating ${client.commands.messageCommands.aliases.size} messageCommands Aliases.`.length + 37),
+            w: Math.floor(`Initiating ${client.commands.aliases.size} messageCommands Aliases.`.length + 37),
             h: 8,
             stringify: false,
             marks: {
@@ -48,7 +48,7 @@ NodeJS Version    ::    ${process.version}
         }, `C O M M A N D S   I N F O R M A T I O N
 
 MessageCommands            ::    Initiating ${client.commands.messageCommands.size} messageCommands.
-MessageCommands Aliases    ::    Initiating ${client.commands.messageCommands.aliases.size} messageCommands Aliases.
+MessageCommands Aliases    ::    Initiating ${client.commands.aliases.size} messageCommands Aliases.
 SlashCommands              ::    Initiating ${client.commands.slashCommands.size} slashCommands.
 SelectMenus                ::    Initiating ${client.commands.selectMenus.size} selectMenus.
 ContextMenus               ::    Initiating ${client.commands.contextMenus.size} contextMenus.

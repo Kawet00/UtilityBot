@@ -34,7 +34,7 @@
     client.events = new Discord.Collection();
     client.langs = new Discord.Collection();
     client.commands.messageCommands = new Discord.Collection();
-    client.commands.messageCommands.aliases = new Discord.Collection();
+    client.commands.aliases = new Discord.Collection();
     client.commands.contextMenus = new Discord.Collection();
     client.commands.slashCommands = new Discord.Collection();
     client.commands.buttonCommands = new Discord.Collection();

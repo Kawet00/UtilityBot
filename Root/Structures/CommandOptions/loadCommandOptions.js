@@ -35,7 +35,7 @@ module.exports = async function (client, message, command, isInteraction, intera
             container.Config.prefix.forEach(prefix => {
                 if (!message.content.toLowerCase().startsWith(prefix)) return;
                 const cmdName = message.content.trim().toLowerCase().slice(prefix.length).trim().split(" ")[0]
-                const command = client.commands.messageCommands.get(cmdName) ?? client.commands.messageCommands.get(client.commands.messageCommands.aliases.get(cmdName))
+                const command = client.commands.messageCommands.get(cmdName) ?? client.commands.messageCommands.get(client.commands.aliases.get(cmdName))
                 if (!command) return;
                 let args = message.content.slice(prefix.length).trim()
                 if (args.toLowerCase().startsWith(cmdName)) args = args.slice(cmdName.length).trim().split(" ")
