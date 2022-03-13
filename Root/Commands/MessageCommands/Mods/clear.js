@@ -31,7 +31,11 @@ module.exports = {
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
-        })
+        }).then(() => {
+            setTimeout(() =>{
+                message.delete();
+              }, 300)
+            })
         if (args[0] < 5) return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
@@ -40,6 +44,10 @@ module.exports = {
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
+        }).then(() => {
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
         })
           if (args[0] > 100) return message.reply({
               embeds: [
@@ -49,6 +57,10 @@ module.exports = {
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
               ]
+            }).then(() => {
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
             })
         try {
             message.channel.bulkDelete(parseInt(args[0])+parseInt(1)).then(() => {
@@ -60,6 +72,10 @@ module.exports = {
                      .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
                     ]
+                }).then(m => {
+                    setTimeout(() => {
+                    m.delete()
+                    }, 3000)
                 })
                 let logsC = db.get(`logs_${message.guild.id}`)
                 if (!logsC) return;
@@ -78,7 +94,8 @@ module.exports = {
                     ]
                 });
             })
-        } catch {
+        } catch (e) {
+            console.log(e)
             message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
@@ -87,7 +104,11 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
-            })
+            }).then(() => {
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
+        })
         };
     }
 }

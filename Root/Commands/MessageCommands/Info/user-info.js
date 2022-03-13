@@ -37,7 +37,7 @@ module.exports = {
                     offline: `😴${lang.commands.util.Ui[3]} / 👻${lang.commands.util.Ui[4]}`,
                     streaming: `💻${lang.commands.util.Ui["6"]}`
                 }
-                const memberM = message.guild.member(message.mentions.users.first()) || message.member || message.author;
+                const memberM = message.mentions.users.first() || message.member || message.author;
                 const userFlags = memberM.user.flags.toArray();
           message.reply({
               embeds: [
@@ -58,5 +58,8 @@ module.exports = {
       .setTimestamp()
               ]
           });
+          setTimeout(() =>{
+            message.delete();
+          }, 300)
     }
 }

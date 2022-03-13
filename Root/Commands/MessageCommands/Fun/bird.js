@@ -34,11 +34,14 @@ module.exports = {
             .setColor(colors.PERSO)
             .setTitle(lang.commands.fun.animaux[0])
             .setURL(bird2)
-            .setDescription(`${container.Emotes.bird} ${lang.commands.fun.animaux[2]} ${container.Emotes.bird}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.autre.bird}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setImage(bird2)
             .setFooter({ text: `© ${client.user.username} `, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
             ]
         });
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
     }
 };

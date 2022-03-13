@@ -73,5 +73,8 @@ module.exports = {
 } catch(e) {
     console.log('test')
 }
+setTimeout(() =>{
+    message.delete();
+  }, 300)
 		}
 	}

@@ -74,7 +74,7 @@
     ]
   },
   "commandsa": [
-    "Partenaire"
+    "Partenaires"
   ],
   "commands": {
     "fun": {
@@ -724,7 +724,7 @@
         "Nouveau prefix",
         "Prefix mis de base !",
         "Un prefix ne peut pas faire plus de 5 caractères.",
-        "Le prefix du serveur a- été mis à jour !"
+        "Le prefix du serveur a été mis à jour !"
       ],
       "setW": [
         "Un membre a supprimer le salon de bienvenue !",
@@ -995,13 +995,13 @@
         "Moyen",
         "Voici les statiques",
         "Propriètaire",
-        "Région",
         "Level de vérification",
         "Nombre de rôle(s)",
         "Nombre de channel(s)",
         "Temp d'AFK",
         "Total de membre(s)",
         "Nombre de membres connecter",
+        "Nombre de membres déconnecter",
         "Nombre de boost",
         "Level de boost",
         "Nombre d'émoji sur le serveur",

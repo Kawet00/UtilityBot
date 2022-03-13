@@ -42,25 +42,10 @@ module.exports = {
                 ]
             })
         }
-        if (args.join("") === container.Prefix || args.join("") === 'delete') {
-            db.delete(`prefix_${message.guild.id}`);
+        if (args.join("") === "u!" || args.join("") === 'delete') {
+            db.delete(`prefix_${message.guild.id}`)
 
-                let logsC = db.get(`logs_${message.guild.id}`)
-                if (!logsC) return;
-                client.channels.cache.get(logsC).send({
-                    embeds: [
-                        new container.Discord.MessageEmbed()
-                .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
-                .setColor(colors.EPINGLE)
-                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
-                .setTimestamp()
-                .addField(lang.commands.owner.setP[3], `\`${container.Prefix}\``, true)
-                .addField(lang.commands.ownera[1], message.author, true)
-                .addField(`\u200B`, '\u200B')
-                .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-                    ]
-                });
-            return await message.reply({
+             message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setP[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
@@ -69,44 +54,59 @@ module.exports = {
                 .setTimestamp()
                 ]
             })
+            let logsC = db.get(`logs_${message.guild.id}`)
+                if (!logsC) return;
+                client.channels.cache.get(logsC).send({
+                    embeds: [
+                        new container.Discord.MessageEmbed()
+                .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
+                .setColor(colors.EPINGLE)
+                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+                .addField(lang.commands.owner.setP[3], `\`u!\``, true)
+                .addField(lang.commands.ownera[1], message.author, true)
+                .addField(`\u200B`, '\u200B')
+                .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                    ]
+                });
         }
         if (args[0].length > 5) {
             return await message.reply({
                 embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP["6"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 .setColor(colors.EPINGLE)
                 ]
             })
         }
-        db.set(`prefix_${message.guild.id}`, args[0]);
+        db.set(`prefix_${message.guild.id}`, args[0])
 
-            let logsC = db.get(`logs_${message.guild.id}`)
-            if (!logsC) return;
-            client.channels.cache.get(logsC).send({
-                embeds: [
-                    new container.Discord.MessageEmbed()
-            .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
-            .setColor(colors.EPINGLE)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
-            .setTimestamp()
-            .addField(lang.commands.owner.setP[3], `\`${container.Prefix}\``, true)
-            .addField(lang.commands.ownera[1], message.author, true)
-            .addField(`\u200B`, '\u200B')
-            .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-                ]
-            });
-
-        await message.reply({
+        message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${config.container.Emotes.autre.cool_pika} ┇ ${lang.commands.owner.setP["7"]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.owner.setP[6]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.VERT)
             .setTimestamp()
-            .setFooter(`© ${client.user.username}`, client.user.displayAvatarURL())
+            .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             ]
         })
+
+        let logsC = db.get(`logs_${message.guild.id}`)
+        if (!logsC) return;
+        client.channels.cache.get(logsC).send({
+            embeds: [
+                new container.Discord.MessageEmbed()
+        .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.setP[2]}`)
+        .setColor(colors.EPINGLE)
+         .setFooter({ text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL() })
+        .setTimestamp()
+        .addField(lang.commands.owner.setP[3], `\`${container.Prefix}\``, true)
+        .addField(lang.commands.ownera[1], message.author, true)
+        .addField(`\u200B`, '\u200B')
+        .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            ]
+        });
     }
 }

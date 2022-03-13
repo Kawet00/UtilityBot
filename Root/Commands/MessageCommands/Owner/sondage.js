@@ -64,7 +64,7 @@ module.exports = {
             .setColor(colors.PERSO)
             .setDescription(`${lang.commands.owner.poll[3]} ${message.author} \n\n ${sondage}\n\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setTitle(lang.commands.owner.poll[4])
-            .setFooter(`${lang.commands.owner.poll[5].replace('{DURATION}', humanizeDuration(duration, { language: 'en' }))}  •  © ${client.user.username}`, client.user.displayAvatarURL())
+            .setFooter({ text: `${lang.commands.owner.poll[5].replace('{DURATION}', humanizeDuration(duration, { language: 'en' }))}  •  © ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
             ]
         }).then(msg => {

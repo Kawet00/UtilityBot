@@ -32,9 +32,11 @@
   -**Developpers**, here you need to put the ids of the developpers, for exemple: `["0123456789", "9876543210"]`.<br>
   -**SupportGuild**, here you need to put the id of your support guild, for the command `report`.<br>
   -**ReportCahnnel**, here you need to put the id of the channel where are going the message of the `report` and it must be a channel of the `SupportGuild`.<br>
+  -**DOG_API_KEY**, here you need to put your dog api key, you get it [here](https://thecatapi.com/signup), signup and you will have your dog api key via E-Mail.<br>
+  -**DOG_API_URL**, here please don't touch it's the link of the dog api.<br>
   -**MaxVol**, here you need to put the volume max of the music.<br>
   -**LoopMessage**, here it's if you want to send a message for the loop.<br>
-  -**DiscordPlayer**, please don't touch this is imortant for the music.
+  -**DiscordPlayer**, here please don't touch this is imortant for the music.
   
   <h4> &nbsp;Root/Storage/json/colors.json </h4>
   Here is where we stock the colors, if you want to add some colors, put the name and the HEX Code of the color.

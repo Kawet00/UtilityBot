@@ -26,35 +26,35 @@ module.exports = {
                                         name: `${emotes.blob.blob_p} ┇ 8BALL`,
                                         value: lang.commands.help.fun[3].replace("{PREFIX}", prefix),
                                         inline: true,
-                                }, {
+                                }, {/*
                                         name: `${emotes.autre.dog} ┇ FUN DOG`,
                                         value: lang.commands.help.fun[4].replace("{PREFIX}", prefix),
                                         inline: true,
-                                }, {
+                                }, {*/
                                         name: `${emotes.autre.dog} ┇ DOG`,
                                         value: lang.commands.help.fun[5].replace("{PREFIX}", prefix),
                                         inline: true,
-                                }, {
+                                }, {/*
                                         name: `${emotes.autre.cat} ┇ FUN CAT`,
                                         value: lang.commands.help.fun[6].replace("{PREFIX}", prefix),
                                         inline: true,
-                                }, {
+                                }, {*/
                                         name: `${emotes.autre.cat} ┇ CAT`,
                                         value: lang.commands.help.fun[7].replace("{PREFIX}", prefix),
                                         inline: true,
-                                }, {
+                                }, {/*
                                         name: `${emotes.autre.fox} ┇ FUN FOX`,
                                         value: lang.commands.help.fun[8].replace("{PREFIX}", prefix),
                                         inline: true,
-                                }, {
+                                }, {*/
                                         name: `${emotes.autre.fox} ┇ FOX`,
                                         value: lang.commands.help.fun[9].replace("{PREFIX}", prefix),
                                         inline: true,
-                                }, {
+                                }, {/*
                                         name: `${emotes.autre.bird} ┇ FUN BIRD`,
                                         value: lang.commands.help.fun[10].replace("{PREFIX}", prefix),
                                         inline: true,
-                                }, {
+                                }, {*/
                                         name: `${emotes.autre.bird} ┇ BIRD`,
                                         value: lang.commands.help.fun[11].replace("{PREFIX}", prefix),
                                         inline: true,

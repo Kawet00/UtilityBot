@@ -32,6 +32,10 @@ module.exports = {
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+                message.delete();
+              }, 300)
         })
 
         if(!Number.isNaN(+number)) return message.reply({
@@ -42,6 +46,10 @@ module.exports = {
                 .setTimestamp()
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             ]
+        }).then(() => {
+            setTimeout(() =>{
+                message.delete();
+              }, 300)
         })
 
         if(!user) return message.reply({
@@ -52,6 +60,10 @@ module.exports = {
                 .setColor(container.Colors.EPINGLE)
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+                message.delete();
+              }, 300)
         })
 
         if(user.id == message.author.id) return message.reply({
@@ -62,6 +74,10 @@ module.exports = {
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+                message.delete();
+              }, 300)
         })
 
         if(user.bot) return message.reply({
@@ -72,6 +88,10 @@ module.exports = {
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+                message.delete();
+              }, 300)
         })
 
         if(message.member.roles.highest.comparePositionTo(user.roles.highest) < 1 && message.author.id !== message.guild.ownerID) return message.reply({
@@ -82,6 +102,10 @@ module.exports = {
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+                message.delete();
+              }, 300)
         })
 
         if(number === 'all') {
@@ -94,6 +118,10 @@ module.exports = {
                     .setColor(container.Colors.VERT)
                     .setTimestamp()
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                    message.delete();
+                  }, 300)
             })
             
             if (!logsC) return;
@@ -124,6 +152,10 @@ module.exports = {
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                    message.delete();
+                  }, 300)
             })
             if (!logsC) return;
             client.channels.cache.get(logsC).send({
@@ -151,6 +183,10 @@ module.exports = {
                         .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                         .setTimestamp()
                     ]
+                }).then(() => {
+                    setTimeout(() =>{
+                        message.delete();
+                      }, 300)
                 })
             }
         }

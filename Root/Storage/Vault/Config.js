@@ -4,6 +4,8 @@ module.exports = {
     AME_API: "KEY", /*Here you need to put your amethyste api key*/
     supporGuild: "ID", /*Here you need to put the id of your support guild*/
     reportChannel: "ID", /*Here you need to put the id of the channel*/
+    DOG_API_KEY: "5e252237-5fd3-4de0-8b35-d0627f0f85c7", /*Here your dog api key*/
+    DOG_API_URL: "https://api.thedogapi.com/", /*Don't touch*/
 
     opt: {
         maxVol: 250, /*The max volume of the music*/

@@ -79,9 +79,7 @@ module.exports = {
                         dynamic: true
                     }))
                     .setColor(colors.VERT)
-                    .setFooter(`© ${client.user.username}`,
-                        client.user.displayAvatarURL()
-                    )
+                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                 ]
             });
         };

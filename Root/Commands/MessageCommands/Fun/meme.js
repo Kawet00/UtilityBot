@@ -21,11 +21,14 @@ module.exports = {
               .setImage(res.url)
               .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
               .setTimestamp()
-              .setColor(message.guild.me.displayHexColor)
+              .setColor(container.Colors.PERSO)
           ]
       });
     } catch (err) {
       message.reply(lang.commands.fun.meme[0], err.message);
     }
+    setTimeout(() =>{
+      message.delete();
+    }, 300)
   }
 };

@@ -126,5 +126,8 @@ if (member.id === message.member.id) return message.reply({
                 ]
             })
         })
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
     }
 }

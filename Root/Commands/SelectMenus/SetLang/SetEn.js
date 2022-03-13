@@ -14,7 +14,7 @@ module.exports = {
             interaction.reply({
                 embeds: [
                     new Discord.MessageEmbed()
-                    .setDescription(`${emoji.pepe.pepe_a} ┇ You have already the English for the language of Utility Bot.\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                    .setDescription(`${emoji.pepe.pepe_a} ┇ You have already the English for the language of Utility Bot.\n\n[Partenership](https://nepust.fr/)`)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                     .setColor(colors.EPINGLE)
                     .setTimestamp()
@@ -27,7 +27,7 @@ module.exports = {
             new Discord.MessageEmbed()
             .setColor(colors.VERT)
             .setDescription('New language of Utility Bot')
-            .addField('The New language of Utility Bot is', `English\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .addField('The New language of Utility Bot is', `English\n\n[Partenership](https://nepust.fr/)`)
             .setTimestamp()
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             ]

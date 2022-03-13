@@ -88,5 +88,8 @@ module.exports = {
                 ]
             })
         })
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
     }
 }

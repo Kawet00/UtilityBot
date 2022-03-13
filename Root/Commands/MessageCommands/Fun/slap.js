@@ -58,5 +58,8 @@ module.exports = {
             .setTimestamp()
             ]
         })
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
     }
 }

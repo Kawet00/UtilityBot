@@ -1,4 +1,3 @@
-
 const db = require('quick.db');
 const colors = require('../../../Storage/json/colors.json')
 
@@ -191,7 +190,7 @@ module.exports = {
           }
     \`\`\``)
                     .setColor(colors.PERSO)
-                    .setFooter(`© ${client.user.username}`)
+                    .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
         ],
             });
         }
@@ -249,5 +248,8 @@ module.exports = {
                 } while (!winners);
             });
         }
-    },
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
+    }
 };

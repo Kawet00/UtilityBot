@@ -1,6 +1,6 @@
 const AmeClient = require('amethyste-api');
-const config = require('../../../Storage/Vault/Config')
-const AmeAPI = new AmeClient(config.AME_API);
+const { AME_API } = require('../../../Storage/Vault/Config')
+const AmeAPI = new AmeClient(AME_API);
 
 const db = require('quick.db');
 const colors = require('../../../Storage/json/colors.json')
@@ -29,12 +29,15 @@ module.exports = {
 message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setColor(colors.cream)
+                .setColor(colors.RED)
                 .setDescription(container.Emotes.pepe.pepe_ar)
                 .setImage("attachment://wanted.png")
             ], files: [attachment]
         }).then(() => {
             m.delete()
         })
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
     }
 }

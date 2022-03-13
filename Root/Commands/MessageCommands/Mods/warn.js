@@ -147,5 +147,8 @@ module.exports = {
             .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
         });
+        setTimeout(() =>{
+            message.delete();
+          }, 300)
     }
 }
