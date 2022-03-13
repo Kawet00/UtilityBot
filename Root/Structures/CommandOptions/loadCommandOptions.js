@@ -8,7 +8,7 @@ const {
 const db = require('quick.db')
 module.exports = async function (client, message, command, isInteraction, interactionType) {
     if (!command) return;
-    const dbprefix = db.get(`prefix_${message.guild.id}`) || "<your prefix>"; //Where we have "<your prefix>" you need tu put your default prefix
+    const dbprefix = db.get(`prefix_${message.guild.id}`) || "u!";
     const container = {
         RootPath: path,
         Config: config,

@@ -94,7 +94,7 @@ module.exports = {
                                         })
                         ]
                 }).then(() => {
-                        interaction.reply(lang.commands.help.sucess[0])
+                        interaction.reply(lang.commands.help.success[0])
                 })
         }
 }

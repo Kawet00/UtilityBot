@@ -22,16 +22,45 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
+
         const reason = args.slice(2).join(" ") || lang.commands.mods["noR"]
         const member = message.guild.members.cache.get(user.id)
 
 		const milliseconds = ms(time);
 		const iosTime = new Date(Date.now() + milliseconds).toISOString();
 
-        if(user.id === client.user.id) return message.reply('bah tu peut pas en faite.')
+        if(user.id === client.user.id) return message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setColor(colors.RED)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+                .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.timeout[3]}`)
+            ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
+        })
 
-        if(user.id === message.member.is) return message.reply('tu veut que je dégage ou quoi ?')
+        if(user.id === message.member.is) return message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.timeout[4]}`)
+                .setColor(colors.RED)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+            ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
+        })
 
         if(message.member.roles.highest.comparePositionTo(member.roles.highest) < 1 && message.author.id !== message.guild.ownerID) return message.reply('t con toi')
         
@@ -46,7 +75,11 @@ module.exports = {
                      .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
                 ]
-            });
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
+            })
 		}
         
 
@@ -69,12 +102,13 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
 } catch(e) {
     console.log('test')
 }
-setTimeout(() =>{
-    message.delete();
-  }, 300)
 		}
 	}

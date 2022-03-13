@@ -16,7 +16,7 @@ function dateFormat(date) {
 module.exports = {
     name: 'sondage',
     description: 'none',
-    aliases: ["poll", "s", "p"],
+    aliases: ["poll", "s"],
     userPermissions: ["ADMINISTRATOR"],
     cooldown: 600000,
 
@@ -34,7 +34,11 @@ module.exports = {
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
-        });
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
+        })
 
         const duration = parseDuration(args[1])
         if (!duration) return message.reply({
@@ -45,6 +49,10 @@ module.exports = {
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
+    }).then(() => {
+        setTimeout(() =>{
+          message.delete();
+        }, 300)
     })
 
         let sondage = args.slice(2).join(" ");
@@ -56,6 +64,10 @@ module.exports = {
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
 
         channelM.send({
@@ -70,6 +82,10 @@ module.exports = {
         }).then(msg => {
             msg.react("✅")
             msg.react("❌")
+            
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
 
             let logsC = db.get(`logs_${message.guild.id}`)
             if (!logsC) return;
@@ -112,6 +128,10 @@ module.exports = {
             .setTimestamp()
             .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.poll[10]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
     
     }

@@ -6,8 +6,7 @@ const config = require('../../../Storage/Vault/Config')
 module.exports = {
     name: "HelpWarn",
     run: async(client, interaction) => {
-        var prefix = db.get(`prefix_${interaction.guild.id}`)
-        if(prefix == null) prefix = config.prefix;
+        var prefix = db.get(`prefix_${interaction.guild.id}`) || 'u!'
         let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
         interaction.user.send({
@@ -44,7 +43,7 @@ module.exports = {
              .setTimestamp()
             ]
         }).then(() => {
-            interaction.reply('Help sent with succes !')
+            interaction.reply(lang.commands.help.success[0])
         })
     }
 }

@@ -47,7 +47,7 @@ module.exports = {
                 .setTimestamp()
             ]
         }).then(() => {
-            interaction.reply('Help sent with succes !')
+            interaction.reply(lang.commands.help.success[0])
         })
     }
 }

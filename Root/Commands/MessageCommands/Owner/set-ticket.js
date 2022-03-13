@@ -22,5 +22,9 @@ module.exports = {
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             ]
         });
+        
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
     }
 }

@@ -19,6 +19,10 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
 
         let giveaway = client.giveawaysManager.giveaways.find((g) => g.prize === args.join(' ')) || client.giveawaysManager.giveaways.find((g) => g.messageID === args[0]);
@@ -31,6 +35,10 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
+                }).then(() => {
+                    setTimeout(() =>{
+                      message.delete();
+                    }, 300)
                 })
 
         client.giveawaysManager.reroll(giveaway.messageID)
@@ -46,6 +54,10 @@ module.exports = {
                          .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                         .setTimestamp()
                         ]
+                    }).then(() => {
+                        setTimeout(() =>{
+                          message.delete();
+                        }, 300)
                     })
             });
 

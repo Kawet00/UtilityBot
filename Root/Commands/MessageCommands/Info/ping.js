@@ -2,7 +2,7 @@ const db = require('quick.db')
 const colors = require('../../../Storage/json/colors.json')
 
 module.exports = {
-            aliases: ["p", "pi", "pong"],
+            aliases: ["pi", "pong"],
             description: "Savoir le ping du bot",
             name: "ping",
             onlyUsers: ["509765051435974692", "691644619758370846"],

@@ -24,6 +24,22 @@ module.exports = {
         
         if (args[0] === "delete") {
             db.delete(`welchannel_${message.guild.id}`, channel.id)
+
+            message.reply({
+                    
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setW[1]}`)
+                    .setColor(colors.VERT)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                    .setTimestamp()
+                ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
+            })
+
                 let logsC = db.get(`logs_${message.guild.id}`)
                 if (!logsC) return;
                 client.channels.cache.get(logsC).send({
@@ -38,17 +54,6 @@ module.exports = {
                     .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     ]
                 });
-
-                message.reply({
-                    
-                    embeds: [
-                        new container.Discord.MessageEmbed()
-                        .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.owner.setW[1]}`)
-                        .setColor(colors.VERT)
-                        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
-                        .setTimestamp()
-                    ]
-                })
         }
 
         if (!channel) {
@@ -60,6 +65,10 @@ module.exports = {
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
             ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
         }
 
@@ -73,6 +82,10 @@ module.exports = {
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
 
             let logsC = db.get(`logs_${message.guild.id}`)

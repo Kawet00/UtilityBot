@@ -213,7 +213,7 @@
         "SONDAGE",
         "TEMP",
         "SITE WEB",
-        "Vous devez faire : `{PREFIX}sondage <un salon> <un temp> <le sondage>`",
+        "Vous devez faire : `{PREFIX}poll <un salon> <un temp> <le sondage>`",
         "Vous devez faire : `{PREFIX}start-g <un salon> <un temp> <le nombre de gagnant(s)> <le cadeau>`",
         "Vous devez faire : `{PREFIX}reroll-g <id du giveaway>`",
         "Vous devez faire : `{PREFIX}color`",
@@ -225,7 +225,7 @@
         "Vous devez faire : `{PREFIX}site-web`",
         "Vous devez faire : `{PREFIX}support`"
       ],
-      "sucess": [
+      "success": [
         "Help envoyer avec succés !"
       ],
       "music": [
@@ -524,10 +524,10 @@
         "Avoir le lien du site web de Utility Bot."
       ],
       "helpSs": [
-        "Vous aurez des informationss sur la commande {PREFIX}sondage:",
-        "Vous aurez des informationss sur la commande `{PREFIX}sondage`:",
+        "Vous aurez des informationss sur la commande {PREFIX}poll:",
+        "Vous aurez des informationss sur la commande `{PREFIX}poll`:",
         "Faire un sondage avec un timer.",
-        "`{PREFIX}sondage <un salon> <un temp> le sondage>`"
+        "`{PREFIX}poll <un salon> <un temp> le sondage>`"
       ],
       "helpSg": [
         "Vous aurez des informationss sur la commande {PREFIX}start-g:",
@@ -662,7 +662,9 @@
       "timeout": [
         "Vous pouvez exclure un membre a partir de {30000} et maximum {2419200000}.",
         "{USER} a été exclue durant {TIME} !",
-        "Veuillez mentionner un membre à exclure."
+        "Veuillez mentionner un membre à exclure.",
+        "Vous ne pouvez pas vous exclure.",
+        "Vous ne pouvez pas m'exclure."
       ]
     },
     "ownera": [

@@ -33,6 +33,10 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
         }
 
@@ -46,6 +50,10 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
         }
 
@@ -57,6 +65,10 @@ module.exports = {
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
 
         let giveawayNumberWinners = args[2];
@@ -69,6 +81,10 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
         }
 
@@ -82,6 +98,10 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
         }
 

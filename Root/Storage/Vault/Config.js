@@ -1,19 +1,19 @@
 module.exports = {
-    developers: ["ID"], /*Here you need to put your id*/
-    token: "TOKEN", /*Here you need to put the token of your bot*/
-    AME_API: "KEY", /*Here you need to put your amethyste api key*/
-    supporGuild: "ID", /*Here you need to put the id of your support guild*/
-    reportChannel: "ID", /*Here you need to put the id of the channel*/
-    DOG_API_KEY: "5e252237-5fd3-4de0-8b35-d0627f0f85c7", /*Here your dog api key*/
-    DOG_API_URL: "https://api.thedogapi.com/", /*Don't touch*/
+    developers: ["691644619758370846"],
+    token: "NzM5ODYzNzE4NTQ3OTQ3NjUy.XygpyA.dfGvuTtM5vztsNAohx_OEa7Seeg",
+    AME_API: "10588f3cdbe8cb8b2552538952e624e59fadbc010bc4430793812643ed13d01929fbce0829a7b857452fcf9cabd6ea20e02518d4b4085414f75a2626ebbede7a",
+    supporGuild: "759700194820096011",
+    reportChannel: "799932188442886176",
+    DOG_API_KEY: "5e252237-5fd3-4de0-8b35-d0627f0f85c7",
+    DOG_API_URL: "https://api.thedogapi.com/",
 
     opt: {
-        maxVol: 250, /*The max volume of the music*/
-        loopMessage: false, /*Put a loop message*/
+        maxVol: 250,
+        loopMessage: false,
         discordPlayer: {
             ytdlOptions: {
-                quality: 'highestaudio', /*Don't touch*/
-                highWaterMark: 1 << 25  /*Don't touch*/
+                quality: 'highestaudio',
+                highWaterMark: 1 << 25
             }
         }
     }

@@ -4,8 +4,17 @@ module.exports = {
     name: "ready",
     once: true,
     run: async (client) => {
-        client.user.setActivity('Cookies get baked.', {
-            type: `WATCHING`,
+        const activitys = [
+            "Utility Bot v2.1",
+            "by Elpistolero13",
+            `${client.guilds.cache.size} servers`,
+        ]
+
+        const activity = activitys[Math.floor(Math.random() * activitys.length)];
+
+        client.user.setActivity(activity, {
+            type: `STREAMING`,
+            url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         })
         const ClientBox = new Box({
             w: Math.floor(client.user.tag.length + 27),

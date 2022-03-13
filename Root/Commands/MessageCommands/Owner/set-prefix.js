@@ -29,8 +29,13 @@ module.exports = {
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
         }
+
         if (args[1]) {
             return message.reply({
                 embeds: [
@@ -40,6 +45,10 @@ module.exports = {
                 .setTimestamp()
                 .setColor(colors.RED)
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
         }
         if (args.join("") === "u!" || args.join("") === 'delete') {
@@ -53,7 +62,12 @@ module.exports = {
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
+
             let logsC = db.get(`logs_${message.guild.id}`)
                 if (!logsC) return;
                 client.channels.cache.get(logsC).send({
@@ -79,6 +93,10 @@ module.exports = {
                 .setTimestamp()
                 .setColor(colors.EPINGLE)
                 ]
+            }).then(() => {
+                setTimeout(() =>{
+                  message.delete();
+                }, 300)
             })
         }
         db.set(`prefix_${message.guild.id}`, args[0])
@@ -91,6 +109,10 @@ module.exports = {
             .setTimestamp()
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
 
         let logsC = db.get(`logs_${message.guild.id}`)

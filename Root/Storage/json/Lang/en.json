@@ -226,7 +226,7 @@
         "You need to do: `{PREFIX}website`",
         "You need to do: `{PREFIX}support`"
       ],
-      "sucss": [
+      "success": [
         "Help sent with succes !"
       ],
       "music": [
@@ -673,7 +673,9 @@
       "timeout": [
         "You can exclude a member from {30000} and maximum {2419200000}.",
         "{USER} was excluded during {TIME} !",
-        "Please mention a memeber to tiemout."
+        "Please mention a memeber to tiemout.",
+        "You can't timeout yourself.",
+        "You can't timeout me."
       ]
     },
     "ownera": [

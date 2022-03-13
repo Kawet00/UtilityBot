@@ -2,7 +2,7 @@ const db = require('quick.db')
 module.exports = {
     name: "messageCreate",
     run: async(message, client, container) => {
-        let Prefix = db.get(`prefix_${message.guild.id}`) || "<your prefix>" //Where we have "<your prefix>" you need tu put your default prefix
+        let Prefix = db.get(`prefix_${message.guild.id}`) || "u!"
 
         const loadCommandOptions = require("../Structures/CommandOptions/loadCommandOptions")
 

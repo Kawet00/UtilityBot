@@ -38,7 +38,11 @@ module.exports = {
                 .addField(`\u200B`, '\u200B')
                 .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
-        });
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
+        })
 
             message.reply({
                 embeds: [
@@ -48,6 +52,10 @@ module.exports = {
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
         }
 
@@ -59,6 +67,10 @@ module.exports = {
             .setTimestamp()
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
 
         db.set(`byechannel_${message.guild.id}`, channel.id)
@@ -86,6 +98,10 @@ module.exports = {
             .setTimestamp()
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             ]
+        }).then(() => {
+            setTimeout(() =>{
+              message.delete();
+            }, 300)
         })
     }
 }
