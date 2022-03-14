@@ -77,7 +77,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
-                .setDescription(`${config.container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
@@ -94,7 +94,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
-                .setDescription(`${config.container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
@@ -111,13 +111,13 @@ module.exports = {
             winnerCount: giveawayNumberWinners,
             hostedBy: config.hostedBy ? message.author : null,
             messages: {
-                giveaway: `${config.container.Emotes.giveaway_2} **${lang.commands.owner.startG[5]}** ${config.container.Emotes.giveaway_2}`,
-                giveawayEnded: `${config.container.Emotes.giveaway_2} **${lang.commands.owner.startG[6]}** ${config.container.Emotes.giveaway_2}`,
+                giveaway: `${container.Emotes.giveaway_2} **${lang.commands.owner.startG[5]}** ${container.Emotes.giveaway_2}`,
+                giveawayEnded: `${container.Emotes.giveaway_2} **${lang.commands.owner.startG[6]}** ${container.Emotes.giveaway_2}`,
                 timeRemaining: `${lang.commands.owner.startG[7]} : **{duration}**!`,
-                inviteToParticipate: `${lang.commands.owner.startG[8].replace('{EMOJI}', config.container.Emotes.giveaway_1)}`,
-                winMessage: `${config.container.Emotes.blob.blob_b} GG, {winners}! ${lang.commands.owner.startG[9]} **{prize}**!`,
+                inviteToParticipate: `${lang.commands.owner.startG[8].replace('{EMOJI}', container.Emotes.giveaway_1)}`,
+                winMessage: `${container.Emotes.blob.blob_b} GG, {winners}! ${lang.commands.owner.startG[9]} **{prize}**!`,
                 embedFooter: `© ${client.user.username}`,
-                noWinner: `${config.container.Emotes.blob.blob_g} ${lang.commands.owner.startG[10]} (**${giveawayPrize}**) !`,
+                noWinner: `${container.Emotes.blob.blob_g} ${lang.commands.owner.startG[10]} (**${giveawayPrize}**) !`,
                 hostedBy: `${lang.commands.owner.startG[11]} {user}`,
                 winners: lang.commands.owner.startG[12],
                 endedAt: lang.commands.owner.startG[13],
@@ -135,7 +135,7 @@ module.exports = {
             client.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-            .setTitle(`${config.container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[16]}`)
+            .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[16]}`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()

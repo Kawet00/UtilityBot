@@ -4,7 +4,6 @@ const db = require('quick.db');
 module.exports = {
 name: 'support',
 aliases: ["sp"],
-onlyUsers: ["509765051435974692", "691644619758370846"],
 cooldown: 20000,
 
 run: async (client, message, args, container) => {

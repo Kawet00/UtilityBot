@@ -47,8 +47,16 @@ module.exports = {
                 iconURL: client.user.displayAvatarURL()
             })
             .setTimestamp()
+            if(guild.systemChannel) {
         guild.systemChannel.send({
             embeds: [embed]
         })
+    } else {
+        await guild.fetchOwner().then(o => {
+            o.send({
+            embeds: [embed]
+        })
+    })
+    }
     }
 }

@@ -14,7 +14,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
-            .setDescription(`${config.container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.calcul[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.calcul[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
@@ -23,7 +23,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
-            .setDescription(`${config.container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.calcul[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.calcul[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
@@ -32,7 +32,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setColor(colors.EPINGLE)
-            .setDescription(`${config.container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.calcul[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.calcul[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
@@ -49,7 +49,7 @@ module.exports = {
                 value: `${calculator(args[0], args[1], args[2])}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`
             })
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
-            .setDescription(`${config.container.Emotes.autre.cool_pika}`)
+            .setDescription(`${container.Emotes.autre.cool_pika}`)
             .setTimestamp()
         ]
     });
@@ -59,7 +59,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
-                .setDescription(`${config.container.Emotes.attention} ┇ ${lang.commands.util.calcul[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.util.calcul[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
@@ -68,7 +68,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
-                .setDescription(`${config.container.Emotes.attention} ┇ ${lang.commands.util.calcul[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.util.calcul[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
@@ -92,7 +92,7 @@ module.exports = {
                         embeds: [
                         new container.Discord.MessageEmbed()
                         .setColor(colors.EPINGLE)
-                        .setDescription(`${config.container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.calcul[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                        .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.calcul[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                         .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                         .setTimestamp()
                         ]

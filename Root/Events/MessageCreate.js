@@ -2,8 +2,6 @@ const db = require('quick.db')
 module.exports = {
     name: "messageCreate",
     run: async(message, client, container) => {
-        if (message.author.bot || message.channel.type == 'DM') return;
-
         let Prefix = db.get(`prefix_${message.guild.id}`) || "u!"
 
         const loadCommandOptions = require("../Structures/CommandOptions/loadCommandOptions")
@@ -15,6 +13,7 @@ module.exports = {
 
             if (!command) return;
             if (command.allowBots) loadCommandOptions(client, message, command, false)
+            else if (message.author.bot || message.channel.type == 'DM') return;
             else if (command.guildOnly == false) loadCommandOptions(client, message, command, false)
             else if (!message.guild) return;
             else loadCommandOptions(client, message, command, false)

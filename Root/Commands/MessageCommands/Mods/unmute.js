@@ -47,7 +47,7 @@ module.exports = {
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`${config.container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.unmute[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.unmute[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
         })
 
@@ -58,7 +58,7 @@ module.exports = {
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`${config.container.Emotes.attention} ┇ ${lang.commands.mods.unmute[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.mods.unmute[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
         })
 
@@ -68,7 +68,7 @@ module.exports = {
             client.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                .setTitle(`${config.container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.unmute[3]}`)
+                .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.unmute[3]}`)
                 .setColor(colors.EPINGLE)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
@@ -84,7 +84,7 @@ module.exports = {
                 .setColor(colors.VERT)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
-                .setDescription(`${config.container.Emotes.autre.cool_pika} ┇ ${member} ${lang.commands.mods.unmute[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${member} ${lang.commands.mods.unmute[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 ]
             })
         })
