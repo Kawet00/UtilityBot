@@ -1,5 +1,6 @@
 const chalk = require("chalk")
 const Box = require("cli-box")
+const package = require('../../package.json')
 module.exports = {
     name: "ready",
     once: true,
@@ -37,6 +38,7 @@ Client Details    ::    ${client.user.tag}
 Guilds Count      ::    ${client.guilds.cache.size}
 User Count        ::    ${client.users.cache.size}
 NodeJS Version    ::    ${process.version}
+Bot Version       ::    ${package["version"]}
 `).stringify()
 
         const CommandsBox = new Box({
