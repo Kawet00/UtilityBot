@@ -39,15 +39,19 @@
    -**DiscordPlayer**, here please don't touch this is imortant for the music.
   
   <h4> 🎨 &nbsp;Root/Storage/json/colors.json </h4>
+  
   Here is where we stock the colors, if you want to add some colors, put the name and the HEX Code of the color.
   
   <h4> 😙 &nbsp;Root/Storage/json/emotes.json </h4>
+  
   Here is where we stock the emojis, if you want to add some emojis, send on discord in a channel `\:emoji:` and paste what is write.
   
   <h4> 🎉 &nbsp;Root/Storage/json/giveaways.json </h4>
+  
   Here is where we stock the data of the giveaways. You don't need to touch a thing.
   
   <h4> <img src="https://freesvg.org/img/frenchflagframed.png" height="17em"/>/<img src="https://freesvg.org/img/Flag_of_the_United_States.png" height="17em"/> &nbsp;Root/Storage/json/Lang </h4>
+  
   Here is where we stock the languages of the bot. If you want to add a language tou need to create a new file rename it `THE LANG.json` and copy the `en.json`, change the top, so the name, the acroname, etc... and change the text and its all.
 
 <p align="center">
