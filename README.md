@@ -1,7 +1,7 @@
 <h2 align="center">👋 Hi!</h2>
 <h3 align="center"> 👨🏻‍💻 &nbsp;About Me</h3>
 <p align="center">
-<a href="https://discord.gg/R39FrwyZ7w"><img src="https://img.shields.io/badge/discord-invite-5865f2?style=for-the-badge&logo=discord&logoColor=white"></a>
+<a href="https://discord.gg/R39FrwyZ7w"><img src="https://img.shields.io/badge/discord-join-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
   <img src="https://img.shields.io/github/stars/Elpistolero131/UtilityBot.svg?style=for-the-badge"/> 
 <img src="https://img.shields.io/github/forks/Elpistolero131/UtilityBot.svg?style=for-the-badge"/></p>
 
