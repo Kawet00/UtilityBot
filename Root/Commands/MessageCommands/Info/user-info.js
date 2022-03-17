@@ -21,7 +21,6 @@ const db = require(`quick.db`);
 
 module.exports = {
         name: `user-info`,
-        onlyUsers: ["509765051435974692", "691644619758370846"],
         description: `none`,
         aliases: ["u-i"],
         cooldown: 5000,

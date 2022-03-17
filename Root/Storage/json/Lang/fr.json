@@ -205,6 +205,7 @@
         "Vous devez faire : `{PREFIX}uptime`",
         "Vous devez faire : `{PREFIX}user-info [un membre]`",
         "Vous devez faire : `{PREFIX}bot-info`",
+        "Vous devez faire : `{PREFIX}crypto-price <une cryptomonnaie>`",
         "Vous devez faire : `{PREFIX}serveur-stats`",
         "Vous devez faire : `{PREFIX}invite`"
       ],
@@ -250,6 +251,12 @@
         "Vous aurez des informations sur la commande {PREFIX}back",
         "Vous aurez des informations sur la commande `{PREFIX}back`",
         "Remettre la chanson précédente."
+      ],
+      "helpCrypto": [
+        "Vous aurez des informations sur la commande {PREFIX}crypto-price",
+        "Vous aurez des informations sur la commande `{PREFIX}crypto-price`",
+        "Avoir le prix de la cryptomonnaie que vous voulez.",
+        "`{PREFIX}crypto-price <une cryptomonnaie>`"
       ],
       "helpGit": [
         "Vous aurez des informations sur la commande {PREFIX}github",
@@ -892,6 +899,11 @@
         "Vitesse ",
         "Mémoire ",
         "Utilisé "
+      ],
+      "Crypto": [
+        "Mettez le **nom** de la cryptomonnaie. Exemple: bitcoin.\n**RAPPEL**: Ne mettez pas le **symbole** (exemple: btc) mais bien le **nom**. Si le nom est un nom a plusieurs mots (exemple: shiba INU), mettez un `-` entre chaque mot (exemple: shiba-inu)",
+        "Aucune cryptomonnaie ayant ce nom n'a été trouvée.",
+        "Prix"
       ],
       "calcul": [
         "Veuillez mettre le premier chiffre/nombre (ex : `1` * 5)",

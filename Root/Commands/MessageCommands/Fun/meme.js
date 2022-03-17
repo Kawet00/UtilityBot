@@ -5,7 +5,6 @@ module.exports = {
       name: 'meme',
       aliases: ['me'],
       cooldown: 10000,
-      onlyUsers: ["509765051435974692", "691644619758370846"],
 
   run: async(client, message, args, container) => {
 

@@ -6,7 +6,6 @@ const Discord = require('discord.js')
 module.exports = {
         name: `help`,
         aliases: [`h`],
-        onlyUsers: ["509765051435974692", "691644619758370846"],
         cooldown: 300000,
 
         run: async (client, message, args, container) => {

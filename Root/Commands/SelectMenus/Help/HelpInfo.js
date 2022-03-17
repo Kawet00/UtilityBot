@@ -39,12 +39,16 @@ module.exports = {
                                         value: lang.commands.help.info[5].replace("{PREFIX}", prefix),
                                         inline: true,
                                 }, {
-                                        name: `${emotes.blob.blob_p} ┇ ${lang.commands.help.info[1]}`,
+                                        name: `${emotes.blob.blob_p} ┇ CRYPTO PRICE`,
                                         value: lang.commands.help.info[6].replace("{PREFIX}", prefix),
                                         inline: true,
                                 }, {
+                                        name: `${emotes.blob.blob_p} ┇ ${lang.commands.help.info[1]}`,
+                                        value: lang.commands.help.info[7].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
                                         name: `${emotes.autre.cool_pika} ┇ INVITE`,
-                                        value: lang.commands.help.info[7].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        value: lang.commands.help.info[8].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
                                         inline: true,
                                 })
                         ]

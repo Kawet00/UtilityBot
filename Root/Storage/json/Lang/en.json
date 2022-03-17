@@ -206,6 +206,7 @@
         "You need to do: `{PREFIX}uptime`",
         "You need to do: `{PREFIX}user-info [a member]`",
         "You need to do: `{PREFIX}bot-info`",
+        "You need to do: `{PREFIX}crypto-price <a cryptocurrency>`",
         "You need to do: `{PREFIX}server-stats`",
         "You need to do: `{PREFIX}invite`"
       ],
@@ -252,13 +253,19 @@
         "Put back the previous song."
       ],
       "helpGit": [
-        "You will have informations on the {PREFIX}github",
-        "You will have informations on the `{PREFIX}github`",
+        "You will have informations on the {PREFIX}github command",
+        "You will have informations on the `{PREFIX}github` command:",
         "Got the github links about Utility Bot."
       ],
+      "helpCrypto": [
+        "You will have informations on the {PREFIX}crypto-price command",
+        "You will have informations on the `{PREFIX}crypto-price` command:",
+        "Got the price oof the cryptocurrency you want.",
+        "`{PREFIX}crypto-price <a curptocurrency>`"
+      ],
       "helpCll": [
-        "You will have informations on the {PREFIX}clear-list",
-        "You will have informations on the `{PREFIX}clear-list`",
+        "You will have informations on the {PREFIX}clear-list command",
+        "You will have informations on the `{PREFIX}clear-list` command:",
         "Clear the queue."
       ],
       "helpFl": [
@@ -903,6 +910,11 @@
         "Speed",
         "Memory",
         "Used"
+      ],
+      "Crypto": [
+        "Put the **name** of the cryptocurrency. Example: bitcoin.\n**REMINDER**: Do not put the **symbol** (example: btc) but the **name**. If the name is a multi-word name (example: shiba INU), put a `-` between each word (example: shiba-inu)",
+        "No cryptocurrency with this name was found.",
+        "Price"
       ],
       "calcul": [
         "Please put the first digit (ex : `1` * 5)",
