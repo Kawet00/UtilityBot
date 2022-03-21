@@ -7,7 +7,6 @@
 
  :octocat: ╎ Made by **[Elpistolero13](https://github.com/Elpistolero131)**<br>
  💻 ╎ [WebSite](https://www.utilitybot.ga)<br>
- <img src="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico" height="17em"/> ╎ [Discord Server](https://discord.com/invite/R39FrwyZ7w)<br>
  📌 ╎ it's a Open Source discord bot<br>
  <img src="https://freesvg.org/img/frenchflagframed.png" height="17em"/>/<img src="https://freesvg.org/img/Flag_of_the_United_States.png" height="17em"/> ╎ French and English bot
   
