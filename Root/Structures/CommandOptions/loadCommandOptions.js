@@ -6,16 +6,18 @@ const {
     colors
 } = require("../../../index")
 const db = require('quick.db')
+
 module.exports = async function (client, message, command, isInteraction, interactionType) {
     if (!command) return;
-    const dbprefix = db.get(`prefix_${message.guild.id}`) || "t!";
+    const dbprefix = db.get(`prefix_${message.guild.id}`) || "u!";
     const container = {
         RootPath: path,
         Config: config,
         Discord: Discord,
         Emotes: emotes,
         Colors: colors,
-        Prefix: dbprefix
+        Prefix: dbprefix,
+        DB: db
     }
     if (await require("./Cooldown")(client, message, command, isInteraction, interactionType, Discord)) return;
     else if (await require("./OwnerOnly")(client, message, command, Discord)) return;
@@ -29,6 +31,7 @@ module.exports = async function (client, message, command, isInteraction, intera
     else if (await require("./OnlyGuilds")(client, message, command, Discord)) return;
     else if (await require("./OnlyUsers")(client, message, command, Discord)) return;
     else if (await require("./VoiceChannel")(client, message, command, Discord)) return;
+    else if (await require("./NsfwChannel")(client, message, command, Discord)) return;
     else {
         if (isInteraction) command.run(client, message, container)
         else {

@@ -13,6 +13,7 @@ module.exports = {
     run: async(client, message, args, container) => {
 
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
+        try {
 
         let member = message.mentions.users.first() || message.author
 
@@ -32,11 +33,11 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[0]} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[0].replace('{USER}', member)} \n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setThumbnail(avatar)
             .setImage(url)
             .setColor(colors.PERSO)
-             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]
         });
@@ -45,7 +46,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[1]} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[1].replace('{USER}', member)} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
             .setImage(avatar)
             .setColor(accent_color)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
@@ -57,7 +58,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
             .setAuthor({name: member.username, iconURL: avatar})
-            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[2]} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.avatar[2].replace('{USER}', member)} \n\n[${lang.commandsa[0]} ](https://nepust.fr/)`)
             .setThumbnail(avatar)
             .setColor(colors.PERSO)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
@@ -66,5 +67,28 @@ module.exports = {
         });
     }
 })
+} catch (e) {
+    client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+        embeds: [
+            new container.Discord.MessageEmbed()
+            .setDescription('Petit problème avec un utilisateur.')
+            .addField('Nom de la commande', 'Avatar')
+            .addField('Erreur', `\`\`\`${e}\`\`\``)
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+            .setTimestamp()
+            .setColor(colors.PERSO)
+        ]
+    })
+    message.reply({
+        embeds: [
+            new container.Discord.MessageEmbed()
+            .setDescription(`${lang.commands.problem[0]}`)
+            .setColor(colors.EPINGLE)
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+            .setTimestamp()
+        ]
+    })
+    console.log(e)
+  }
     }
 }

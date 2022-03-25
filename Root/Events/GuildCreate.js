@@ -31,8 +31,8 @@ module.exports = {
                 value: `[💻Website](https://www.utilitybot.ga/) `,
                 inline: true
             }, {
-                name: "Here you can support me",
-                value: `[💲Support Me](https://donatebot.io/checkout/759700194820096011)`,
+                name: "Here you can support me and get bonuses",
+                value: `[💲Support Me](https://www.patreon.com/Elpistolero13)`,
                 inline: true
             }, {
                 name: "My Partnership",

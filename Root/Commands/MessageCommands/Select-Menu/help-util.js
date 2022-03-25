@@ -8,6 +8,7 @@ module.exports = {
 
         run: async (client, message, args, container) => {
                 let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
+                try {
 
                 const embed =
                         new container.Discord.MessageEmbed()
@@ -57,6 +58,16 @@ module.exports = {
                                         label: 'VOTE',
                                         description: lang.commands.help.helpV[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpVote'
+                                },
+                                {
+                                        label: 'REMIND',
+                                        description: lang.commands.help.helpRm[0].replace('{PREFIX}', container.Prefix),
+                                        value: 'HelpRemind'
+                                },
+                                {
+                                        label: 'APOD',
+                                        description: lang.commands.help.helpApod[0].replace('{PREFIX}', container.Prefix),
+                                        value: 'HelpApod'
                                 }
                         ]),
                 )
@@ -67,5 +78,28 @@ module.exports = {
                                 repliedUser: false
                         }
                 })
+        } catch (e) {
+            client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription('Petit problème avec un utilisateur.')
+                    .addField('Nom de la commande', 'Help Util')
+                    .addField('Erreur', `\`\`\`${e}\`\`\``)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                    .setTimestamp()
+                    .setColor(colors.PERSO)
+                ]
+            })
+            message.reply({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription(`${lang.commands.problem[0]}`)
+                    .setColor(colors.EPINGLE)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                    .setTimestamp()
+                ]
+            })
+            console.log(e)
+          }
         }
 };

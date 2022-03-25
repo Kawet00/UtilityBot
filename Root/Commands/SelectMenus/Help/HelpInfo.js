@@ -7,8 +7,7 @@ const config = require('../../../Storage/Vault/Config')
 module.exports = {
         name: "Info",
         run: async (client, interaction) => {
-                var prefix = db.get(`prefix_${interaction.guild.id}`)
-                if (prefix == null) prefix = config.prefix;
+                var prefix = db.get(`prefix_${interaction.guild.id}`) || 'u!'
                 let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
                 interaction.user.send({
@@ -48,8 +47,24 @@ module.exports = {
                                         inline: true,
                                 }, {
                                         name: `${emotes.autre.cool_pika} ┇ INVITE`,
-                                        value: lang.commands.help.info[8].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        value: lang.commands.help.info[8].replace("{PREFIX}", prefix),
                                         inline: true,
+                                }, {
+                                        name: `${emotes.blob.blob_p} ┇ SEARCH GITHUB`,
+                                        value: lang.commands.help.info[9].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.blob.blob_p} ┇ GITHUB`,
+                                        value: lang.commands.help.info[10].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.blob.blob_p} ┇ PEOPLE IN SPACE`,
+                                        value: lang.commands.help.info[11].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.blob.blob_p} ┇ YOUTUBE STATS`,
+                                        value: lang.commands.help.info[12].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        inline: true
                                 })
                         ]
                 }).then(() => {

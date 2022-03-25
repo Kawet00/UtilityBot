@@ -23,6 +23,8 @@ module.exports = {
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
+        try {
+
         if (!args[0]) return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
@@ -35,6 +37,15 @@ module.exports = {
             setTimeout(() =>{
                 message.delete();
               }, 300)
+            })
+            if(isNaN(args[0])) return message.reply({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.clear[7]}`)
+                    .setColor(colors.RED)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                    .setTimestamp()
+                ]
             })
         if (args[0] < 5) return message.reply({
             embeds: [
@@ -79,7 +90,7 @@ module.exports = {
                 })
                 let logsC = db.get(`logs_${message.guild.id}`)
                 if (!logsC) return;
-                client.channels.cache.get(logsC).send({
+                message.guild.channels.cache.get(logsC.id).send({
                     embeds: [
                         new container.Discord.MessageEmbed()
                     .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.clear[4]}`)
@@ -87,7 +98,7 @@ module.exports = {
                      .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
                     .addField(lang.commands.mods.clear[5], args[0], true)
-                    .addField(lang.commands.modsa[0], message.author, true)
+                    .addField(lang.commands.modsa[0], message.author.username + '#' + message.author.discriminator, true)
                     .addField(lang.commands.modsa[5], message.channel.name)
                     .addField(`\u200B`, '\u200B')
                     .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
@@ -100,7 +111,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.RED)
-                .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.mods.clear[6]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.autre.attention} ┇ ${lang.commands.mods.clear[6]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
@@ -110,5 +121,28 @@ module.exports = {
           }, 300)
         })
         };
+    } catch (e) {
+        client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription('Petit problème avec un utilisateur.')
+                .addField('Nom de la commande', 'Clear')
+                .addField('Erreur', `\`\`\`${e}\`\`\``)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+                .setColor(colors.PERSO)
+            ]
+        })
+        message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription(`${lang.commands.problem[0]}`)
+                .setColor(colors.EPINGLE)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+            ]
+        })
+        console.log(e)
+    }
     }
 }

@@ -4,7 +4,7 @@ const colors = require('../../../Storage/json/colors.json')
 const config = require('../../../Storage/Vault/Config')
 
 module.exports = {
-    name: "HelpBotInfo",
+    name: "HelpCrypto",
     run: async(client, interaction) => {
         var prefix = db.get(`prefix_${interaction.guild.id}`) || 'u!'
         let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')

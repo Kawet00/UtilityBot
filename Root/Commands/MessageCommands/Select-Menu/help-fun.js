@@ -8,7 +8,7 @@ module.exports = {
 
         run: async (client, message, args, container) => {
                 let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
-
+                try {
                 const embed =
                         new container.Discord.MessageEmbed()
                         .setColor(colors.PERSO)
@@ -54,6 +54,11 @@ module.exports = {
                                         value: 'HelpFox'
                                 },
                                 {
+                                        label: 'PANDA',
+                                        description: lang.commands.help.helpPanda[0].replace('{PREFIX}', container.Prefix),
+                                        value: 'HelpPanda'
+                                },/*
+                                {
                                         label: 'FUN BIRD',
                                         description: lang.commands.help.helpFBI[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpFunBird'
@@ -72,7 +77,7 @@ module.exports = {
                                         label: 'FUN FOX',
                                         description: lang.commands.help.helpFFox[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpFunFox'
-                                },
+                                },*/
                                 {
                                         label: 'MEME',
                                         description: lang.commands.help.helpM[0].replace('{PREFIX}', container.Prefix),
@@ -112,6 +117,31 @@ module.exports = {
                                         label: 'WANTED',
                                         description: lang.commands.help.helpWa[0].replace('{PREFIX}', container.Prefix),
                                         value: 'HelpWanted'
+                                },
+                                {
+                                        label: 'GIPHY',
+                                        description: lang.commands.help.helpGif[0].replace('{PREFIX}', container.Prefix),
+                                        value: 'HelpGiphy'
+                                },
+                                {
+                                        label: 'RPS',
+                                        description: lang.commands.help.helpRps[0].replace('{PREFIX}', container.Prefix),
+                                        value: 'HelpRps'
+                                },
+                                {
+                                        label: 'QUICK CLICK',
+                                        description: lang.commands.help.helpRps[0].replace('{PREFIX}', container.Prefix),
+                                        value: 'HelpQC'
+                                },
+                                {
+                                        label: 'FIGHT',
+                                        description: lang.commands.help.helpFight[0].replace('{PREFIX}', container.Prefix),
+                                        value: 'HelpFight'
+                                },
+                                {
+                                        label: 'GUESS THE NUMBER',
+                                        description: lang.commands.help.helpGuessTheNumber[0].replace('{PREFIX}', container.Prefix),
+                                        value: 'HelpGTN'
                                 }
                         ]),
                 )
@@ -122,5 +152,28 @@ module.exports = {
                                 repliedUser: false
                         }
                 })
+        } catch (e) {
+            client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription('Petit problème avec un utilisateur.')
+                    .addField('Nom de la commande', 'Help Fun')
+                    .addField('Erreur', `\`\`\`${e}\`\`\``)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                    .setTimestamp()
+                    .setColor(colors.PERSO)
+                ]
+            })
+            message.reply({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription(`${lang.commands.problem[0]}`)
+                    .setColor(colors.EPINGLE)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                    .setTimestamp()
+                ]
+            })
+            console.log(e)
+          }
         }
 };

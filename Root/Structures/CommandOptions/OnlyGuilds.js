@@ -22,6 +22,7 @@ module.exports = async function (client, message, command, Discord) {
                     })
                 })
                 .setColor(colors.EPINGLE)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 .setDescription(`${emotes.blob.blob_n} ┇ ${lang.cmdOptions.OnlyGuild[0]}`)
                 .addField(lang.cmdOptions.OnlyGuild[1], `•${onlyGuilds.join("\n•")}`)

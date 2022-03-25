@@ -8,6 +8,8 @@ module.exports = {
   run: async(client, message, args, container) => {
         
     let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
+
+    try {
     
     const maxVol = container.Config.opt.maxVol;
     const queue = client.player.getQueue(message.guild.id);
@@ -65,5 +67,28 @@ module.exports = {
             .setDescription(success ? `${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.Volume[4]} **%${vol}**/**${maxVol}** 🔊` : `${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.SomethW[0].replace('{PREFIX}', container.Prefix)}`)
           ]
         });
+      } catch (e) {
+          client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+              embeds: [
+                  new container.Discord.MessageEmbed()
+                  .setDescription('Petit problème avec un utilisateur.')
+                  .addField('Nom de la commande', 'Volume')
+                  .addField('Erreur', `\`\`\`${e}\`\`\``)
+                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                  .setTimestamp()
+                  .setColor(colors.PERSO)
+              ]
+          })
+          message.reply({
+              embeds: [
+                  new container.Discord.MessageEmbed()
+                  .setDescription(`${lang.commands.problem[0]}`)
+                  .setColor(colors.EPINGLE)
+                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                  .setTimestamp()
+              ]
+          })
+          console.log(e)
+        }
   }
 }

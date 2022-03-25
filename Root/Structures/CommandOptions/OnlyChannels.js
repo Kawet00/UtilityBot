@@ -24,6 +24,7 @@ module.exports = async function (client, message, command, Discord) {
                 .setColor(colors.EPINGLE)
                 .setTimestamp()
                 .setDescription(`${emotes.blob.blob_n} ┇ ${lang.cmdOptions.OnlyChannels[0]}`)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                 .addField(lang.cmdOptions.OnlyChannels[1], `•${onlyChannels.join("\n•")}`)
             ],
             allowedMentions: {

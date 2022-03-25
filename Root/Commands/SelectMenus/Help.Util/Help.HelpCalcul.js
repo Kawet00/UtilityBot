@@ -20,7 +20,7 @@ module.exports = {
                 value: lang.commands.help.helpCal[2]
             }, {
                 name: lang.commands.helpa[6],
-                value: lang.commands.help.helpCal[3].replace('{PREFIX}', prefix),
+                value: `${prefix}calcul`,
                 inline: true
             }, {
                 name: lang.commands.helpa[7],

@@ -7,8 +7,7 @@ const config = require('../../../Storage/Vault/Config')
 module.exports = {
         name: "Fun",
         run: async (client, interaction) => {
-                var prefix = db.get(`prefix_${interaction.guild.id}`)
-                if (prefix == null) prefix = config.prefix;
+                var prefix = db.get(`prefix_${interaction.guild.id}`) || 'u!'
                 let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
                 interaction.user.send({
@@ -59,6 +58,10 @@ module.exports = {
                                         value: lang.commands.help.fun[11].replace("{PREFIX}", prefix),
                                         inline: true,
                                 }, {
+                                        name: `${emotes.autre.bird} ┇ PANDA`,
+                                        value: lang.commands.help.fun[20].replace("{PREFIX}", prefix),
+                                        inline: true,
+                                }, {
                                         name: `${emotes.blob.blob_t} ┇ ${lang.commands.help.fun[1]}`,
                                         value: lang.commands.help.fun[12].replace("{PREFIX}", prefix),
                                         inline: true,
@@ -84,7 +87,27 @@ module.exports = {
                                         inline: true
                                 }, {
                                         name: `${emotes.pepe.pepe_wa} ┇ SLAP`,
-                                        value: lang.commands.help.fun[18].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        value: lang.commands.help.fun[18].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.pepe.pepe_wa} ┇ GIPHY`,
+                                        value: lang.commands.help.fun[19].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.pepe.pepe_wa} ┇ RPS`,
+                                        value: lang.commands.help.fun[20].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.pepe.pepe_wa} ┇ QUICK CLICK`,
+                                        value: lang.commands.help.fun[21].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.pepe.pepe_wa} ┇ FIGHT`,
+                                        value: lang.commands.help.fun[22].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.pepe.pepe_wa} ┇ GUESS THE NUMBER`,
+                                        value: lang.commands.help.fun[23].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
                                         inline: true
                                 })
                         ]

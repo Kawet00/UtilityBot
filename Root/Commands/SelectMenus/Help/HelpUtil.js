@@ -7,8 +7,7 @@ const config = require('../../../Storage/Vault/Config')
 module.exports = {
         name: "Util",
         run: async (client, interaction) => {
-                var prefix = db.get(`prefix_${interaction.guild.id}`)
-                if (prefix == null) prefix = config.prefix;
+                var prefix = db.get(`prefix_${interaction.guild.id}`) || 'u!'
                 let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
                 interaction.user.send({
@@ -52,8 +51,16 @@ module.exports = {
                                         inline: true,
                                 }, {
                                         name: `${emotes.blob.blob_t} ┇ SUPPORT`,
-                                        value: lang.commands.help.util[14].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        value: lang.commands.help.util[14].replace("{PREFIX}", prefix),
                                         inline: true,
+                                }, {
+                                        name: `${emotes.blob.blob_p} ┇ REMIND`,
+                                        value: lang.commands.help.util[15].replace("{PREFIX}", prefix),
+                                        inline: true
+                                }, {
+                                        name: `${emotes.blob.blob_p} ┇ APOD`,
+                                        value: lang.commands.help.util[16].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        inline: true
                                 })
                         ]
                 }).then(() => {

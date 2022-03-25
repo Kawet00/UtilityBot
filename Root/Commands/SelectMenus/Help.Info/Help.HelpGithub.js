@@ -6,8 +6,7 @@ const config = require('../../../Storage/Vault/Config')
 module.exports = {
     name: "HelpGithub",
     run: async(client, interaction) => {
-        var prefix = db.get(`prefix_${interaction.guild.id}`)
-        if(prefix == null) prefix = config.prefix;
+        var prefix = db.get(`prefix_${interaction.guild.id}`) || 'u!'
         let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
         interaction.user.send({
@@ -25,7 +24,7 @@ module.exports = {
                 inline: true
             }, {
                 name: lang.commands.helpa[7],
-                value: lang.commands.helpa[8],
+                value: `\`${prefix}git\``,
                 inline: true
             }, {
                 name: lang.commands.helpa[2],
@@ -44,7 +43,7 @@ module.exports = {
             .setTimestamp()
             ]
         }).then(() => {
-            interaction.reply('Help sent with succes !')
+            interaction.reply(lang.commands.help.success[0])
         })
     }
 }

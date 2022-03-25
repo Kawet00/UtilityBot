@@ -22,6 +22,7 @@ module.exports = {
     run: async(client, message, args, container) => {
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
+        try {
 
         let giveawayChannel = message.mentions.channels.first();
         if (!giveawayChannel) {
@@ -111,10 +112,10 @@ module.exports = {
             winnerCount: giveawayNumberWinners,
             hostedBy: config.hostedBy ? message.author : null,
             messages: {
-                giveaway: `${container.Emotes.giveaway_2} **${lang.commands.owner.startG[5]}** ${container.Emotes.giveaway_2}`,
-                giveawayEnded: `${container.Emotes.giveaway_2} **${lang.commands.owner.startG[6]}** ${container.Emotes.giveaway_2}`,
+                giveaway: `${container.Emotes.autre.giveaway_2} **${lang.commands.owner.startG[5]}** ${container.Emotes.autre.giveaway_2}`,
+                giveawayEnded: `${container.Emotes.autre.giveaway_2} **${lang.commands.owner.startG[6]}** ${container.Emotes.autre.giveaway_2}`,
                 timeRemaining: `${lang.commands.owner.startG[7]} : **{duration}**!`,
-                inviteToParticipate: `${lang.commands.owner.startG[8].replace('{EMOJI}', container.Emotes.giveaway_1)}`,
+                inviteToParticipate: `${lang.commands.owner.startG[8].replace('{EMOJI}', container.Emotes.autre.giveaway_1)}`,
                 winMessage: `${container.Emotes.blob.blob_b} GG, {winners}! ${lang.commands.owner.startG[9]} **{prize}**!`,
                 embedFooter: `© ${client.user.username}`,
                 noWinner: `${container.Emotes.blob.blob_g} ${lang.commands.owner.startG[10]} (**${giveawayPrize}**) !`,
@@ -132,7 +133,7 @@ module.exports = {
         });
             let logsC = db.get(`logs_${message.guild.id}`)
             if (!logsC) return;
-            client.channels.cache.get(logsC).send({
+            message.guild.channels.cache.get(logsC.id).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
             .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.startG[16]}`)
@@ -150,5 +151,28 @@ module.exports = {
 
         message.channel.send(`${lang.commands.owner.startG[20]} ${giveawayChannel} !`);
 
+    } catch (e) {
+        client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription('Petit problème avec un utilisateur.')
+                .addField('Nom de la commande', 'Start Giveaways')
+                .addField('Erreur', `\`\`\`${e}\`\`\``)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+                .setColor(colors.PERSO)
+            ]
+        })
+        message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription(`${lang.commands.problem[0]}`)
+                .setColor(colors.EPINGLE)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+            ]
+        })
+        console.log(e)
+      }
     }
 }

@@ -25,6 +25,7 @@ module.exports = async function (client, message, command, isInteraction, intera
                         iconURL: message.member.user.displayAvatarURL({ dynamic: true })
                     })
                     .setTimestamp()
+                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                     .setColor(colors.EPINGLE)
                     .setDescription(`${emotes.blob.blob_n} ┇ ${lang.cmdOptions.Cooldown[0]}`)
                     .addField(lang.cmdOptions.Cooldown[1], `<t:${Math.floor(Math.floor(oldTime + cooldown) / 1000)}>`)],

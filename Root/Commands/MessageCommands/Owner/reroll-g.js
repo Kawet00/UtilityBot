@@ -10,6 +10,7 @@ module.exports = {
     run: async(client, message, args, container) => {
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
+        try {
 
         if (!args[0]) return message.reply({
             embeds: [
@@ -31,7 +32,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.RED)
-                .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.owner.rerollG[1]} \`${args.join(' ')}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.autre.attention} ┇ ${lang.commands.owner.rerollG[1]} \`${args.join(' ')}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
@@ -50,7 +51,7 @@ module.exports = {
                         embeds: [
                         new container.Discord.MessageEmbed()
                         .setColor(colors.RED)
-                        .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.owner.rerollG[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                        .setDescription(`${container.Emotes.autre.attention} ┇ ${lang.commands.owner.rerollG[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                          .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                         .setTimestamp()
                         ]
@@ -61,5 +62,28 @@ module.exports = {
                     })
             });
 
+        } catch (e) {
+            client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription('Petit problème avec un utilisateur.')
+                    .addField('Nom de la commande', ' Reroll Giveaways')
+                    .addField('Erreur', `\`\`\`${e}\`\`\``)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                    .setTimestamp()
+                    .setColor(colors.PERSO)
+                ]
+            })
+            message.reply({
+                embeds: [
+                    new container.Discord.MessageEmbed()
+                    .setDescription(`${lang.commands.problem[0]}`)
+                    .setColor(colors.EPINGLE)
+                    .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                    .setTimestamp()
+                ]
+            })
+            console.log(e)
+          }
     }
 }

@@ -20,6 +20,8 @@ module.exports = {
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 
+        try {
+
         const member = message.mentions.members.first()
         if (!member) return message.reply({
             embeds: [
@@ -58,14 +60,14 @@ module.exports = {
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`${container.Emotes.attention} ┇ ${lang.commands.mods.unmute[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.autre.attention} ┇ ${lang.commands.mods.unmute[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             ]
         })
 
         await member.roles.remove(muteRole).then(() => {
             let logsC = db.get(`logs_${message.guild.id}`)
             if (!logsC) lang = 'en';
-            client.channels.cache.get(logsC).send({
+            message.guild.channels.cache.get(logsC.id).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
                 .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.unmute[3]}`)
@@ -91,5 +93,29 @@ module.exports = {
         setTimeout(() =>{
             message.delete();
           }, 300)
+          
+    } catch (e) {
+        client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription('Petit problème avec un utilisateur.')
+                .addField('Nom de la commande', 'Unmute')
+                .addField('Erreur', `\`\`\`${e}\`\`\``)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+                .setColor(colors.PERSO)
+            ]
+        })
+        message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription(`${lang.commands.problem[0]}`)
+                .setColor(colors.EPINGLE)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+            ]
+        })
+        console.log(e)
+    }
     }
 }

@@ -18,6 +18,8 @@ module.exports = {
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) ||'en');
 
+        try {
+
         const user = message.mentions.users.first() || message.guild.members.cache.get(args[1]);
 
         if (!user) return message.reply({
@@ -132,16 +134,16 @@ module.exports = {
 
         let logsC = db.get(`logs_${message.guild.id}`)
         if (!logsC) return;
-        client.channels.cache.get(logsC).send({
+        message.guild.channels.cache.get(logsC.id).send({
             embeds: [
                 new container.Discord.MessageEmbed()
             .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.warn[6]}`)
             .setColor(container.Colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .addField(lang.commands.mods.warn[7], user.tag, true)
-            .addField(lang.commands.modsa[0], message.author, true)
-            .addField(lang.commands.mods.warn[8], warnings, true)
+            .addField(lang.commands.mods.warn[7], user.username + '#' + user.discriminator, true)
+            .addField(lang.commands.modsa[0], message.author.username + '#' + message.author.discriminator, true)
+            .addField(lang.commands.mods.warn[8], `${warnings}`, true)
             .addField(`\u200B`, '\u200B')
             .addField(lang.commands.modsa[1], reason)
             .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
@@ -150,5 +152,29 @@ module.exports = {
         setTimeout(() =>{
             message.delete();
           }, 300)
+          
+    } catch (e) {
+        client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription('Petit problème avec un utilisateur.')
+                .addField('Nom de la commande', 'Warn')
+                .addField('Erreur', `\`\`\`${e}\`\`\``)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+                .setColor(colors.PERSO)
+            ]
+        })
+        message.reply({
+            embeds: [
+                new container.Discord.MessageEmbed()
+                .setDescription(`${lang.commands.problem[0]}`)
+                .setColor(colors.EPINGLE)
+                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+            ]
+        })
+        console.log(e)
+    }
     }
 }

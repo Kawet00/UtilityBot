@@ -12,6 +12,8 @@ module.exports = {
 	run: async(client, message, args, container) => {
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
         
+        try {
+
         const time = args[0]
         const user = message.mentions.members.first()
         if(!user) return message.reply({
@@ -96,9 +98,7 @@ module.exports = {
             embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.green_light)
-                .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.timeout[1]
-                                                                                           .replace('{USER}', user)
-                                                                                           .replace('{TIME}', time)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.timeout[1].replace('{USER}', user).replace('{TIME}', time)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
@@ -109,6 +109,30 @@ module.exports = {
         })
 } catch(e) {
     console.log('test')
+}
+
+} catch (e) {
+    client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+        embeds: [
+            new container.Discord.MessageEmbed()
+            .setDescription('Petit problème avec un utilisateur.')
+            .addField('Nom de la commande', 'Timeout')
+            .addField('Erreur', `\`\`\`${e}\`\`\``)
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+            .setTimestamp()
+            .setColor(colors.PERSO)
+        ]
+    })
+    message.reply({
+        embeds: [
+            new container.Discord.MessageEmbed()
+            .setDescription(`${lang.commands.problem[0]}`)
+            .setColor(colors.EPINGLE)
+            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+            .setTimestamp()
+        ]
+    })
+    console.log(e)
 }
 		}
 	}

@@ -23,6 +23,7 @@ module.exports = async function (client, message, command, Discord) {
                 })
                 .setColor(colors.EPINGLE)
                 .setTimestamp()
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.cmdOptions.RequiredRoles[0]}`)
                 .addField(lang.cmdOptions.RequiredRoles[1], `•${missing.join("\n•")}`)
             ],
