@@ -3,3 +3,5 @@ node_modules/
 package-lock.json
 
 json.sqlite
+.DS_Store
+.frontmatter/content/mediaDb.json
