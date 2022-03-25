@@ -32,8 +32,9 @@
    -**Developpers**, here you need to put the ids of the developpers, for exemple: `["0123456789", "9876543210"]`.<br>
    -**SupportGuild**, here you need to put the id of your support guild, for the command `report`.<br>
    -**ReportCahnnel**, here you need to put the id of the channel where are going the message of the `report` and it must be a channel of the `SupportGuild`.<br>
-   -**DOG_API_KEY**, here you need to put your dog api key, you get it [here](https://thecatapi.com/signup), signup and you will have your dog api key via E-Mail.<br>
-   -**DOG_API_URL**, here please don't touch it's the link of the dog api.<br>
+   -**GITHUB_API_KEY**, here you need to put a github token. To create a github token you need to go [here](https://github.com/settings/tokens).<br>
+   -**GIPHY_API_KEY**, here you need to put you giphy api key, to get your giphy api key you need to create a giphy account [here](https://giphy.com/login) and go [here](https://developers.giphy.com/dashboard/) to create a giphy api key.<br>
+   -**APOD_API_KEY**, here you need to put your apod api key, to get your apod api key go [here](https://api.nasa.gov/) and create a account, etc...<br>
    -**MaxVol**, here you need to put the volume max of the music.<br>
    -**LoopMessage**, here it's if you want to send a message for the loop.<br>
    -**DiscordPlayer**, here please don't touch this is imortant for the music.
