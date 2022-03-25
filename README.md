@@ -53,7 +53,24 @@
   <h4> <img src="https://freesvg.org/img/frenchflagframed.png" height="17em"/>/<img src="https://freesvg.org/img/Flag_of_the_United_States.png" height="17em"/> &nbsp;Root/Storage/json/Lang </h4>
   
   Here is where we stock the languages of the bot. If you want to add a language tou need to create a new file rename it `THE LANG.json` and copy the `en.json`, change the top, so the name, the acroname, etc... and change the text and its all.
+  
+  --------------
 
+<h3> 📊 &nbsp;My statistics </h3>
+<h4> <img src="https://top.gg/favicon.png" height="17em"/> Top.gg </h3>
+<p align="center">
+<a href="https://top.gg/bot/739863718547947652">
+  <img src="https://top.gg/api/widget/739863718547947652.svg">
+</a>
+  </p>
+
+<h4> <img src="https://discordbotlist.com/icon.png" height="17em"/> Discord Bot List </h4>
+<p align="center">
+<a href="https://discordbotlist.com/bots/739863718547947652">
+  <img src="https://discordbotlist.com/api/v1/bots/739863718547947652/widget">
+</a>
+  </p>
+<br>
 <p align="center">
   <img src="https://img.shields.io/badge/version-2.1-05122A?style=for-the-badge">
 </p>
