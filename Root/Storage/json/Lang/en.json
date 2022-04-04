@@ -550,11 +550,6 @@
         "You will have informations on the `{PREFIX}fun-dog` command:",
         "Have a gif of a random funny dog."
       ],
-      "helpEmbed": [
-        "You will have informations on the {PREFIX}embed command:",
-        "You will have informations on the `{PREFIX}embed` command:",
-        "Send one of your embeds, created [here](https://panel.utilitybot.ga/manage/)."
-      ],
       "helpFFox": [
         "You will have informations on the {PREFIX}fun-fox command:",
         "You will have informations on the `{PREFIX}fun-fox` command:",
@@ -1030,11 +1025,6 @@
     },
     "util": {
       "Serveur": "Server",
-      "embed": [
-        "You must specify an embed ID.",
-        "An ID must have 3 characters.",
-        "This ID is invalid.\n\n1. Make sure the ID exists.\n2. Make sure it belongs to you.\n3. Make sure the ID is spelled correctly."
-      ],
       "apod": [
         "Astronomy Picture of the Day"
       ],
@@ -1101,7 +1091,7 @@
         "The provided equation is invalid!",
         "Only <@{AUTHOR}> can use that buttons!"
       ],
-      "embedB": [
+      "embed": [
         "Default Title",
         "Default Description",
         "Please wait, adding reactions...",

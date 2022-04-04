@@ -90,7 +90,7 @@ module.exports = {
                 })
                 let logsC = db.get(`logs_${message.guild.id}`)
                 if (!logsC) return;
-                message.guild.channels.cache.get(logsC).send({
+                message.guild.channels.cache.get(logsC.id).send({
                     embeds: [
                         new container.Discord.MessageEmbed()
                     .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.clear[4]}`)
@@ -98,8 +98,8 @@ module.exports = {
                      .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
                     .addField(lang.commands.mods.clear[5], args[0], true)
-                    .addField(lang.commands.modsa[0], `<@!${message.author.id}>`, true)
-                    .addField(lang.commands.modsa[5], `<#${message.channel.id}>`)
+                    .addField(lang.commands.modsa[0], message.author.username + '#' + message.author.discriminator, true)
+                    .addField(lang.commands.modsa[5], message.channel.name)
                     .addField(`\u200B`, '\u200B')
                     .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                     ]

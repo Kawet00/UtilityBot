@@ -5,6 +5,5 @@ module.exports = {
     loadContextMenus: require("./ContextMenus"),
     loadSelectMenus: require("./SelectMenus"),
     loadSlashCommands: require("./SlashCommands"),
-    loadLangs: require('./Langs'),
-    loadServer: require('./Server')
+    loadLangs: require('./Langs')
 }

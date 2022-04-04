@@ -1012,11 +1012,6 @@
     },
     "util": {
       "Serveur": "Serveur",
-      "embed": [
-        "Vous devez préciser un ID de embed.",
-        "Un ID doit avoir obligatoirement 3 caractères.",
-        "Cette ID est invalide.\n\n1. Assurez vous que l'ID existe bien.\n2. Assurez vous qu'il vous appartient bien.\n3. Assurez vous que l'ID est bien écrit."
-      ],
       "apod": [
         "Photo d'astronomie du jour"
       ],
@@ -1086,7 +1081,7 @@
         "Le deuxième chiffre/nombre est invalide (ex : 1 * `5`)",
         "Veuillez mettre un signe d'opération valide (`+` `-` `*` `/`)"
       ],
-      "embedB": [
+      "embed": [
         "Titre par défaut",
         "Description par défaut",
         "Veuillez patientez, ajout des émojis...",
@@ -1198,9 +1193,6 @@
       "Sw": [
         "Site Web",
         "Vous voulez le {WebSite} ?"
-      ],
-      "don": [
-        "Merci de vouloir me soutenir ! Vous pouvez souscrire à un abonnement et avoir certains avantages ou bien seulement faire un petit don sans avantage pour me soutenir et soutenire les développeurs."
       ],
       "support": [
         "Vous voulez rejoindre le serveur de {SupportServer} ?"

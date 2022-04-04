@@ -56,6 +56,7 @@ module.exports = {
               message.delete();
             }, 300)
         })
+        console.log(channelFetched)
         client.channels.cache.get(args[0].slice(2, -1)).send({
             embeds: [
                 new container.Discord.MessageEmbed()

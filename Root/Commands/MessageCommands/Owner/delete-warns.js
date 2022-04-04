@@ -126,7 +126,7 @@ module.exports = {
             
         let logsC = db.get(`logs_${message.guild.id}`)
             if (!logsC) return;
-            message.guild.channels.cache.get(logsC).send({
+            message.guild.channels.cache.get(logsC.id).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
             .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.deleteW[7]}`)
@@ -160,7 +160,7 @@ module.exports = {
             })
             let logsC = db.get(`logs_${message.guild.id}`)
             if (!logsC) return;
-            message.guild.channels.cache.get(logsC).send({
+            message.guild.channels.cache.get(logsC.id).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
             .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.owner.deleteW[11]}`)

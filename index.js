@@ -43,14 +43,13 @@
 
     const Handler = require(`${path}/Root/Structures/Handlers/Handler`);
     await Handler.loadMessageCommands(client, path);
-    await Handler.loadEvents(client, path);
-    await Handler.loadLangs(client, path);
+    await Handler.loadEvents(client);
+    await Handler.loadLangs(client);
     await client.login(config.token);
     await Handler.loadSlashCommands(client, path);
     await Handler.loadContextMenus(client, path);
     await Handler.loadButtonCommands(client, path);
     await Handler.loadSelectMenus(client, path);
-    await Handler.loadServer(client);
 
     const player = client.player
 
@@ -94,7 +93,8 @@
         queue.metadata.send({
             embeds: [
                 new Discord.MessageEmbed()
-                .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.trackStart[0].replace('{TITLE}', track.title).replace('{CHANNEL}', queue.connection.channel.name)}`)
+                .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.trackStart[0].replace('{TITLE}', track.title)
+                                                            .replace('{CHANNEL}', queue.connection.channel.name)}`)
                 .setColor(colors.VERT)
                 .setFooter({
                     text: `© ${client.user.username}`,

@@ -94,7 +94,6 @@ module.exports = {
                     'Authorization': `Bot ${ROOT.config.token}`,
                 },
             });
-            
         message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
