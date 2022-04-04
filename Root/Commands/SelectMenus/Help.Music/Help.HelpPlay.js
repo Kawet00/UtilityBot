@@ -9,6 +9,7 @@ module.exports = {
         var prefix = db.get(`prefix_${interaction.guild.id}`) || 'u!'
         let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
 
+        try {
         interaction.user.send({
             embeds: [
                 new Discord.MessageEmbed()
@@ -53,5 +54,8 @@ module.exports = {
         }).then(() => {
             interaction.reply(lang.commands.help.success[0])
         })
+    } catch {
+            interaction.reply(`Please active your DMs.`)
+    }
     }
 }

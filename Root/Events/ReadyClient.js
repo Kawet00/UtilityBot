@@ -2,6 +2,9 @@ const chalk = require("chalk")
 const Box = require("cli-box")
 const package = require('../../package.json')
 const config = require('../Storage/Vault/Config')
+const colors = require('../Storage/json/colors.json')
+const emotes = require('../Storage/json/emotes.json')
+const Discord = require('discord.js')
 
 module.exports = {
     name: "ready",
@@ -11,7 +14,7 @@ module.exports = {
 
         const activitys = [
             "by Elpistolero13",
-        "the v2.1.1",
+        "the v2.2.0",
         "on www.utilitybot.ga",
         "u!help",
         /*`on ${client.guilds.cache.size} servers`*/
@@ -165,9 +168,27 @@ Client Events              ::    Initiating ${client.events.size} events.
 
         console.log(chalk.bold.greenBright(ClientBox))
         console.log(chalk.bold.cyanBright(CommandsBox))
-        setInterval(() => {
-        console.log(chalk.bold.magentaBright(InfosClientBox))
-        console.log(chalk.bold.cyanBright(InfosCommandsBox))
+        /*client.guilds.cache.get(config.supporGuild).channels.cache.get('790955338479304776').send({
+            content: `@here`,
+            embeds: [
+                new Discord.MessageEmbed()
+                .setColor(colors.PERSO)
+                .setDescription(`${emotes.pepe.pepe_a} ┇ RESTART`)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+            ]
+        })*/
+        setTimeout(() => {
+            client.guilds.cache.get(config.supporGuild).channels.cache.get('790955338479304776').send({
+                content: `@here`,
+                embeds: [
+                    new Discord.MessageEmbed()
+                    .setColor(colors.PERSO)
+                    .setDescription(`${emotes.pepe.pepe_a} ┇ RESTART`)
+                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                    .setTimestamp()
+                ]
+            })
         }, 43200000)
     }
 }

@@ -78,7 +78,7 @@ module.exports = {
                             .setFooter(`© ${client.user.username}`, client.user.avatarURL())
                             .setTimestamp()
                             .addField(lang.commands.mods.ban[4], member.author.tag, true)
-                            .addField(lang.commands.modsa[0], message.author, true)
+                            .addField(lang.commands.modsa[0], `<@!${message.author.id}>`, true)
                             .addField(`\u200B`, '\u200B')
                             .addField(lang.commands.modsa[1], raison)
                             .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);

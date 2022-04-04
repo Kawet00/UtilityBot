@@ -3,14 +3,20 @@ const Filer = require("../../Utils/Filer");
 const Discord = require("discord.js");
 const {
     path,
-    config
-} = require("../../..")
+    config,
+    emotes,
+    colors
+} = require("../../../index")
+const db = require('quick.db')
 module.exports = async function (client) {
     const container = {
         RootPath: path,
         Config: config,
-        Discord: Discord
-    };
+        Discord: Discord,
+        Emotes: emotes,
+        Colors: colors,
+        DB: db
+    }
     Filer(`${container.RootPath}/Root/Events`, async function (err, res) {
         res.forEach(file => {
             if (fs.statSync(file).isDirectory()) return;
