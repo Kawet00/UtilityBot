@@ -65,8 +65,8 @@ module.exports = {
                             .setColor(colors.EPINGLE)
                             .setFooter(`© ${client.user.username}`, client.user.avatarURL())
                             .setTimestamp()
-                            .addField(lang.commands.mods.ban[3], member.author.tag, true)
-                            .addField(lang.commands.modsa[0], message.author, true)
+                            .addField(lang.commands.mods.ban[3], `<@!${member.author.tag}>`, true)
+                            .addField(lang.commands.modsa[0], `<@!${message.author.id}>`, true)
                             .addField(`\u200B`, '\u200B')
                             .addField(lang.commands.modsa[1], raison)
                             .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);

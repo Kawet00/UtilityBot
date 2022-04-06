@@ -43,6 +43,11 @@ module.exports = {
                                         label: 'Fun',
                                         description: lang.commands.helpa[23],
                                         value: 'Fun'
+                                },
+                                {
+                                        label: 'Music',
+                                        description: lang.commands.helpa[23],
+                                        value: 'Music'
                                 }
                         ]),
                 )

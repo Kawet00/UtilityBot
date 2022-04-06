@@ -1012,6 +1012,11 @@
     },
     "util": {
       "Serveur": "Serveur",
+      "embed": [
+        "Vous devez préciser un ID de embed.",
+        "Un ID doit avoir obligatoirement 3 caractères.",
+        "Cette ID est invalide.\n\n1. Assurez vous que l'ID existe bien.\n2. Assurez vous qu'il vous appartient bien.\n3. Assurez vous que l'ID est bien écrit."
+      ],
       "apod": [
         "Photo d'astronomie du jour"
       ],
@@ -1081,7 +1086,7 @@
         "Le deuxième chiffre/nombre est invalide (ex : 1 * `5`)",
         "Veuillez mettre un signe d'opération valide (`+` `-` `*` `/`)"
       ],
-      "embed": [
+      "embedB": [
         "Titre par défaut",
         "Description par défaut",
         "Veuillez patientez, ajout des émojis...",
@@ -1194,6 +1199,9 @@
         "Site Web",
         "Vous voulez le {WebSite} ?"
       ],
+      "don": [
+        "Merci de vouloir me soutenir ! Vous pouvez souscrire à un abonnement et avoir certains avantages ou bien seulement faire un petit don sans avantage pour me soutenir et soutenire les développeurs."
+      ],
       "support": [
         "Vous voulez rejoindre le serveur de {SupportServer} ?"
       ],
@@ -1261,6 +1269,30 @@
     ],
     "MsgCreate": [
       "Voici mon prefix sur ce serveur : __**{PREFIX}**__\nEt pour avoir toute les commandes c'est : **{PREFIX}help**"
+    ],
+    "TicketOpt": [
+      "Les données de ce système sont obsolètes.",
+      "Vous ne pouvez pas utiliser ces bouttons.",
+      "Le ticket est déjà vérrouillé.",
+      "Ce ticket est désormais vérrouillé.",
+      "Le ticket est déjà dévérrouillé.",
+      "Ce ticket est désormiais dévérrouillé.",
+      "Ce ticket est déjà fermée. Veuillez attedre la suppréssion du ticket.",
+      "Type de Transcriptio: **{TYPE}**\nAuthor: <@{AUTHOR}>\nID: **{ID}**",
+      "La transcription est enregistrée. [TRANSCRIPTION]({MSGURL})",
+      "Ce ticket est déjà suspendue par <@{BY}>.",
+      "Ce ticket est maintenant suspendue par {MEMBER}",
+      "Ce ticket n'est pas suspendue.",
+      "Ce ticket n'est plus suspendue."
+    ],
+    "InitialTicket": [
+      "Enregistré & Fermé le Ticket",
+      "Vérrouiller le Ticket",
+      "Dévérrouiller le Ticket",
+      "Suspendre le Ticket",
+      "Maintenire le Ticket",
+      "{MEMBER} votre ticket est içi.",
+      "{MEMBER} votre ticket a été créer : <#{DBCHANNEL}>"
     ]
   }
 }

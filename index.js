@@ -45,11 +45,11 @@
     await Handler.loadMessageCommands(client, path);
     await Handler.loadEvents(client);
     await Handler.loadLangs(client);
-    await client.login(config.token);
     await Handler.loadSlashCommands(client, path);
     await Handler.loadContextMenus(client, path);
     await Handler.loadButtonCommands(client, path);
     await Handler.loadSelectMenus(client, path);
+    await Handler.loadServer(client, path);
 
     const player = client.player
 
@@ -168,4 +168,6 @@
             ]
         });
     });
+
+    await client.login(config.token);
 })()

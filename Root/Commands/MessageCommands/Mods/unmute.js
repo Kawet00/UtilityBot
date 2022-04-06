@@ -67,7 +67,7 @@ module.exports = {
         await member.roles.remove(muteRole).then(() => {
             let logsC = db.get(`logs_${message.guild.id}`)
             if (!logsC) lang = 'en';
-            message.guild.channels.cache.get(logsC.id).send({
+            message.guild.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
                 .setTitle(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.unmute[3]}`)
@@ -75,7 +75,7 @@ module.exports = {
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 .addField(lang.commands.mods.unmute[4], member.author.tag, true)
-                .addField(lang.commands.modsa[0], message.author, true)
+                .addField(lang.commands.modsa[0], `<@!${message.author.id}>`, true)
                 .addField(`\u200B`, '\u200B')
                 .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                 ]

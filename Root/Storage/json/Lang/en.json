@@ -24,6 +24,16 @@
       "All play queue finished, I think you can listen to some more music."
     ]
   },
+  "slashCommand": {
+    "ticketOpt": [
+      "This is not tied with a ticket.",
+      "This user is already on the ticket.",
+      "{MEMBER} has been added to this ticket.",
+      "This is not tied with a ticket.",
+      "This user is not on this ticket.",
+      "{MEMBER} has been remove from this ticket."
+    ]
+  },
   "cmdOptions": {
     "AnyClientPerm": [
       "I required any one of these permissions for this command.",
@@ -550,6 +560,11 @@
         "You will have informations on the `{PREFIX}fun-dog` command:",
         "Have a gif of a random funny dog."
       ],
+      "helpEmbed": [
+        "You will have informations on the {PREFIX}embed command:",
+        "You will have informations on the `{PREFIX}embed` command:",
+        "Send one of your embeds, created [here](https://panel.utilitybot.ga/manage/)."
+      ],
       "helpFFox": [
         "You will have informations on the {PREFIX}fun-fox command:",
         "You will have informations on the `{PREFIX}fun-fox` command:",
@@ -1025,6 +1040,11 @@
     },
     "util": {
       "Serveur": "Server",
+      "embed": [
+        "You must specify an embed ID.",
+        "An ID must have 3 characters.",
+        "This ID is invalid.\n\n1. Make sure the ID exists.\n2. Make sure it belongs to you.\n3. Make sure the ID is spelled correctly."
+      ],
       "apod": [
         "Astronomy Picture of the Day"
       ],
@@ -1091,7 +1111,7 @@
         "The provided equation is invalid!",
         "Only <@{AUTHOR}> can use that buttons!"
       ],
-      "embed": [
+      "embedB": [
         "Default Title",
         "Default Description",
         "Please wait, adding reactions...",
@@ -1274,6 +1294,31 @@
     ],
     "MsgCreate": [
       "Here is my prefix on this server: __**{PREFIX}**__\nAnd to get all of the commands it's: **{PREFIX}help**"
+    ],
+    "TicketOpt": [
+      "The data for this system is outdated.",
+      "You cannot use that button.",
+      "The ticket is already locked.",
+      "This ticket is now locked for reciewing.",
+      "The ticket is already unlocked.",
+      "This ticket is now unlock.",
+      "The ticket is already closed. Please wait for it to get deleted.",
+      "Transcript\nType: **{TYPE}**\nAuthor: <@{AUTHOR}>\nID: **{ID}**",
+      "The transcript is now saved [TRANSCRIPT]({MSGURL})",
+      "This ticket is already claimed by <@{BY}>.",
+      "This ticket is now claimed by {MEMBER}",
+      "This ticket isn't claimed.",
+      "This ticket is now unclaimed."
+    ],
+    "InitialTicket": [
+      "Save & Close Ticket",
+      "Lock Ticket",
+      "Unlock Ticket",
+      "Claim Ticket",
+      "Unclaim Ticket",
+      "{MEMBER} here is your ticket.",
+      "{MEMBER} your ticket has been created: <#{DBCHANNEL}>",
+      "Please setup the channel of transcript with the commande `{PREFIX}setup-transcript <mention the channel>`"
     ]
   }
 }

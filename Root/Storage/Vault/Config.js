@@ -3,6 +3,8 @@
 module.exports = {
     developers: ["ID"], /*Here you need to put your id*/
     token: "TOKEN", /*Here you need to put the token of your bot*/
+    secret_key: "KEY", /*Here put the secret key of your bot*/
+    ID: "ID", /*The ID of your bot*/
     AME_API: "KEY", /*Here you need to put your amethyste api key*/
     supporGuild: "ID", /*Here you need to put the id of your support guild*/
     reportChannel: "ID", /*Here you need to put the id of the channel*/
@@ -11,6 +13,7 @@ module.exports = {
     GITHUB_API_KEY: "KEY", /*Here put your github api key*/
     GIPHY_API_KEY: "KEY", /*Here put your giphy api key*/
     APOD_API_KEY: "KEY", /*Here put your apod api key*/
+    DBD_LICENSE: "KEY", /*Here put your DBD license*/
 
     opt: {
         maxVol: 250, /*The max volume of the music*/
