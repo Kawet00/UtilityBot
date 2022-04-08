@@ -1,4 +1,4 @@
-const { GuildTicket } = require('../models/GuildTicket')
+const db = require('quick.db')
 
 module.exports = {
     name: "interactionCreate",
@@ -7,7 +7,7 @@ module.exports = {
 
       const { guild, member, customId } = interaction;
 
-      const Data = GuildTicket.findOne({ GuildId: guild.id })
+      const Data = db.get(`ticket.${guild.id}`)
       if(!Data) return;
 
       if(!Data.Button.includes(customId)) return;
