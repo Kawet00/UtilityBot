@@ -43,7 +43,10 @@ module.exports = {
                 .setTimestamp()
             ]
         }).then(() => {
-            interaction.reply(lang.commands.help.success[0])
+            interaction.reply({
+                content: lang.commands.help.success[0],
+                ephemeral: true
+        })
         })
     } catch {
             interaction.reply(`Please active your DMs.`)

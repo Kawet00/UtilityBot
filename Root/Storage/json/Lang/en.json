@@ -563,7 +563,7 @@
       "helpEmbed": [
         "You will have informations on the {PREFIX}embed command:",
         "You will have informations on the `{PREFIX}embed` command:",
-        "Send one of your embeds, created [here](https://panel.utilitybot.ga/manage/)."
+        "Send one of your embeds, created [here](https://panel.utilitybot.me/manage/)."
       ],
       "helpFFox": [
         "You will have informations on the {PREFIX}fun-fox command:",
@@ -1319,6 +1319,10 @@
       "{MEMBER} here is your ticket.",
       "{MEMBER} your ticket has been created: <#{DBCHANNEL}>",
       "Please setup the channel of transcript with the commande `{PREFIX}setup-transcript <mention the channel>`"
+    ],
+    "ReactionRoles": [
+      "{RNAME} has been removed from you!",
+      "{RNAME} has been added to you!"
     ]
   }
 }

@@ -19,8 +19,8 @@ module.exports = {
            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()
             .setTitle(lang.commands.util.Sw[0])
-            .setDescription(`${lang.commands.util.Sw[1].replace('{WebSite}', `[${lang.commands.util.Sw[0]}](https://www.utilitybot.ga/)`)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
-            .setURL('https://www.utilitybot.ga/')
+            .setDescription(`${lang.commands.util.Sw[1].replace('{WebSite}', `[${lang.commands.util.Sw[0]}](https://utilitybot.me/)`)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setURL('https://utilitybot.me/')
             ]
         })
     } catch (e) {

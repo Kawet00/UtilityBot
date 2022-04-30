@@ -60,7 +60,7 @@ module.exports = {
             message.delete();
           }, 300)
         })
-          if (args[0] > 100) return message.reply({
+          if (args[0] > 99) return message.reply({
               embeds: [
             new container.Discord.MessageEmbed()
             .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.clear[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)

@@ -6,5 +6,5 @@ module.exports = {
     loadSelectMenus: require("./SelectMenus"),
     loadSlashCommands: require("./SlashCommands"),
     loadLangs: require('./Langs'),
-    loadServer: require('./Server')
+    loadServer: require('../../Website/Server')
 }

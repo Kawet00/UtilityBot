@@ -9,6 +9,8 @@ module.exports = {
     cooldown: 5000,
 
     run: async(client, message, args, container) => {
+        if(db.get(`cat`) === false) return;
+
         try {
         
         let res = await fetch('https://api.thecatapi.com/v1/images/search');

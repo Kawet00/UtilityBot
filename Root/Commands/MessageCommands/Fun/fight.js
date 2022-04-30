@@ -5,6 +5,8 @@ module.exports = {
     name: 'fight',
 
     run: async (client, message, args, container) => { 
+      if(db.get(`fight`) === false) return;
+
       let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
       if(!message.mentions.users.first()) return message.reply({

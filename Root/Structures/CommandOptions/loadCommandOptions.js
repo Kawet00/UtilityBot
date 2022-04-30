@@ -5,11 +5,13 @@ const {
     emotes,
     colors
 } = require("../../../index")
-const db = require('quick.db')
+const db = require('../../Storage/db/Models')
 
 module.exports = async function (client, message, command, isInteraction, interactionType) {
     if (!command) return;
-    const dbprefix = db.get(`prefix_${message.guild.id}`) || "u!";
+    const guildData = await db.GuildSettings.findOne({GuildID: message.guild.id})
+    const dbprefix = guildData?.prefix
+    const dblang = client.langs.get(guildData?.lang)
     const container = {
         RootPath: path,
         Config: config,
@@ -17,7 +19,8 @@ module.exports = async function (client, message, command, isInteraction, intera
         Emotes: emotes,
         Colors: colors,
         Prefix: dbprefix,
-        DB: db
+        db,
+        Lang: dblang
     }
     if (await require("./Cooldown")(client, message, command, isInteraction, interactionType, Discord)) return;
     else if (await require("./OwnerOnly")(client, message, command, Discord)) return;

@@ -5,8 +5,10 @@ module.exports = {
     name: 'morpion',
     description: 'none',
     aliases: ["noughts-and-crosses", "n-a-c"],
+    ignoreFile: true,
 
     run: async(client, message, args, container) => {
+        if(db.get(`morpion`) === false) return;
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 

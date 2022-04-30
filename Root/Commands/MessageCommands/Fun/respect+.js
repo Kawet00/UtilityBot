@@ -1,5 +1,5 @@
 const AmeClient = require('amethyste-api');
-const { AME_API } = require('../../../Storage/Vault/Config')
+const { AME_API } = require('../../../Storage/json/Config.json')
 const AmeAPI = new AmeClient(AME_API);
 
 const db = require('quick.db');
@@ -10,6 +10,7 @@ module.exports = {
     cooldown: 10000,
 
     async run(client, message, args, container) {
+        if(db.get(`respect+`) === false) return;
 
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 

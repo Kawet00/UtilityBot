@@ -1,7 +1,11 @@
 const chalk = require("chalk")
 const Box = require("cli-box")
 const package = require('../../package.json')
-const config = require('../Storage/Vault/Config')
+const config = require('../Storage/json/Config.json')
+const colors = require('../Storage/json/colors.json')
+const emotes = require('../Storage/json/emotes.json')
+const Discord = require('discord.js')
+const mongoose = require('mongoose')
 
 module.exports = {
     name: "ready",
@@ -11,10 +15,10 @@ module.exports = {
 
         const activitys = [
             "by Elpistolero13",
-        "the v2.1.1",
-        "on www.utilitybot.ga",
+        "the v2.3.1",
+        "on utilitybot.me",
         "u!help",
-        /*`on ${client.guilds.cache.size} servers`*/
+        `on ${client.guilds.cache.size} servers`
         ]
 
         
@@ -27,41 +31,8 @@ module.exports = {
             url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         })
     }, 5000)
-/*
-setInterval(() => {
-    api.postStats({
-        serverCount: client.guilds.cache.size,
-    })
-}, 1800000)
-app.post('/dblwebhook', webhook.middleware(), async(req, res) => {
-    try {
-        const user = await client.users.fetch(req.vote.user);
-        db.set(`votes_${user.id}`)
-        db.add(`votes_${user.id}`, 1)
-        let vote = db.get(`votes_${user.id}`)
-        user.send(
-            new Discord.MessageEmbed()
-            .setColor(colors.PERSO)
-            .setTitle('🥰 ┇ MERCI !')
-            .setDescription('Merci d\'avoir voter pour \`Utility Bot\` !')
-            .addFields({
-                name: 'Vous avez',
-                value: `${vote} vote(s)`
-            })
-        );
-        setTimeout(() => {
-            user.send(
-                new Discord.MessageEmbed()
-                .setColor(colors.PERSO)
-                .setTitle('VOTE')
-                .setDescription('Vous pouvez [revoter pour moi](https://top.gg/bot/739863718547947652/vote) sur top.gg :) !')
-            )
-        }, 4, 32e+7)
-    } catch (error) {
-        console.error(error);
-    }
-})
-console.log('✅ Api top.gg mise ! ✅');*/
+
+const connected = await mongoose.connect(config.MONGODB_GUILDS_URI)
 
         const ClientBox = new Box({
             w: Math.floor(client.user.tag.length + 27),
@@ -137,9 +108,9 @@ NodeJS Version    ::    ${process.version}
 Bot Version       ::    ${package["version"]}
 `).stringify()
 
-const InfosCommandsBox = new Box({
-    w: Math.floor(`Initiating ${client.commands.aliases.size} messageCommands Aliases.`.length + 37),
-    h: 8,
+const MongoDBBox = new Box({
+    w: Math.floor(`Connecting to MongoDB`.length + 20),
+    h: 3,
     stringify: false,
     marks: {
         nw: '╭',
@@ -152,22 +123,34 @@ const InfosCommandsBox = new Box({
         w: '│'
     },
     hAlign: "left",
-}, `R A P P E L   C O M M A N D S   I N F O R M A T I O N
+}, `M O N G O D B   C O N N E C T I O N
 
-MessageCommands            ::    Initiating ${client.commands.messageCommands.size} messageCommands.
-MessageCommands Aliases    ::    Initiating ${client.commands.aliases.size} messageCommands Aliases.
-SlashCommands              ::    Initiating ${client.commands.slashCommands.size} slashCommands.
-SelectMenus                ::    Initiating ${client.commands.selectMenus.size} selectMenus.
-ContextMenus               ::    Initiating ${client.commands.contextMenus.size} contextMenus.
-ButtonCommands             ::    Initiating ${client.commands.buttonCommands.size} buttonCommands.
-Client Events              ::    Initiating ${client.events.size} events.
-`).stringify()
+Connection                 ::    ${connected? '✅': '❌'}`).stringify()
 
-        console.log(chalk.bold.greenBright(ClientBox))
+        console.log(chalk.bold.magentaBright(ClientBox))
         console.log(chalk.bold.cyanBright(CommandsBox))
-        setInterval(() => {
-        console.log(chalk.bold.magentaBright(InfosClientBox))
-        console.log(chalk.bold.cyanBright(InfosCommandsBox))
+        console.log(chalk.bold.greenBright(MongoDBBox))
+        client.guilds.cache.get(config.supporGuild).channels.cache.get('790955338479304776').send({
+            content: `@here`,
+            embeds: [
+                new Discord.MessageEmbed()
+                .setColor(colors.PERSO)
+                .setDescription(`${emotes.pepe.pepe_a} ┇ BOT ON`)
+                .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                .setTimestamp()
+            ]
+        })
+        setTimeout(() => {
+            client.guilds.cache.get(config.supporGuild).channels.cache.get('790955338479304776').send({
+                content: `@here`,
+                embeds: [
+                    new Discord.MessageEmbed()
+                    .setColor(colors.PERSO)
+                    .setDescription(`${emotes.pepe.pepe_a} ┇ RESTART`)
+                    .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
+                    .setTimestamp()
+                ]
+            })
         }, 43200000)
     }
 }

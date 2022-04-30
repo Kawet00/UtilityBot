@@ -1,4 +1,4 @@
-const db = require('quick.db')
+const { GuildTicket } = require('../Storage/db/Models')
 
 module.exports = {
     name: "interactionCreate",
@@ -7,7 +7,7 @@ module.exports = {
 
       const { guild, member, customId } = interaction;
 
-      const Data = db.get(`ticket.${guild.id}`)
+      const Data = GuildTicket.findOne({ GuildID: guild.id })
       if(!Data) return;
 
       if(!Data.Button.includes(customId)) return;
@@ -36,8 +36,9 @@ module.exports = {
               }
             ]
           }).then(async(channel) => {
-            db.set(`ticket.${guild.id}.${member.id}`, {
-              MembersID: [member.id],
+            GuildTicket.create({
+              GuildID: guild.id,
+              MembersID: member.id,
               ChannelID: channel.id,
               TicketID: ID,
               Closed: false,

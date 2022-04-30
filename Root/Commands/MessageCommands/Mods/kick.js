@@ -27,7 +27,7 @@ module.exports = {
 
         if (user) {
 
-            const member = message.guild.member(user);
+            const member = message.guild.users.cache.get(user);
 
             if (user.user.bot) return message.channel.send(
                 new container.Discord.MessageEmbed()

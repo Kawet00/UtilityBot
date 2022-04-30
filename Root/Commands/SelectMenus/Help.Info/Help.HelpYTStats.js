@@ -1,7 +1,7 @@
 const db = require('quick.db')
 const Discord = require('discord.js')
 const colors = require('../../../Storage/json/colors.json')
-const config = require('../../../Storage/Vault/Config')
+const config = require('../../../Storage/json/Config.json')
 
 module.exports = {
     name: "HelpYTStats",
@@ -44,7 +44,10 @@ module.exports = {
             .setTimestamp()
             ]
         }).then(() => {
-            interaction.reply(lang.commands.help.success[0])
+            interaction.reply({
+                content: lang.commands.help.success[0],
+                ephemeral: true
+        })
         })
     } catch {
             interaction.reply(`Please active your DMs.`)

@@ -8,6 +8,8 @@ module.exports = {
     cooldown: 10000,
 
     run: async(client, message, args, container) => {
+        if(db.get(`bird`) === false) return;
+
         try {
       let res = await fetch('https://some-random-api.ml/img/bird');
       res = await res.json();

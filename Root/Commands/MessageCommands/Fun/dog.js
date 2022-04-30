@@ -9,6 +9,8 @@ module.exports = {
     cooldown: 10000,
 
     run: async(client, message, args, container) => {
+        if(db.get(`dog`) === false) return;
+
       let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
       let res = await fetch('https://some-random-api.ml/img/dog');
       res = await res.json();

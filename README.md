@@ -35,9 +35,15 @@
    -**GITHUB_API_KEY**, here you need to put a github token. To create a github token you need to go [here](https://github.com/settings/tokens).<br>
    -**GIPHY_API_KEY**, here you need to put you giphy api key, to get your giphy api key you need to create a giphy account [here](https://giphy.com/login) and go [here](https://developers.giphy.com/dashboard/) to create a giphy api key.<br>
    -**APOD_API_KEY**, here you need to put your apod api key, to get your apod api key go [here](https://api.nasa.gov/) and create a account, etc...<br>
+   -**MONGODB_GUILDS_URI**, here you need to create a MongoDB database, to know how create a MongoDB database and how it work you can see [this video](https://youtu.be/a3Gz_7KEJkQ), so when you created your database you need to create a cluster with the name `Guilds` and connect it with his URI adress.<br>
+   -**MONGODB_WEB_URI**, here you need to create a MongoDB database, to know how create a MongoDB database and how it work you can see [this video](https://youtu.be/a3Gz_7KEJkQ), so when you created your database you need to create a cluster with the name `Web` and connect it with his URI adress.<br>
    -**MaxVol**, here you need to put the volume max of the music.<br>
    -**LoopMessage**, here it's if you want to send a message for the loop.<br>
-   -**DiscordPlayer**, here please don't touch this is imortant for the music.
+   -**DiscordPlayer**, here please don't touch this is imortant for the music.<br>
+   -**port**, this is the port of the dashboard. If you going to use a host or a VPS you need to put his port and not a random port.<br>
+   -**callbackURL**, this is the callback URI of the dashboard, you need to do this: go [here](https://discord.com/developers/applications), go in the application of your bot go in `OAuth2` and to `General`, here click on `Add Redirect`, and put this url: `http://localhost:5000/login` or `domain/login` if you have a domain.<br>
+   -**domain**, here is the URL of the dashboard, if you have a domain put it here.<br>
+   -**SESSION_SECRET**, here is a secret session it's for the cookies.
   
   <h4> 🎨 &nbsp;Root/Storage/json/colors.json </h4>
   

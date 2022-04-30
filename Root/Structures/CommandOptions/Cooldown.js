@@ -1,5 +1,5 @@
 const db = require("quick.db")
-const config = require('../../Storage/Vault/Config')
+const config = require('../../Storage/json/Config.json')
 const emotes = require('../../Storage/json/emotes.json')
 const colors = require('../../Storage/json/colors.json')
 

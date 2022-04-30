@@ -7,6 +7,7 @@ module.exports = {
     aliases: ["gif"],
     
     run: async (client, message, [ ...query ], container) => {
+      if(db.get(`giphy`) === false) return;
         
       let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 

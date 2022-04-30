@@ -1,23 +1,26 @@
 const colors = require('../Storage/json/colors.json');
-const db = require('quick.db')
 const Discord = require('discord.js')
 const emotes = require('../Storage/json/emotes.json')
+const db = require('../Storage/db/manager')
 
 module.exports = {
     name: "guildCreate",
 
     run: async (guild, client) => {
+	if (!guild.available) return;
 
-        db.set(`lang_${guild.id}`, "en")
-        let lang = client.langs.get(db.get(`lang_${guild.id}`))
+	await db.createGuild(guild.id);
+
+	db.updateGuildPrefix(guild.id, 'u!')
+	db.updateGuildLang(guild.id, 'en')
 
         const embed = new Discord.MessageEmbed()
             .setColor(colors.PERSO)
-            .setTitle(`${emotes.blob.blob_b} ┇ ${lang.events.guildC[0]}`)
+            .setTitle(`${emotes.blob.blob_b} ┇ test`)
             .setThumbnail(guild.iconURL({
                 dynamic: true
             }))
-            .setDescription(lang.events.guildC[1])
+            .setDescription('test')
             .addFields({
                 name: "Here the number of servers where I am currently",
                 value: `\`${client.guilds.cache.size.toString()}\` servers`,
@@ -28,7 +31,7 @@ module.exports = {
                 inline: true
             }, {
                 name: "Here my Website",
-                value: `[💻Website](https://www.utilitybot.ga/) `,
+                value: `[💻Website](https://utilitybot.me/) `,
                 inline: true
             }, {
                 name: "Here you can support me and get bonuses",

@@ -26,7 +26,7 @@ module.exports = {
         });
             const { body } = await request
                 .get(`https://api.github.com/repos/${author}/${repository}`)
-                .set({ Authorization: `token ${container.Config.GITHUB_API_KEY} ` });
+                .set({ Authorization: `token ${container.Config.GITHUB_API_KEY}` });
             const embed = new container.Discord.MessageEmbed()
                 .setColor(colors.NOIR)
                 .setAuthor({ name: 'GitHub', iconURL: 'https://i.imgur.com/e4HunUm.png', url: 'https://github.com/'})

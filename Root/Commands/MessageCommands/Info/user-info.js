@@ -38,23 +38,33 @@ module.exports = {
                     offline: `😴${lang.commands.util.Ui[3]} / 👻${lang.commands.util.Ui[4]}`,
                     streaming: `💻${lang.commands.util.Ui["6"]}`
                 }
-                const memberM = message.mentions.users.first() || message.member || message.author;
-                const userFlags = memberM.user.flags.toArray();
+                const memberM = message.mentions.members.first() || message.member;
+
+                const filteredRoles = memberM.roles.cache.filter(role => role.id != message.guild.id);
+                const listedRoles = filteredRoles.sort((a, b) => b.position - a.position).map(role => role.toString());
+                
+                const userFlags = memberM.user.flags.toArray()
+
+                const UserFlags = {
+                    HOUSE_BALANCE: 'test',
+                };
+
+
           message.reply({
               embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.PERSO)
                 .setAuthor({ name: memberM.user.username, iconURL: memberM.user.displayAvatarURL({ dynamic: true })})
                 .setThumbnail(memberM.user.displayAvatarURL({ dynamic: true, size: 1024 }))
-                .addField(`**•🕵️‍♂️ ${lang.commands.util.Ui[5]}:**`, `${memberM.user.tag}`, true)
+                .addField(`**•🕵️‍♂️ ${lang.commands.util.Ui[5]}:**`, `${memberM.user.discriminator}`, true)
                 .addField(`**• Status:**`, `${status[memberM.presence.status]}`, true)
-                .addField(`**•🕵️‍♀️ Nickname:**`, `${memberM.nickname !== null ? `${memberM.nickname}` : `🚫 ${lang.commands.util.Ui[3]}`}`, true)
+                .addField(`**•🕵️‍♀️ Nickname:**`, `${memberM.user.nickname !== null ? `${memberM.nickname}` : `🚫 ${lang.commands.util.Ui[3]}`}`, true)
         .addField(`**•🆔 ID:**`, `${memberM.id}`, true)
         .addField(`**•🤖 Bot:**`, `${memberM.bot ? `🤖 ${lang.commands.util.Ui[8]}` : `👤 ${lang.commands.util.Ui[9]}`}`, true)
         .addField(`**•👨‍💻 ${lang.commands.util.Ui[10]}:**`, `${memberM.presence.game || `🚫 ${lang.commands.util.Ui[11]}`}`, true)
-        .addField(`**•👋 ${lang.commands.util.Ui[12]}:**`, `${moment(message.member.joinedAt).format(`DD/MM/YYYY`)}`, true)
-        .addField(`**•🧔 ${lang.commands.util.Ui[13]}:**`, `${memberM.roles.cache.filter(r => r.name !== "@everyone").map(roles => `${roles}`).join(", ") || `🚫 ${lang.commands.util.Ui[14]}`}`, true)
-        .addField(`**• ${lang.commands.util.Ui[15]}:**`, userFlags.length ? userFlags.map(flag => flags[flag]).join(`, `) : `🚫 ${lang.commands.util.Ui[16]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`, true)
+        .addField(`**•👋 ${lang.commands.util.Ui[12]}:**`, `${moment(message.member.joinedAt).format(`DD/MM/YYYY`)}`, true)/*
+        .addField(`**•🧔 ${lang.commands.util.Ui[13]}:**`, `${listedRoles ? listedRoles.join(', ') : `🚫 ${lang.commands.util.Ui[14]}`}`, true)*/
+        .addField(`**• ${lang.commands.util.Ui[15]}:**`, userFlags ? flags[userFlags.join(`, `)] : `🚫 ${lang.commands.util.Ui[16]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`, true)
        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
       .setTimestamp()
               ]

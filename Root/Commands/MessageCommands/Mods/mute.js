@@ -90,9 +90,9 @@ if (member.id === message.member.id) return message.reply({
         if (!muteRole) {
             muteRole = await message.guild.roles.create({
                     name: 'Muted',
-                    permissions: [
-                        Permissions.FLAGS.MANAGE_MESSAGES,
-                        Permissions.FLAGS.KICK_MEMBERS
+                        permissions: [
+                            Permissions.FLAGS.MANAGE_MESSAGES,
+                            Permissions.FLAGS.KICK_MEMBERS
                     ]
             });
             message.guild.channels.cache.forEach(channel => channel.createOverwrite.edit(muteRole.id, {

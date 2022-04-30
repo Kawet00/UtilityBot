@@ -6,6 +6,7 @@ module.exports = {
     aliases: ["snk"],
 
     run: async (client, message, args, container) => { 
+      if(db.get(`snake`) === false) return;
       let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
       await weky.Snake({

@@ -2,7 +2,7 @@ const db = require('quick.db')
 const Discord = require('discord.js')
 const colors = require('../../../Storage/json/colors.json')
 const emoji = require('../../../Storage/json/emotes.json')
-const config = require('../../../Storage/Vault/Config')
+const config = require('../../../Storage/json/Config.json')
 
 module.exports = {
     name: "bug",

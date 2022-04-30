@@ -23,11 +23,11 @@ module.exports = {
         
         let lang = client.langs.get(db.get(`lang_${message.guild.id}`))
 
-        const user = message.guild.member(message.mentions.users.first());
+        const user = message.mentions.users.first();
 
         if (user) {
 
-            const member = message.guild.member(user);
+            const member = message.guild.users.cache.get(user);
 
             if (user.user.bot) return message.channel.send(
                 new container.Discord.MessageEmbed()

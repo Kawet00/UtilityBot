@@ -7,6 +7,8 @@ module.exports = {
     cooldown: 5000,
 
     run: async (client, message, args, container) => { 
+      if(db.get(`rps`) === false) return;
+
       let lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
 
       if(!message.mentions.users.first()) return message.reply({

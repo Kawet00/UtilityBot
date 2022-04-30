@@ -8,6 +8,7 @@ module.exports = {
     cooldown: 5000,
 
     run: async (client, message, args, container) => {
+        if(db.get(`pf`) === false) return;
 
         try {
         

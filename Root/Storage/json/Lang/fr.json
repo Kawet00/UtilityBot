@@ -84,6 +84,10 @@
       "J'ai un problème. Nos développeurs ont été informé et vont réglé le problème le plus rapidement possible.\n**Excusé nous pour ce dérangement**"
     ],
     "fun": {
+      "gif": [
+        "Veuilez mettre le nom d'un gif.",
+        "Je trouve aucun résultat."
+      ],
       "ball": [
         "Veuillez spécifiez votre question.",
         "Vous devez poser une vrai question !",
@@ -1025,9 +1029,9 @@
         "**{USER}** n'a pas de bannière donc je vous met la couleur de sa bannière dans la couleur du message.",
         "**{USER}** n'a pas de bannière ni de couleur de bannière."
       ],
-      "SGif": [
-        "Veuilez mettre le nom d'un gif.",
-        "Je trouve aucun résultat."
+      "SGit": [
+        "Veuillez précisez un autheur et un nom de repository.",
+        "Aucune description."
       ],
       "Rm": [
         "Il faut mettre le temps ! Comme ceci : `30s`, `1m`, `1h` ou `1d`",
@@ -1293,6 +1297,10 @@
       "Maintenire le Ticket",
       "{MEMBER} votre ticket est içi.",
       "{MEMBER} votre ticket a été créer : <#{DBCHANNEL}>"
+    ],
+    "ReactionRoles": [
+      "{RNAME} vous à été retiré !",
+      "{RNAME} vous à été ajouté !"
     ]
   }
 }

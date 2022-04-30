@@ -8,6 +8,7 @@ module.exports = {
     cooldown: 10000,
 
     run: async(client, message, args, container) => {
+        if(db.get(`fox`) === false) return;
 
         try {
         

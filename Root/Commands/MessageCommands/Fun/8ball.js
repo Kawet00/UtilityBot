@@ -7,6 +7,7 @@ module.exports = {
     aliases: ["8b", "ball"],
 
     run: async (client, message, args, container) => {
+        if(db.get(`8ball`) === false) return;
         
         const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en');
 

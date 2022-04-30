@@ -1,4 +1,8 @@
 {
+    "success": "<a:success:838601708761513995>",
+    "verify": "<a:verify:832780308297809920>",
+    "online": "<a:online:962841642254106737>",
+    "offline": "<a:offline:962841641167777813>",
     "pepe": {
         "pepe_n": "<:pepe_no:797548159428722688>",
         "pepe_y": "<:pepe_yes:797548218858209281>",
@@ -14,11 +18,11 @@
         "pepe_ok": "<:pepe_ok:950717831065006140>"
     },
     "blob": {
-        "blob_p": "<:hein_g_pas_compris:797552615437238302>",
+        "blob_p": "<:blob_no_smart:797552615437238302>",
         "blob_d": "<a:blob_dance:948271376681283594>",
         "blob_n": "<a:pas_question:797566202103857162>",
-        "blob_w": "<:wsh:797566163503808513>",
-        "blob_s": "<a:salut:797567005213065256>",
+        "blob_w": "<:blob_hi:797566163503808513>",
+        "blob_s": "<a:blob_welcome:797567005213065256>",
         "blob_c": "<a:ciao:797566927232958515>",
         "blob_g": "<:g_peur_1:797566498172043315>",
         "blob_g2": "<:g_peur_2:797566567177125932>",
@@ -39,14 +43,14 @@
         "blob_thx": "<:blob_thx:925350099683536926>"
     },
     "autre": {
-        "banned": "<:tampon_banned:797552562865307711>",
+        "banned": "<:banned:797552562865307711>",
         "panda": "<:panda:955112768384696330>",
         "mute": "<:mute:797552739474735154>",
         "unmute": "<:unmute:802834534176653353>",
         "giveaway_1": "<:giveaway:797553108606779422>",
-        "giveaway_2": "<a:c_la_fete:797567093376548884>",
+        "giveaway_2": "<a:giveaway2:797567093376548884>",
         "attention": "<a:attention:797566292583776288>",
-        "intelligent": "<:intelligent:797566633572958270>",
+        "intelligent": "<:smart:797566633572958270>",
         "dog": "<:dogSmile:790638224115499070>",
         "cat": "<:cutecat:790638184878702593>",
         "bird": "<:bird:790638131481149482>",

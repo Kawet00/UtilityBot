@@ -1,13 +1,11 @@
 (async () => {
     const Discord = require("discord.js");
-    const {
-        Player
-    } = require('discord-player');
-    const config = require("./Root/Storage/Vault/Config");
+    const { Player } = require('discord-player');
+    const config = require("./UtilityBotFinal copy/Root/Storage/json/Config.json");
     const path = __dirname;
     const db = require('quick.db');
-    const emotes = require('./Root/Storage/json/emotes.json')
-    const colors = require('./Root/Storage/json/colors.json')
+    const emotes = require('./UtilityBotFinal copy/Root/Storage/json/emotes.json');
+    const colors = require('./UtilityBotFinal copy/Root/Storage/json/colors.json');
     const client = new Discord.Client({
         intents: [
             Discord.Intents.FLAGS.GUILDS,
@@ -22,7 +20,8 @@
             Discord.Intents.FLAGS.GUILD_INVITES,
             Discord.Intents.FLAGS.GUILD_BANS
         ],
-        partials: ["CHANNEL"]
+        partials: ["CHANNEL"],
+        shards: "auto"
     });
 
     exports.client = client;
@@ -43,13 +42,14 @@
 
     const Handler = require(`${path}/Root/Structures/Handlers/Handler`);
     await Handler.loadMessageCommands(client, path);
-    await Handler.loadEvents(client);
-    await Handler.loadLangs(client);
+    await Handler.loadEvents(client, path);
+    await Handler.loadLangs(client, path);
     await Handler.loadSlashCommands(client, path);
     await Handler.loadContextMenus(client, path);
     await Handler.loadButtonCommands(client, path);
     await Handler.loadSelectMenus(client, path);
-    await Handler.loadServer(client, path);
+    await Handler.loadServer(client)
+
 
     const player = client.player
 
@@ -93,8 +93,7 @@
         queue.metadata.send({
             embeds: [
                 new Discord.MessageEmbed()
-                .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.trackStart[0].replace('{TITLE}', track.title)
-                                                            .replace('{CHANNEL}', queue.connection.channel.name)}`)
+                .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.trackStart[0].replace('{TITLE}', track.title).replace('{CHANNEL}', queue.connection.channel.name)}`)
                 .setColor(colors.VERT)
                 .setFooter({
                     text: `© ${client.user.username}`,
@@ -168,6 +167,6 @@
             ]
         });
     });
-
+    
     await client.login(config.token);
 })()

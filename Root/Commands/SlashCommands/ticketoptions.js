@@ -25,7 +25,6 @@ module.exports = {
 
 	run: async(client, interaction, container) => {
         const { guildId, options, channel, user } = interaction;
-        const lang = client.langs.get(db.get(`lang_${guildId}`) || 'en')
 
         const Action = options.getString("action");
         const Member = options.getUser("member");
@@ -38,12 +37,12 @@ module.exports = {
             case "add":
                 if(!db.get(`ticket.${guildId}`) == guildId && !db.get(`ticket.${guildId}.ChannelID`) == channel.id) return interaction.reply({
                     embeds: [
-                        embed.setColor('RED').setDescription(lang.slashCommands.ticketOpt[0])
+                        embed.setColor('RED').setDescription('This is not tied with a ticket.')
                     ]
                 })
                 if(DBMEMBERSID.includes(Member.id)) return interaction.reply({
                     embeds: [
-                        embed.setColor('RED').setDescription(lang.slashCommands.ticketOpt[1])
+                        embed.setColor('RED').setDescription('This user is already on the ticket.')
                     ],
                     ephemeral: true
                 })
@@ -57,7 +56,7 @@ module.exports = {
 
                 interaction.reply({
                     embeds: [
-                        embed.setColor('GREEN').setDescription(lang.slashCommands.ticketOpt[2].replace('{MEMBER}', Member))
+                        embed.setColor('GREEN').setDescription(`${Member} has been added to this ticket.`)
                     ]
                 })
                 break;
@@ -65,12 +64,12 @@ module.exports = {
                 case "remove":
                     if(!db.get(`ticket.${guildId}`) == guildId && !db.get(`ticket.${guildId}.ChannelID`) == channel.id ) return interaction.reply({
                         embeds: [
-                            embed.setColor('RED').setDescription(lang.slashCommands.ticketOpt[3])
+                            embed.setColor('RED').setDescription('This is not tied with a ticket.')
                         ]
                     })
                     if(!DBMEMBERSID.includes(Member.id)) return interaction.reply({
                         embeds: [
-                            embed.setColor('RED').setDescription(lang.slashCommands.ticketOpt[4])
+                            embed.setColor('RED').setDescription('This user is not on this ticket.')
                         ],
                         ephemeral: true
                     })
@@ -82,7 +81,7 @@ module.exports = {
     
                     interaction.reply({
                         embeds: [
-                            embed.setColor('GREEN').setDescription(lang.slashCommands.ticketOpt[5].replace('{MEMBER}', Member))
+                            embed.setColor('GREEN').setDescription(`${Member} has been remove from this ticket.`)
                         ]
                     })
                     break;

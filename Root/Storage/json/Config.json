@@ -1,0 +1,36 @@
+    {
+    "developers": ["Here you need to put your id"],
+    "token": "Here you need to put the token of your bot",
+    "secret_key": "Here put the secret key of your bot",
+    "ID": "The ID of your bot",
+    "AME_API": "Here you need to put your amethyste api key",
+    "supporGuild": "Here you need to put the id of your support guild",
+    "reportChannel": "Here you need to put the id of the channel",
+    "DOG_API_KEY": "Here your dog api key",
+    "DOG_API_URL": "https://api.thedogapi.com/",
+    "GITHUB_API_KEY": "Here put your github api key",
+    "GIPHY_API_KEY": "Here put your giphy api key",
+    "APOD_API_KEY": "Here put your apod api key",
+    "MONGODB_GUILDS_URI": "The URI of your MongoDB database (Guilds Cluster)",
+    "MONGODB_WEB_URI": "The URI of your MongoDB database (Web Cluster)",
+
+
+    "opt": {
+        "maxVol": 250,
+        "loopMessage": false,
+        "discordPlayer": {
+            "ytdlOptions": {
+                "quality": "highestaudio",
+                "highWaterMark": "1 << 25"
+            }
+        }
+    },
+
+
+    "website": {
+        "port": 5000,
+        "callbackURL": "http://localhost:5000/login",
+        "domain": "http://localhost:5000/",
+        "SESSION_SECRET": "oi!è§(§e'sxdfcgvhbjuyt§!r(è'§è(qé'('(§è!yuhi"
+        }
+    }
