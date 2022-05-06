@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/github/forks/Elpistolero131/UtilityBot.svg?style=for-the-badge"/></p>
 
  :octocat: ╎ Made by **[Elpistolero13](https://github.com/Elpistolero131)**<br>
- 💻 ╎ [WebSite](https://www.utilitybot.ga)<br>
+ 💻 ╎ [WebSite](https://utilitybot.me)<br>
  📌 ╎ it's a Open Source discord bot<br>
  <img src="https://freesvg.org/img/frenchflagframed.png" height="17em"/>/<img src="https://freesvg.org/img/Flag_of_the_United_States.png" height="17em"/> ╎ French and English bot
   
