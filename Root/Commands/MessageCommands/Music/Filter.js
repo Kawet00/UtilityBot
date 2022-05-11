@@ -64,27 +64,27 @@ module.exports = {
         ]
       })
     } catch (e) {
-        client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
-            embeds: [
-                new container.Discord.MessageEmbed()
-                .setDescription('Petit problème avec un utilisateur.')
-                .addField('Nom de la commande', 'Filter')
-                .addField('Erreur', `\`\`\`${e}\`\`\``)
-                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
-                .setTimestamp()
-                .setColor(colors.PERSO)
-            ]
-        })
-        message.reply({
-            embeds: [
-                new container.Discord.MessageEmbed()
-                .setDescription(`${lang.commands.problem[0]}`)
-                .setColor(colors.EPINGLE)
-                .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
-                .setTimestamp()
-            ]
-        })
-        console.log(e)
-      }
+      client.guilds.cache.get(container.Config.supporGuild).channels.cache.get(container.Config.reportChannel).send({
+          embeds: [
+              new container.Discord.MessageEmbed()
+              .setDescription('Petit problème avec un utilisateur.')
+              .addField('Nom de la commande', 'Pause')
+              .addField('Erreur', `\`\`\`${e}\`\`\``)
+              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+              .setTimestamp()
+              .setColor(container.Colors.PERSO)
+          ]
+      })
+      message.reply({
+          embeds: [
+              new container.Discord.MessageEmbed()
+              .setDescription(`${lang.commands.problem[0]}`)
+              .setColor(container.Colors.EPINGLE)
+              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+              .setTimestamp()
+          ]
+      })
+      console.log(e)
+    }
   },
 };

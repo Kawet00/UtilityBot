@@ -17,7 +17,7 @@ module.exports = {
         if (!queue || !queue.playing) return message.reply({
           embeds: [
             new container.Discord.MessageEmbed()
-            .setColor(container.Colors)
+            .setColor(container.Colors.EPINGLE)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.AnyM[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
@@ -27,7 +27,7 @@ module.exports = {
         if (!queue.tracks[0]) return message.reply({
           embeds: [
             new container.Discord.MessageEmbed()
-            .setColor(container.Colors)
+            .setColor(container.Colors.EPINGLE)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.music.Queue[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
@@ -63,14 +63,14 @@ module.exports = {
                   .addField('Erreur', `\`\`\`${e}\`\`\``)
                   .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                   .setTimestamp()
-                  .setColor(colors.PERSO)
+                  .setColor(container.Colors.PERSO)
               ]
           })
           message.reply({
               embeds: [
                   new container.Discord.MessageEmbed()
                   .setDescription(`${lang.commands.problem[0]}`)
-                  .setColor(colors.EPINGLE)
+                  .setColor(container.Colors.EPINGLE)
                   .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                   .setTimestamp()
               ]

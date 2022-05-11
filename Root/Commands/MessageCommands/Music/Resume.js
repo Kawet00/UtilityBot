@@ -40,14 +40,14 @@ module.exports = {
                   .addField('Erreur', `\`\`\`${e}\`\`\``)
                   .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                   .setTimestamp()
-                  .setColor(colors.PERSO)
+                  .setColor(container.Colors.PERSO)
               ]
           })
           message.reply({
               embeds: [
                   new container.Discord.MessageEmbed()
                   .setDescription(`${lang.commands.problem[0]}`)
-                  .setColor(colors.EPINGLE)
+                  .setColor(container.Colors.EPINGLE)
                   .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                   .setTimestamp()
               ]

@@ -91,7 +91,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new container.Discord.MessageEmbed()
-                        .setColor(container.Colors)
+                        .setColor(container.Colors.EPINGLE)
                         .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                         .setTimestamp()
                         .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.music.Search[6]}`)
@@ -118,7 +118,7 @@ module.exports = {
             if (reason === 'time') return message.reply({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                    .setColor(container.Colors)
+                    .setColor(container.Colors.EPINGLE)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                     .setTimestamp()
                     .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.music.Search[8].replace('{PREFIX}', container.Prefix)}`)
@@ -134,14 +134,14 @@ module.exports = {
                 .addField('Erreur', `\`\`\`${e}\`\`\``)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
-                .setColor(colors.PERSO)
+                .setColor(container.Colors.PERSO)
             ]
         })
         message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
                 .setDescription(`${lang.commands.problem[0]}`)
-                .setColor(colors.EPINGLE)
+                .setColor(container.Colors.EPINGLE)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
             ]
