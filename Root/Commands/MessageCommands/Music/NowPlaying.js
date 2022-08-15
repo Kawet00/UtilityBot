@@ -17,7 +17,7 @@ try  {
       embeds: [
         new container.Discord.MessageEmbed()
         .setColor(container.Colors.RED)
-        .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+        .setDescription(`${container.Emotes.blob.blob_n} ┇ ${lang.commands.music.AnyM[0]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
         .setFooter({
           text: `© ${client.user.username}`,
           iconURL: client.user.displayAvatarURL()
@@ -44,9 +44,9 @@ try  {
 
     if (queue.getFiltersEnabled() !== filter) {}
     if (queue.getFiltersEnabled().length < 1) {
-      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${lang.commands.music.NowP[6]}**\n\n[${lang.commandsa[0]}](https://nepust.fr/)`);
+      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${lang.commands.music.NowP[6]}**\n\n[${lang.commandsa[0]}](https://eternode.ga/)`);
     } else if (queue.getFiltersEnabled().length > 0) {
-      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${queue.getFiltersEnabled()}**\n\n[${lang.commandsa[0]}](https://nepust.fr/)`);
+      embed.setDescription(`${container.Emotes.autre.wumpus_dj} ┇ Volume **${queue.volume}%**\n${lang.commands.music.NowP[2]}  **${trackDuration}**\nLoop Mode **${methods[queue.repeatMode]}**\n${lang.commands.music.NowP[7]} **${queue.getFiltersEnabled()}**\n\n[${lang.commandsa[0]}](https://eternode.ga/)`);
     }
 
 

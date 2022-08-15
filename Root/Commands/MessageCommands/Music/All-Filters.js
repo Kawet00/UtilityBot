@@ -13,7 +13,7 @@ module.exports = {
           new container.Discord.MessageEmbed()
           .setColor(container.Colors.PERSO)
           .setDescription(`${container.Emotes.autre.wumpus_dj} ┇ ${lang.commands.music.AllF[0]} `)
-          .addField('Filters:', `\`bassboost\`\n\`bassboost_low\`\n\`bassboost_high\`\n\`8D\`\n\`vaporwave\`\n\`nightcore\`\n\`phaser\`\n\`tremolo\`\n\`vibrato\`\n\`reverse\`\n\`treble\`\n\`normalizer\`\n\`normalizer2\`\n\`surrounding\`\n\`pulsator\`\n\`subboost\`\n\`karaoke\`\n\`flanger\`\n\`gate\`\n\`haas\`\n\`mcompand\`\n\`mono\`\n\`mstlr\`\n\`mstrr\`\n\`compressor\`\n\`expander\`\n\`softlimiter\`\n\`chorus\`\n\`chorus2d\`\n\`chorus3d\`\n\`fadein\`\n\`dim\`\n\`earrape\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+          .addField('Filters:', `\`bassboost\`\n\`bassboost_low\`\n\`bassboost_high\`\n\`8D\`\n\`vaporwave\`\n\`nightcore\`\n\`phaser\`\n\`tremolo\`\n\`vibrato\`\n\`reverse\`\n\`treble\`\n\`normalizer\`\n\`normalizer2\`\n\`surrounding\`\n\`pulsator\`\n\`subboost\`\n\`karaoke\`\n\`flanger\`\n\`gate\`\n\`haas\`\n\`mcompand\`\n\`mono\`\n\`mstlr\`\n\`mstrr\`\n\`compressor\`\n\`expander\`\n\`softlimiter\`\n\`chorus\`\n\`chorus2d\`\n\`chorus3d\`\n\`fadein\`\n\`dim\`\n\`earrape\`\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
           .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
           .setThumbnail()
          ]

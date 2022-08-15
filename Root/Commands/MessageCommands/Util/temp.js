@@ -21,7 +21,7 @@ module.exports = {
                     embeds: [
                     new container.Discord.MessageEmbed()
                     .setColor(colors.EPINGLE)
-                    .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                    .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                     .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
                     ]
@@ -32,7 +32,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
-                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[1]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
@@ -46,7 +46,7 @@ module.exports = {
             .setColor(colors.EPINGLE)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[2]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
             ]
         });
 
@@ -62,7 +62,7 @@ module.exports = {
                         .addField(`🥶 ┇ **${lang.commands.util.temp[5]}**`, `${result[0].current.temperature}°${result[0].location.degreetype}`, true)
                         .addField("**Temp:**", `${result[0].current.skytext}`, true)
                         .addField(`**${lang.commands.util.temp[6]}**`, `${result[0].current.shortday}`, true)
-                        .addField(`**${lang.commands.util.temp[7]}**`, `${result[0].current.feelslike}°${result[0].location.degreetype}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`, true)
+                        .addField(`**${lang.commands.util.temp[7]}**`, `${result[0].current.feelslike}°${result[0].location.degreetype}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`, true)
                         .addField(`💦 ┇ **${lang.commands.util.temp[8]}**`, `${result[0].current.humidity}%`, true)
                         .addField(`💨 ┇ **${lang.commands.util.temp[9]}**`, `${result[0].current.winddisplay}`, true)
                         .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})

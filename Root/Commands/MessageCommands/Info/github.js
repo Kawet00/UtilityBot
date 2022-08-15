@@ -17,7 +17,7 @@ module.exports = {
             embeds: [
             new container.Discord.MessageEmbed()
               .setColor(colors.PERSO)
-              .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.util.github[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+              .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.util.github[0]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
               .setThumbnail(client.user.avatarURL({ dynamic: true, size: 512 }))
               .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()

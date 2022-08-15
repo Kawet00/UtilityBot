@@ -17,7 +17,7 @@ module.exports = {
         if (!msgUser) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[0]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                 .setColor(colors.EPINGLE)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
@@ -26,7 +26,7 @@ module.exports = {
         if (!messageBeingSent) return message.reply({
             embeds: [
                 new container.Discord.MessageEmbed()
-                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.message[1]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                 .setColor(colors.EPINGLE)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
@@ -51,14 +51,14 @@ module.exports = {
                         dynamic: true
                     }))
                     .setTitle(`${container.Emotes.blob.blob_w} ┇ ${lang.commands.util.message[2].replace('{USER}', message.author.tag)}`)
-                    .setDescription(`\n${messageBeingSent}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                    .setDescription(`\n${messageBeingSent}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                 ]
             }).catch((err) => {
                 message.reply({
                     embeds: [
                         new container.Discord.MessageEmbed()
                         .setColor(colors.RED)
-                        .setDescription(`${container.Emotes.autre.attention} ┇ ${lang.commands.util.messageA[1].replace('[contact]', '[contact the support](https://discord.gg/R39FrwyZ7w)')}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                        .setDescription(`${container.Emotes.autre.attention} ┇ ${lang.commands.util.messageA[1].replace('[contact]', '[contact the support](https://discord.gg/R39FrwyZ7w)')}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                          .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                         .setTimestamp()
                     ]
@@ -69,7 +69,7 @@ module.exports = {
                 embeds: [
                     new container.Discord.MessageEmbed()
                     .setTitle(lang.commands.util.message[3])
-                    .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.util.message[4].replace('{USER}', msgUser)}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                    .setDescription(`${container.Emotes.pepe.pepe_s} ┇ ${lang.commands.util.message[4].replace('{USER}', msgUser)}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                     .setAuthor(
 { name: message.author.tag, iconURL:
                         message.author.displayAvatarURL({

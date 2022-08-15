@@ -64,7 +64,7 @@ module.exports = {
                                         inline: true
                                 }, {
                                         name: `${emotes.blob.blob_p} ┇ YOUTUBE STATS`,
-                                        value: lang.commands.help.info[12].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        value: lang.commands.help.info[12].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://eternode.ga/)`,
                                         inline: true
                                 })
                         ]

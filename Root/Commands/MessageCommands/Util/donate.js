@@ -19,7 +19,7 @@ module.exports = {
            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()
             .setTitle("Donation")
-            .setDescription(`${lang.commands.util.don[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${lang.commands.util.don[0]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
             .setURL('https://www.patreon.com/Elpistolero13')
             ]
         })

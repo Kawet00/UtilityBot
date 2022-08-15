@@ -13,7 +13,7 @@ module.exports = {
                 const embed =
                         new container.Discord.MessageEmbed()
                         .setColor(colors.PERSO)
-                        .setDescription(`${lang.commands.helpa[24]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                        .setDescription(`${lang.commands.helpa[24]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                         .setFooter({
                                 text: `© ${client.user.username}`,
                                 iconURL: client.user.displayAvatarURL()

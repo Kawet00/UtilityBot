@@ -40,7 +40,7 @@ module.exports = {
                 .addField(lang.commands.util.Ss[12], message.guild.premiumSubscriptionCount || lang.commands.util.Ss[16], true)
                 .addField(lang.commands.util.Ss[13], message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : '0', true)
                 .addField(lang.commands.util.Ss[14], `${message.guild.emojis.cache.size}/250 `, true)
-                .addField(lang.commands.util.Ss[15], `${container.Prefix}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`, true)
+                .addField(lang.commands.util.Ss[15], `${container.Prefix}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`, true)
                 .setThumbnail(message.guild.iconURL({
                     dynamic: true
                 }))

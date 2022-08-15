@@ -29,7 +29,7 @@ module.exports = {
                     message.reply({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${lang.commands.owner.setL[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                                .setDescription(`${lang.commands.owner.setL[1]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             ],
                         components: [row],

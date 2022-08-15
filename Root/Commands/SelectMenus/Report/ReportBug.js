@@ -12,7 +12,7 @@ module.exports = {
         interaction.reply({
             embeds: [
                 new Discord.MessageEmbed()
-                .setDescription(`${emoji.pepe.pepe_srx} ┇ ${lang.commands.util.report[8]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${emoji.pepe.pepe_srx} ┇ ${lang.commands.util.report[8]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                 .setColor(colors.PERSO)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
@@ -34,7 +34,7 @@ module.exports = {
                     embeds: [
                         new Discord.MessageEmbed()
                         .setColor(colors.EPINGLE)
-                        .setDescription(`${emoji.pepe.pepe_a} ┇ ${lang.commands.util.report[18]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                        .setDescription(`${emoji.pepe.pepe_a} ┇ ${lang.commands.util.report[18]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                         .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                         .setTimestamp()
                     ]
@@ -53,7 +53,7 @@ module.exports = {
                     new Discord.MessageEmbed()
                     .setColor(colors.VERT)
                     .setDescription(`${emoji.blob.blob_thx} ┇ ${lang.commands.util.report[9]}`)
-                    .addField(lang.commands.util.report[10], "`" + text + "`\n\n[${lang.commandsa[0]}](https://nepust.fr/)")
+                    .addField(lang.commands.util.report[10], "`" + text + "`\n\n[${lang.commandsa[0]}](https://eternode.ga/)")
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
                 ]
@@ -100,7 +100,7 @@ module.exports = {
                         embeds: [
                             new Discord.MessageEmbed()
                             .setColor(colors.VERT)
-                            .setDescription(`${emoji.autre.intelligent} ┇ ${lang.commands.util.report[19]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                            .setDescription(`${emoji.autre.intelligent} ┇ ${lang.commands.util.report[19]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                         ]

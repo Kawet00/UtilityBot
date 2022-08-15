@@ -37,7 +37,7 @@ module.exports = {
                 value: "10m"
             }, {
                 name: lang.commands.helpa[12],
-                value: lang.commands.helpa[18]+`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`
+                value: lang.commands.helpa[18]+`\n\n[${lang.commandsa[0]}](https://eternode.ga/)`
             })
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()

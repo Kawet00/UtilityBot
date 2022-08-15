@@ -32,7 +32,7 @@ module.exports = {
       }))
       .addFields({
         name: `🆔 ┇ ${lang.commands.util.BI[0]}:`,
-        value: `${client.user.id}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+        value: `${client.user.id}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[${lang.commandsa[0]}](https://eternode.ga/)`,
         inline: true
       }, {
         name: `__**🕵️‍♂️ ┇ ${lang.commands.util.BI[1]}:**__`,
