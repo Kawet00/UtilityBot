@@ -89,7 +89,7 @@ module.exports = {
                                                 inline: true
                                         }, {
                                                 name: `${emotes.autre.intelligent} ┇ SET LANG`,
-                                                value: `${prefix}set-lang\n\n[${lang.commandsa[0]}](https://eternode.ga/)`,
+                                                value: `${prefix}set-lang\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
                                                 inline: true
                                         })
                         ]

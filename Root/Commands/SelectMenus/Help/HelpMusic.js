@@ -77,7 +77,7 @@ module.exports = {
           inline: true,
         }, {
           name: `${emotes.autre.cool_pika} ┇ VOLUME`,
-          value: lang.commands.help.music[15].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://eternode.ga/)`,
+          value: lang.commands.help.music[15].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
           inline: true,
         })
       ]

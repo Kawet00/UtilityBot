@@ -17,7 +17,7 @@ module.exports = {
                 embeds: [
                 new container.Discord.MessageEmbed()
                 .setColor(colors.EPINGLE)
-                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.Rm[0]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.Rm[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
                 ]
@@ -32,7 +32,7 @@ module.exports = {
           return message.reply({
             embeds: [
               new container.Discord.MessageEmbed()
-              .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.Rm[1]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+              .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.Rm[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
               .setColor(colors.EPINGLE)
               .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
               .setTimestamp()
@@ -46,7 +46,7 @@ module.exports = {
         embeds: [
           new container.Discord.MessageEmbed()
           .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.Rm[2]}`)
-          .addField(lang.commands.util.Rm[3], `${filteredMessage}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+          .addField(lang.commands.util.Rm[3], `${filteredMessage}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
           .setColor(colors.EPINGLE)
           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()
@@ -58,7 +58,7 @@ module.exports = {
         return message.reply({
           embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.Rm[4]} ${args[0].slice(0, -1)} ${lang.commands.util.Rm[5]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.Rm[4]} ${args[0].slice(0, -1)} ${lang.commands.util.Rm[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.VERT)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
@@ -73,7 +73,7 @@ module.exports = {
         return message.reply({
           embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.Rm[4]} ${args[0].slice(0, -1)} minutes.\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.Rm[4]} ${args[0].slice(0, -1)} minutes.\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.VERT)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
@@ -88,7 +88,7 @@ module.exports = {
         return message.reply({
           embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.Rm[4]} ${args[0].slice(0, -1)} ${lang.commands.util.Rm[6]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.Rm[4]} ${args[0].slice(0, -1)} ${lang.commands.util.Rm[6]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.VERT)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
@@ -103,7 +103,7 @@ module.exports = {
         return message.reply({
           embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.Rm[4]} ${args[0].slice(0, -1)}${lang.commands.util.Rm[7]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${lang.commands.util.Rm[4]} ${args[0].slice(0, -1)}${lang.commands.util.Rm[7]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
             .setColor(colors.VERT)
             .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
@@ -117,7 +117,7 @@ module.exports = {
       message.reply({
         embeds: [
           new container.Discord.MessageEmbed()
-          .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.Rm[8]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+          .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.util.Rm[8]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
           .setColor(colors.EPINGLE)
           .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()

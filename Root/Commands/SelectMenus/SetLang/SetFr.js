@@ -14,7 +14,7 @@ module.exports = {
             interaction.reply({
                 embeds: [
                     new Discord.MessageEmbed()
-                    .setDescription(`${emoji.pepe.pepe_a} ┇ Vous utiliser déjà le français comme langue pour Utility Bot.\n\n[Partenaires}](https://eternode.ga/)`)
+                    .setDescription(`${emoji.pepe.pepe_a} ┇ Vous utiliser déjà le français comme langue pour Utility Bot.\n\n[Partenaires}](https://nepust.fr/)`)
                     .setColor(colors.EPINGLE)
                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                     .setTimestamp()
@@ -27,7 +27,7 @@ module.exports = {
             new Discord.MessageEmbed()
             .setColor(colors.VERT)
             .setDescription('Changement de la langue de Utility Bot')
-            .addField('La Nouvelle langue de Utility Bot est', `Français\n\n[Partenaires](https://eternode.ga/)`)
+            .addField('La Nouvelle langue de Utility Bot est', `Français\n\n[Partenaires](https://nepust.fr/)`)
             .setTimestamp()
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             ]

@@ -22,7 +22,7 @@ module.exports = {
             embeds: [
                 new container.Discord.MessageEmbed()
             .setColor(colors.PERSO)
-            .setDescription(`${container.Emotes.autre.cool_pika} ┇ Uptime : ${days} ${lang.commands.util.uptime[0]}, ${hours} ${lang.commands.util.uptime[1]}, ${minutes} ${lang.commands.util.uptime[2]}, ${seconds} ${lang.commands.util.uptime[3]}\n\n[${lang.commandsa[0]}](https://eternode.ga/)`)
+            .setDescription(`${container.Emotes.autre.cool_pika} ┇ Uptime : ${days} ${lang.commands.util.uptime[0]}, ${hours} ${lang.commands.util.uptime[1]}, ${minutes} ${lang.commands.util.uptime[2]}, ${seconds} ${lang.commands.util.uptime[3]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
             ]

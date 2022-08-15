@@ -39,7 +39,7 @@ module.exports = {
                 inline: true
             }, {
                 name: "My Partnership",
-                value: "[EterNode](https://eternode.ga/)",
+                value: "[Nepust](https://nepust.fr)",
                 inline: true
             }, {
                 name: "Prefix + Help command",
