@@ -64,7 +64,7 @@ module.exports = {
         .addField(`**•👨‍💻 ${lang.commands.util.Ui[10]}:**`, `${memberM.presence.game || `🚫 ${lang.commands.util.Ui[11]}`}`, true)
         .addField(`**•👋 ${lang.commands.util.Ui[12]}:**`, `${moment(message.member.joinedAt).format(`DD/MM/YYYY`)}`, true)/*
         .addField(`**•🧔 ${lang.commands.util.Ui[13]}:**`, `${listedRoles ? listedRoles.join(', ') : `🚫 ${lang.commands.util.Ui[14]}`}`, true)*/
-        .addField(`**• ${lang.commands.util.Ui[15]}:**`, userFlags ? flags[userFlags.join(`, `)] : `🚫 ${lang.commands.util.Ui[16]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`, true)
+        .addField(`**• ${lang.commands.util.Ui[15]}:**`, userFlags ? flags[userFlags.join(`, `)] : `🚫 ${lang.commands.util.Ui[16]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`, true)
        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
       .setTimestamp()
               ]

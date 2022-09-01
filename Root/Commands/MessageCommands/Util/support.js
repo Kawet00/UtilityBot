@@ -15,7 +15,7 @@ message.reply({
   embeds: [
 new container.Discord.MessageEmbed()
 .setColor(colors.PERSO)
-.setDescription(`${lang.commands.util.support[0].replace('{SupportServer}', "[support](https://discord.gg/R39FrwyZ7w)")}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+.setDescription(`${lang.commands.util.support[0].replace('{SupportServer}', "[support](https://discord.gg/R39FrwyZ7w)")}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
 .setURL('https://discord.gg/R39FrwyZ7w')
            .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
           .setTimestamp()

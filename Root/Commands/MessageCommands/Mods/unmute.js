@@ -29,7 +29,7 @@ module.exports = {
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.modsa[4]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.modsa[4]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
             ]
             })
 
@@ -39,7 +39,7 @@ module.exports = {
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.unmute[0]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.unmute[0]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
             ]
         })
 
@@ -49,7 +49,7 @@ module.exports = {
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.unmute[1]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_n} ┇ ${lang.commands.mods.unmute[1]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
             ]
         })
 
@@ -60,7 +60,7 @@ module.exports = {
             .setColor(colors.RED)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()
-            .setDescription(`${container.Emotes.autre.attention} ┇ ${lang.commands.mods.unmute[2]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+            .setDescription(`${container.Emotes.autre.attention} ┇ ${lang.commands.mods.unmute[2]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
             ]
         })
 
@@ -77,7 +77,7 @@ module.exports = {
                 .addField(lang.commands.mods.unmute[4], member.author.tag, true)
                 .addField(lang.commands.modsa[0], `<@!${message.author.id}>`, true)
                 .addField(`\u200B`, '\u200B')
-                .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
                 ]
             });
             message.reply({
@@ -86,7 +86,7 @@ module.exports = {
                 .setColor(colors.VERT)
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()
-                .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${member} ${lang.commands.mods.unmute[5]}\n\n[${lang.commandsa[0]}](https://nepust.fr/)`)
+                .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${member} ${lang.commands.mods.unmute[5]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
                 ]
             })
         })

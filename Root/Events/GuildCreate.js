@@ -39,7 +39,7 @@ module.exports = {
                 inline: true
             }, {
                 name: "My Partnership",
-                value: "[Nepust](https://nepust.fr)",
+                value: "[CLHCloud](https://clh-c.com)",
                 inline: true
             }, {
                 name: "Prefix + Help command",

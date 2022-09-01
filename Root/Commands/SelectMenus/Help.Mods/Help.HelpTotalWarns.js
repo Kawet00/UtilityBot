@@ -38,7 +38,7 @@ module.exports = {
                     value: "0s"
                 }, {
                     name: lang.commands.helpa[10],
-                    value: lang.commands.helpa[14]+`\n\n[${lang.commandsa[0]}](https://nepust.fr/)`
+                    value: lang.commands.helpa[14]+`\n\n[${lang.commandsa[0]}](https://clh-c.com/)`
                 })
                  .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
                 .setTimestamp()

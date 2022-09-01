@@ -60,7 +60,7 @@ module.exports = {
                                         inline: true
                                 }, {
                                         name: `${emotes.blob.blob_p} ┇ APOD`,
-                                        value: lang.commands.help.util[16].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://nepust.fr/)`,
+                                        value: lang.commands.help.util[16].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://clh-c.com/)`,
                                         inline: true
                                 })
                         ]
