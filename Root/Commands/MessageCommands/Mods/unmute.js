@@ -65,8 +65,18 @@ module.exports = {
         })
 
         await member.roles.remove(muteRole).then(() => {
+            message.reply({
+                embeds: [
+                new container.Discord.MessageEmbed()
+                .setColor(colors.VERT)
+                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
+                .setTimestamp()
+                .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${member} ${lang.commands.mods.unmute[5]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                ]
+            })
+            
             let logsC = db.get(`logs_${message.guild.id}`)
-            if (!logsC) lang = 'en';
+            if (!logsC) return;
             message.guild.channels.cache.get(logsC).send({
                 embeds: [
                     new container.Discord.MessageEmbed()
@@ -80,15 +90,6 @@ module.exports = {
                 .addField(`Date`, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\`\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
                 ]
             });
-            message.reply({
-                embeds: [
-                new container.Discord.MessageEmbed()
-                .setColor(colors.VERT)
-                 .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
-                .setTimestamp()
-                .setDescription(`${container.Emotes.autre.cool_pika} ┇ ${member} ${lang.commands.mods.unmute[5]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
-                ]
-            })
         })
         setTimeout(() =>{
             message.delete();

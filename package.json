@@ -1,6 +1,6 @@
 {
   "name": "utility-bot",
-  "version": "2.3.1",
+  "version": "2.3.3",
   "description": "Source code of Utility Bot.",
   "main": "index.js",
   "scripts": {
