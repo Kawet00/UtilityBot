@@ -5,10 +5,10 @@ const colors = require('../../../Storage/json/colors.json')
 const { getPrefix, getLang } = require('../../../Storage/db/manager')
 
 module.exports = {
-  name: "Music",
-  run: async (client, interaction) => {
-    var prefix = await getPrefix(interaction.guild.id)
-    let lang = client.langs.get(await getLang(interaction.guild.id))
+        name: "Music",
+        run: async (client, interaction) => {
+                var prefix = await getPrefix(interaction.guild.id)
+                let lang = client.langs.get(await getLang(interaction.guild.id))
 
     try {
     interaction.user.send({
@@ -24,59 +24,59 @@ module.exports = {
         .setTimestamp()
         .addFields({
           name: `${emotes.blob.blob_p} ┇ BACK`,
-          value: lang.commands.help.music[1].replace("{PREFIX}", prefix),
-          inline: true,
-        }, {
-          name: `${emotes.blob.blob_p} ┇ CLEAR`,
           value: lang.commands.help.music[2].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.blob.blob_p} ┇ FILTER`,
+          name: `${emotes.blob.blob_p} ┇ CLEAR`,
           value: lang.commands.help.music[3].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.blob.blob_p} ┇ LOOP`,
+          name: `${emotes.blob.blob_p} ┇ FILTER`,
           value: lang.commands.help.music[4].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.blob.blob_p} ┇ NOW PLAYING`,
+          name: `${emotes.blob.blob_p} ┇ LOOP`,
           value: lang.commands.help.music[5].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.autre.cool_pika} ┇ PAUSE`,
+          name: `${emotes.blob.blob_p} ┇ NOW PLAYING`,
           value: lang.commands.help.music[6].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.autre.cool_pika} ┇ PLAY`,
+          name: `${emotes.autre.cool_pika} ┇ PAUSE`,
           value: lang.commands.help.music[7].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.autre.cool_pika} ┇ QUEUE`,
+          name: `${emotes.autre.cool_pika} ┇ PLAY`,
           value: lang.commands.help.music[8].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.autre.cool_pika} ┇ RESUME`,
+          name: `${emotes.autre.cool_pika} ┇ QUEUE`,
           value: lang.commands.help.music[9].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.autre.cool_pika} ┇ SAVE`,
+          name: `${emotes.autre.cool_pika} ┇ RESUME`,
           value: lang.commands.help.music[10].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.autre.cool_pika} ┇ SEARCH`,
+          name: `${emotes.autre.cool_pika} ┇ SAVE`,
           value: lang.commands.help.music[11].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.autre.cool_pika} ┇ SKIP`,
+          name: `${emotes.autre.cool_pika} ┇ SEARCH`,
           value: lang.commands.help.music[12].replace("{PREFIX}", prefix),
           inline: true,
         }, {
-          name: `${emotes.autre.cool_pika} ┇ STOP`,
+          name: `${emotes.autre.cool_pika} ┇ SKIP`,
           value: lang.commands.help.music[13].replace("{PREFIX}", prefix),
           inline: true,
         }, {
+          name: `${emotes.autre.cool_pika} ┇ STOP`,
+          value: lang.commands.help.music[14].replace("{PREFIX}", prefix),
+          inline: true,
+        }, {
           name: `${emotes.autre.cool_pika} ┇ VOLUME`,
-          value: lang.commands.help.music[14].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://clh-c.com/)`,
+          value: lang.commands.help.music[15].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://clh-c.com/)`,
           inline: true,
         })
       ]

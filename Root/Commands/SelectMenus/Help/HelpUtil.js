@@ -7,8 +7,8 @@ const { getPrefix, getLang } = require('../../../Storage/db/manager')
 module.exports = {
         name: "Util",
         run: async (client, interaction) => {
-                var prefix = getPrefix(interaction.guild.id)
-                let lang = client.langs.get(getLang(interaction.guild.id))
+                var prefix = await getPrefix(interaction.guild.id)
+                let lang = client.langs.get(await getLang(interaction.guild.id))
 
                 try {
                 interaction.user.send({
@@ -36,7 +36,7 @@ module.exports = {
                                         inline: true
                                 }, {
                                         name: `${emotes.pepe.pepe_w} ┇ REPORT`,
-                                        value: `${prefix}report`,
+                                        value: lang.commands.help.util[10].replace("{PREFIX}", prefix),
                                         inline: true
                                 }, {
                                         name: `${emotes.blob.blob_t} ┇ ${lang.commands.help.util[2]} `,

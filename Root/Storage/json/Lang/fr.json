@@ -306,6 +306,7 @@
       ],
       "music": [
         "Commandes de Musique",
+        "Musqiue",
         "Vous devez faire : `{PREFIX}back`",
         "Vous devez faire : `{PREFIX}clear`",
         "Vous devez faire : `{PREFIX}filter <un filtre>`",
