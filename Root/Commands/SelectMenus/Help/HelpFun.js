@@ -2,13 +2,13 @@ const db = require('quick.db')
 const Discord = require('discord.js')
 const emotes = require('../../../Storage/json/emotes.json')
 const colors = require('../../../Storage/json/colors.json')
-const config = require('../../../Storage/json/Config.json')
+const { getPrefix, getLang } = require('../../../Storage/db/manager')
 
 module.exports = {
         name: "Fun",
         run: async (client, interaction) => {
-                var prefix = db.get(`prefix_${interaction.guild.id}`) || 't!'
-                let lang = client.langs.get(db.get(`lang_${interaction.guild.id}`) || 'en')
+                var prefix = getPrefix(interaction.guild.id)
+                let lang = client.langs.get(getLang(interaction.guild.id))
 try {
                 interaction.user.send({
                         embeds: [

@@ -317,7 +317,6 @@
       ],
       "music": [
         "Music commands",
-        "Music",
         "You need to do: `{PREFIX}back`",
         "You need to do: `{PREFIX}clear`",
         "You need to do: `{PREFIX}filter <a filter>`",

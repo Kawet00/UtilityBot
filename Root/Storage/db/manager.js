@@ -4,7 +4,7 @@ module.exports = class Manager {
 	static async createGuild(id) {
 		const result = new GuildSettings({
 			GuildID: id,
-			prefix: "t!",
+			prefix: "u!",
 			lang: "en"
 		});
 
