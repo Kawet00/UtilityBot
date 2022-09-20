@@ -57,16 +57,16 @@ module.exports = {
                 .setAuthor({ name: memberM.user.username, iconURL: memberM.user.displayAvatarURL({ dynamic: true })})
                 .setThumbnail(memberM.user.displayAvatarURL({ dynamic: true, size: 1024 }))
                 .addField(`**•🕵️‍♂️ ${lang.commands.util.Ui[5]}:**`, `${memberM.user.discriminator}`, true)
-                .addField(`**• Status:**`, `${status[memberM.presence.status]}`, true)
+                .addField(`**• Status:**`, `${status[memberM.presence?.status]}`, true)
                 .addField(`**•🕵️‍♀️ Nickname:**`, `${memberM.user.nickname !== null ? `${memberM.nickname}` : `🚫 ${lang.commands.util.Ui[3]}`}`, true)
         .addField(`**•🆔 ID:**`, `${memberM.id}`, true)
         .addField(`**•🤖 Bot:**`, `${memberM.bot ? `🤖 ${lang.commands.util.Ui[8]}` : `👤 ${lang.commands.util.Ui[9]}`}`, true)
-        .addField(`**•👨‍💻 ${lang.commands.util.Ui[10]}:**`, `${memberM.presence.game || `🚫 ${lang.commands.util.Ui[11]}`}`, true)
-        .addField(`**•👋 ${lang.commands.util.Ui[12]}:**`, `${moment(message.member.joinedAt).format(`DD/MM/YYYY`)}`, true)/*
-        .addField(`**•🧔 ${lang.commands.util.Ui[13]}:**`, `${listedRoles ? listedRoles.join(', ') : `🚫 ${lang.commands.util.Ui[14]}`}`, true)*/
+        .addField(`**•👨‍💻 ${lang.commands.util.Ui[10]}:**`, `${memberM.presence?.game || `🚫 ${lang.commands.util.Ui[11]}`}`, true)
+        .addField(`**•👋 ${lang.commands.util.Ui[12]}:**`, `${moment(message.member.joinedAt).format(`DD/MM/YYYY`)}`, true)
         .addField(`**• ${lang.commands.util.Ui[15]}:**`, userFlags ? flags[userFlags.join(`, `)] : `🚫 ${lang.commands.util.Ui[16]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`, true)
        .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
       .setTimestamp()
+      /*.addField(`**•🧔 ${lang.commands.util.Ui[13]}:**`, `${listedRoles ? listedRoles.join(', ') : `🚫 ${lang.commands.util.Ui[14]}`}`, true)*/
               ]
           });
           setTimeout(() =>{
