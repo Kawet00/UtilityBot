@@ -33,7 +33,7 @@ module.exports = {
                     message.reply({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${lang.commands.util.report[1]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${lang.commands.util.report[1]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             ],
                         components: [row],

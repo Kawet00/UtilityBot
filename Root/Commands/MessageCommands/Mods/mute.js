@@ -28,7 +28,7 @@ module.exports = {
         if (!member) return message.reply({
             embeds: [
             new container.Discord.MessageEmbed()
-            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.mute[0]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.mods.mute[0]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
             .setColor(colors.EPINGLE)
              .setFooter({text: `© ${client.user.username}`,  iconURL: client.user.displayAvatarURL()})
             .setTimestamp()

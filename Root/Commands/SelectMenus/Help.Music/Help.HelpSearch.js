@@ -47,7 +47,7 @@ module.exports = {
                         value: "5s"
                     }, {
                         name: lang.commands.helpa[10],
-                        value: lang.commands.helpa[11] + `\n\n[${lang.commandsa[0]}](https://clh-c.com/)`
+                        value: lang.commands.helpa[11] + `\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`
                     })
                     .setFooter({
                         text: `© ${client.user.username}`,

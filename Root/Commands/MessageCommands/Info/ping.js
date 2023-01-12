@@ -21,7 +21,7 @@ module.exports = {
             .addFields(
               {
                 name: `\`\`\`Latence:\`\`\``,
-                value: `**${latency}**ms\n\n[${lang.commandsa[0]}](https://clh-c.com/)`,
+                value: `**${latency}**ms\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`,
                 inline: true
               }, {
                 name: `\`\`\`Discord API:\`\`\``,

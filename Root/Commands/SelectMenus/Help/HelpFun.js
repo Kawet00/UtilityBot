@@ -107,7 +107,7 @@ try {
                                         inline: true
                                 }, {
                                         name: `${emotes.pepe.pepe_wa} ┇ GUESS THE NUMBER`,
-                                        value: lang.commands.help.fun[23].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://clh-c.com/)`,
+                                        value: lang.commands.help.fun[23].replace("{PREFIX}", prefix) + `\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`,
                                         inline: true
                                 })
                         ]

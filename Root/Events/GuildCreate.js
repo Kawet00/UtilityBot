@@ -39,7 +39,7 @@ module.exports = {
                 inline: true
             }, {
                 name: "My Partnership",
-                value: "[CLHCloud](https://clh-c.com)",
+                value: "[YorkHost](https://yorkhost.fr)",
                 inline: true
             }, {
                 name: "Prefix + Help command",

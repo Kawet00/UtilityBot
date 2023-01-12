@@ -16,7 +16,7 @@ module.exports = {
             .setColor(container.Colors.RED)
             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
             .setTimestamp()
-            .setDescription(`${container.Emotes.pepe.pepe_srx} ┇ ${lang.commands.music.Search[0]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+            .setDescription(`${container.Emotes.pepe.pepe_srx} ┇ ${lang.commands.music.Search[0]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
         ]
     });
 
@@ -31,7 +31,7 @@ module.exports = {
                 .setColor(container.Colors.RED)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
-                .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Search[1]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_ns} ┇ ${lang.commands.music.Search[1]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
             ]
         });
 
@@ -46,7 +46,7 @@ module.exports = {
 
         const maxTracks = res.tracks.slice(0, 10);
 
-        embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\n  ${lang.commands.music.Search[3].replace('{MAXT}', maxTracks.length)}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`);
+        embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\n  ${lang.commands.music.Search[3].replace('{MAXT}', maxTracks.length)}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`);
 
         embed.setTimestamp();
         embed.setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
@@ -63,7 +63,7 @@ module.exports = {
             if (query.content.toLowerCase() === 'cancel') return message.channel.send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                .setDescription(`${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.Search[4]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_ok} ┇ ${lang.commands.music.Search[4]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                 .setColor(container.Colors.VERT)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()
@@ -75,7 +75,7 @@ module.exports = {
             if (!value || value <= 0 || value > maxTracks.length) return message.channel.send({
                 embeds: [
                     new container.Discord.MessageEmbed()
-                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.music.Search[5].replace('{MAXT}', maxTracks.length)}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                .setDescription(`${container.Emotes.pepe.pepe_a} ┇ ${lang.commands.music.Search[5].replace('{MAXT}', maxTracks.length)}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                 .setColor(container.Colors.EPINGLE)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                 .setTimestamp()

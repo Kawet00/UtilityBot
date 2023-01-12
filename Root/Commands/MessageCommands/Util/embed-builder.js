@@ -63,7 +63,7 @@ module.exports= {
                     inline: true
                 }, {
                     name: lang.commands.util.embed[15],
-                    value: `✅\n\n[${lang.commandsa[0]}](https://clh-c.com/)`
+                    value: `✅\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`
                 }
             )
             ]
@@ -78,7 +78,7 @@ module.exports= {
                     const msgQT = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[16]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[16]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -89,7 +89,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -104,7 +104,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[17]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[17]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -119,7 +119,7 @@ module.exports= {
                     const msgQD = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[18]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[18]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -130,7 +130,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -145,7 +145,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[19]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[19]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -160,7 +160,7 @@ module.exports= {
                     const msgQA = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[20]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[20]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -171,7 +171,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -182,7 +182,7 @@ module.exports= {
                     const msgQAU = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[43]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[43]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -193,7 +193,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -203,7 +203,7 @@ module.exports= {
                     if(!auteurURL.includes('http') || !auteurURL.includes('https')) return message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed["26"]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed["26"]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -216,7 +216,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[21]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[21]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -231,7 +231,7 @@ module.exports= {
                     const msgQF = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[22]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[22]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -242,7 +242,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -257,7 +257,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[23]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[23]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -272,7 +272,7 @@ module.exports= {
                     const msgQTh = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[24]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[24]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -283,7 +283,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -293,7 +293,7 @@ module.exports= {
                     if(!thumbnail.includes('http') || !thumbnail.includes('https')) return message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[25]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[25]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -301,7 +301,7 @@ module.exports= {
                     if(!thumbnail.endsWith('.png') || !thumbnail.endsWith('.gif') || !thumbnail.endsWith('.jpg') || !thumbnail.endsWith('.jpeg')) return message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[44]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[44]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -314,7 +314,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[26]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[26]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -333,7 +333,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[27]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[27]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -348,7 +348,7 @@ module.exports= {
                     const msgQI = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[28]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[28]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -359,7 +359,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -369,7 +369,7 @@ module.exports= {
                     if(!image.includes('http') || !image.includes('https')) return message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[29]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[29]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -382,7 +382,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[30]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[30]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -397,7 +397,7 @@ module.exports= {
                     const msgQU = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[31]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[31]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -408,7 +408,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -418,7 +418,7 @@ module.exports= {
                     if(!url.includes('http') || !url.includes('https')) return message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[32]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[32]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -431,7 +431,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[33]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[33]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -446,7 +446,7 @@ module.exports= {
                     const msgQC = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[34]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[34]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -457,7 +457,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -467,7 +467,7 @@ module.exports= {
                     if(!couleur.includes('#')) return message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[35]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[35]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -480,7 +480,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[36]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[36]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -495,7 +495,7 @@ module.exports= {
                     const msgQTF = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[37]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[37]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -506,7 +506,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -517,7 +517,7 @@ module.exports= {
                     const msgQDF = await message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[38]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[38]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]
@@ -528,7 +528,7 @@ module.exports= {
                         message.channel.send({
                         embeds: [
                             new container.Discord.MessageEmbed()
-                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                            .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                             .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                             .setTimestamp()
                             .setColor(container.Colors.EPINGLE)
@@ -543,7 +543,7 @@ module.exports= {
                         message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[39]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[39]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -558,7 +558,7 @@ module.exports= {
                         const msgQE = await message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[40]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[40]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -569,7 +569,7 @@ module.exports= {
                             message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.pepe.pepe_a}  ${lang.commands.util.embed[45]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL() })
                                 .setTimestamp()
                                 .setColor(container.Colors.EPINGLE)
@@ -580,7 +580,7 @@ module.exports= {
                         if(!message.guild.channels.cache.get(channel)) return message.channel.send({
                             embeds: [
                                 new container.Discord.MessageEmbed()
-                                .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[41]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                .setDescription(`${container.Emotes.pepe.pepe_srx}  ${lang.commands.util.embed[41]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                 .setTimestamp()
                         ]
@@ -591,7 +591,7 @@ module.exports= {
                             message.channel.send({
                                 embeds: [
                                     new container.Discord.MessageEmbed()
-                                    .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[42]}\n\n[${lang.commandsa[0]}](https://clh-c.com/)`)
+                                    .setDescription(`${container.Emotes.blob.blob_g}  ${lang.commands.util.embed[42]}\n\n[${lang.commandsa[0]}](https://yorkhost.fr/)`)
                                     .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                                     .setTimestamp()
                             ]
