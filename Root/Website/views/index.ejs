@@ -1,0 +1,49 @@
+<%- include("partials/header") %>
+
+<title>Home » <%= bot.user.username %> Dashboard</title>
+
+<div class="container has-text-centered" style="padding-top: 80px;">
+    <% if (user) { %>
+        <figure class="image is-128x128 has-image-centered">
+            <img class="is-rounded" src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>">
+        </figure>
+        <br>
+        <h1 class="is-size-2 has-text-white">Logged in as <strong class="has-text-white"><%= user.username %>#<%= user.discriminator %></strong></h1>
+        <p class="has-text-white">Welcome in the dashboard of <b><%= bot.user.username %></b>! Here you can customise <b><%= bot.user.username %></b>.<br>Where would you like to go?</p>
+        <br>
+
+        <hr style="background-color: dimgray">
+
+        <br>
+        <div class="columns is-centered">
+            <div class="field is-grouped has-image-centered">
+                <p class="control">
+                    <a href="/dashboard/servers" class="button is-success is-rounded is-medium">
+                        <i class="fas fa-server" style="padding-right: 5px;"></i> Servers
+                    </a>
+                </p>
+                <p class="control">
+                    <a href="/discord-server" class="button is-link is-rounded is-medium">
+                        <i class="fab fa-discord" style="padding-right: 5px;"></i> Support
+                    </a>
+                </p>
+                <p class="control">
+                    <a href="/logout" class="button is-danger  is-rounded is-medium">
+                        <i class="fas fa-sign-out-alt" style="padding-right: 5px;"></i> Log Out
+                    </a>
+                </p>
+            </div>
+        </div>
+    <% } else { %>
+        <figure class="image is-128x128 has-image-centered">
+            <img class="is-rounded" src="<%= bot.user.displayAvatarURL({ dynamic: true, size: 128, format: 'png' }) %>">
+        </figure>
+        <br>
+        <h1 class="is-size-2 has-text-white"><%= bot.user.username %> Dashboard</h1>
+        <br>
+        <a href="/login" class="button is-medium is-rounded"><i class="fab fa-discord" style="padding-right: 5px;"></i> Login with Discord</a>
+
+        <hr style="background-color: dimgray">
+        <p class="has-text-white">Hello! Thank you for using <b><%= bot.user.username %></b>!<br>If you have any problem please contact our staff. You need to <a href="/discord-server">join the support server</a> and do a ticket!</p>
+    <% } %>
+</div>

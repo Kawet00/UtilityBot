@@ -1,0 +1,1328 @@
+{
+  "fullName": "English",
+  "shortName": "en",
+  "mscOptions": {
+    "error": [
+      "I have an error, please do `{PREFIX}report` and choose **bug** and write the problem."
+    ],
+    "connectionError": [
+      "I have an error, please do `{PREFIX}report` and choose **bug** and write the problem."
+    ],
+    "trackStart": [
+      "Music started playing: **{TITLE}** -> Channel: **{CHANNEL}**"
+    ],
+    "trackAdd": [
+      "**{TITLE}** added to playlist."
+    ],
+    "botDisconnect": [
+      "Someone from the audio channel kicked me out, the whole playlist has been cleared!"
+    ],
+    "channelEmpty": [
+      "I left the audio channel because there is no one on my audio channel."
+    ],
+    "queueEnd": [
+      "All play queue finished, I think you can listen to some more music."
+    ]
+  },
+  "slashCommand": {
+    "ticketOpt": [
+      "This is not tied with a ticket.",
+      "This user is already on the ticket.",
+      "{MEMBER} has been added to this ticket.",
+      "This is not tied with a ticket.",
+      "This user is not on this ticket.",
+      "{MEMBER} has been remove from this ticket."
+    ]
+  },
+  "cmdOptions": {
+    "AnyClientPerm": [
+      "I required any one of these permissions for this command.",
+      "Not required"
+    ],
+    "NsfwChannel": [
+      "You need to be in a NSFW channel to excute this command!"
+    ],
+    "AnyUserPerm": [
+      "You require any one of these permissions to be able to run this command.",
+      "Not required"
+    ],
+    "ClientPerm": [
+      "I require these permissions to be able to run this command.",
+      "Permissions required"
+    ],
+    "Cooldown": [
+      "You are currently at cooldown until to retype the command.",
+      "Time of the cooldown"
+    ],
+    "OnlyChannels": [
+      "This command can only be ran in certain channels.",
+      "These channels"
+    ],
+    "OnlyGuild": [
+      "This command can only be ran in ceratin guild.",
+      "These guilds"
+    ],
+    "OnlyUsers": [
+      "This command can only be ran by certain people.",
+      "These people"
+    ],
+    "OwnerOnly": [
+      "This command is reserved for the developers of Utilty Bot."
+    ],
+    "RequiredAnyRole": [
+      "You are required to have any one of these roles to be able to run this command.",
+      "These roles"
+    ],
+    "RequiredRoles": [
+      "You have not the role required.",
+      "Role required"
+    ],
+    "UserPerms": [
+      "You have not the permissions required.",
+      "Permission required"
+    ],
+    "VoiceChannel": [
+      "You are not connected to an audio channel.",
+      "You are not on the same audio channel as me."
+    ]
+  },
+  "commandsa": [
+    "Partenership"
+  ],
+  "commands": {
+    "problem": [
+      "I have a problem. Our developers have been informed and will solve the problem as soon as possible.\n**Sorry for this problem**"
+    ],
+    "fun": {
+      "gif": [
+        "Please put the name of a gif.",
+        "Could not find any results."
+      ],
+      "snake": [
+        "Nice game {PLAYER}, you scored **{SCORE}** points",
+        "Only <@{PLAYER}> can use that buttons!"
+      ],
+      "ball": [
+        "Please specify the question to be asked.",
+        "You must specify a real question!",
+        "You said:",
+        "Reply:",
+        "Yes, but...",
+        "Hmm, frankly not sure!",
+        "NO !",
+        "mmm.... Yeah.",
+        "YEEESSSS !!!!",
+        "Your question must have at least 10 characters."
+      ],
+      "rps": [
+        "Rock Paper Scissors",
+        "Press the button below to choose your element.",
+        "Rock",
+        "Paper",
+        "Scissors",
+        "Accept",
+        "Deny",
+        "<@{PLAYER}> has challenged <@{PLAYER2}> for a game of Rock Paper and Scissors!",
+        "GG, <@{WINNER}> won!",
+        "This game is deadlock!",
+        "<@{PLAYER2}> didn't answer in time. So, I dropped the game!",
+        "Both of you didn't pick something in time. So, I dropped the game!",
+        "<@{PLAYER2}> refused to have a game of Rock Paper and Scissors with you!",
+        "You picked {EMOJI}",
+        "You cannot change your selection!",
+        "Only {AUTHOR} can use that buttons!",
+        "Please, ping a member."
+      ],
+      "QuickC": [
+        "The buttons may appear anytime now!",
+        "First person to press the button who have my face, win. You have **{TIME}**!",
+        "GG, <@{WINNER}> pressed the button in **{TIME} seconds**.",
+        "No one pressed the button in time. So, I dropped the game!",
+        "A game is already runnning in <#{CHANNEL}>. You can't start a new one!"
+      ],
+      "animaux": [
+        "Image not showing? Click here!",
+        "Woof",
+        "TWEET TWEET",
+        "MEOW"
+      ],
+      "meme": [
+        "**Please wait...**"
+      ],
+      "morpion": [
+        "Who wants to make a match? `2 players required`",
+        "noughts-and-crosses",
+        "YOU MUST WAIT FOR ALL THE EMOJI TO BE SET OTHERWISE IT WILL NOT WORK!!!!!",
+        "Game: Noughts and Crosses",
+        "Player",
+        "Player {PLAYER} wins the game.\nIn 5 seconds this room will be deleted",
+        "Equality",
+        "No winner for this match.\nIn 5 seconds this room will be deleted"
+      ],
+      "fight": [
+        "Hit",
+        "Heal",
+        "Stop",
+        "Accept",
+        "Deny",
+        "<@{PLAYER1}> has challenged <@{PLAYER2}> for a fighu!",
+        "GG, <@{WINNER}> won the fighu!",
+        "<@{PLAYER2}> didn't answer in time. So, I dropped the game!",
+        "<@{PLAYER2}> refused to have a fight with you! He is afraid.",
+        "{PLAYER} you go firsu!",
+        "Please wait for your opponents move!",
+        "You cannot heal if your HP is above 80!",
+        "You cannot cancel the fight if your HP is below 20!",
+        "Only {AUTHOR} can use that buttons!"
+      ],
+      "pf": [
+        "Heads",
+        "Tails"
+      ],
+      "GTN": [
+        "Guess The Number",
+        "You have **{TIME}** to guess the number.",
+        "GG, The number which I guessed was **{NUMBER}**. <@{WINNER}> made it in **{TIME}**.\n\n__**Stats of the game:**__\n**Duration**: {TIME}\n**Number of participants**: {NUMBEROFP} Participants\n**Participants**: {PART}",
+        "GG, The number which I guessed was **{NUMBER}**. You made it in **{TIME}**.",
+        "Better luck next time! The number which I guessed was **{NUMBER}**.",
+        "No {AUTHOR}! My number is greater than **{NUMBER}**.",
+        "No {AUTHOR}! My number is smaller than **{NUMBER}**.",
+        "Only <@{AUTHOR}> can use that buttons!",
+        "Cancel",
+        "A game is already runnning in <#{CHANNEL}>. You can't start a new one!"
+      ],
+      "respect": [
+        "**Please wait...**"
+      ],
+      "slap": [
+        "You must mention a member to slap!",
+        "But why do you want to slap me?",
+        "You can't slap yourself! Otherwise you are frankly very stupid!",
+        "OwO, {USERM} was slapped by {USER}! (shame {EMOJI})."
+      ],
+      "wanted": [
+        "**Please wait...**"
+      ]
+    },
+    "helpa": [
+      "Yes",
+      "No",
+      "Slash command?",
+      "Command list",
+      "What is between `<>` is mandatory to put and those between `[]` are not mandatory to put. In 3 minutes the message will be expired and no longer usable. \nTo get information about an command, do {PREFIX}help-[command]",
+      "Description",
+      "Use",
+      "A.k.a",
+      "No a.k.a",
+      "Category",
+      "Permissions",
+      "`No permissions`",
+      "`Moderator`",
+      "Ban members",
+      "Manage messages",
+      "Kick members",
+      "Mute members",
+      "Administrator",
+      "`Server owner`",
+      "Which part do you want?",
+      "Utility part",
+      "Moderator part",
+      "Information part",
+      "Fun part",
+      "Choose the part of the help you want to see...",
+      "Can you use this command only while in a voice channel?"
+    ],
+    "help": {
+      "moderation": [
+        "Moderation commands",
+        "You need to do: `{PREFIX}ban <a member> [the reason]`",
+        "You need to do: `{PREFIX}kick <a member> [the reason]`",
+        "You need to do: `{PREFIX}mute <a member> [the reason]`",
+        "You need to do: `{PREFIX}unmute <a member> [the reason]`",
+        "You need to do: `{PREFIX}clear <a number of messages to clear>`",
+        "You need to do: `{PREFIX}warn <a member> <the reason>`",
+        "You need to do: `{PREFIX}delete-warns <a member> <a number>`",
+        "You need to do: `{PREFIX}total-warns <a member>`",
+        "You need to do: `{PREFIX}set-prefix <a new prefix>`",
+        "You need to do: `{PREFIX}set-welcome <a channel>`",
+        "You need to do: `{PREFIX}set-bye <a channel>`",
+        "You need to do: `{PREFIX}set-logs <a channel>`",
+        "You need to do: `{PREFIX}set-lang <fr/en>`",
+        "You need to do: `{PREFIX}set-ticket`",
+        "You need to do: `{PREFIX}timeout <a member> <a time> [the reason]`"
+      ],
+      "fun": [
+        "Fun Commands",
+        "NOUGHTS AND CROSSES",
+        "HEADS OR TAILS",
+        "You need to do: `{PREFIX}8ball <a question>`",
+        "You need to do: `{PREFIX}fun-dog`",
+        "You need to do: `{PREFIX}dog`",
+        "You need to do: `{PREFIX}fun-cat`",
+        "You need to do: `{PREFIX}cat`",
+        "You need to do: `{PREFIX}fun-fox`",
+        "You need to do: `{PREFIX}fox`",
+        "You need to do: `{PREFIX}fun-bird`",
+        "You need to do: `{PREFIX}bird`",
+        "You need to do: `{PREFIX}noughts-and-crosses`",
+        "You need to do: `{PREFIX}heads-or-tails`",
+        "You need to do: `{PREFIX}message <a member> <the message>`",
+        "You need to do: `{PREFIX}anonymous-message <a member> <the message>`",
+        "You need to do: `{PREFIX}wanted [a member]`",
+        "You need to do: `{PREFIX}respect+ [a member]`",
+        "You need to do: `{PREFIX}slap <a member>`",
+        "You need to do: `{PREFIX}giphy <a name>",
+        "You need to do: `{PREFIX}panda",
+        "You need to do: `{PREFIX}rps",
+        "You need to do: `{PREFIX}quick-click",
+        "You need to do: `{PREFIX}fight",
+        "You need to do: `{PREFIX}GuessTheNumber"
+      ],
+      "info": [
+        "Information Commands",
+        "SERVER STATS",
+        "You need to do: `{PREFIX}ping`",
+        "You need to do: `{PREFIX}uptime`",
+        "You need to do: `{PREFIX}user-info [a member]`",
+        "You need to do: `{PREFIX}bot-info`",
+        "You need to do: `{PREFIX}crypto-price <a cryptocurrency>`",
+        "You need to do: `{PREFIX}server-stats`",
+        "You need to do: `{PREFIX}invite`",
+        "You need to do: `{PREFIX}search-github`",
+        "You need to do: `{PREFIX}github`",
+        "You need to do: `{PREFIX}people-in-space`",
+        "You need to do: `{PREFIX}ytstats`"
+      ],
+      "util": [
+        "UTIL Commands",
+        "POLL",
+        "WEATHER",
+        "WEB SITE",
+        "You need to do: `{PREFIX}poll <a channel> <a time> <the poll>`",
+        "You need to do: `{PREFIX}start-g <a channel> <a time> <the number of winner(s)> <the gift>`",
+        "You need to do: `{PREFIX}reroll-g <id of giveaway>`",
+        "You need to do: `{PREFIX}color`",
+        "You need to do: `{PREFIX}vote`",
+        "You need to do: `{PREFIX}avatar [a member]`",
+        "You need to do: `{PREFIX}report <bug/ping/other> <your problem>`",
+        "You need to do: `{PREFIX}weather <C/F> <a city>`",
+        "You need to do: `{PREFIX}calcul`",
+        "You need to do: `{PREFIX}website`",
+        "You need to do: `{PREFIX}support`",
+        "You need to do: `{PREFIX}remind`",
+        "You need to do: `{PREFIX}apod`"
+      ],
+      "success": [
+        "Help sent with succes !"
+      ],
+      "music": [
+        "Music commands",
+        "Music",
+        "You need to do: `{PREFIX}back`",
+        "You need to do: `{PREFIX}clear`",
+        "You need to do: `{PREFIX}filter <a filter>`",
+        "You need to do: `{PREFIX}loop`",
+        "You need to do: `{PREFIX}nowplaying`",
+        "You need to do: `{PREFIX}pause`",
+        "You need to do: `{PREFIX}play <the link or the title of a song>`",
+        "You need to do: `{PREFIX}queue`",
+        "You need to do: `{PREFIX}resume`",
+        "You need to do: `{PREFIX}save`",
+        "You need to do: `{PREFIX}search <the title of a song>`",
+        "You need to do: `{PREFIX}stop`",
+        "You need to do: `{PREFIX}volume <a numbre between 1 and 250>`"
+      ],
+      "helpBk": [
+        "You will have informations on the {PREFIX}back command",
+        "You will have informations on the `{PREFIX}back` command:",
+        "Put back the previous song."
+      ],
+      "helpPanda": [
+        "You will have informations on the {PREFIX}panda command",
+        "You will have informations on the `{PREFIX}panda` command:",
+        "Got a random image of panda."
+      ],
+      "helpQC": [
+        "You will have informations on the {PREFIX}quick-click command",
+        "You will have informations on the `{PREFIX}quick-click` command:",
+        "Send a message with a lot of buttons and find me faster as possible."
+      ],
+      "helpFight": [
+        "You will have informations on the {PREFIX}fight command",
+        "You will have informations on the `{PREFIX}fight` command:",
+        "You can do a fight with a member.",
+        "{PREFIX}fight <a member>"
+      ],
+      "helpGTN": [
+        "You will have informations on the {PREFIX}GuessTheNumber command",
+        "You will have informations on the `{PREFIX}GuessTheNumber` command:",
+        "Guess a number, who was chosen by Utility Bot."
+      ],
+      "helpYTS": [
+        "You will have informations on the {PREFIX}ytstats command",
+        "You will have informations on the `{PREFIX}ytstats` command:",
+        "Have some statistics about a youtube channel."
+      ],
+      "helpGit": [
+        "You will have informations on the {PREFIX}github command",
+        "You will have informations on the `{PREFIX}github` command:",
+        "Got the github links about Utility Bot."
+      ],
+      "helpSGit": [
+        "You will have informations on the {PREFIX}search-github command",
+        "You will have informations on the `{PREFIX}search-github` command:",
+        "Got informations about the repository of your choise.",
+        "{PREFIX}search-github <the author> <the name of the repository>"
+      ],
+      "helpRm": [
+        "You will have informations on the {PREFIX}remind command",
+        "You will have informations on the `{PREFIX}remind` command:",
+        "Make a remind with Utility Bot.",
+        "{PREFIX}remind <a time> <a remind>"
+      ],
+      "helpCrypto": [
+        "You will have informations on the {PREFIX}crypto-price command",
+        "You will have informations on the `{PREFIX}crypto-price` command:",
+        "Got the price oof the cryptocurrency you want.",
+        "{PREFIX}crypto-price <a curptocurrency>"
+      ],
+      "helpApod": [
+        "You will have informations on the {PREFIX}apod command",
+        "You will have informations on the `{PREFIX}apod` command:",
+        "Have the astronomy picture of the day"
+      ],
+      "helpPIS": [
+        "You will have informations on the {PREFIX}people-in-space command",
+        "You will have informations on the `{PREFIX}people-in-space` command:",
+        "Got the number of person in the space now."
+      ],
+      "helpCll": [
+        "You will have informations on the {PREFIX}clear-list command",
+        "You will have informations on the `{PREFIX}clear-list` command:",
+        "Clear the queue."
+      ],
+      "helpFl": [
+        "You will have informations on the {PREFIX}filter command",
+        "You will have informations on the `{PREFIX}filter` command:",
+        "Add filters to the music you listen to.",
+        "{PREFIX}filter <a filter>, if you want to have all the names of the filters do {PREFIX}all-filters"
+      ],
+      "helpLp": [
+        "You will have informations on the {PREFIX}loop command",
+        "You will have informations on the `{PREFIX}loop` command:",
+        "Loop the music listened to."
+      ],
+      "helpNp": [
+        "You will have informations on the {PREFIX}nowplaying command",
+        "You will have informations on the `{PREFIX}nowplaying` command:",
+        " Have information about the music listened to."
+      ],
+      "helpPause": [
+        "You will have informations on the {PREFIX}pause command",
+        "You will have informations on the `{PREFIX}pause` command:",
+        "Pause listening music."
+      ],
+      "helpQueue": [
+        "You will have informations on the {PREFIX}queue command",
+        "You will have informations on the `{PREFIX}queue` command:",
+        "Have the playlist with all the music that is in the queue."
+      ],
+      "helpRes": [
+        "You will have informations on the {PREFIX}resume command",
+        "You will have informations on the `{PREFIX}resume` command:",
+        "Resume paused music."
+      ],
+      "helpSave": [
+        "You will have informations on the {PREFIX}save command",
+        "You will have informations on the `{PREFIX}save` command:",
+        "You can record the songs you listen to."
+      ],
+      "helpSch": [
+        "You will have informations on the {PREFIX}search command",
+        "You will have informations on the `{PREFIX}search` command:",
+        "Find the exact music by doing a search.",
+        "{PREFIX}search <the title of a song>"
+      ],
+      "helpSk": [
+        "You will have informations on the {PREFIX}skip command",
+        "You will have informations on the `{PREFIX}skip` command:",
+        "You will be able to skip to the next music that is in the queue."
+      ],
+      "helpStop": [
+        "You will have informations on the {PREFIX}stop command",
+        "You will have informations on the `{PREFIX}stop` command:",
+        "Stop the music, the queue will be deleted and Utility Bot will leave the channel."
+      ],
+      "helpVol": [
+        "You will have informations on the {PREFIX}volume command",
+        "You will have informations on the `{PREFIX}volume` command:",
+        "Vous pourrez régler le volume du son entre 1% et 250%.",
+        "{PREFIX}volume <a number between 1 and 250>"
+      ],
+      "helpB": [
+        "You will have informations on the {PREFIX}8ball command:",
+        "You will have informations on the `{PREFIX}8ball` command:",
+        "Ask a question and Utility Bot answers you.",
+        "{PREFIX}8ball <a question>"
+      ],
+      "helpA": [
+        "You will have informations on the {PREFIX}avatar command:",
+        "You will have informations on the `{PREFIX}avatar` command:",
+        "Have your avatar or the avatar of a server member.",
+        "{PREFIX}avatar [a member]"
+      ],
+      "helpBa": [
+        "You will have informations on the {PREFIX}ban command:",
+        "You will have informations on the `{PREFIX}ban` command:",
+        "Banning members",
+        "{PREFIX}ban <a member> [the reason]"
+      ],
+      "helpBi": [
+        "You will have informations on the {PREFIX}bird command:",
+        "You will have informations on the `{PREFIX}bird` command:",
+        "Have a random bird image."
+      ],
+      "helpBo": [
+        "You will have informations on the {PREFIX}bot-info command:",
+        "You will have informations on the `{PREFIX}bot-info` command:",
+        "have informations about Utility Bot"
+      ],
+      "helpCal": [
+        "You will have informations on the {PREFIX}calcul command:",
+        "You will have informations on the `{PREFIX}calcul` command:",
+        "To make calculations."
+      ],
+      "helpCat": [
+        "You will have informations on the {PREFIX}cat command:",
+        "You will have informations on the `{PREFIX}cat` command:",
+        "Have a random cat image."
+      ],
+      "helpSetT": [
+        "You will have informations on the {PREFIX}set-ticket command:",
+        "You will have informations on the `{PREFIX}set-ticket` command:",
+        "Set a ticket system on your server."
+      ],
+      "helpCl": [
+        "You will have informations on the {PREFIX}clear command:",
+        "You will have informations on the `{PREFIX}clear` command:",
+        "Delete messages",
+        "{PREFIX}clear <a number of messages to clear>"
+      ],
+      "helpCo": [
+        "You will have informations on the {PREFIX}color command:",
+        "You will have informations on the `{PREFIX}color` command:",
+        "Have a random color."
+      ],
+      "helpCor": [
+        "You will have informations on the {PREFIX}corona command:",
+        "You will have informations on the `{PREFIX}corona` command:",
+        "Gives you information on Covid-19 on the whole world."
+      ],
+      "helpDW": [
+        "You will have informations on the {PREFIX}delete-warns command:",
+        "You will have informations on the `{PREFIX}delete-warns` command:",
+        "Remove all warns from a member",
+        "{PREFIX}delete-warns <a member>"
+      ],
+      "helpM": [
+        "You will have informations on the {PREFIX}meme command:",
+        "You will have informations on the `{PREFIX}meme` command:",
+        "You can see some memes"
+      ],
+      "helpDog": [
+        "You will have informations on the {PREFIX}dog command:",
+        "You will have informations on the `{PREFIX}dog` command:",
+        "Have a random dog image."
+      ],
+      "helpFox": [
+        "You will have informations on the {PREFIX}fox command:",
+        "You will have informations on the `{PREFIX}fox` command:",
+        "Have a random fox image."
+      ],
+      "helpSlap": [
+        "You will have informations on the {PREFIX}slap command:",
+        "You will have informations on the `{PREFIX}slap` command:",
+        "You can slap a member of the server.",
+        "{PREFIX}slap <a member>"
+      ],
+      "helpFBI": [
+        "You will have informations on the {PREFIX}fun-bird command:",
+        "You will have informations on the `{PREFIX}fun-bird` command:",
+        "Have a random funny bird gif."
+      ],
+      "helpFCat": [
+        "You will have informations on the {PREFIX}fun-cat command:",
+        "You will have informations on the `{PREFIX}fun-cat` command:",
+        "Have a gif of a random funny cat."
+      ],
+      "helpFDog": [
+        "You will have informations on the {PREFIX}fun-dog command:",
+        "You will have informations on the `{PREFIX}fun-dog` command:",
+        "Have a gif of a random funny dog."
+      ],
+      "helpEmbed": [
+        "You will have informations on the {PREFIX}embed command:",
+        "You will have informations on the `{PREFIX}embed` command:",
+        "Send one of your embeds, created [here](https://panel.utilitybot.me/manage/)."
+      ],
+      "helpFFox": [
+        "You will have informations on the {PREFIX}fun-fox command:",
+        "You will have informations on the `{PREFIX}fun-fox` command:",
+        "Have a gif of a random funny fox."
+      ],
+      "helpI": [
+        "You will have informations on the {PREFIX}invite command:",
+        "You will have informations on the `{PREFIX}invite` command:",
+        "Have the invite link from Utility Bot."
+      ],
+      "helpK": [
+        "You will have informations on the {PREFIX}kick command:",
+        "You will have informations on the `{PREFIX}kick` command:",
+        "Kick members",
+        "{PREFIX}kick <a member> [the reason]"
+      ],
+      "helpMsgA": [
+        "You will have informations on the {PREFIX}anonymous-message command:",
+        "You will have informations on the `{PREFIX}anonymous-message` command:",
+        "Send an anonymous message to a server member",
+        "{PREFIX}anonymous-message <a member> <a message>"
+      ],
+      "helpGif": [
+        "You will have informations on the {PREFIX}giphy command:",
+        "You will have informations on the `{PREFIX}giphy` command:",
+        "Get a random gif with a name.",
+        "{PREFIX}giphy <a name>"
+      ],
+      "helpMsg": [
+        "You will have informations on the {PREFIX}message command:",
+        "You will have informations on the `{PREFIX}message` command:",
+        "Send a message to a server member",
+        "{PREFIX}message <a member> <a message>"
+      ],
+      "helpMo": [
+        "You will have informations on the {PREFIX}morpion command:",
+        "You will have informations on the `{PREFIX}morpion` command:",
+        "Do a noughts and crosses with a member of the server (You and the memebre who want to do a noughts and crosses must put the emojis to make the noughts and crosses).",
+        "Noughts and Crosses"
+      ],
+      "helpMu": [
+        "You will have informations on the {PREFIX}mute command:",
+        "You will have informations on the `{PREFIX}mute` command:",
+        "Mute members",
+        "{PREFIX}mute <a member> [the reason]"
+      ],
+      "helpPF": [
+        "You will have informations on the {PREFIX}heads-or-tails` command:",
+        "You will have informations on the `{PREFIX}heads-or-tails` command:",
+        "Tossing a coin",
+        "Heads of Tails"
+      ],
+      "helpP": [
+        "You will have informations on the {PREFIX}ping command:",
+        "You will have informations on the `{PREFIX}ping` command:",
+        "Know Utility Bot's ping"
+      ],
+      "helpPl": [
+        "You will have informations on the {PREFIX}ping command:",
+        "You will have informations on the `{PREFIX}ping` command:",
+        "Know Utility Bot's ping"
+      ],
+      "helpR": [
+        "You will have informations on the {PREFIX}report command:",
+        "You will have informations on the `{PREFIX}report` command:",
+        "Report a problem to the moderators of Utility Bot"
+      ],
+      "helpRg": [
+        "You will have informations on the {PREFIX}reroll-g command:",
+        "You will have informations on the `{PREFIX}reroll-g` command:",
+        "Find another winner of a giveaway.",
+        "{PREFIX}reroll-g <a id of giveaway>"
+      ],
+      "helpRe": [
+        "You will have informations on the {PREFIX}respect+ command:",
+        "You will have informations on the `{PREFIX}respect+` command:",
+        "Gives you respect+.",
+        "{PREFIX}respect+ [a member]"
+      ],
+      "helpSS": [
+        "You will have informations on the {PREFIX}server-stats command:",
+        "You will have informations on the `{PREFIX}server-stats` command:",
+        "have informations about the server."
+      ],
+      "helpSLa": [
+        "You will have informations on the {PREFIX}set-lang command:",
+        "You will have informations on the `{PREFIX}set-lang` command:",
+        "You define the bot language (either by `fr` (French) or `en` (English))"
+      ],
+      "helpSl": [
+        "You will have informations on the {PREFIX}set-logs command:",
+        "You will have informations on the `{PREFIX}set-logs` command:",
+        "Define a server log channel.",
+        "{PREFIX}set-logs <a channel>"
+      ],
+      "helpSp": [
+        "You will have informations on the {PREFIX}set-prefix command:",
+        "You will have informations on the `{PREFIX}set-prefix` command:",
+        "Change the prefix of Utility Bot on the server where the command was made.",
+        "{PREFIX}set-prefix <your new prefix>"
+      ],
+      "helpSw": [
+        "You will have informations on the {PREFIX}set-welcome command:",
+        "You will have informations on the `{PREFIX}set-welcome` command:",
+        "Specify the channel where the welcome message will be.",
+        "{PREFIX}set-welcome <a channel>"
+      ],
+      "helpSetB": [
+        "You will have informations on the {PREFIX}set-bye command:",
+        "You will have informations on the `{PREFIX}set-bye command:`",
+        "Set the channel where will have the bye message.",
+        "{PREFIX}set-bye <a channel>"
+      ],
+      "helpSwe": [
+        "You will have informations on the {PREFIX}site-web command:",
+        "You will have informations on the `{PREFIX}site-web` command:",
+        "Have the website link."
+      ],
+      "helpSs": [
+        "You will have informations on the {PREFIX}poll command:",
+        "You will have informations on the `{PREFIX}poll` command:",
+        "Do some polls and give it a time.",
+        "{PREFIX}poll <a channel> <a time> <the poll>"
+      ],
+      "helpSg": [
+        "You will have informations on the {PREFIX}start-g command:",
+        "You will have informations on the `{PREFIX}start-g` command:",
+        "Create a giveaway.",
+        "{PREFIX}start-g <a channel> <a time> <a number of winner> <the gift>"
+      ],
+      "helpSu": [
+        "You will have informations on the {PREFIX}support command:",
+        "You will have informations on the `{PREFIX}support` command:",
+        "Join the support server."
+      ],
+      "helpRps": [
+        "You will have informations on the {PREFIX}rps command:",
+        "You will have informations on the `{PREFIX}rps` command:",
+        "Play to Rock Paper Scissors with a member.",
+        "{PREFIX}rps <a member>"
+      ],
+      "helpT": [
+        "You will have informations on the {PREFIX}weather command:",
+        "You will have informations on the `{PREFIX}weather` command:",
+        "Have a weather forecast of a place.",
+        "{PREFIX}weather <C|F> <a city>"
+      ],
+      "helpTi": [
+        "You will have informations on the {PREFIX}timeout command:",
+        "You will have informations on the `{PREFIX}timeout` command:",
+        "Timeout a member for a time.",
+        "{PREFIX}timeout <a memeber> <time> (reason)"
+      ],
+      "helpTw": [
+        "You will have informations on the {PREFIX}total-warns command:",
+        "You will have informations on the `{PREFIX}total-warns` command:",
+        "See all of a member's warns.",
+        "{PREFIX}total-warns <a member>"
+      ],
+      "helpUm": [
+        "You will have informations on the {PREFIX}unmute command:",
+        "You will have informations on the `{PREFIX}unmute` command:",
+        "Unmute a member.",
+        "{PREFIX}unmute <a member> (mute)>"
+      ],
+      "helpUp": [
+        "You will have informations on the {PREFIX}uptime command:",
+        "You will have informations on the `{PREFIX}uptime` command:",
+        "Know how long Utility Bot has been online."
+      ],
+      "helpUI": [
+        "You will have informations on the {PREFIX}user-info command:",
+        "You will have informations on the `{PREFIX}user-info` command:",
+        "have informations about you or a member of the server.",
+        "{PREFIX}user-info [a member]"
+      ],
+      "helpV": [
+        "You will have informations on the {PREFIX}vote command:",
+        "You will have informations on the `{PREFIX}vote` command:",
+        "Lets have the top.gg link to vote for Utility Bot."
+      ],
+      "helpWa": [
+        "You will have informations on the {PREFIX}wanted command:",
+        "You will have informations on the `{PREFIX}wanted` command:",
+        "Make a search card of you or someone else.",
+        "{PREFIX}wanted [a member]"
+      ],
+      "helpW": [
+        "You will have informations on the {PREFIX}warn command:",
+        "You will have informations on the `{PREFIX}warn` command:",
+        "Warn members.",
+        "{PREFIX}warn <a member> [the reason]"
+      ]
+    },
+    "modsa": [
+      "Moderator",
+      "Reason",
+      "No reason given.",
+      "This user is not located in the server!",
+      "You must mention a user!",
+      "Channel",
+      "Server"
+    ],
+    "mods": {
+      "ban": [
+        "You cannot ban bots.",
+        "You cannot ban staff members.",
+        "A member has been banned !",
+        "Banned member",
+        "successfully banned!",
+        "I dont have the **Permissions** to ban users! [BAN_MEMBERS]"
+      ],
+      "clear": [
+        "You must put the number of messages to delete!",
+        "Are you serious less than 5 messages you can not do it alone ?!",
+        "I cannot delete more than 100 messages!",
+        "messages delete!",
+        "A member to delete messages!",
+        "Number of message to delete",
+        "Small problem😅... I couldn't delete the messages (probably the messages are older than 14 days because I can't delete messages older than 14 days.)",
+        "You need to put a number!"
+      ],
+      "kick": [
+        "You cannot kick bots.",
+        "You cannot kick staff members.",
+        "was successfully kicked!",
+        "A member was kicked!",
+        "Kick member",
+        "I can't kick this member..."
+      ],
+      "mute": [
+        "You must mention a mute member!",
+        "You cannot mute the owner of the server!!",
+        "You cannot mute members higher than you!",
+        "I cannot mute this member!",
+        "A member has been mute!",
+        "Mute member",
+        "is mute!",
+        "This member is already muted."
+      ],
+      "totalW": [
+        "has *{WARNINGS}* warn(s)"
+      ],
+      "unmute": [
+        "You cannot unmute a higher ranking member than you!",
+        "I can't unmute this member!",
+        "This person is not mute so you cannot unmute him!",
+        "A member has been unmute!",
+        "Unmute member",
+        "is now unmuted!"
+      ],
+      "warn": [
+        "Please mention or put the member's ID.",
+        "You can't warn bots.",
+        "You can't warn yourself.",
+        "You can't warn the owner of the server!!",
+        "You have just been warn.",
+        "was warn.",
+        "A member has been warn!",
+        "Warn member",
+        "Number of warn"
+      ],
+      "timeout": [
+        "You can exclude a member from {30000} and maximum {2419200000}.",
+        "{USER} was excluded during {TIME} !",
+        "Please mention a memeber to tiemout.",
+        "You can't timeout yourself.",
+        "You can't timeout me."
+      ]
+    },
+    "ownera": [
+      "Member",
+      "Moderator",
+      "Channel"
+    ],
+    "owner": {
+      "deleteW": [
+        "Please put the number of warns to remove or else please put `all` to remove all these warns.",
+        "Please put either `all` to remove all warns or a number of warn(s) to remove",
+        "You must mention the member to remove the warns from.",
+        "You cannot remove your own warns!",
+        "You can't warn bots so you can't remove warns from a bot.",
+        "You cannot remove warns from members with a role higher than yours.",
+        "I just removed all warnings from {MEMBER}",
+        "I just removed all warns from a member.",
+        "Member",
+        "Responsible moderator",
+        "I just deleted {NUMBER} warn(s) at {MEMBER}",
+        "I just removed a number of warn(s) from a member.",
+        "Number of warn(s) removed",
+        "Member's Total Warn",
+        "A problem has occurred, please report it to support by doing `{PREFIX}report` and selecting `bug`"
+      ],
+      "setT": [
+        "To have The Ticket System you need to buy {TheBot} on the shop in the Web Site.\n\nPrice : $17.99, Save 50% in the momenu! $17.99 to $8.99."
+      ],
+      "rerollG": [
+        "Please put the message id where there is the giveaway.",
+        "No giveaway to find thanks to this id =>",
+        "Giveaway relaunch!",
+        "The giveaway hasn't finished so I can't find another winner."
+      ],
+      "setB": [
+        "Goodbye Channel has been deleted!",
+        "Please mention the salon in the message.",
+        "Goodbye channel seu!",
+        "A member has defined the goodbye channel!",
+        "Goodbye channel remove!"
+      ],
+      "setL": [
+        "Choose...",
+        "Choose the next language of Utility Bot, either French or English.",
+        "English",
+        "French",
+        "Set the language of Utility Bot in English",
+        "Set the Language of Utility Bot in French"
+      ],
+      "setLo": [
+        "Please choose a text channel.",
+        "Channel set",
+        "The log channel has been defined."
+      ],
+      "setP": [
+        "Please specify the new prefix to put.",
+        "You cannot put space in your prefix.",
+        "A member has reset the server prefix!",
+        "New prefix",
+        "Prefix reseu!",
+        "A prefix cannot be more than 5 characters long.",
+        "The server prefix has been changed!"
+      ],
+      "setW": [
+        "A member to delete the welcome channel!",
+        "Welcome channel remove!",
+        "Please mention the channel in the message.",
+        "A member has defined the welcome channel!",
+        "Welcome channel seu!"
+      ],
+      "poll": [
+        "You must mention a channel!",
+        "You must specify the polling time.",
+        "You must add a text to make your poll!",
+        "Poll made by",
+        "POLL",
+        "The time of the poll : {DURATION}",
+        "A member made a poll!",
+        "Poll content",
+        "Time of the poll",
+        "Your poll is finished!",
+        "Your poll has been published!"
+      ],
+      "startG": [
+        "Please mention the channel where the giveaway will be.",
+        "Please give the duration of the giveaway.",
+        "The time must end with d => (day(s)), h => (hour(s)), m => (minutes), s => (seconds).",
+        "Please specify the number of winner(s).",
+        "Please add the gift.",
+        "NEW GIVEAWAY",
+        "GIVEAWAY END",
+        "Limited time",
+        "React with {EMOJI} to participate!",
+        "You just won",
+        "2 members participated, too bad. In addition it was a good gift",
+        "Host by",
+        "Winner(s)",
+        "Ending at",
+        "hour(s)",
+        "day(s)",
+        "A member started a giveaway!",
+        "Gift",
+        "Number of winners",
+        "Time of the giveaway",
+        "Gift:",
+        "seconds"
+      ]
+    },
+    "music": {
+      "AnyM": [
+        "No music currently playing!"
+      ],
+      "SomethW": [
+        "Something went wrong. Please do `{PREFIX}report` then select **bug** and write the issue"
+      ],
+      "AllF": [
+        "Here are all the filters available."
+      ],
+      "Back": [
+        "There was no music playing before.",
+        "Previous music started playing..."
+      ],
+      "Clear": [
+        "There is already no music in queue.",
+        "The queue has just been cleared."
+      ],
+      "Filter": [
+        "Please enter a calid filter name.\n\nYou can do `{PREFIX}all-filters` to see all of filters available.",
+        "I counldn't find a filter with this name.\n\nYou can do `{PREFIX}all-filter` to see all of filters available.",
+        "Filter applied",
+        "**Remember**, if the music is long, the filter application time may be longer accordingly."
+      ],
+      "Loop": [
+        "You should disable loop mode of existing music first, `{PREFIX}loop`.",
+        "Inactive",
+        "Active",
+        "The whole sequence will repeat non-stop.",
+        "In Loop mode you must disable existing queue first, `{PREFIX}loop queue`.",
+        "Current music will be repeated non-stop (You can repeat the queue too with the option `{PREFIX}loop queue`.)."
+      ],
+      "NowP": [
+        "disabled",
+        "queue",
+        "Duration",
+        "Save Song",
+        "Forever",
+        "Endless (Live)",
+        "Nothing",
+        "Filter(s):"
+      ],
+      "Pause": [
+        "The currently playing music named **{TITLE}** has stopped"
+      ],
+      "Play": [
+        "Write the name of the music you want to search.",
+        "No result found!",
+        "I can't join audio channel.",
+        "Your",
+        "Your playlist",
+        "Your track",
+        "Loading..."
+      ],
+      "Queue": [
+        "No music in queue after current.",
+        "Server Music List",
+        "Started by",
+        "And",
+        "Other Song(s)...",
+        "There are **{SONGS}** Songs in the List.",
+        "Currently Playing:"
+      ],
+      "Resume": [
+        "start playing again."
+      ],
+      "Save": [
+        "Registered track:",
+        "Saved server:",
+        "I sent the name of the music via private message.",
+        "Unable to send you private message."
+      ],
+      "Search": [
+        "Please enter a valid song name.",
+        "No search results found.",
+        "Searched Music:",
+        "Choose a song between **1** and **{MAXT}** write send or write **cancel** and cancel selection.",
+        "Call cancelled.",
+        "Error: select a song between **1** and **{MAXT}** and write send or type **cancel** and cancel selection.",
+        "I can't join audio channel.",
+        "Loading your music call.",
+        "Song search time expired. Retype `{PREFIX}search <your music>` to retry."
+      ],
+      "Skip": [
+        "was skipped."
+      ],
+      "Stop": [
+        "The music playing on this server has been turned off, see you next time!"
+      ],
+      "Volume": [
+        "Current volume:",
+        "**To change the volume, with `1` to `{MAXV}`, type a number between.**",
+        "The volume you want to change is already the current volume",
+        "Type a number between `1` and `{MAXV}` to change the volume .",
+        "Volume changed:"
+      ]
+    },
+    "util": {
+      "Serveur": "Server",
+      "embed": [
+        "You must specify an embed ID.",
+        "An ID must have 3 characters.",
+        "This ID is invalid.\n\n1. Make sure the ID exists.\n2. Make sure it belongs to you.\n3. Make sure the ID is spelled correctly."
+      ],
+      "apod": [
+        "Astronomy Picture of the Day"
+      ],
+      "avatar": [
+        "**{USER}**'s avatar and banner.",
+        "**{USER}** haven't banner so his color of banner is in the color of the message.",
+        "**{USER}** haven't banner and nothing for the color of the banner."
+      ],
+      "SGit": [
+        "You must provide an author and repository name.",
+        "No description."
+      ],
+      "Rm": [
+        "You need to put the time! Like this : `30s`, `1m`, `1h` or `1d`.",
+        "You need to put a number!",
+        "REMINDER:",
+        "Your reminder:",
+        "Your reminder has been set. I will remind you in",
+        "seconds.",
+        "hour(s).",
+        "day(s).",
+        "You must put obligatorily one of these suffixes: `s`, `m`, `h` or `d`.",
+        "No reminder given"
+      ],
+      "Pis": [
+        "Oooh! Currently **{NUMBER}** people in space!"
+      ],
+      "YTS": [
+        "Please enter a channel name.",
+        "Channel Name",
+        "Subscribers Count",
+        "Videos Count",
+        "Channel Link",
+        "Fetching stats..."
+      ],
+      "BI": [
+        "Utility Bot's ID",
+        "Information about Utility Bot",
+        "Created on",
+        "Developer",
+        "Utility Bot's version",
+        "Utility Bot's prefix",
+        "System Information",
+        "RAM usage",
+        "Uptime",
+        "day(s)",
+        "hour(s)",
+        "seconds",
+        "Latency",
+        "Node version used",
+        "Discord.js version used",
+        "CPU type",
+        "Speed",
+        "Memory",
+        "Used"
+      ],
+      "Crypto": [
+        "Put the **name** of the cryptocurrency. Example: bitcoin.\n**REMINDER**: Do not put the **symbol** (example: btc) but the **name**. If the name is a multi-word name (example: shiba INU), put a `-` between each word (example: shiba-inu)",
+        "No cryptocurrency with this name was found.",
+        "Price"
+      ],
+      "calcul": [
+        "This command is disabled.",
+        "The provided equation is invalid!",
+        "Only <@{AUTHOR}> can use that buttons!"
+      ],
+      "embedB": [
+        "Default Title",
+        "Default Description",
+        "Please wait, adding reactions...",
+        "What to change in your embed?",
+        "Choose the appropriate reactions.",
+        "Edit the Title",
+        "Edit the Description",
+        "Edit the Author",
+        "Edit the Footer",
+        "Edit the Thumbnail",
+        "Add a Timestamp",
+        "Edit the Image",
+        "Edit URL",
+        "Change color",
+        "Add a Field",
+        "Confirm Embed",
+        "What is your title?",
+        "Title successfully changed!",
+        "What's your description?",
+        "Description successfully changed!",
+        "Who is the Author?",
+        "Author succesfully changed!",
+        "What's your Footer?",
+        "Footer successfully changed!",
+        "What is your Thumbnail?",
+        "Incorrect thumbnail.",
+        "Thumbnail successfully changed!",
+        "Timestamp successfully add!",
+        "What's your Image?",
+        "Incorrect image.",
+        "Image successfully changed!",
+        "What url should I put?",
+        "This is not a URL.",
+        "URL change successfully!",
+        "What color should I put?",
+        "This is not a (digital) color.",
+        "Color successfully changed!",
+        "What is the title of your Field ?",
+        "What is the description of your Field?",
+        "Color successfully changed!",
+        "Please put the id of the room where I have to send the embed",
+        "Invalid channel.",
+        "Embed successfully send!",
+        "What is the avatar url of the Author?",
+        "You must have a thumbnail that is in one of these 4 formats: `.png`, `.jpg`, `.jpeg`, `.gif`",
+        "You took more than 1 minute to respond. Please put back the reaction to refresh."
+      ],
+      "color": [
+        "Random HEX code : #{HEX}"
+      ],
+      "invite": [
+        "Want to {UtilityBot}? No problem!",
+        "INVITE Utility Bot"
+      ],
+      "github": [
+        "Here is [my github profile](https://github.com/Elpistolero131), but if you want [the code of Utility Bot is on github](https://github.com/Elpistolero131/UtilityBot) because Utility Bot is ** Open Source**, you can take a short tour and then maybe put your proposed changes and make a `Fork` and then maybe your part of code will be on Utility Bou!"
+      ],
+      "messageA": [
+        "A anonymous member has sent you a message:",
+        "Problem, please [contact] to report this problem!"
+      ],
+      "message": [
+        "You need to ping a member!",
+        "You need to set the message to send!",
+        "{USER} send a message:",
+        "The message has been senu!",
+        "Message sent to **{USER}**"
+      ],
+      "report": [
+        "What is the type of problem?",
+        "Please specify the type of problem to reporu! (`bug`, `latency` or `other`) then write your report.",
+        "Bug",
+        "Ping",
+        "Other",
+        "If it's a bug",
+        "If it's a problem about the ping",
+        "if it's another problem (bad handwriting, translation mistake, ...)",
+        "Now, write your problem:",
+        "Thanks for this reporu!",
+        "Your problem is:",
+        "Do you want confirm your report and send it ? (👍: yes, 👎: no)",
+        "reported a problem!",
+        "User ID",
+        "Name of the server",
+        "ID of the server",
+        "Type of problem",
+        "The problem",
+        "You need to give more details about your problem."
+      ],
+      "Ss": [
+        "Nothing",
+        "Low",
+        "Medium",
+        "Here are the statistics",
+        "Owner",
+        "Verification levels",
+        "Number of role(s)",
+        "Number of channel(s)",
+        "AFK Timeout",
+        "Total member(s)",
+        "Number of members connected",
+        "Number of members didn't connected",
+        "Number of boost",
+        "Boost level",
+        "Number of emoji(s) on the server",
+        "Prefix",
+        "No boost"
+      ],
+      "Sw": [
+        "Web Site",
+        "You want the join the {WebSite} server?"
+      ],
+      "don": [
+        "Thank you for wanting to support me! You can subscribe to a subscription and have some advantages or just make a small donation without advantage to support me and the developers."
+      ],
+      "support": [
+        "You want {SupportServer}?"
+      ],
+      "temp": [
+        "Please put a valid temperature measurement (Celsius -> `C` | Fahrenheit -> `F`).",
+        "Please put a temperature measurement (Celsius -> `C` | Fahrenheit -> `F`",
+        "Please put the city where to look for the weather.",
+        "Weather",
+        "Weather in",
+        "Temperature",
+        "Day",
+        "Felt",
+        "Humidity",
+        "Wind",
+        "Are you sure this city exists?"
+      ],
+      "uptime": [
+        "day(s)",
+        "hour(s)",
+        "minutes",
+        "seconds"
+      ],
+      "Ui": [
+        "Online",
+        "Inactive",
+        "Do Not Disturb",
+        "Offline",
+        "Invisible",
+        "In Stream",
+        "Information on",
+        "None",
+        "Yes",
+        "No",
+        "Play at",
+        "Nothing",
+        "Joined the server on",
+        "Roles",
+        "No roles",
+        "Flags",
+        "None"
+      ],
+      "Vote": [
+        "Oooooh! Thank you to support me! I love you! ❤️"
+      ]
+    }
+  },
+  "events": {
+    "server": "server",
+    "guildC": [
+      "Thanks for inviting me to your server!",
+      "Here is a little more information about me!",
+      "Support server",
+      "Web Site",
+      "Support",
+      "If you want to help the Elpistolero13🔫#0001",
+      "to have the list of commands"
+    ],
+    "guildMA": [
+      "Welcome",
+      "on"
+    ],
+    "guildMR": [
+      "left",
+      "Good Bye"
+    ],
+    "MsgCreate": [
+      "Here is my prefix on this server: __**{PREFIX}**__\nAnd to get all of the commands it's: **{PREFIX}help**"
+    ],
+    "TicketOpt": [
+      "The data for this system is outdated.",
+      "You cannot use that button.",
+      "The ticket is already locked.",
+      "This ticket is now locked for reciewing.",
+      "The ticket is already unlocked.",
+      "This ticket is now unlock.",
+      "The ticket is already closed. Please wait for it to get deleted.",
+      "Transcript\nType: **{TYPE}**\nAuthor: <@{AUTHOR}>\nID: **{ID}**",
+      "The transcript is now saved [TRANSCRIPT]({MSGURL})",
+      "This ticket is already claimed by <@{BY}>.",
+      "This ticket is now claimed by {MEMBER}",
+      "This ticket isn't claimed.",
+      "This ticket is now unclaimed."
+    ],
+    "InitialTicket": [
+      "Save & Close Ticket",
+      "Lock Ticket",
+      "Unlock Ticket",
+      "Claim Ticket",
+      "Unclaim Ticket",
+      "{MEMBER} here is your ticket.",
+      "{MEMBER} your ticket has been created: <#{DBCHANNEL}>",
+      "Please setup the channel of transcript with the commande `{PREFIX}setup-transcript <mention the channel>`"
+    ],
+    "ReactionRoles": [
+      "{RNAME} has been removed from you!",
+      "{RNAME} has been added to you!"
+    ]
+  }
+}
