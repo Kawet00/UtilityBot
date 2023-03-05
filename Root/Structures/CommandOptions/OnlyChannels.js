@@ -1,20 +1,27 @@
-const emotes = require('../../Storage/json/emotes.json')
-const colors = require('../../Storage/json/colors.json')
-const db = require('quick.db')
+const {bold} = require("chalk");
+const {getLang} = require('../../Storage/db/manager');
+const {EmbedBuilder} = require('discord.js');
+const {developers} = require('../../Storage/json/Config.json');
+const emotes = require('../../Storage/json/emotes.json');
+const colors = require('../../Storage/json/colors.json');
 
-module.exports = async function (client, message, command, Discord) {
-    const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
-    if (!command.onlyChannels) return false;
-    if (command.onlyChannels.some(id => id == message.channel.id)) return false;
+module.exports = async (client, message, Command, InteractionType) => {
+    const lang = client.langs.get(await getLang(message.guild.id) || 'en')
+    if (!Command.onlyChannels) return true;
+    if (!message.guild) {
+        console.log(bold.blue(`[WARN] Guild object not found in OnlyChannels option of ${Command.name} of ${InteractionType}.`))
+        return true;
+    }
+    Command.onlyChannels.forEach(Id => {
+        if (!message.guild.channels.cache.get(Id)) console.log(bold.yellow(`[WARN] Invalid Channel Id [${Id}] provided in OnlyChannels option of ${Command.name} of ${InteractionType}.`))
+        return true;
+    })
+
+    if (Command.onlyChannels.some(Id => message.channel.id == Id)) return true;
     else {
-        let onlyChannels = []
-        command.onlyChannels.forEach(id => {
-            onlyChannels.push(`<#${id}>`)
-        })
-        if (command.returnOnlyChannels == false || command.returnNoErrors) return true;
-        else message.reply({
-            embeds: [
-                new Discord.MessageEmbed()
+        if (Command.returnErrors == false || Command.returnOnlyChannelsError == false) return false;
+        else {
+            const errorEmbed = new EmbedBuilder()
                 .setAuthor({
                     name: message.member.user.tag,
                     iconURL: message.member.user.displayAvatarURL({
@@ -25,12 +32,17 @@ module.exports = async function (client, message, command, Discord) {
                 .setTimestamp()
                 .setDescription(`${emotes.blob.blob_n} ┇ ${lang.cmdOptions.OnlyChannels[0]}`)
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
-                .addField(lang.cmdOptions.OnlyChannels[1], `•${onlyChannels.join("\n•")}`)
-            ],
-            allowedMentions: {
-                repliedUser: false
-            }
-        })
-        return true;
+                .addFields(
+                    {name: lang.cmdOptions.OnlyChannels[1], value: `•${onlyChannels.join("\n•")}`}
+                )
+
+            message.reply({
+                embeds: [errorEmbed],
+                allowedMentions: {
+                    repliedUser: false
+                }
+            })
+            return false;
+        }
     }
 }

@@ -1,43 +1,33 @@
-const {
-    GuildSettings
-} = require('../Storage/db/Models')
-const colors = require('../Storage/json/colors.json');
-const emotes = require('../Storage/json/emotes.json');
+const CommandOptionsVerifier = require("../Structures/CommandOptions/LoadCommandOptions");
+const {getPrefix} = require('../Storage/db/manager');
 
 module.exports = {
     name: "messageCreate",
-    run: async (message, client, container) => {
-        if (message.author.bot || message.channel.type == 'DM') return;
-        const guildData = await GuildSettings.findOne({
-            GuildID: message.guild.id
-        })
-        const Prefix = guildData?.prefix
-        const lang = client.langs.get(guildData?.lang)
+    run: async (message, client) => {
+        if (!message.guild || message.author.bot) return;
+        const Prefix = await getPrefix(message.guild.id);
+        if (!message.content.startsWith(Prefix)) return;
+        const CommandName = message.content.toString().slice(Prefix.length).trim().split(" ")[0];
+        const Command = client.messageCommands.get(CommandName) ?? client.messageCommands.get(client.messageCommands_Aliases.get(CommandName));
+        if (!Command) return;
+        let args = message.content.slice(Prefix.length).trim();
+        if (args.toLowerCase().startsWith(CommandName)) args = args.slice(CommandName.length).trim().split(" ");
 
-        const loadCommandOptions = require("../Structures/CommandOptions/loadCommandOptions")
+        if (Command.limitUses && !isNaN(Command.limitUses)) {
+            const limitUsesCollection = client.limitCommandUses;
+            let LimitedUsesCount = limitUsesCollection.get(`${Command.name}_MessageCommand`) ?? -1;
+            limitUsesCollection.set(`${Command.name}_MessageCommand`, Math.floor(LimitedUsesCount + 1));
+        }
 
-        if (message.content === `<@!787306158301511691>`) return message.reply({
-            embeds: [
-                new container.Discord.MessageEmbed()
-                .setDescription(`${emotes.autre.UT_LOGO} ┇ ${lang.events.MsgCreate[0].replace('{PREFIX}', Prefix).replace('{PREFIX}', Prefix)}`)
-                .setColor(colors.PERSO)
-                .setTimestamp()
-                .setFooter({
-                    text: `© ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                })
-            ]
-        });
+        if (!CommandOptionsVerifier(client, message, Command, false, "MessageCommand")) return;
 
-        if (!message.content.toLowerCase().startsWith(Prefix)) return;
+        if (Command.expireAfter && !isNaN(Command.expireAfter)) {
+            const expireAfterCollection = client.expireAfter;
+            if (!expireAfterCollection.get(`${Command.name}_MessageCommand`)) expireAfterCollection.set(`${Command.name}_MessageCommand`, Date.now());
+        }
 
-        const cmdName = message.content.toString().toLowerCase().slice(Prefix.length).trim().split(" ")[0]
-        const command = client.commands.messageCommands.get(cmdName) ?? client.commands.messageCommands.get(client.commands.aliases.get(cmdName))
-
-        if (!command) return;
-        if (command.allowBots) loadCommandOptions(client, message, command, false)
-        else if (command.guildOnly == false) loadCommandOptions(client, message, command, false)
-        else if (!message.guild) return;
-        else loadCommandOptions(client, message, command, false)
+        if (Command.allowInDms) Command.run(client, message, args);
+        else if (Command.allowBots) Command.run(client, message, args);
+        else Command.run(client, message, args);
     }
 }

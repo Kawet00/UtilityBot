@@ -12,10 +12,10 @@
       "Musique lancée : **{TITLE}** -> Salon: **{CHANNEL}**"
     ],
     "trackAdd": [
-      "**{TITLE}** ajouté a la playlist."
+      "**{TITLE}** ajouté à la playlist."
     ],
     "botDisconnect": [
-      "Une personne du salon m'a kick du salon, tout la playlist a été supprimée!"
+      "Une personne du salon m'a kick du salon, toute la playlist a été supprimée!"
     ],
     "channelEmpty": [
       "J'ai quitté le salon car il n'y a plus personne dans le salon."
@@ -30,50 +30,56 @@
       "Non requis"
     ],
     "NsfwChannel": [
-      "Vous devez être dans un salon NSFW pour éxécuté cette commande !"
+      "Vous devez être dans un salon NSFW pour exécuter cette commande !"
     ],
     "AnyUserPerm": [
       "Vous avez besoin de l'une de ces permissions pour cette commande.",
       "Non requis"
     ],
     "ClientPerm": [
-      "J'ai besoin de ces permissions pour exécuté cette commande.",
-      "Permission(s) requise"
+      "J'ai besoin de ces permissions pour exécuter cette commande.",
+      "Permission(s) requise(s)"
     ],
     "Cooldown": [
-      "Vous êtes acctuellement en cooldown pour cette commande inutile de retaper la commande.",
+      "Vous êtes actuellement en cooldown pour cette commande, inutile de retaper la commande.",
       "Temp du cooldown"
     ],
     "OnlyChannels": [
-      "Cette commande peut être utilisé que dans certain salon.",
+      "Cette commande peut être utilisée que dans certains salons.",
       "Ces salons"
     ],
     "OnlyGuild": [
-      "Cette commande peut être utilisé que dans certain serveurs.",
+      "Cette commande peut être utilisée que dans certains serveurs.",
       "Ces serveurs"
     ],
     "OnlyUsers": [
-      "Cette commande peut être utilisé que par certaine personnes.",
+      "Cette commande peut être utilisée que par certaines personnes.",
       "Ces personnes"
     ],
     "OwnerOnly": [
-      "Cette commande est réservé au développeur de Utility Bot."
+      "Cette commande est réservée au développeurs d'Utility Bot."
     ],
     "RequiredAnyRole": [
-      "Vous avez besoin d'avoir de l'un de ces roles pour cette commande.",
-      "Ces roles"
+      "Vous avez besoin d'avoir de l'un de ces rôles pour cette commande.",
+      "Ces rôles"
     ],
     "RequiredRoles": [
-      "Vous n'avez pas le role requis.",
-      "Role requis"
+      "Vous n'avez pas le rôle requis.",
+      "Rôle requis"
     ],
     "UserPerms": [
-      "Vous n'avez pas les permissions requise pour éxécuté cette commande.",
-      "Permission(s) requise"
+      "Vous n'avez pas les permissions requises pour exécuter cette commande.",
+      "Permission(s) requise(s)"
     ],
     "VoiceChannel": [
-      "Vous n'êtes pas connecter a un salon audio.",
+      "Vous n'êtes pas connecté à un salon audio.",
       "Vous n'êtes pas dans le même salon audio que moi."
+    ],
+    "LimitUses": [
+      "Cette commande a atteint sa limite d’utilisation et ne peut plus être utilisée."
+    ],
+    "ExpireAfter": [
+      "Cette commande a atteint sa date d’expiration et ne peut plus être utilisée."
     ]
   },
   "commandsa": [
@@ -81,16 +87,16 @@
   ],
   "commands": {
     "problem": [
-      "J'ai un problème. Nos développeurs ont été informé et vont réglé le problème le plus rapidement possible.\n**Excusé nous pour ce dérangement**"
+      "J'ai un problème. Nos développeurs ont été informé et vont régler le problème le plus rapidement possible.\n**Excusé nous pour ce dérangement**"
     ],
     "fun": {
       "gif": [
-        "Veuilez mettre le nom d'un gif.",
+        "Veuillez mettre le nom d'un gif.",
         "Je trouve aucun résultat."
       ],
       "ball": [
-        "Veuillez spécifiez votre question.",
-        "Vous devez poser une vrai question !",
+        "Veuillez spécifier votre question.",
+        "Vous devez poser une vraie question !",
         "Vous avez dit :",
         "Réponse :",
         "Oui, mais...",
@@ -98,7 +104,7 @@
         "NON !",
         "mmm...Ouai.",
         "OUIIIIII !!!!",
-        "Votre question doit avoir minimum 10 caractères."
+        "Votre question doit comporter un minimum de 10 caractères."
       ],
       "fight": [
         "Frapper",
@@ -107,53 +113,53 @@
         "Accepté",
         "Refusé",
         "<@{PLAYER1}> à challenger <@{PLAYER2}> pour un combat !",
-        "GG, <@{WINNER}> à gagné le combat !",
-        "<@{PLAYER2}> n'a pas répondu dans le temps. Donc, j'ai arrété le jeu !",
-        "<@{PLAYER2}> à refusé d'avoir un combat avec vous ! Il a peur.",
-        "{PLAYER} vous y allez en premier !",
-        "Veuillez attendre que vous adversaire fasse quelque chose !",
+        "GG, <@{WINNER}> a gagné le combat !",
+        "<@{PLAYER2}> n'a pas répondu dans le temps. Donc, j'ai arrêté le jeu !",
+        "<@{PLAYER2}> n'a pas voulu se battre avec vous! Il a peur.",
+        "{PLAYER}, vous êtes le premier!",
+        "Veuillez attendre que votre adversaire agisse !",
         "Vous ne pouvez pas vous guérir si vous avez plus de 80HP !",
-        "Vous ne pouvez pas arrété si vous êtes en dessous de 20HP !",
-        "Seulement {AUTHOR} peut utilisé ces bouttons !"
+        "Vous ne pouvez pas arrêté si vous êtes en dessous de 20HP !",
+        "Seulement {AUTHOR} peut utiliser ces boutons !"
       ],
       "snake": [
         "Bien joué {PLAYER}, vous avez fait **{SCORE}** points",
-        "Seulement {PLAYER} peut utilisé ces bouttons !"
+        "Seulement {PLAYER} peut utiliser ces boutons !"
       ],
       "rps": [
-        "Pierre Papier Ciseaux",
-        "Appuyez sur le bouton ci-dessous pour choisir votre objet.",
+        "Pierre, Papier, Ciseaux",
+        "Cliquez sur le bouton ci-dessous afin de sélectionner votre objet.",
         "Pierre",
         "Papier",
         "Ciseaux",
         "Accepté",
-        "Refuser",
-        "<@{PLAYER}> à challenger <@{PLAYER2}> pour une partie de Pierre Papier Ciseaux !",
-        "GG, <@{WINNER}> à gagné !",
+        "Refusé",
+        "<@{PLAYER}> à challenger <@{PLAYER2}> pour une partie de Pierre, Papier, Ciseaux !",
+        "GG, <@{WINNER}> a gagné !",
         "Ce jeu est dans l'impasse , égalité !",
-        "<@{PLAYER2}> n'a pas répondu dans le temps. Donc, J'ai arrété la partie !",
-        "Tous les deux vous n'avez pas choisi quelque chose à temps. Donc, J'ai arrété la partie !",
-        "<@{PLAYER2}> à refusé de jouer à Pierre Papier Ciseaux avec vous !",
+        "<@{PLAYER2}> n'a pas répondu dans le temps. Donc, J'ai arrêté la partie !",
+        "Tous les deux vous n'avez pas choisi quelque chose à temps. Donc, J'ai arrêté la partie !",
+        "<@{PLAYER2}> a refusé de jouer à Pierre, Papier, Ciseaux avec vous !",
         "Vous avez pris {EMOJI}",
         "Vous ne pouvez pas changer votre choix !",
-        "Seulement {AUTHOR} peut utilisé ces bouttons !",
+        "Seulement {AUTHOR} peut utiliser ces boutons !",
         "Veuillez mentionner un membre."
       ],
       "animaux": [
-        "L'image ne s'affiche pas ? Cliquer içi !",
+        "L'image ne s'affiche pas ? Cliquer ici !",
         "OUAF",
         "QUI QUI",
         "MIAOU"
       ],
       "QuickC": [
         "Les boutons peuvent apparaître à tout moment maintenant !",
-        "La première personne qui clique sur le boutton où il y a ma tête, gagne. Vous avez **{TIME}**",
-        "GG, {WINNER} à appuyé sur le boutton en **{TIME} secondes**.",
-        "Personne n'a cliquer sur le boutton. Donc, j'ai arrété la partie.",
+        "La première personne qui clique sur le bouton où il y a ma tête, gagne. Vous avez **{TIME}**",
+        "GG, {WINNER} a appuyé sur le bouton en **{TIME} secondes**.",
+        "Personne n'a cliqué sur le bouton. Donc, j'ai arrêté la partie.",
         "Une partie se joue déjà dans <#{CHANNEL}>. Vous ne pouvez pas en lancer une autre."
       ],
       "meme": [
-        "**Veuillez patientez...**"
+        "**Veuillez patienter...**"
       ],
       "morpion": [
         "Qui veut jouer ? `Besoin de 2 joueurs`",
@@ -161,19 +167,19 @@
         "VOUS DEVEZ ATTENDRE QUE TOUT LES EMOJIS SOIT MIS SINON SA NE MARCHE PAS !!!",
         "Jeu : Morpion",
         "Joueur",
-        "Joueur **{PLAYER}** a gagner.\nDans 5 secondes ce channel sera supprimer.",
-        "Egualité",
-        "Aucun gagnant pour cette partie.\nDans 5 secondes ce channel sera supprimer."
+        "Joueur **{PLAYER}** à gagner.\nDans 5 secondes ce channel sera supprimé.",
+        "Égalité",
+        "Aucun vainqueur pour ce match.\nDans 5 secondes ce channel sera supprimé."
       ],
       "GTN": [
         "Trouvez Le Nombre",
         "Vous avez **{TIME}**pour trouver le nombre.",
-        "GG, Le nombre que j'ai choisi été **{NUMBER}**. <@{WINNER}> la trouver en **{TIME}**.\n\n__**Stats de la partie:**__\n**Durée**: {TIME}\n**Nombre de participants**: {NUMBEROFP} Participants\n**Participants**: {PART}",
-        "GG, Le nombre que j'ai choisi été **{NUMBER}**. Vous l'avez trouver en **{TIME}**.",
+        "GG, le nombre que j'ai choisi été **{NUMBER}**. <@{WINNER}> la trouver en **{TIME}**.\n\n__**Stats de la partie:**__\n**Durée**: {TIME}\n**Nombre de participants**: {NUMBEROFP} Participants\n**Participants**: {PART}",
+        "GG, le nombre que j'ai choisi été **{NUMBER}**. Vous l'avez trouvé en **{TIME}**.",
         "Plus de chance la prochaine fois ! Le nombre que j'avais choisi été **{NUMBER}**.",
         "Non {AUTHOR}! Mon nombre est plus grand que **{NUMBER}**.",
         "Non {AUTHOR}! Mon nombre est plus petit que **{NUMBER}**.",
-        "Seulement <@{AUTHOR}> peut utilisé ces bouttons !",
+        "Seulement <@{AUTHOR}> peut utiliser ces boutons !",
         "Annulé",
         "Une partie est déjà en cours dans <#{CHANNEL}>. Vous ne pouvez pas en lancée une nouvelle !"
       ],
@@ -182,40 +188,40 @@
         "Face"
       ],
       "respect": [
-        "**Veuillez patientez...**"
+        "**Veuillez patienter...**"
       ],
       "slap": [
-        "Vous devez mentionner le membre a gifler !",
+        "Vous devez mentionner le membre à gifler !",
         "Mais pourquoi vous voulez me gifler ?",
         "Vous ne pouvez pas vous gifler ! Ou bien vous êtes vraiment bête !",
-        "OwO, {USERM} à été gifler par {USER}! (la honte {EMOJI})."
+        "OwO, {USERM} à été giflé par {USER}! (la honte {EMOJI})."
       ],
       "wanted": [
-        "**Veuillez patientez...**"
+        "**Veuillez patienter...**"
       ]
     },
     "helpa": [
       "Oui",
       "Non",
       "Commande en Slash ?",
-      "List des commandes",
-      "Ce qui est entre `<>` est obligatoire a mettre et ce qui sont entre `[]` ne sont pas obligatoire a mettre. Dans 3 minutes se message ne sera plus utilisable. \nPour avoir plus d'information sur une commande, faites {PREFIX}help-[commande]",
+      "Liste des commandes",
+      "Ce qui est entre `<>` est obligatoire à mettre et ceux qui sont entre `[]` ne sont pas obligatoires a mettre. Dans 3 minutes se message ne sera plus utilisable. \nPour avoir plus d'informations sur une commande, faites {PREFIX}help-[commande]",
       "Description",
       "Usage",
       "Alias",
       "Aucun alias",
       "Catégorie",
       "Permissions",
-      "`Aucune Permissions`",
+      "`Aucune Permission`",
       "`Modérateur`",
       "`Bannir des membres`",
       "`Géré les messages`",
-      "`Kick ddes membres`",
+      "`Kick des membres`",
       "`Rendre Muet des membres`",
       "`Administrateur`",
       "`Propriétaire du serveur`",
-      "Quel est la partie que vous voulez ?",
-      "Partie Util",
+      "Quelle est la partie que vous vouliez ?",
+      "Partie Utile",
       "Partie Modérateurs",
       "Partie Information",
       "Partie Fun",
@@ -229,7 +235,7 @@
         "Vous devez faire : `{PREFIX}kick <un membre> [la raison]`",
         "Vous devez faire : `{PREFIX}mute <un membre> [la raison]`",
         "Vous devez faire : `{PREFIX}unmute <un membre> [la raison]`",
-        "Vous devez faire : `{PREFIX}clear <un nombre de message a supprimer>`",
+        "Vous devez faire : `{PREFIX}clear <un nombre de messages à supprimé>`",
         "Vous devez faire : `{PREFIX}warn <un membre> <la raison>`",
         "Vous devez faire : `{PREFIX}delete-warns <un membre> <un nombre>`",
         "Vous devez faire : `{PREFIX}total-warns <un membre>`",
@@ -238,7 +244,7 @@
         "Vous devez faire : `{PREFIX}set-bye <un salon>`",
         "Vous devez faire : `{PREFIX}set-logs <un salon>`",
         "Vous devez faire : `{PREFIX}set-lang <fr/en>`",
-        "Vous devez faire : `{PREFIX}timeout <un membre> <un temp> [la raison]`"
+        "Vous devez faire : `{PREFIX}timeout <un membre> <un temps> [la raison]`"
       ],
       "fun": [
         "Commandes de Fun",
@@ -280,7 +286,7 @@
         "Vous devez faire : `{PREFIX}search-github`",
         "Vous devez faire : `{PREFIX}github`",
         "Vous devez faire : `{PREFIX}people-in-space`",
-        "Vous devez faire : `{PREFIX}ytstats`"
+        "Vous devez faire : `{PREFIX}ytstats <le nom d'un chaîne youtube>`"
       ],
       "util": [
         "Commandes Utiles",
@@ -306,7 +312,7 @@
       ],
       "music": [
         "Commandes de Musique",
-        "Musqiue",
+        "Musique",
         "Vous devez faire : `{PREFIX}back`",
         "Vous devez faire : `{PREFIX}clear`",
         "Vous devez faire : `{PREFIX}filter <un filtre>`",
@@ -808,7 +814,8 @@
         "{USER} a été exclue durant {TIME} !",
         "Veuillez mentionner un membre à exclure.",
         "Vous ne pouvez pas vous exclure.",
-        "Vous ne pouvez pas m'exclure."
+        "Vous ne pouvez pas m'exclure.",
+        "Vous ne pouvez pas exclure un membre plus gradé que vous."
       ]
     },
     "ownera": [
@@ -967,8 +974,8 @@
         "Aucun résultat trouver !",
         "Je ne peut pas rejoindre le salon audio.",
         "Votre",
-        "Votre playlist",
-        "Votre track",
+        "playlist",
+        "track",
         "Chargement..."
       ],
       "Queue": [
@@ -1054,7 +1061,8 @@
         "Nombre d'Abonné",
         "Nombre de Vidéos",
         "Lien de la Chaine",
-        "Récupération des statistiques..."
+        "Récupération des statistiques...",
+        "abonnées"
       ],
       "BI": [
         "ID de Utility Bot ",
@@ -1178,7 +1186,8 @@
         "ID du serveur",
         "Type de problème",
         "Le problème",
-        "Vous devez plus détaillez votre problème."
+        "Vous devez plus détaillez votre problème.",
+        "Votre signalement a bien été envoyé."
       ],
       "Ss": [
         "Aucun",
@@ -1245,7 +1254,9 @@
         "Rôles",
         "Aucun rôles",
         "Badges",
-        "Aucun"
+        "Aucun",
+        "Discriminateur",
+        "Surnom"
       ],
       "Vote": [
         "Ooooh ! Merci de me soutenir ! Je vous aime ! ❤️"

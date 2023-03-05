@@ -1,12 +1,13 @@
 const fs = require("fs");
-const Filer = require("../../../UtilityBotFinal/Root/Utils/Filer");
-module.exports = async function (client, path) {
-    Filer(`${path}/Root/Commands/ButtonCommands`, async function (err, res) {
-        res.forEach(file => {
-            if (fs.statSync(file).isDirectory()) return;
-            const button = require(file)
-            if (button.ignoreFile) return;
-            client.commands.buttonCommands.set(button.name, button)
-        })
-    })
+const FileScanner = require('node-recursive-directory');
+
+module.exports = async (client, RootPath) => {
+    const ScannedFiles = await FileScanner(`${RootPath}/Root/Interactions/ButtonCommands`)
+    ScannedFiles.forEach(File => {
+        if (fs.statSync(File).isDirectory()) return;
+        const Button = require(File)
+        if (Button.ignore) return;
+        else
+        client.buttonCommands.set(Button.name, Button)
+    });
 }

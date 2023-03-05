@@ -1,12 +1,13 @@
 const fs = require("fs");
-const Filer = require("../../Utils/Filer");
-module.exports = async function (client, path) {
-    Filer(`${path}/Root/Commands/SelectMenus`, async function (err, res) {
-        res.forEach(file => {
-            if (fs.statSync(file).isDirectory()) return;
-            const selectMenu = require(file)
-            if (selectMenu.ignoreFile) return;
-            client.commands.selectMenus.set(selectMenu.name, selectMenu)
-        })
-    })
+const FileScanner = require('node-recursive-directory');
+
+module.exports = async (client, RootPath) => {
+    const ScannedFiles = await FileScanner(`${RootPath}/Root/Interactions/SelectMenus`)
+    ScannedFiles.forEach(File => {
+        if (fs.statSync(File).isDirectory()) return;
+        const SelectMenu = require(File)
+        if (SelectMenu.ignore) return;
+        else
+        client.selectMenus.set(SelectMenu.name, SelectMenu)
+    });
 }

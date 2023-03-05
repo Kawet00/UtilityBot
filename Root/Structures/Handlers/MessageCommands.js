@@ -1,13 +1,16 @@
 const fs = require("fs");
-const Filer = require("../../Utils/Filer");
-module.exports = async function (client, path) {
-    Filer(`${path}/Root/Commands/MessageCommands`, async function (err, res) {
-        res.forEach(file => {
-            if (fs.statSync(file).isDirectory()) return;
-            const command = require(file)
-            if (command.ignoreFile) return;
-            client.commands.messageCommands.set(command.name.toLowerCase(), command)
-            if (command.aliases) command.aliases.forEach(alias => client.commands.aliases.set(alias.toLowerCase(), command.name.toLowerCase()))
-        })
-    })
+const FileScanner = require('node-recursive-directory');
+
+module.exports = async (client, RootPath) => {
+    const ScannedFiles = await FileScanner(`${RootPath}/Root/MessageCommands`)
+    ScannedFiles.forEach(File => {
+        if (fs.statSync(File).isDirectory()) return;
+        const MessageCommand = require(File);
+        if (MessageCommand.ignore) return;
+
+        client.messageCommands.set(MessageCommand.name, MessageCommand);
+        if (MessageCommand.aliases) MessageCommand.aliases.forEach(Alias => {
+            client.messageCommands_Aliases.set(Alias, MessageCommand.name);
+        });
+    });
 }

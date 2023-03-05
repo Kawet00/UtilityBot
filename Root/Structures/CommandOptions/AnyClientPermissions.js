@@ -1,16 +1,26 @@
-const emotes = require('../../Storage/json/emotes.json')
-const colors = require('../../Storage/json/colors.json')
-const db = require('quick.db')
+const {bold} = require("chalk");
+const {getLang} = require('../../Storage/db/manager');
+const {EmbedBuilder} = require('discord.js');
+const emotes = require('../../Storage/json/emotes.json');
+const colors = require('../../Storage/json/colors.json');
 
-module.exports = async function (client, message, command, Discord) {
-    const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
-    if (!command.anyClientPermission) return false;
-    if (command.anyClientPermission.some(i => message.member.permissions.has(i))) return false;
+module.exports = async (client, message, Command, InteractionType) => {
+    const lang = client.langs.get(await getLang(message.guild.id) || 'en')
+    if (!Command.anyClientPermissions) return true;
+    if (!Array.isArray(Command.anyClientPermissions)) {
+        console.log(bold.yellow(`[ERROR] Invalid input detected in AnyClientPermissions option of ${Command.name} of ${InteractionType}.`))
+        return true;
+    }
+    if (!message.guild) {
+        console.log(bold.blue(`[WARN] Guild object not found in AnyClientPermissions option of ${Command.name} of ${InteractionType}.`))
+        return true;
+    }
+    if (message.guild.members.me.permissions.toArray().some(I => Command.anyClientPermissions.some(i => i.toUpperCase() == I.toUpperCase()))) return true;
     else {
-        if (command.returnAnyClientPermissions == false || command.returnNoErrors) return true;
-        else message.reply({
-            embeds: [
-                new Discord.MessageEmbed()
+        if (Command.returnErrors == false || Command.returnAnyClientPermissionsError == false) return false;
+        else {
+            const errorEmbed = new EmbedBuilder()
+            new EmbedBuilder()
                 .setAuthor({
                     name: message.member.user.tag,
                     iconURL: message.member.user.displayAvatarURL({ dynamic: true })
@@ -19,11 +29,17 @@ module.exports = async function (client, message, command, Discord) {
                 .setTimestamp()
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                 .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.cmdOptions.AnyClientPerm[0]}`)
-                .addField(lang.cmdOptions.AnyClientPerm[1], `•${command.anyClientPermission.join("\n•")}`)],
+                .addFields(
+                    {name: lang.cmdOptions.AnyClientPerm[1], value: `•${command.anyClientPermission.join("\n•")}`}
+                )
+
+            message.reply({
+                embeds: [errorEmbed],
                 allowedMentions: {
                     repliedUser: false
                 }
             })
-            return true
+            return false;
         }
     }
+}

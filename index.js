@@ -1,172 +1,180 @@
 (async () => {
-    const Discord = require("discord.js");
-    const { Player } = require('discord-player');
-    const config = require("./UtilityBotFinal copy/Root/Storage/json/Config.json");
-    const path = __dirname;
-    const db = require('quick.db');
-    const emotes = require('./UtilityBotFinal copy/Root/Storage/json/emotes.json');
-    const colors = require('./UtilityBotFinal copy/Root/Storage/json/colors.json');
-    const client = new Discord.Client({
-        intents: [
-            Discord.Intents.FLAGS.GUILDS,
-            Discord.Intents.FLAGS.GUILD_MESSAGES,
-            Discord.Intents.FLAGS.GUILD_PRESENCES,
-            Discord.Intents.FLAGS.DIRECT_MESSAGES,
-            Discord.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
-            Discord.Intents.FLAGS.GUILD_MEMBERS,
-            Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
-            Discord.Intents.FLAGS.GUILD_WEBHOOKS,
-            Discord.Intents.FLAGS.GUILD_VOICE_STATES,
-            Discord.Intents.FLAGS.GUILD_INVITES,
-            Discord.Intents.FLAGS.GUILD_BANS
-        ],
-        partials: ["CHANNEL"],
-        shards: "auto"
-    });
+    const {Client, GatewayIntentBits, Partials, Collection} = require("discord.js"),
+        config = require("./Root/Storage/json/Config.json"),
+        DirPath = __dirname,
+        {
+            MessageCommandHandler,
+            EventManager,
+            ButtonCommandHandler,
+            SelectMenuHandler,
+            SlashCommandsHandler,
+            ContextMenuHandler,
+            ModalFormsHandler,
+            LangsHandler
+        } = require("./Root/Structures/Handlers/HandlersManager"),
+        {Player} = require('discord-player'),
+        emotes = require('./Root/Storage/json/emotes.json'),
+        colors = require('./Root/Storage/json/colors.json'),
+        client = new Client({
+            intents: [
+                GatewayIntentBits.Guilds,
+                GatewayIntentBits.GuildMessages,
+                GatewayIntentBits.GuildPresences,
+                GatewayIntentBits.DirectMessages,
+                GatewayIntentBits.MessageContent,
+                GatewayIntentBits.DirectMessageReactions,
+                GatewayIntentBits.GuildMembers,
+                GatewayIntentBits.GuildMessageReactions,
+                GatewayIntentBits.GuildWebhooks,
+                GatewayIntentBits.GuildVoiceStates,
+                GatewayIntentBits.GuildInvites,
+                GatewayIntentBits.GuildBans
+            ],
+            partials: [Partials.Channel]
+        }),
+        { getLang, getPrefix } = require('./Root/Storage/db/manager'),
+        { EmbedBuilder } = require('discord.js');
 
     exports.client = client;
-    exports.path = path;
-    exports.config = config;
-    exports.emotes = emotes;
-    exports.colors = colors;
-    client.commands = {};
-    client.events = new Discord.Collection();
-    client.langs = new Discord.Collection();
-    client.commands.messageCommands = new Discord.Collection();
-    client.commands.aliases = new Discord.Collection();
-    client.commands.contextMenus = new Discord.Collection();
-    client.commands.slashCommands = new Discord.Collection();
-    client.commands.buttonCommands = new Discord.Collection();
-    client.commands.selectMenus = new Discord.Collection();
+    exports.rootPath = DirPath;
+
+    client.limitCommandUses = new Collection();
+    client.expireAfter = new Collection();
+    client.messageCommands = new Collection();
+    client.messageCommands_Aliases = new Collection();
+    client.events = new Collection();
+    client.slashCommands = new Collection();
+    client.contextMenus = new Collection();
+    client.selectMenus = new Collection();
+    client.buttonCommands = new Collection();
+    client.modalForms = new Collection();
+    client.langs = new Collection();
+    client.giveawaysManager = new Collection();
     client.player = new Player(client, config.opt.discordPlayer);
-
-    const Handler = require(`${path}/Root/Structures/Handlers/Handler`);
-    await Handler.loadMessageCommands(client, path);
-    await Handler.loadEvents(client, path);
-    await Handler.loadLangs(client, path);
-    await Handler.loadSlashCommands(client, path);
-    await Handler.loadContextMenus(client, path);
-    await Handler.loadButtonCommands(client, path);
-    await Handler.loadSelectMenus(client, path);
-    await Handler.loadServer(client)
-
 
     const player = client.player
 
-    player.on('error', (queue, error) => {
-        const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    player.on('error', async (queue, error) => {
+        const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
-                new Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.mscOptions.error[0].replace('{PREFIX}', config.prefix)}`)
-                .setColor(colors.RED)
-                .setFooter({
-                    text: `© ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                })
-                .setTimestamp()
+                new EmbedBuilder()
+                    .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.mscOptions.error[0].replace('{PREFIX}', await getPrefix(queue.guild.id))}`)
+                    .setColor(colors.RED)
+                    .setFooter({
+                        text: `© ${client.user.username}`,
+                        iconURL: client.user.displayAvatarURL()
+                    })
+                    .setTimestamp()
             ]
         });
         console.log(error);
     });
 
-    player.on('connectionError', (queue, error) => {
-        const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    player.on('connectionError', async (queue, error) => {
+        const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
-                new Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.mscOptions.connectionError[0].replace('{PREFIX}', config.prefix)}`)
-                .setColor(colors.RED)
-                .setFooter({
-                    text: `© ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                })
-                .setTimestamp()
+                new EmbedBuilder()
+                    .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.mscOptions.connectionError[0].replace('{PREFIX}', await getPrefix(queue.guild.id))}`)
+                    .setColor(colors.RED)
+                    .setFooter({
+                        text: `© ${client.user.username}`,
+                        iconURL: client.user.displayAvatarURL()
+                    })
+                    .setTimestamp()
             ]
         });
         console.log(error);
     });
 
-    player.on('trackStart', (queue, track) => {
-        const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
-        if (!config.opt.loopMessage && queue.repeatMode !== 0) return;
+    player.on('trackStart', async (queue, track) => {
+        const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
-                new Discord.MessageEmbed()
-                .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.trackStart[0].replace('{TITLE}', track.title).replace('{CHANNEL}', queue.connection.channel.name)}`)
-                .setColor(colors.VERT)
-                .setFooter({
-                    text: `© ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                })
-                .setTimestamp()
+                new EmbedBuilder()
+                    .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.trackStart[0].replace('{TITLE}', track.title).replace('{CHANNEL}', queue.connection.channel.name)}`)
+                    .setColor(colors.VERT)
+                    .setFooter({
+                        text: `© ${client.user.username}`,
+                        iconURL: client.user.displayAvatarURL()
+                    })
+                    .setTimestamp()
             ]
         });
     });
 
-    player.on('trackAdd', (queue, track) => {
-        const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    player.on('trackAdd', async (queue, track) => {
+        const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
-                new Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_ok} ┇ ${lang.mscOptions.trackAdd[0].replace('{TITLE}', track.title)}`)
-                .setColor(colors.VERT)
-                .setFooter({
-                    text: `© ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                })
-                .setTimestamp()
+                new EmbedBuilder()
+                    .setDescription(`${emotes.pepe.pepe_ok} ┇ ${lang.mscOptions.trackAdd[0].replace('{TITLE}', track.title)}`)
+                    .setColor(colors.VERT)
+                    .setFooter({
+                        text: `© ${client.user.username}`,
+                        iconURL: client.user.displayAvatarURL()
+                    })
+                    .setTimestamp()
             ]
         });
     });
 
-    player.on('botDisconnect', (queue) => {
-        const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    player.on('botDisconnect', async (queue) => {
+        const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
-                new Discord.MessageEmbed()
-                .setDescription(`${emotes.blob.blob_w} ┇ ${lang.mscOptions.botDisconnect[0]}`)
-                .setColor(colors.EPINGLE)
-                .setFooter({
-                    text: `© ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                })
-                .setTimestamp()
+                new EmbedBuilder()
+                    .setDescription(`${emotes.blob.blob_w} ┇ ${lang.mscOptions.botDisconnect[0]}`)
+                    .setColor(colors.EPINGLE)
+                    .setFooter({
+                        text: `© ${client.user.username}`,
+                        iconURL: client.user.displayAvatarURL()
+                    })
+                    .setTimestamp()
             ]
         });
     });
 
-    player.on('channelEmpty', (queue) => {
-        const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    player.on('channelEmpty', async (queue) => {
+        const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
-                new Discord.MessageEmbed()
-                .setDescription(`${emotes.pepe.pepe_srx} ┇ ${lang.mscOptions.channelEmpty[0]}`)
-                .setColor(colors.EPINGLE)
-                .setFooter({
-                    text: `© ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                })
-                .setTimestamp()
+                new EmbedBuilder()
+                    .setDescription(`${emotes.pepe.pepe_srx} ┇ ${lang.mscOptions.channelEmpty[0]}`)
+                    .setColor(colors.EPINGLE)
+                    .setFooter({
+                        text: `© ${client.user.username}`,
+                        iconURL: client.user.displayAvatarURL()
+                    })
+                    .setTimestamp()
             ]
         });
     });
 
-    player.on('queueEnd', (queue) => {
-        const lang = client.langs.get(db.get(`lang_${queue.guild.id}`) || 'en')
+    player.on('queueEnd', async (queue) => {
+        const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
-                new Discord.MessageEmbed()
-                .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.queueEnd[0]}`)
-                .setColor(colors.VERT)
-                .setFooter({
-                    text: `© ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                })
-                .setTimestamp()
+                new EmbedBuilder()
+                    .setDescription(`${emotes.autre.wumpus_dj} ┇ ${lang.mscOptions.queueEnd[0]}`)
+                    .setColor(colors.VERT)
+                    .setFooter({
+                        text: `© ${client.user.username}`,
+                        iconURL: client.user.displayAvatarURL()
+                    })
+                    .setTimestamp()
             ]
         });
     });
-    
+
+    await MessageCommandHandler(client, DirPath);
+    await EventManager(client, DirPath);
+    await ButtonCommandHandler(client, DirPath);
+    await SelectMenuHandler(client, DirPath);
+    await ModalFormsHandler(client, DirPath);
     await client.login(config.token);
-})()
+    await SlashCommandsHandler(client, DirPath);
+    await ContextMenuHandler(client, DirPath);
+    await LangsHandler(client);
+})();

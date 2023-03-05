@@ -1,9 +1,9 @@
-const db = require('../../UtilityBotFinal/Root/Storage/db/manager')
+const {deleteGuild} = require('../Storage/db/manager')
 
 module.exports = {
     name: "guildDelete",
 
     run: async (guild, client) => {
-        await db.deleteGuild(guild.id);
+        await deleteGuild(guild.id);
     }
 }

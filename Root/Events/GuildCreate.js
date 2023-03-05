@@ -1,26 +1,23 @@
 const colors = require('../Storage/json/colors.json');
-const Discord = require('discord.js')
+const {EmbedBuilder} = require('discord.js')
 const emotes = require('../Storage/json/emotes.json')
-const db = require('../Storage/db/manager')
+const {createGuild} = require('../Storage/db/manager')
 
 module.exports = {
     name: "guildCreate",
 
     run: async (guild, client) => {
-	if (!guild.available) return;
+        if (!guild.available) return;
 
-	await db.createGuild(guild.id);
+        await createGuild(guild.id);
 
-	db.updateGuildPrefix(guild.id, 'u!')
-	db.updateGuildLang(guild.id, 'en')
-
-        const embed = new Discord.MessageEmbed()
+        const embed = new EmbedBuilder()
             .setColor(colors.PERSO)
-            .setTitle(`${emotes.blob.blob_b} ┇ test`)
+            .setTitle(`${emotes.blob.blob_h} ┇ Hi`)
             .setThumbnail(guild.iconURL({
                 dynamic: true
             }))
-            .setDescription('test')
+            .setDescription("Thank you for adding me to your server!")
             .addFields({
                 name: "Here the number of servers where I am currently",
                 value: `\`${client.guilds.cache.size.toString()}\` servers`,
@@ -50,16 +47,16 @@ module.exports = {
                 iconURL: client.user.displayAvatarURL()
             })
             .setTimestamp()
-            if(guild.systemChannel) {
-        guild.systemChannel.send({
-            embeds: [embed]
-        })
-    } else {
-        await guild.fetchOwner().then(o => {
-            o.send({
-            embeds: [embed]
-        })
-    })
-    }
+        if(guild.systemChannel) {
+            guild.systemChannel.send({
+                embeds: [embed]
+            })
+        } else {
+            await guild.fetchOwner().then(o => {
+                o.send({
+                    embeds: [embed]
+                })
+            })
+        }
     }
 }

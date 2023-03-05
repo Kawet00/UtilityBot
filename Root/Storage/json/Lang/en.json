@@ -25,14 +25,7 @@
     ]
   },
   "slashCommand": {
-    "ticketOpt": [
-      "This is not tied with a ticket.",
-      "This user is already on the ticket.",
-      "{MEMBER} has been added to this ticket.",
-      "This is not tied with a ticket.",
-      "This user is not on this ticket.",
-      "{MEMBER} has been remove from this ticket."
-    ]
+
   },
   "cmdOptions": {
     "AnyClientPerm": [
@@ -84,6 +77,12 @@
     "VoiceChannel": [
       "You are not connected to an audio channel.",
       "You are not on the same audio channel as me."
+    ],
+    "LimitUses": [
+      "This command has reached it's set limit of uses and cannot be used anymore."
+    ],
+    "ExpireAfter": [
+      "This command has reached it's expiration time and cannot be used anymore."
     ]
   },
   "commandsa": [
@@ -241,7 +240,7 @@
         "You need to do: `{PREFIX}unmute <a member> [the reason]`",
         "You need to do: `{PREFIX}clear <a number of messages to clear>`",
         "You need to do: `{PREFIX}warn <a member> <the reason>`",
-        "You need to do: `{PREFIX}delete-warns <a member> <a number>`",
+        "You need to do: `{PREFIX}delete-warns <a member> <a number|all>`",
         "You need to do: `{PREFIX}total-warns <a member>`",
         "You need to do: `{PREFIX}set-prefix <a new prefix>`",
         "You need to do: `{PREFIX}set-welcome <a channel>`",
@@ -329,6 +328,7 @@
         "You need to do: `{PREFIX}resume`",
         "You need to do: `{PREFIX}save`",
         "You need to do: `{PREFIX}search <the title of a song>`",
+        "You need to do: `{PREFIX}skip`",
         "You need to do: `{PREFIX}stop`",
         "You need to do: `{PREFIX}volume <a numbre between 1 and 250>`"
       ],
@@ -830,9 +830,10 @@
       "timeout": [
         "You can exclude a member from {30000} and maximum {2419200000}.",
         "{USER} was excluded during {TIME} !",
-        "Please mention a memeber to tiemout.",
+        "Please mention a member to tiemout.",
         "You can't timeout yourself.",
-        "You can't timeout me."
+        "You can't timeout me.",
+        "You can’t timeout a higher-ranking member."
       ]
     },
     "ownera": [
@@ -991,8 +992,8 @@
         "No result found!",
         "I can't join audio channel.",
         "Your",
-        "Your playlist",
-        "Your track",
+        "playlist",
+        "track",
         "Loading..."
       ],
       "Queue": [
@@ -1078,7 +1079,8 @@
         "Subscribers Count",
         "Videos Count",
         "Channel Link",
-        "Fetching stats..."
+        "Fetching stats...",
+        "subscribers"
       ],
       "BI": [
         "Utility Bot's ID",
@@ -1199,7 +1201,8 @@
         "ID of the server",
         "Type of problem",
         "The problem",
-        "You need to give more details about your problem."
+        "You need to give more details about your problem.",
+        "Your report has been sent.."
       ],
       "Ss": [
         "Nothing",
@@ -1266,7 +1269,9 @@
         "Roles",
         "No roles",
         "Flags",
-        "None"
+        "None",
+        "Discriminator",
+        "Nickname"
       ],
       "Vote": [
         "Oooooh! Thank you to support me! I love you! ❤️"

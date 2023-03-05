@@ -1,20 +1,23 @@
-const emotes = require('../../Storage/json/emotes.json')
-const colors = require('../../Storage/json/colors.json')
-const db = require('quick.db')
+const {bold} = require("chalk");
+const {getLang} = require('../../Storage/db/manager');
+const {EmbedBuilder} = require('discord.js');
+const {developers} = require('../../Storage/json/Config.json');
+const emotes = require('../../Storage/json/emotes.json');
+const colors = require('../../Storage/json/colors.json');
 
-module.exports = async function (client, message, command, Discord) {
-    const lang = client.langs.get(db.get(`lang_${message.guild.id}`) || 'en')
-    if (!command.onlyUsers) return false;
-    if (command.onlyUsers.some(i => i == message.member.user.id)) return false;
+module.exports = async (client, message, Command, IsInteraction) => {
+    const lang = client.langs.get(await getLang(message.guild.id) || 'en')
+    if (!Command.onlyUsers) return true;
+    let user;
+
+    if (IsInteraction) user = message.user
+    else user = message.author
+
+    if (Command.onlyUsers.some(Id => user.id == Id)) return true;
     else {
-        let onlyUsers = []
-        command.onlyUsers.forEach(id => {
-            onlyUsers.push(`<@${id}>`)
-        })
-        if (command.returnOnlyUsers == false || command.returnNoErrors) return true;
-        else message.reply({
-            embeds: [
-                new Discord.MessageEmbed()
+        if (Command.returnErrors == false || Command.returnOnlyUsersError == false) return false;
+        else {
+            const errorEmbed = new EmbedBuilder()
                 .setAuthor({
                     name: message.member.user.tag,
                     iconURL: message.member.user.displayAvatarURL({
@@ -25,12 +28,17 @@ module.exports = async function (client, message, command, Discord) {
                 .setTimestamp()
                 .setFooter({ text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                 .setDescription(`${emotes.blob.blob_n} ┇ ${lang.cmdOptions.OnlyUsers[0]}`)
-                .addField(lang.cmdOptions.OnlyUsers[1], `• ${onlyUsers.join("\n• ")}`)
-            ],
-            allowedMentions: {
-                repliedUser: false
-            }
-        })
-        return true;
+                .addFields(
+                    {name: lang.cmdOptions.OnlyUsers[1], value: `• ${onlyUsers.join("\n• ")}`}
+                )
+
+            message.reply({
+                embeds: [errorEmbed],
+                allowedMentions: {
+                    repliedUser: false
+                }
+            })
+            return false;
+        }
     }
 }

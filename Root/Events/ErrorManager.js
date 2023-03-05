@@ -1,21 +1,28 @@
-const chalk = require('chalk')
+const {EmbedBuilder} = require('discord.js');
 
 module.exports = {
     name: "errorManager",
-    customEvent: true,
-
+    isCustom: true,
     run: async (client) => {
         process.on('unhandledRejection', error => {
-            const err = error.stack.split("\n")
-            console.log(chalk.bold.red("[Error Message] ") + chalk.magentaBright(err[0].trim()))
-            console.log(chalk.bold.red("[Error Location] ") + chalk.magentaBright(err[1].trim()))
             console.log(error)
+            client.channels.cache.get('799932188442886176').send({
+                embeds: [
+                    new EmbedBuilder()
+                        .setDescription(`Nouvelle erreur\n\n\`\`\`${error}\`\`\``)
+                        .setTimestamp()
+                ]
+            })
         })
         process.on('uncaughtException', error => {
-            const err = error.stack.split("\n")
-            console.log(chalk.bold.red("[Error Message] ") + chalk.magentaBright(err[0].trim()))
-            console.log(chalk.bold.red("[Error Location] ") + chalk.magentaBright(err[1].trim()))
             console.log(error)
+            client.channels.cache.get('799932188442886176').send({
+                embeds: [
+                    new EmbedBuilder()
+                        .setDescription(`Nouvelle erreur\n\n\`\`\`${error}\`\`\``)
+                        .setTimestamp()
+                ]
+            })
         })
     }
 }
