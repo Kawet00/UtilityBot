@@ -18,10 +18,12 @@ module.exports = {
                     .setColor(colors.PERSO)
                     .setDescription(`${emotes.autre.giveaway_1} ┇ ${lang.commands.util.Vote["0"]}`)
                     .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
-                    .addField('TOP.GG', '[VOTE](https://top.gg/bot/739863718547947652/vote)')
-                    .addField('WONDERBOTLIST.COM', '[VOTE](https://wonderbotlist.com/fr/bot/739863718547947652/vote)')
-                    .addField('DISCORDBOTLIST.COM', '[VOTE](https://discordbotlist.com/bots/utility-bot-9218/upvote)')
-                    .addField('DISCORDLABS.ORG', '[VOTE](https://bots.discordlabs.org/bot/739863718547947652/vote)')
+                    .addFields(
+                        {name: 'TOP.GG', value: '[VOTE](https://top.gg/bot/739863718547947652/vote)'},
+                        {name: 'WONDERBOTLIST.COM', value: '[VOTE](https://wonderbotlist.com/fr/bot/739863718547947652/vote)'},
+                        {name: 'DISCORDBOTLIST.COM', value: '[VOTE](https://discordbotlist.com/bots/utility-bot-9218/upvote)'},
+                        {name: 'DISCORDLABS.ORG', value: '[VOTE](https://bots.discordlabs.org/bot/739863718547947652/vote)'}
+                    )
                     .setTimestamp()
             ]
         })
