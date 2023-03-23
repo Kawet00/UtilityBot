@@ -54,7 +54,7 @@
 
     const player = client.player
 
-    player.on('error', async (queue, error) => {
+    player.events.on('error', async (queue, error) => {
         const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
@@ -71,7 +71,7 @@
         console.log(error);
     });
 
-    player.on('connectionError', async (queue, error) => {
+    player.events.on('playerError', async (queue, error) => {
         const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
@@ -88,7 +88,7 @@
         console.log(error);
     });
 
-    player.on('trackStart', async (queue, track) => {
+    player.events.on('playerStart', async (queue, track) => {
         const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
@@ -104,7 +104,7 @@
         });
     });
 
-    player.on('trackAdd', async (queue, track) => {
+    player.events.on('audioTracksAdd', async (queue, track) => {
         const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
@@ -120,7 +120,7 @@
         });
     });
 
-    player.on('botDisconnect', async (queue) => {
+    player.events.on('disconnect', async (queue) => {
         const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
@@ -136,7 +136,7 @@
         });
     });
 
-    player.on('channelEmpty', async (queue) => {
+    player.events.on('emptyChannel', async (queue) => {
         const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
@@ -152,7 +152,7 @@
         });
     });
 
-    player.on('queueEnd', async (queue) => {
+    player.events.on('emptyQueue', async (queue) => {
         const lang = client.langs.get(await getLang(queue.guild.id) || 'en')
         queue.metadata.send({
             embeds: [
