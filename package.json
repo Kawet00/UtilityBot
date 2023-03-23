@@ -1,6 +1,6 @@
 {
   "name": "utility-bot",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Source code of Utility Bot.",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/Elpistolero131/UtilityBot.git"
   },
+  "keywords": [
+    "Yes"
+  ],
   "author": "Elpistolero13",
   "license": {
     "type": "Apache-2.0",
