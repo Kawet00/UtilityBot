@@ -20,7 +20,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor(colors.EPINGLE)
-                            .setDescription(`${cemotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}`)
+                            .setDescription(`${emotes.pepe.pepe_a} ┇ ${lang.commands.util.temp[0]}`)
                             .setFooter({text: `© ${client.user.username}`, iconURL: client.user.displayAvatarURL()})
                             .setTimestamp()
                     ]

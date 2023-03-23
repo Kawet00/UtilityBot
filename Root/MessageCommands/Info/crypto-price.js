@@ -2,10 +2,10 @@ const {getLang} = require('../../Storage/db/manager');
 const {EmbedBuilder} = require('discord.js');
 const colors = require('../../Storage/json/colors.json');
 const emotes = require('../../Storage/json/emotes.json');
+const fetch = require('node-fetch');
 
 module.exports = {
     name: "crypto-price",
-    description: "test",
     aliases: ["c-p"],
 
     run: async (client, message, args) => {
@@ -29,6 +29,19 @@ module.exports = {
             `https://api.coingecko.com/api/v3/coins/${args[0]}`
         );
         const data = await response.json();
+
+        if(data.error === "coin not found") return message.reply({
+            embeds: [
+                new EmbedBuilder()
+                    .setDescription(`${emotes.pepe.pepe_ns} ┇ ${lang.commands.util.Crypto[3]} `)
+                    .setColor(colors.EPINGLE)
+                    .setFooter({
+                        text: `© ${client.user.username}`,
+                        iconURL: client.user.displayAvatarURL()
+                    })
+                    .setTimestamp()
+            ]
+        })
 
         if (!response) {
             message.channel.send({

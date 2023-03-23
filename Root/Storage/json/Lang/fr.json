@@ -267,11 +267,12 @@
         "Vous devez faire : `{PREFIX}respect+ [un membre]`",
         "Vous devez faire : `{PREFIX}slap <un membre>`",
         "Vous devez faire : `{PREFIX}giphy <un nom de gif>",
-        "Vous devez faire : `{PREFIX}panda",
-        "Vous devez faire : `{PREFIX}rps",
-        "Vous devez faire : `{PREFIX}quick-click",
-        "Vous devez faire : `{PREFIX}fight",
-        "Vous devez faire : `{PREFIX}GuessTheNumber"
+        "Vous devez faire : `{PREFIX}panda`",
+        "Vous devez faire : `{PREFIX}giphy`",
+        "Vous devez faire : `{PREFIX}rps`",
+        "Vous devez faire : `{PREFIX}quick-click`",
+        "Vous devez faire : `{PREFIX}fight`",
+        "Vous devez faire : `{PREFIX}GuessTheNumber`"
       ],
       "info": [
         "Commandes d'Information",
@@ -1022,7 +1023,6 @@
       ]
     },
     "util": {
-      "Serveur": "Serveur",
       "embed": [
         "Vous devez préciser un ID de embed.",
         "Un ID doit avoir obligatoirement 3 caractères.",
@@ -1083,12 +1083,15 @@
         "Type de CPU ",
         "Vitesse ",
         "Mémoire ",
-        "Utilisé "
+        "Utilisé ",
+        "Serveurs",
+        "Utilisateurs"
       ],
       "Crypto": [
         "Mettez le **nom** de la cryptomonnaie. Exemple: bitcoin.\n**RAPPEL**: Ne mettez pas le **symbole** (exemple: btc) mais bien le **nom**. Si le nom est un nom a plusieurs mots (exemple: shiba INU), mettez un `-` entre chaque mot (exemple: shiba-inu)",
         "Aucune cryptomonnaie ayant ce nom n'a été trouvée.",
-        "Prix"
+        "Prix",
+        "Cette monnaie n'a pas été trouvée. Veuillez mettre le nom ou le symbole du jeton."
       ],
       "calcul": [
         "Veuillez mettre le premier chiffre/nombre (ex : `1` * 5)",

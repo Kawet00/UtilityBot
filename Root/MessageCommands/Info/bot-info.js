@@ -38,7 +38,8 @@ module.exports = {
                     }, {
                         name: `__**🕵️‍♂️ ┇ ${lang.commands.util.BI[1]}:**__`,
                         value: `**• Status :** ${client.user.presence.status}
-        **• ${lang.commands.util["Serveur"]}:** ${client.guilds.cache.size}
+        **• ${lang.commands.util.BI[19]}:** ${client.guilds.cache.size}
+        **• ${lang.commands.util.BI[20]}:** ${client.users.cache.size}
         **• ${lang.commands.util.BI[2]}:** ${moment(client.user.createdAt).format('MM/DD/YYYY')}
         **• ${lang.commands.util.BI[3]}:** __${JSON["author"]}__
         **• ${lang.commands.util.BI[4]}:** ${JSON["version"]}

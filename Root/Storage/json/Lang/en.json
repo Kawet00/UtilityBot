@@ -271,11 +271,12 @@
         "You need to do: `{PREFIX}respect+ [a member]`",
         "You need to do: `{PREFIX}slap <a member>`",
         "You need to do: `{PREFIX}giphy <a name>",
-        "You need to do: `{PREFIX}panda",
-        "You need to do: `{PREFIX}rps",
-        "You need to do: `{PREFIX}quick-click",
-        "You need to do: `{PREFIX}fight",
-        "You need to do: `{PREFIX}GuessTheNumber"
+        "You need to do: `{PREFIX}panda`",
+        "You need to do: `{PREFIX}giphy`",
+        "You need to do: `{PREFIX}rps`",
+        "You need to do: `{PREFIX}quick-click`",
+        "You need to do: `{PREFIX}fight`",
+        "You need to do: `{PREFIX}GuessTheNumber`"
       ],
       "info": [
         "Information Commands",
@@ -1040,7 +1041,6 @@
       ]
     },
     "util": {
-      "Serveur": "Server",
       "embed": [
         "You must specify an embed ID.",
         "An ID must have 3 characters.",
@@ -1101,12 +1101,15 @@
         "CPU type",
         "Speed",
         "Memory",
-        "Used"
+        "Used",
+        "Servers",
+        "Users"
       ],
       "Crypto": [
         "Put the **name** of the cryptocurrency. Example: bitcoin.\n**REMINDER**: Do not put the **symbol** (example: btc) but the **name**. If the name is a multi-word name (example: shiba INU), put a `-` between each word (example: shiba-inu)",
         "No cryptocurrency with this name was found.",
-        "Price"
+        "Price",
+        "I don't found this coin. Please put the name or the symbol of the token."
       ],
       "calcul": [
         "This command is disabled.",

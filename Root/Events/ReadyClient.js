@@ -8,7 +8,7 @@ module.exports = {
 
         const activitys = [
             "by Elpistolero13",
-            "the v2.4.0",
+            "the v2.4.1",
             "on utilitybot.me",
             "u! help",
             `on ${client.guilds.cache.size} servers`
