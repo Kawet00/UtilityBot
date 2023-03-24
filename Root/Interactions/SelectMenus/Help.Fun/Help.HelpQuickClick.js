@@ -4,6 +4,7 @@ const colors = require('../../../Storage/json/colors.json');
 
 module.exports = {
     name: "HelpQC",
+    ignore: true,
 
     run: async (client, interaction) => {
         let prefix = await getPrefix(interaction.guild.id);

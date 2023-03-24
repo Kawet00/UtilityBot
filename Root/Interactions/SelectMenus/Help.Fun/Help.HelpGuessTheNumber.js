@@ -4,6 +4,8 @@ const colors = require('../../../Storage/json/colors.json');
 
 module.exports = {
     name: "HelpGTN",
+    ignore: true,
+
     run: async (client, interaction) => {
         let prefix = await getPrefix(interaction.guild.id);
         let lang = client.langs.get(await getLang(interaction.guild.id) || 'en');

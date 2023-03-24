@@ -25,35 +25,19 @@ module.exports = {
                             name: `${emotes.blob.blob_p} ┇ 8BALL`,
                             value: lang.commands.help.fun[3].replace("{PREFIX}", prefix),
                             inline: true,
-                        }, {/*
-                                        name: `${emotes.autre.dog} ┇ FUN DOG`,
-                                        value: lang.commands.help.fun[4].replace("{PREFIX}", prefix),
-                                        inline: true,
-                                }, {*/
+                        }, {
                             name: `${emotes.autre.dog} ┇ DOG`,
                             value: lang.commands.help.fun[5].replace("{PREFIX}", prefix),
                             inline: true,
-                        }, {/*
-                                        name: `${emotes.autre.cat} ┇ FUN CAT`,
-                                        value: lang.commands.help.fun[6].replace("{PREFIX}", prefix),
-                                        inline: true,
-                                }, {*/
+                        }, {
                             name: `${emotes.autre.cat} ┇ CAT`,
                             value: lang.commands.help.fun[7].replace("{PREFIX}", prefix),
                             inline: true,
-                        }, {/*
-                                        name: `${emotes.autre.fox} ┇ FUN FOX`,
-                                        value: lang.commands.help.fun[8].replace("{PREFIX}", prefix),
-                                        inline: true,
-                                }, {*/
+                        }, {
                             name: `${emotes.autre.fox} ┇ FOX`,
                             value: lang.commands.help.fun[9].replace("{PREFIX}", prefix),
                             inline: true,
-                        }, {/*
-                                        name: `${emotes.autre.bird} ┇ FUN BIRD`,
-                                        value: lang.commands.help.fun[10].replace("{PREFIX}", prefix),
-                                        inline: true,
-                                }, {*/
+                        }, {
                             name: `${emotes.autre.bird} ┇ BIRD`,
                             value: lang.commands.help.fun[11].replace("{PREFIX}", prefix),
                             inline: true,
@@ -95,19 +79,39 @@ module.exports = {
                             inline: true
                         }, {
                             name: `${emotes.pepe.pepe_wa} ┇ RPS`,
-                            value: lang.commands.help.fun[20].replace("{PREFIX}", prefix),
-                            inline: true
-                        }, {
-                            name: `${emotes.pepe.pepe_wa} ┇ QUICK CLICK`,
                             value: lang.commands.help.fun[21].replace("{PREFIX}", prefix),
                             inline: true
-                        }, {
-                            name: `${emotes.pepe.pepe_wa} ┇ FIGHT`,
+                        }, /*{
+                            name: `${emotes.pepe.pepe_wa} ┇ QUICK CLICK`,
                             value: lang.commands.help.fun[22].replace("{PREFIX}", prefix),
                             inline: true
-                        }, {
-                            name: `${emotes.pepe.pepe_wa} ┇ GUESS THE NUMBER`,
+                        }, */{
+                            name: `${emotes.pepe.pepe_wa} ┇ FIGHT`,
                             value: lang.commands.help.fun[23].replace("{PREFIX}", prefix),
+                            inline: true
+                        }, /*{
+                            name: `${emotes.pepe.pepe_wa} ┇ GUESS THE NUMBER`,
+                            value: lang.commands.help.fun[24].replace("{PREFIX}", prefix),
+                            inline: true
+                        }, */{
+                            name: `${emotes.pepe.pepe_wa} ┇ 2048`,
+                            value: lang.commands.help.fun[25].replace("{PREFIX}", prefix),
+                            inline: true
+                        }, {
+                            name: `${emotes.pepe.pepe_wa} ┇ ${lang.commands.help.fun[30]}`,
+                            value: lang.commands.help.fun[26].replace("{PREFIX}", prefix),
+                            inline: true
+                        }, {
+                            name: `${emotes.pepe.pepe_wa} ┇ POKEMON`,
+                            value: lang.commands.help.fun[27].replace("{PREFIX}", prefix),
+                            inline: true
+                        }, {
+                            name: `${emotes.pepe.pepe_wa} ┇ ${lang.commands.help.fun[31]}`,
+                            value: lang.commands.help.fun[28].replace("{PREFIX}", prefix),
+                            inline: true
+                        }, {
+                            name: `${emotes.pepe.pepe_wa} ┇ ${lang.commands.help.fun[32]}`,
+                            value: lang.commands.help.fun[29].replace("{PREFIX}", prefix),
                             inline: true
                         })
                 ]

@@ -98,8 +98,7 @@
         "Could not find any results."
       ],
       "snake": [
-        "Nice game {PLAYER}, you scored **{SCORE}** points",
-        "Only <@{PLAYER}> can use that buttons!"
+        "Only {player} can use these buttons."
       ],
       "ball": [
         "Please specify the question to be asked.",
@@ -113,24 +112,58 @@
         "YEEESSSS !!!!",
         "Your question must have at least 10 characters."
       ],
+      "TwoZeroFourEight": [
+        "Only {player} can use these buttons."
+      ],
+      "connect4": [
+        "Connect4",
+        "{emoji} ┇ Its turn of player **{player}**.",
+        "{emoji} ┇ **{player}** won the Connect4 Game.",
+        "The Game tied! No one won the Game!",
+        "The Game went unfinished! No one won the Game!",
+        "Only {player} and {opponent} can use these buttons."
+      ],
+      "matchpairs": [
+        "Match Pairs",
+        "**Click on the buttons to match emojis with their pairs.**",
+        "**You won the Game! You turned a total of `{tilesTurned}` tiles.**",
+        "**You lost the Game! You turned a total of `{tilesTurned}` tiles.**",
+        "Only {player} can use these buttons."
+      ],
+      "mines": [
+        "Minesweeper",
+        "Click on the buttons to reveal the blocks except mines.",
+        "You won the Game! You successfully avoided all the mines.",
+        "You lost the Game! Beaware of the mines next time.",
+        "Only {player} can use these buttons."
+      ],
+      "pokemon": [
+        "Who's The Pokemon",
+        "You guessed it right! It was a {pokemon}.",
+        "Better luck next time! It was a {pokemon}.",
+        "Unable to fetch pokemon data! Please try again.",
+        "Only {player} can use these buttons."
+      ],
+      "tictac": [
+        "Tic Tac Toe",
+        "{emoji} ┇ Its turn of player **{player}**.",
+        "{emoji} ┇ **{player}** won the TicTacToe Game.",
+        "The Game tied! No one won the Game!",
+        "The Game went unfinished! No one won the Game!",
+        "Only {player} and {opponent} can use these buttons."
+      ],
       "rps": [
         "Rock Paper Scissors",
-        "Press the button below to choose your element.",
+        "Press a button below to make a choice.",
         "Rock",
         "Paper",
         "Scissors",
-        "Accept",
-        "Deny",
-        "<@{PLAYER}> has challenged <@{PLAYER2}> for a game of Rock Paper and Scissors!",
-        "GG, <@{WINNER}> won!",
-        "This game is deadlock!",
-        "<@{PLAYER2}> didn't answer in time. So, I dropped the game!",
-        "Both of you didn't pick something in time. So, I dropped the game!",
-        "<@{PLAYER2}> refused to have a game of Rock Paper and Scissors with you!",
-        "You picked {EMOJI}",
-        "You cannot change your selection!",
-        "Only {AUTHOR} can use that buttons!",
-        "Please, ping a member."
+        "You picked {emoji}",
+        "**{player}** won the Game! Congratulations!",
+        "The Game tied! No one won the Game!",
+        "The Game went unfinished! No one won the Game!",
+        "Only {player} and {opponent} can use these buttons.",
+        "Please, ping a member who want to play with."
       ],
       "QuickC": [
         "The buttons may appear anytime now!",
@@ -252,7 +285,7 @@
       ],
       "fun": [
         "Fun Commands",
-        "NOUGHTS AND CROSSES",
+        "TIC TAC TOE",
         "HEADS OR TAILS",
         "You need to do: `{PREFIX}8ball <a question>`",
         "You need to do: `{PREFIX}fun-dog`",
@@ -276,7 +309,15 @@
         "You need to do: `{PREFIX}rps`",
         "You need to do: `{PREFIX}quick-click`",
         "You need to do: `{PREFIX}fight`",
-        "You need to do: `{PREFIX}GuessTheNumber`"
+        "You need to do: `{PREFIX}GuessTheNumber`",
+        "You need to do: `{PREFIX}2048`",
+        "You need to do: `{PREFIX}minesweeper`",
+        "You need to do: `{PREFIX}connect4`",
+        "You need to do: `{PREFIX}pokemon`",
+        "You need to do: `{PREFIX}matchpairs`",
+        "MINE SWEEPER",
+        "CONNECT4",
+        "MATCH PAIRS"
       ],
       "info": [
         "Information Commands",
@@ -514,10 +555,30 @@
         "You will have informations on the `{PREFIX}color` command:",
         "Have a random color."
       ],
-      "helpCor": [
-        "You will have informations on the {PREFIX}corona command:",
-        "You will have informations on the `{PREFIX}corona` command:",
-        "Gives you information on Covid-19 on the whole world."
+      "helpConnect4": [
+        "You will have informations on the {PREFIX}connect4 command:",
+        "You will have informations on the `{PREFIX}connect4` command:",
+        "Play a connect 4."
+      ],
+      "help2048": [
+        "You will have informations on the {PREFIX}2048 command:",
+        "You will have informations on the `{PREFIX}2048` command:",
+        "Play 2048 game."
+      ],
+      "helpPairs": [
+        "You will have informations on the {PREFIX}2048 command:",
+        "You will have informations on the `{PREFIX}2048` command:",
+        "Find the paires."
+      ],
+      "helpMineSweeper": [
+        "You will have informations on the {PREFIX}minesweeper command:",
+        "You will have informations on the `{PREFIX}minesweeper` command:",
+        "Play Mine Sweeper."
+      ],
+      "helpPokemon": [
+        "You will have informations on the {PREFIX}pokemon command:",
+        "You will have informations on the `{PREFIX}pokemon` command:",
+        "Guess the pokemon through a silhouette."
       ],
       "helpDW": [
         "You will have informations on the {PREFIX}delete-warns command:",

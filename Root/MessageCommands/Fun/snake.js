@@ -1,40 +1,37 @@
-const weky = require("weky");
-const {getLang} = require('../../Storage/db/manager');
+const { Snake } = require('discord-gamecord');
 const colors = require('../../Storage/json/colors.json');
 const emotes = require('../../Storage/json/emotes.json');
 
 module.exports = {
-    name: 'snake',
+    name: "snake",
+    description: "play snake",
     aliases: ["snk"],
 
     run: async (client, message) => {
-        let lang = client.langs.get(await getLang(message.guild.id) || 'en')
-
-        await weky.Snake({
+        const lang = await getLang(message.guild.id);
+        const Game = new Snake({
             message: message,
+            isSlashGame: false,
             embed: {
-                color: colors.PERSO,
-                title: "Snake",
-                description: `${emotes.autre.cool_pika} ┇ ${lang.commands.fun.snake[0].replace('{PLAYER}', message.author).replace('{SCORE}', '{{score}}')}`,
-                footer: {
-                    text: `©️ ${client.user.username}`,
-                    iconURL: client.user.displayAvatarURL()
-                },
-                timestamp: true,
+                title: 'Snake',
+                overTitle: 'Game Over',
+                color: colors.PERSO
             },
             emojis: {
-                empty: "⬛",
-                snakeBody: "🟦",
-                food: "🔴",
-                up: "⬆️",
-                right: "⬅️",
-                down: "⬇️",
-                left: "➡️",
+                board: '⬛',
+                food: '🍎',
+                up: '⬆️',
+                down: '⬇️',
+                left: '⬅️',
+                right: '➡️',
             },
-            othersMessage: `${emotes.blob.blob_n} ┇ ${lang.commands.fun.snake[1].replace('{PLAYER}', message.author)}`,
-            buttonText: "Stop",
+            snake: {head: '🟢', body: '🟩', tail: '🟢', skull: '💀'},
+            foods: ['🍎', '🍇', '🍊', '🫐', '🥕', '🥝', '🌽'],
+            stopButton: 'Stop',
+            timeoutTime: 60000,
+            playerOnlyMessage: lang.commands.fun.snake[0]
         });
 
+        Game.startGame();
     }
-
-};
+}

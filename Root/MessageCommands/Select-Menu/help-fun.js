@@ -29,122 +29,127 @@ module.exports = {
                 .addOptions([{
                     label: '8BALL',
                     description: lang.commands.help.helpB[0].replace('{PREFIX}', prefix),
-                    value: 'Help8ball'
+                    value: 'help8ball'
                 },
                     {
                         label: 'BIRD',
                         description: lang.commands.help.helpBi[0].replace('{PREFIX}', prefix),
-                        value: 'HelpBird'
+                        value: 'helpBird'
                     },
                     {
                         label: 'CAT',
                         description: lang.commands.help.helpCat[0].replace('{PREFIX}', prefix),
-                        value: 'HelpCat'
+                        value: 'helpCat'
                     },
                     {
                         label: 'COLOR',
                         description: lang.commands.help.helpCo[0].replace('{PREFIX}', prefix),
-                        value: 'HelpColor'
+                        value: 'helpColor'
                     },
                     {
                         label: 'DOG',
                         description: lang.commands.help.helpDog[0].replace('{PREFIX}', prefix),
-                        value: 'HelpDog'
+                        value: 'helpDog'
                     },
                     {
                         label: 'FOX',
                         description: lang.commands.help.helpFox[0].replace('{PREFIX}', prefix),
-                        value: 'HelpFox'
+                        value: 'helpFox'
                     },
                     {
                         label: 'PANDA',
                         description: lang.commands.help.helpPanda[0].replace('{PREFIX}', prefix),
-                        value: 'HelpPanda'
-                    },/*
-                                {
-                                        label: 'FUN BIRD',
-                                        description: lang.commands.help.helpFBI[0].replace('{PREFIX}', container.Prefix),
-                                        value: 'HelpFunBird'
-                                },
-                                {
-                                        label: 'FUN CAT',
-                                        description: lang.commands.help.helpFCat[0].replace('{PREFIX}', container.Prefix),
-                                        value: 'HelpFunCat'
-                                },
-                                {
-                                        label: 'FUN DOG',
-                                        description: lang.commands.help.helpFDog[0].replace('{PREFIX}', container.Prefix),
-                                        value: 'HelpFunDog'
-                                },
-                                {
-                                        label: 'FUN FOX',
-                                        description: lang.commands.help.helpFFox[0].replace('{PREFIX}', container.Prefix),
-                                        value: 'HelpFunFox'
-                                },*/
+                        value: 'helpPanda'
+                    },
                     {
                         label: 'MEME',
                         description: lang.commands.help.helpM[0].replace('{PREFIX}', prefix),
-                        value: 'HelpMeme',
+                        value: 'helpMeme',
                     },
                     {
-                        label: lang.commands.help.helpMo[2],
+                        label: lang.commands.help.fun[1],
                         description: lang.commands.help.helpMo[0].replace('{PREFIX}', prefix),
-                        value: 'HelpMo'
+                        value: 'helpMo'
                     },
                     {
-                        label: lang.commands.help.helpPF[2],
+                        label: lang.commands.help.fun[2],
                         description: lang.commands.help.helpPF[0].replace('{PREFIX}', prefix),
-                        value: 'HelpPF'
+                        value: 'helpPF'
                     },
                     {
                         label: 'MESSAGE ANONYME',
                         description: lang.commands.help.helpMsgA[0].replace('{PREFIX}', prefix),
-                        value: 'HelpMsgAnonyme'
+                        value: 'helpMsgAnonyme'
                     },
                     {
                         label: 'MESSAGE',
                         description: lang.commands.help.helpMsg[0].replace('{PREFIX}', prefix),
-                        value: 'HelpMsg'
+                        value: 'helpMsg'
                     },
                     {
                         label: 'RESPECT+',
                         description: lang.commands.help.helpRe[0].replace('{PREFIX}', prefix),
-                        value: 'HelpRespect'
+                        value: 'helpRespect'
                     },
                     {
                         label: 'SLAP',
                         description: lang.commands.help.helpSlap[0].replace('{PREFIX}', prefix),
-                        value: 'HelpSlap'
+                        value: 'helpSlap'
                     },
                     {
                         label: 'WANTED',
                         description: lang.commands.help.helpWa[0].replace('{PREFIX}', prefix),
-                        value: 'HelpWanted'
+                        value: 'helpWanted'
                     },
                     {
                         label: 'GIPHY',
                         description: lang.commands.help.helpGif[0].replace('{PREFIX}', prefix),
-                        value: 'HelpGiphy'
+                        value: 'helpGiphy'
                     },
                     {
                         label: 'RPS',
                         description: lang.commands.help.helpRps[0].replace('{PREFIX}', prefix),
-                        value: 'HelpRps'
-                    },
+                        value: 'helpRps'
+                    },/*
                     {
                         label: 'QUICK CLICK',
                         description: lang.commands.help.helpRps[0].replace('{PREFIX}', prefix),
-                        value: 'HelpQC'
-                    },
+                        value: 'helpQC'
+                    },*/
                     {
                         label: 'FIGHT',
                         description: lang.commands.help.helpFight[0].replace('{PREFIX}', prefix),
-                        value: 'HelpFight'
-                    },
+                        value: 'helpFight'
+                    },/*
                     {
                         label: 'GUESS THE NUMBER',
-                        description: lang.commands.help.helpGuessTheNumber[0].replace('{PREFIX}', prefix),
-                        value: 'HelpGTN'
+                        description: lang.commands.help.helpGTN[0].replace('{PREFIX}', prefix),
+                        value: 'helpGTN'
+                    },*/
+                    {
+                        label: '2048',
+                        description: lang.commands.help.help2048[0].replace('{PREFIX}', prefix),
+                        value: 'help2048'
+                    },
+                    {
+                        label: lang.commands.help.fun[31],
+                        description: lang.commands.help.helpMineSweeper[0].replace('{PREFIX}', prefix),
+                        value: 'helpMineSweeper'
+                    },
+                    {
+                        label: "POKEMON",
+                        description: lang.commands.help.helpPokemon[0].replace('{PREFIX}', prefix),
+                        value: 'helpPokemon'
+                    },
+                    {
+                        label: lang.commands.help.fun[31],
+                        description: lang.commands.help.helpConnect4[0].replace('{PREFIX}', prefix),
+                        value: 'helpConnect4'
+                    },
+                    {
+                        label: lang.commands.help.fun[32],
+                        description: lang.commands.help.helpPairs[0].replace('{PREFIX}', prefix),
+                        value: 'helpPairs'
                     }
                 ]),
         )

@@ -126,23 +126,59 @@
         "Bien joué {PLAYER}, vous avez fait **{SCORE}** points",
         "Seulement {PLAYER} peut utiliser ces boutons !"
       ],
+      "TwoZeroFourEight": [
+        "Seulement {player} peut utiliser ces boutons."
+      ],
+      "connect4": [
+        "Puissance 4",
+        "{emoji} ┇ Its turn of player **{player}**.",
+        "{emoji} ┇ **{player}** a gagné cette partie.",
+        "Egalité! Personne n'a remporté cette partie !",
+        "Le jeu est resté inachevé! Personne n’a gagné le jeu!",
+        "Seulement {player} peut utiliser ces boutons.",
+        "Veuillez mentionner un membre."
+      ],
+      "matchpairs": [
+        "Paires",
+        "**Cliquez sur les boutons pour faire correspondre les émojis à leurs paires.**'",
+        "**Vous avez gagné le match! Vous avez tourné un total de `{tilesTurned}` cartes.**",
+        "**Vous avez gagné le match! Vous avez transformé un total de `{tilesTurned}` cartes.**",
+        "Seulement {player} peut utiliser ces boutons."
+      ],
+      "mines": [
+        "Démineur",
+        "Cliquez sur les boutons pour afficher les blocs sauf les mines.",
+        "Vous avez gagné le jeu! Vous avez réussi à éviter toutes les mines.",
+        "Vous avez perdu le jeu! Faites attention aux mines la prochaine fois.",
+        "Seulement {player} peut utiliser ces boutons."
+      ],
+      "pokemon": [
+        "Qui est ce Pokemon ?",
+        "Vous avez deviné juste ! C’était un {pokemon}.",
+        "Meilleure chance la prochaine fois! C’était un {pokemon}.",
+        "Impossible de récupérer les données pokemon ! Veuillez réessayer.",
+        "Seulement {player} peut utiliser ces boutons."
+      ],
+      "tictac": [
+        "Morpion",
+        "{emoji} ┇ C'est au tour de **{player}**.",
+        "{emoji} ┇ **{player}** a gagné cette partie.",
+        "Egalité ! Personne n'a remporté cette partie !",
+        "Le jeu est resté inachevé ! Personne n’a gagné le jeu !",
+        "Seulement {player} peut utiliser ces boutons.",
+        "Veuillez mentionner un membre."
+      ],
       "rps": [
         "Pierre, Papier, Ciseaux",
-        "Cliquez sur le bouton ci-dessous afin de sélectionner votre objet.",
+        "Appuyez sur un bouton ci-dessous pour faire un choix.",
         "Pierre",
         "Papier",
         "Ciseaux",
-        "Accepté",
-        "Refusé",
-        "<@{PLAYER}> à challenger <@{PLAYER2}> pour une partie de Pierre, Papier, Ciseaux !",
-        "GG, <@{WINNER}> a gagné !",
-        "Ce jeu est dans l'impasse , égalité !",
-        "<@{PLAYER2}> n'a pas répondu dans le temps. Donc, J'ai arrêté la partie !",
-        "Tous les deux vous n'avez pas choisi quelque chose à temps. Donc, J'ai arrêté la partie !",
-        "<@{PLAYER2}> a refusé de jouer à Pierre, Papier, Ciseaux avec vous !",
-        "Vous avez pris {EMOJI}",
-        "Vous ne pouvez pas changer votre choix !",
-        "Seulement {AUTHOR} peut utiliser ces boutons !",
+        "Vous avez pris {emoji}",
+        "**{joueur}** a remporté la parti ! Félicitations !",
+        "Egalité ! Personne n’a gagné la parti !",
+        "La parti est resté inachevé! Personne n’a gagné le jeu!",
+        "Seuls {player} et {opponent} peuvent utiliser ces boutons.",
         "Veuillez mentionner un membre."
       ],
       "animaux": [
@@ -268,11 +304,18 @@
         "Vous devez faire : `{PREFIX}slap <un membre>`",
         "Vous devez faire : `{PREFIX}giphy <un nom de gif>",
         "Vous devez faire : `{PREFIX}panda`",
-        "Vous devez faire : `{PREFIX}giphy`",
         "Vous devez faire : `{PREFIX}rps`",
         "Vous devez faire : `{PREFIX}quick-click`",
         "Vous devez faire : `{PREFIX}fight`",
-        "Vous devez faire : `{PREFIX}GuessTheNumber`"
+        "Vous devez faire : `{PREFIX}GuessTheNumber`",
+        "Vous devez faire : `{PREFIX}2048`",
+        "Vous devez faire : `{PREFIX}démineur`",
+        "Vous devez faire : `{PREFIX}pokemon`",
+        "Vous devez faire : `{PREFIX}connect4`",
+        "Vous devez faire : `{PREFIX}matchpairs`",
+        "DEMINEUR",
+        "PUISSANCE 4",
+        "PAIRES"
       ],
       "info": [
         "Commandes d'Information",
@@ -517,6 +560,32 @@
         "Vous aurez des informations sur la commande `{PREFIX}color`:",
         "Avoir une couleur au hasard."
       ],
+      "helpConnect4": [
+        "Vous aurez des informations sur la commande {PREFIX}connect4:",
+        "Vous aurez des informations sur la commande `{PREFIX}connect4`:",
+        "Faire un puissance 4.",
+        "{PREFIX}slap <un membre>"
+      ],
+      "help2048": [
+        "Vous aurez des informations sur la commande {PREFIX}2048:",
+        "Vous aurez des informations sur la commande `{PREFIX}2048`:",
+        "Jouer au jeu 2048."
+      ],
+      "helpPairs": [
+        "Vous aurez des informations sur la commande {PREFIX}matchpaires:",
+        "Vous aurez des informations sur la commande `{PREFIX}matchpaires`:",
+        "Jouer un 7 familles, avec plus de 7 familles..."
+      ],
+      "helpMineSweeper": [
+        "Vous aurez des informations sur la commande {PREFIX}démineur:",
+        "Vous aurez des informations sur la commande `{PREFIX}démineur`:",
+        "Jouer au démineur."
+      ],
+      "helpPokemon": [
+        "Vous aurez des informations sur la commande {PREFIX}pokemon:",
+        "Vous aurez des informations sur la commande `{PREFIX}pokemon`:",
+        "Deviner le pokemon via une silhouette."
+      ],
       "helpDW": [
         "Vous aurez des informations sur la commande {PREFIX}delete-warns:",
         "Vous aurez des informations sur la commande `{PREFIX}delete-warns`:",
@@ -562,6 +631,11 @@
       "helpFFox": [
         "Vous aurez des informations sur la commande {PREFIX}fun-fox:",
         "Vous aurez des informations sur la commande `{PREFIX}fun-fox`:",
+        "Avoir un gif d'un drôle de renard."
+      ],
+      "helpF2048": [
+        "Vous aurez des informations sur la commande {PREFIX}fun-2048:",
+        "Vous aurez des informations sur la commande `{PREFIX}fun-2048`:",
         "Avoir un gif d'un drôle de renard."
       ],
       "helpI": [

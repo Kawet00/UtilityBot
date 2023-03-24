@@ -1,4 +1,4 @@
-const weky = require("weky");
+const weky = require("weky-update");
 const {getLang} = require('../../Storage/db/manager');
 const colors = require('../../Storage/json/Config.json');
 const emotes = require('../../Storage/json/emotes.json');
@@ -7,6 +7,7 @@ module.exports = {
     name: 'quick-click',
     aliases: ["quick-clique", "qc", "q-c"],
     cooldown: 10000,
+    ignore: true,
 
     run: async (client, message) => {
         let lang = client.langs.get(await getLang(message.guild.id) || 'en')

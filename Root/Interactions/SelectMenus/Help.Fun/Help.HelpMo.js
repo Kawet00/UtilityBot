@@ -20,11 +20,11 @@ module.exports = {
                             value: lang.commands.help.helpMo[2]
                         }, {
                             name: lang.commands.helpa[6],
-                            value: `\`${prefix}morpion\``,
+                            value: `\`${prefix}tictactoe\``,
                             inline: true
                         }, {
                             name: lang.commands.helpa[7],
-                            value: `\`${prefix}noughts-and-crosses\`\n\`${prefix}n-a-c\``,
+                            value: `\`${prefix}morpion\``,
                             inline: true
                         }, {
                             name: lang.commands.helpa[2],
@@ -34,7 +34,7 @@ module.exports = {
                             value: "`Fun`"
                         }, {
                             name: "Cooldown",
-                            value: "0s"
+                            value: "1m"
                         }, {
                             name: lang.commands.helpa[10],
                             value: lang.commands.helpa[11]

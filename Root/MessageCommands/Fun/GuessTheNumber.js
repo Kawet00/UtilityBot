@@ -6,6 +6,7 @@ module.exports = {
     name: 'GuessTheNumber',
     aliases: ['GTN'],
     cooldown: 10000,
+    ignore: true,
 
     run: async (client, message) => {
         let lang = client.langs.get(await getLang(message.guild.id) || 'en')

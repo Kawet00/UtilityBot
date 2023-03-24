@@ -11,7 +11,7 @@ module.exports = {
     aliases: [],
     cooldown: 10000,
 
-    async run(client, message, args) {
+    run: async (client, message, args) => {
         let lang = client.langs.get(await getLang(message.guild.id) || 'en')
 
         let User = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase().includes() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase().includes() === args.join(' ').toLocaleLowerCase()) ||

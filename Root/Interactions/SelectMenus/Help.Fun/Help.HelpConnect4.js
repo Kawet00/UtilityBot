@@ -3,7 +3,7 @@ const {EmbedBuilder} = require('discord.js');
 const colors = require('../../../Storage/json/colors.json');
 
 module.exports = {
-    name: "HelpColor",
+    name: "HelpConnect4",
     run: async (client, interaction) => {
         let prefix = await getPrefix(interaction.guild.id);
         let lang = client.langs.get(await getLang(interaction.guild.id) || 'en');
@@ -13,14 +13,14 @@ module.exports = {
                 embeds: [
                     new EmbedBuilder()
                         .setColor(colors.PERSO)
-                        .setTitle(lang.commands.help.helpCo[1].replace('{PREFIX}', prefix))
+                        .setTitle(lang.commands.help.helpConnect4[1].replace('{PREFIX}', prefix))
                         .setDescription(lang.commands.helpa[4])
                         .addFields({
                             name: lang.commands.helpa[5],
-                            value: lang.commands.help.helpCo[2]
+                            value: lang.commands.help.helpConnect4[2]
                         }, {
                             name: lang.commands.helpa[6],
-                            value: `\`${prefix}color\``,
+                            value: lang.commands.help.helpConnect4[3].replace('{PREFIX}', prefix),
                             inline: true
                         }, {
                             name: lang.commands.helpa[7],
@@ -34,7 +34,7 @@ module.exports = {
                             value: "`Fun`"
                         }, {
                             name: "Cooldown",
-                            value: "10s"
+                            value: "1m"
                         }, {
                             name: lang.commands.helpa[10],
                             value: lang.commands.helpa[11]
