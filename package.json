@@ -10,20 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Elpistolero131/UtilityBot.git"
+    "url": "git+https://github.com/Kawet00/UtilityBot.git"
   },
   "keywords": [
     "Yes"
   ],
-  "author": "Elpistolero13",
+  "author": "Kawet",
   "license": {
     "type": "Apache-2.0",
     "url": "https://opensource.org/licenses/apache2.0.php"
   },
   "bugs": {
-    "url": "https://github.com/Elpistolero131/UtilityBot/issues"
+    "url": "https://github.com/Kawet00/UtilityBot/issues"
   },
-  "homepage": "https://github.com/Elpistolero131/UtilityBot#readme",
+  "homepage": "https://github.com/Kawet00/UtilityBot#readme",
   "dependencies": {
     "@discordjs/opus": "^0.8.0",
     "amethyste-api": "^1.1.5",
