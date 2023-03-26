@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/github/stars/Elpistolero131/UtilityBot.svg?style=for-the-badge"/> 
 <img src="https://img.shields.io/github/forks/Elpistolero131/UtilityBot.svg?style=for-the-badge"/></p>
 
- <img src="https://i.imgur.com/ib1GKuj.png" height="17em"> ╎ Made by **[Kawet](https://github.com/Kawet00)**<br>
+ <img src="https://i.imgur.com/ib1GKuj.png" height="17em"> ╎ Made by **[Kawet](https://kawet.is-a.dev)**<br>
  💻 ╎ [WebSite](https://utilitybot.me)<br>
  📌 ╎ it's a Open Source discord bot<br>
  <img src="https://freesvg.org/img/frenchflagframed.png" height="17em"/>/<img src="https://freesvg.org/img/Flag_of_the_United_States.png" height="17em"/> ╎ French and English bot
