@@ -79,5 +79,5 @@
   </p>
 <br>
 <p align="center">
-  <img src="https://img.shields.io/badge/version-2.4.0-05122A?style=for-the-badge">
+  <img src="https://img.shields.io/badge/version-2.6.0-05122A?style=for-the-badge">
 </p>
