@@ -7,7 +7,7 @@
 
  <img src="https://i.imgur.com/ib1GKuj.png" height="17em"> ╎ Made by **[Kawet](https://kawet.is-a.dev)**<br>
  💻 ╎ [WebSite](https://utilitybot.me)<br>
- 📌 ╎ it's a Open Source discord bot<br>
+ 📌 ╎ it's an Open Source discord bot<br>
  <img src="https://freesvg.org/img/frenchflagframed.png" height="17em"/>/<img src="https://freesvg.org/img/Flag_of_the_United_States.png" height="17em"/> ╎ French and English bot
   
 -------
@@ -79,5 +79,5 @@
   </p>
 <br>
 <p align="center">
-  <img src="https://img.shields.io/badge/version-2.6.0-05122A?style=for-the-badge">
+  <img src="https://img.shields.io/badge/version-2.4.2-05122A?style=for-the-badge">
 </p>
